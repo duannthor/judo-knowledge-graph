@@ -1,9 +1,10 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const rootDir = dirname(dirname(fileURLToPath(import.meta.url)));
-const dataDir = join(rootDir, "data");
+const cwdDataDir = join(process.cwd(), "data");
+const dataDir = existsSync(cwdDataDir) ? cwdDataDir : join(rootDir, "data");
 
 const readJson = (name) => JSON.parse(readFileSync(join(dataDir, name), "utf8"));
 

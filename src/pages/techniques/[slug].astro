@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  classifications,
+  comboEdges,
+  getLegality,
+  getSafetyAdvisories,
+  getTechnique,
+  sources,
+  techniques,
+  variants
+} from "../../query.mjs";
+
+export function getStaticPaths() {
+  return techniques.map((technique) => ({
+    params: { slug: technique.slug }
+  }));
+}
+
+const technique = getTechnique(Astro.params.slug);
+
+if (!technique) {
+  return Astro.redirect("/");
+}
+
+const classificationLabels = technique.classifications.map((slug) => {
+  const classification = classifications.find((item) => item.slug === slug);
+  return classification ? `${classification.japaneseRomaji} · ${classification.english}` : slug;
+});
+
+const variantRows = variants
+  .filter((variant) => variant.baseTechniqueSlug === technique.slug)
+  .map((variant) => ({
+    variant,
+    legality: getLegality(variant.slug),
+    advisories: getSafetyAdvisories(variant.slug)
+  }));
+
+const comboRows = comboEdges
+  .filter((edge) => edge.fromSlug === technique.slug || variantRows.some((row) => row.variant.slug === edge.fromSlug))
+  .map((edge) => ({
+    edge,
+    target: techniques.find((item) => item.slug === edge.toSlug) ?? variants.find((item) => item.slug === edge.toSlug)
+  }));
+
+const sourceRows = technique.sourceIds
+  .map((id) => sources.find((source) => source.id === id))
+  .filter(Boolean);
+---
+
+<BaseLayout title={`${technique.names.japaneseRomaji} · Judo Knowledge Graph`}>
+  <section class="intro" aria-labelledby="technique-title">
+    <div>
+      <p class="eyebrow">{classificationLabels[0]}</p>
+      <h1 id="technique-title">{technique.names.japaneseRomaji}</h1>
+      <p class="lede">
+        {technique.names.english} · {technique.names.japanese} · {technique.names.kana}
+      </p>
+    </div>
+    <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
+  </section>
+
+  <div class="detail-grid">
+    <div>
+      <section class="panel" aria-labelledby="facts-title">
+        <h2 id="facts-title">Technique Facts</h2>
+        <div class="facts">
+          <div class="fact">
+            <span>English</span>
+            <strong>{technique.names.english}</strong>
+          </div>
+          <div class="fact">
+            <span>Japanese</span>
+            <strong>{technique.names.japanese} · {technique.names.kana}</strong>
+          </div>
+          <div class="fact">
+            <span>Domain</span>
+            <strong>{technique.domains.join(", ")}</strong>
+          </div>
+          <div class="fact">
+            <span>Roles</span>
+            <strong>{technique.roles.join(", ")}</strong>
+          </div>
+        </div>
+        <div class="tags">
+          {technique.classifications.map((slug) => <span class="tag accent">{slug}</span>)}
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="phases-title">
+        <h2 id="phases-title">Kuzushi · Tsukuri · Kake</h2>
+        {Object.keys(technique.phases).length > 0 ? (
+          <div class="phase-list">
+            {["kuzushi", "tsukuri", "kake"].map((phaseName) => technique.phases[phaseName] && (
+              <article class="phase">
+                <h3>{phaseName}</h3>
+                <p>{technique.phases[phaseName].summary}</p>
+                {technique.phases[phaseName].directionHints && (
+                  <div class="tags">
+                    {technique.phases[phaseName].directionHints.map((direction) => <span class="tag">{direction}</span>)}
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p class="empty">Phase data has not been added yet.</p>
+        )}
+      </section>
+
+      <section class="panel" aria-labelledby="combos-title">
+        <h2 id="combos-title">Combos And Counters</h2>
+        {comboRows.length > 0 ? (
+          <ul class="list">
+            {comboRows.map(({ edge, target }) => (
+              <li>
+                <strong>{edge.pattern}</strong>
+                <div class="source">
+                  to {target?.names?.japaneseRomaji ?? target?.name ?? edge.toSlug}
+                  {edge.firstPressureDirection && ` · pressure ${edge.firstPressureDirection}`}
+                  {edge.expectedUkeReaction && ` · reaction ${edge.expectedUkeReaction}`}
+                  {edge.finishingDirection && ` · finish ${edge.finishingDirection}`}
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="empty">No combo edges have been added yet.</p>
+        )}
+      </section>
+    </div>
+
+    <aside>
+      <section class="panel" aria-labelledby="variants-title">
+        <h2 id="variants-title">Variants</h2>
+        {variantRows.length > 0 ? (
+          <ul class="list">
+            {variantRows.map(({ variant, legality, advisories }) => (
+              <li>
+                <strong>{variant.name}</strong>
+                <div class="source">
+                  {legality ? `${legality.status} · ${legality.reasons.join(", ")}` : "No legality record"}
+                </div>
+                {advisories.length > 0 && (
+                  <div class="tags">
+                    {advisories.map((advisory) => <span class="tag">{advisory.level}</span>)}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="empty">No variants have been added yet.</p>
+        )}
+      </section>
+
+      <section class="panel" aria-labelledby="sources-title">
+        <h2 id="sources-title">Sources</h2>
+        <ul class="list">
+          {sourceRows.map((source) => (
+            <li>
+              <strong>{source.title}</strong>
+              <div class="source">
+                {source.publisher}
+                {source.url && <> · <a href={source.url}>source</a></>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </aside>
+  </div>
+</BaseLayout>

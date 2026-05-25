@@ -1,0 +1,130 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  classifications,
+  getLegality,
+  getSafetyAdvisories,
+  getVariantsFor,
+  techniques
+} from "../query.mjs";
+
+const nageTechniques = techniques.filter((technique) => technique.classifications.includes("nage-waza"));
+const groups = ["te-waza", "koshi-waza", "ashi-waza", "ma-sutemi-waza", "yoko-sutemi-waza"];
+const groupMeta = groups.map((slug) => ({
+  slug,
+  label: classifications.find((item) => item.slug === slug)?.japaneseRomaji ?? slug,
+  english: classifications.find((item) => item.slug === slug)?.english ?? slug,
+  count: nageTechniques.filter((technique) => technique.classifications.includes(slug)).length
+}));
+
+const cards = nageTechniques
+  .slice()
+  .sort((a, b) => a.names.japaneseRomaji.localeCompare(b.names.japaneseRomaji))
+  .map((technique) => {
+    const primaryGroup = groups.find((group) => technique.classifications.includes(group)) ?? "other";
+    const variants = getVariantsFor(technique.slug);
+    const legalityStatuses = variants.map((variant) => getLegality(variant.slug)?.status).filter(Boolean);
+    const advisories = variants.flatMap((variant) => getSafetyAdvisories(variant.slug));
+    return {
+      technique,
+      primaryGroup,
+      variants,
+      legalityStatuses,
+      advisories,
+      searchText: [
+        technique.slug,
+        technique.names.english,
+        technique.names.japaneseRomaji,
+        technique.names.japanese,
+        technique.names.kana,
+        ...technique.names.aliases,
+        ...technique.classifications
+      ].join(" ").toLowerCase()
+    };
+  });
+---
+
+<BaseLayout title="Judo Throw Browser">
+  <section class="intro" aria-labelledby="page-title">
+    <div>
+      <p class="eyebrow">Nage-waza catalog</p>
+      <h1 id="page-title">Judo throws, grouped by technique family.</h1>
+      <p class="lede">
+        {nageTechniques.length} throws with Japanese names, kana, classifications, variants, legality notes, safety advisories, and combo hooks.
+      </p>
+    </div>
+    <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
+  </section>
+
+  <section class="stats" aria-label="Throw groups">
+    {groupMeta.map((group) => (
+      <a class="stat" href={`/?group=${group.slug}`} data-group-link={group.slug}>
+        <strong>{group.count}</strong>
+        <span>{group.label} · {group.english}</span>
+      </a>
+    ))}
+  </section>
+
+  <section aria-label="Technique controls">
+    <div class="toolbar">
+      <input class="field" id="technique-search" type="search" placeholder="Search English, romaji, kana, kanji, alias" autocomplete="off" />
+      <select class="select" id="group-filter">
+        <option value="all">All groups</option>
+        {groupMeta.map((group) => (
+          <option value={group.slug}>{group.label} · {group.english}</option>
+        ))}
+      </select>
+    </div>
+  </section>
+
+  <section class="technique-grid" id="technique-grid" aria-label="Techniques">
+    {cards.map(({ technique, primaryGroup, variants, legalityStatuses, advisories, searchText }) => (
+      <article class="technique-card" data-technique-card data-group={primaryGroup} data-search={searchText}>
+        <div class="card-top">
+          <div>
+            <h2><a href={`/techniques/${technique.slug}/`}>{technique.names.japaneseRomaji}</a></h2>
+            <div class="names">
+              <div>{technique.names.english}</div>
+              <div class="kana">{technique.names.japanese} · {technique.names.kana}</div>
+            </div>
+          </div>
+          <span class="tag accent">{primaryGroup}</span>
+        </div>
+        <div class="tags">
+          {technique.roles.map((role) => <span class="tag">{role}</span>)}
+          {variants.length > 0 && <span class="tag">{variants.length} variants</span>}
+          {legalityStatuses.includes("illegal") && <span class="tag">illegal variant</span>}
+          {legalityStatuses.includes("restricted") && <span class="tag">restricted</span>}
+          {advisories.length > 0 && <span class="tag">safety note</span>}
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <script>
+    const search = document.querySelector("#technique-search");
+    const filter = document.querySelector("#group-filter");
+    const cards = Array.from(document.querySelectorAll("[data-technique-card]"));
+    const params = new URLSearchParams(window.location.search);
+    const initialGroup = params.get("group");
+
+    if (initialGroup && filter instanceof HTMLSelectElement) {
+      filter.value = initialGroup;
+    }
+
+    function applyFilters() {
+      const term = search instanceof HTMLInputElement ? search.value.trim().toLowerCase() : "";
+      const group = filter instanceof HTMLSelectElement ? filter.value : "all";
+
+      for (const card of cards) {
+        const matchesText = !term || card.dataset.search?.includes(term);
+        const matchesGroup = group === "all" || card.dataset.group === group;
+        card.hidden = !(matchesText && matchesGroup);
+      }
+    }
+
+    search?.addEventListener("input", applyFilters);
+    filter?.addEventListener("change", applyFilters);
+    applyFilters();
+  </script>
+</BaseLayout>
