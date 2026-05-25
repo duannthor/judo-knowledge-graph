@@ -78,6 +78,31 @@ test("te-waza catalog chunk contains the sixteen hand throws with kana", () => {
   assert.ok(throws.every((technique) => technique.names.kana));
 });
 
+test("yoko-sutemi-waza catalog chunk contains the sixteen side sacrifice throws with kana", () => {
+  const throws = getByGrouping("yoko-sutemi-waza");
+  const slugs = throws.map((technique) => technique.slug).sort();
+
+  assert.deepEqual(slugs, [
+    "daki-wakare",
+    "hane-makikomi",
+    "harai-makikomi",
+    "kani-basami",
+    "kawazu-gake",
+    "ko-uchi-makikomi",
+    "o-soto-makikomi",
+    "soto-makikomi",
+    "tani-otoshi",
+    "uchi-makikomi",
+    "uchi-mata-makikomi",
+    "uki-waza",
+    "yoko-gake",
+    "yoko-guruma",
+    "yoko-otoshi",
+    "yoko-wakare"
+  ]);
+  assert.ok(throws.every((technique) => technique.names.kana));
+});
+
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {
   const legalVariants = getVariantsFor("kata-guruma", { legalOnly: true });
   assert.ok(!legalVariants.some((variant) => variant.slug === "kata-guruma-traditional-leg-grab"));

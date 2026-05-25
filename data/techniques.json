@@ -540,6 +540,246 @@
     "sourceIds": ["kodokan-repertoire"]
   },
   {
+    "slug": "yoko-otoshi",
+    "names": {
+      "english": "Side drop",
+      "japaneseRomaji": "yoko-otoshi",
+      "japanese": "横落",
+      "kana": "よこおとし",
+      "aliases": ["yoko otoshi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "tani-otoshi",
+    "names": {
+      "english": "Valley drop",
+      "japaneseRomaji": "tani-otoshi",
+      "japanese": "谷落",
+      "kana": "たにおとし",
+      "aliases": ["tani otoshi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "hane-makikomi",
+    "names": {
+      "english": "Spring wraparound",
+      "japaneseRomaji": "hane-makikomi",
+      "japanese": "跳巻込",
+      "kana": "はねまきこみ",
+      "aliases": ["hane makikomi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "soto-makikomi",
+    "names": {
+      "english": "Outer wraparound",
+      "japaneseRomaji": "soto-makikomi",
+      "japanese": "外巻込",
+      "kana": "そとまきこみ",
+      "aliases": ["soto makikomi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "uki-waza",
+    "names": {
+      "english": "Floating throw",
+      "japaneseRomaji": "uki-waza",
+      "japanese": "浮技",
+      "kana": "うきわざ",
+      "aliases": ["uki waza"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "yoko-wakare",
+    "names": {
+      "english": "Side separation",
+      "japaneseRomaji": "yoko-wakare",
+      "japanese": "横分",
+      "kana": "よこわかれ",
+      "aliases": ["yoko wakare"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "yoko-guruma",
+    "names": {
+      "english": "Side wheel",
+      "japaneseRomaji": "yoko-guruma",
+      "japanese": "横車",
+      "kana": "よこぐるま",
+      "aliases": ["yoko guruma"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "yoko-gake",
+    "names": {
+      "english": "Side hook",
+      "japaneseRomaji": "yoko-gake",
+      "japanese": "横掛",
+      "kana": "よこがけ",
+      "aliases": ["yoko gake"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "daki-wakare",
+    "names": {
+      "english": "High lift and separate",
+      "japaneseRomaji": "daki-wakare",
+      "japanese": "抱分",
+      "kana": "だきわかれ",
+      "aliases": ["daki wakare"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "uchi-makikomi",
+    "names": {
+      "english": "Inner wraparound",
+      "japaneseRomaji": "uchi-makikomi",
+      "japanese": "内巻込",
+      "kana": "うちまきこみ",
+      "aliases": ["uchi makikomi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kani-basami",
+    "names": {
+      "english": "Scissors throw",
+      "japaneseRomaji": "kani-basami",
+      "japanese": "蟹挟",
+      "kana": "かにばさみ",
+      "aliases": ["kani basami"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kawazu-gake",
+    "names": {
+      "english": "One-leg entanglement drop",
+      "japaneseRomaji": "kawazu-gake",
+      "japanese": "河津掛",
+      "kana": "かわづがけ",
+      "aliases": ["kawazu gake"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "o-soto-makikomi",
+    "names": {
+      "english": "Major outer wraparound",
+      "japaneseRomaji": "o-soto-makikomi",
+      "japanese": "大外巻込",
+      "kana": "おおそとまきこみ",
+      "aliases": ["osoto makikomi", "o soto makikomi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "uchi-mata-makikomi",
+    "names": {
+      "english": "Inner-thigh wraparound",
+      "japaneseRomaji": "uchi-mata-makikomi",
+      "japanese": "内股巻込",
+      "kana": "うちまたまきこみ",
+      "aliases": ["uchi mata makikomi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "harai-makikomi",
+    "names": {
+      "english": "Sweeping wraparound",
+      "japaneseRomaji": "harai-makikomi",
+      "japanese": "払巻込",
+      "kana": "はらいまきこみ",
+      "aliases": ["harai makikomi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ko-uchi-makikomi",
+    "names": {
+      "english": "Minor inner wraparound",
+      "japaneseRomaji": "ko-uchi-makikomi",
+      "japanese": "小内巻込",
+      "kana": "こうちまきこみ",
+      "aliases": ["ko uchi makikomi", "kouchi makikomi"]
+    },
+    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
     "slug": "hadaka-jime",
     "names": {
       "english": "Naked choke",
