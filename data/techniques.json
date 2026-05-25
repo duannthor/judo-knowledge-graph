@@ -780,6 +780,321 @@
     "sourceIds": ["kodokan-repertoire"]
   },
   {
+    "slug": "kesa-gatame",
+    "names": {
+      "english": "Scarf hold",
+      "japaneseRomaji": "kesa-gatame",
+      "japanese": "袈裟固",
+      "kana": "けさがため",
+      "aliases": ["kesa gatame"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kuzure-kesa-gatame",
+    "names": {
+      "english": "Modified scarf hold",
+      "japaneseRomaji": "kuzure-kesa-gatame",
+      "japanese": "崩袈裟固",
+      "kana": "くずれけさがため",
+      "aliases": ["kuzure kesa gatame"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ushiro-kesa-gatame",
+    "names": {
+      "english": "Reverse scarf hold",
+      "japaneseRomaji": "ushiro-kesa-gatame",
+      "japanese": "後袈裟固",
+      "kana": "うしろけさがため",
+      "aliases": ["ushiro kesa gatame"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kata-gatame",
+    "names": {
+      "english": "Shoulder hold",
+      "japaneseRomaji": "kata-gatame",
+      "japanese": "肩固",
+      "kana": "かたがため",
+      "aliases": ["kata gatame", "arm triangle hold"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kami-shiho-gatame",
+    "names": {
+      "english": "Upper four-quarter hold",
+      "japaneseRomaji": "kami-shiho-gatame",
+      "japanese": "上四方固",
+      "kana": "かみしほうがため",
+      "aliases": ["kami shiho gatame"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kuzure-kami-shiho-gatame",
+    "names": {
+      "english": "Modified upper four-quarter hold",
+      "japaneseRomaji": "kuzure-kami-shiho-gatame",
+      "japanese": "崩上四方固",
+      "kana": "くずれかみしほうがため",
+      "aliases": ["kuzure kami shiho gatame"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "yoko-shiho-gatame",
+    "names": {
+      "english": "Side four-quarter hold",
+      "japaneseRomaji": "yoko-shiho-gatame",
+      "japanese": "横四方固",
+      "kana": "よこしほうがため",
+      "aliases": ["yoko shiho gatame"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "tate-shiho-gatame",
+    "names": {
+      "english": "Straight four-quarter hold",
+      "japaneseRomaji": "tate-shiho-gatame",
+      "japanese": "縦四方固",
+      "kana": "たてしほうがため",
+      "aliases": ["tate shiho gatame", "mount hold"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "uki-gatame",
+    "names": {
+      "english": "Floating hold",
+      "japaneseRomaji": "uki-gatame",
+      "japanese": "浮固",
+      "kana": "うきがため",
+      "aliases": ["uki gatame"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ura-gatame",
+    "names": {
+      "english": "Back hold",
+      "japaneseRomaji": "ura-gatame",
+      "japanese": "裏固",
+      "kana": "うらがため",
+      "aliases": ["ura gatame"]
+    },
+    "classifications": ["katame-waza", "osaekomi-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "nami-juji-jime",
+    "names": {
+      "english": "Normal cross choke",
+      "japaneseRomaji": "nami-juji-jime",
+      "japanese": "並十字絞",
+      "kana": "なみじゅうじじめ",
+      "aliases": ["nami juji jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "gyaku-juji-jime",
+    "names": {
+      "english": "Reverse cross choke",
+      "japaneseRomaji": "gyaku-juji-jime",
+      "japanese": "逆十字絞",
+      "kana": "ぎゃくじゅうじじめ",
+      "aliases": ["gyaku juji jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kata-juji-jime",
+    "names": {
+      "english": "Half cross choke",
+      "japaneseRomaji": "kata-juji-jime",
+      "japanese": "片十字絞",
+      "kana": "かたじゅうじじめ",
+      "aliases": ["kata juji jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "okuri-eri-jime",
+    "names": {
+      "english": "Sliding collar choke",
+      "japaneseRomaji": "okuri-eri-jime",
+      "japanese": "送襟絞",
+      "kana": "おくりえりじめ",
+      "aliases": ["okuri eri jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kataha-jime",
+    "names": {
+      "english": "Single-wing choke",
+      "japaneseRomaji": "kataha-jime",
+      "japanese": "片羽絞",
+      "kana": "かたはじめ",
+      "aliases": ["kataha jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "katate-jime",
+    "names": {
+      "english": "One-hand choke",
+      "japaneseRomaji": "katate-jime",
+      "japanese": "片手絞",
+      "kana": "かたてじめ",
+      "aliases": ["katate jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ryote-jime",
+    "names": {
+      "english": "Two-hand choke",
+      "japaneseRomaji": "ryote-jime",
+      "japanese": "両手絞",
+      "kana": "りょうてじめ",
+      "aliases": ["ryote jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "sode-guruma-jime",
+    "names": {
+      "english": "Sleeve wheel choke",
+      "japaneseRomaji": "sode-guruma-jime",
+      "japanese": "袖車絞",
+      "kana": "そでぐるまじめ",
+      "aliases": ["sode guruma jime", "ezekiel choke"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "tsukkomi-jime",
+    "names": {
+      "english": "Thrust choke",
+      "japaneseRomaji": "tsukkomi-jime",
+      "japanese": "突込絞",
+      "kana": "つっこみじめ",
+      "aliases": ["tsukkomi jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "sankaku-jime",
+    "names": {
+      "english": "Triangle choke",
+      "japaneseRomaji": "sankaku-jime",
+      "japanese": "三角絞",
+      "kana": "さんかくじめ",
+      "aliases": ["sankaku jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "do-jime",
+    "names": {
+      "english": "Body scissors",
+      "japaneseRomaji": "do-jime",
+      "japanese": "胴絞",
+      "kana": "どうじめ",
+      "aliases": ["do jime"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
     "slug": "hadaka-jime",
     "names": {
       "english": "Naked choke",
@@ -802,6 +1117,141 @@
       "japanese": "腕緘",
       "kana": "うでがらみ",
       "aliases": ["figure-four arm lock"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-hishigi-juji-gatame",
+    "names": {
+      "english": "Cross arm lock",
+      "japaneseRomaji": "ude-hishigi-juji-gatame",
+      "japanese": "腕挫十字固",
+      "kana": "うでひしぎじゅうじがため",
+      "aliases": ["juji gatame", "armbar"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-hishigi-ude-gatame",
+    "names": {
+      "english": "Arm lock",
+      "japaneseRomaji": "ude-hishigi-ude-gatame",
+      "japanese": "腕挫腕固",
+      "kana": "うでひしぎうでがため",
+      "aliases": ["ude hishigi ude gatame"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-hishigi-hiza-gatame",
+    "names": {
+      "english": "Knee arm lock",
+      "japaneseRomaji": "ude-hishigi-hiza-gatame",
+      "japanese": "腕挫膝固",
+      "kana": "うでひしぎひざがため",
+      "aliases": ["ude hishigi hiza gatame"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-hishigi-waki-gatame",
+    "names": {
+      "english": "Armpit arm lock",
+      "japaneseRomaji": "ude-hishigi-waki-gatame",
+      "japanese": "腕挫腋固",
+      "kana": "うでひしぎわきがため",
+      "aliases": ["waki gatame"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-hishigi-hara-gatame",
+    "names": {
+      "english": "Stomach arm lock",
+      "japaneseRomaji": "ude-hishigi-hara-gatame",
+      "japanese": "腕挫腹固",
+      "kana": "うでひしぎはらがため",
+      "aliases": ["ude hishigi hara gatame"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-hishigi-ashi-gatame",
+    "names": {
+      "english": "Leg arm lock",
+      "japaneseRomaji": "ude-hishigi-ashi-gatame",
+      "japanese": "腕挫脚固",
+      "kana": "うでひしぎあしがため",
+      "aliases": ["ude hishigi ashi gatame"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-hishigi-te-gatame",
+    "names": {
+      "english": "Hand arm lock",
+      "japaneseRomaji": "ude-hishigi-te-gatame",
+      "japanese": "腕挫手固",
+      "kana": "うでひしぎてがため",
+      "aliases": ["ude hishigi te gatame"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-hishigi-sankaku-gatame",
+    "names": {
+      "english": "Triangle arm lock",
+      "japaneseRomaji": "ude-hishigi-sankaku-gatame",
+      "japanese": "腕挫三角固",
+      "kana": "うでひしぎさんかくがため",
+      "aliases": ["ude hishigi sankaku gatame"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ashi-garami",
+    "names": {
+      "english": "Leg entanglement",
+      "japaneseRomaji": "ashi-garami",
+      "japanese": "足緘",
+      "kana": "あしがらみ",
+      "aliases": ["ashi garami"]
     },
     "classifications": ["katame-waza", "kansetsu-waza"],
     "domains": ["ground"],

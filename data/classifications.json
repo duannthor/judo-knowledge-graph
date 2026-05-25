@@ -81,6 +81,14 @@
     "sourceIds": ["kodokan-repertoire"]
   },
   {
+    "slug": "osaekomi-waza",
+    "english": "hold-down techniques",
+    "japaneseRomaji": "osaekomi-waza",
+    "japanese": "抑込技",
+    "kana": "おさえこみわざ",
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
     "slug": "kansetsu-waza",
     "english": "joint lock techniques",
     "japaneseRomaji": "kansetsu-waza",

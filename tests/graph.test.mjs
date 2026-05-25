@@ -103,6 +103,72 @@ test("yoko-sutemi-waza catalog chunk contains the sixteen side sacrifice throws 
   assert.ok(throws.every((technique) => technique.names.kana));
 });
 
+test("katame-waza catalog contains the thirty-two grappling techniques with kana", () => {
+  const techniques = getByGrouping("katame-waza");
+
+  assert.equal(techniques.length, 32);
+  assert.ok(techniques.every((technique) => technique.names.kana));
+});
+
+test("osaekomi-waza catalog chunk contains the ten hold-down techniques", () => {
+  const techniques = getByGrouping("osaekomi-waza");
+  const slugs = techniques.map((technique) => technique.slug).sort();
+
+  assert.deepEqual(slugs, [
+    "kami-shiho-gatame",
+    "kata-gatame",
+    "kesa-gatame",
+    "kuzure-kami-shiho-gatame",
+    "kuzure-kesa-gatame",
+    "tate-shiho-gatame",
+    "uki-gatame",
+    "ura-gatame",
+    "ushiro-kesa-gatame",
+    "yoko-shiho-gatame"
+  ]);
+});
+
+test("shime-waza catalog chunk contains the twelve choking techniques", () => {
+  const techniques = getByGrouping("shime-waza");
+  const slugs = techniques.map((technique) => technique.slug).sort();
+
+  assert.deepEqual(slugs, [
+    "do-jime",
+    "gyaku-juji-jime",
+    "hadaka-jime",
+    "kata-juji-jime",
+    "kataha-jime",
+    "katate-jime",
+    "nami-juji-jime",
+    "okuri-eri-jime",
+    "ryote-jime",
+    "sankaku-jime",
+    "sode-guruma-jime",
+    "tsukkomi-jime"
+  ]);
+});
+
+test("kansetsu-waza catalog chunk contains the ten joint lock techniques", () => {
+  const techniques = getByGrouping("kansetsu-waza");
+  const slugs = techniques
+    .filter((technique) => technique.sourceIds.includes("kodokan-repertoire"))
+    .map((technique) => technique.slug)
+    .sort();
+
+  assert.deepEqual(slugs, [
+    "ashi-garami",
+    "ude-garami",
+    "ude-hishigi-ashi-gatame",
+    "ude-hishigi-hara-gatame",
+    "ude-hishigi-hiza-gatame",
+    "ude-hishigi-juji-gatame",
+    "ude-hishigi-sankaku-gatame",
+    "ude-hishigi-te-gatame",
+    "ude-hishigi-ude-gatame",
+    "ude-hishigi-waki-gatame"
+  ]);
+});
+
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {
   const legalVariants = getVariantsFor("kata-guruma", { legalOnly: true });
   assert.ok(!legalVariants.some((variant) => variant.slug === "kata-guruma-traditional-leg-grab"));
