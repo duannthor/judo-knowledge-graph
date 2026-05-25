@@ -330,6 +330,216 @@
     "sourceIds": ["kodokan-repertoire"]
   },
   {
+    "slug": "ippon-seoi-nage",
+    "names": {
+      "english": "One-arm shoulder throw",
+      "japaneseRomaji": "ippon-seoi-nage",
+      "japanese": "一本背負投",
+      "kana": "いっぽんせおいなげ",
+      "aliases": ["ippon seoi nage"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "seoi-otoshi",
+    "names": {
+      "english": "Shoulder drop",
+      "japaneseRomaji": "seoi-otoshi",
+      "japanese": "背負落",
+      "kana": "せおいおとし",
+      "aliases": ["seoi otoshi", "drop seoi nage"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "tai-otoshi",
+    "names": {
+      "english": "Body drop",
+      "japaneseRomaji": "tai-otoshi",
+      "japanese": "体落",
+      "kana": "たいおとし",
+      "aliases": ["tai otoshi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "sukui-nage",
+    "names": {
+      "english": "Scoop throw",
+      "japaneseRomaji": "sukui-nage",
+      "japanese": "掬投",
+      "kana": "すくいなげ",
+      "aliases": ["sukui nage"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "uki-otoshi",
+    "names": {
+      "english": "Floating drop",
+      "japaneseRomaji": "uki-otoshi",
+      "japanese": "浮落",
+      "kana": "うきおとし",
+      "aliases": ["uki otoshi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "sumi-otoshi",
+    "names": {
+      "english": "Corner drop",
+      "japaneseRomaji": "sumi-otoshi",
+      "japanese": "隅落",
+      "kana": "すみおとし",
+      "aliases": ["sumi otoshi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "obi-otoshi",
+    "names": {
+      "english": "Belt drop",
+      "japaneseRomaji": "obi-otoshi",
+      "japanese": "帯落",
+      "kana": "おびおとし",
+      "aliases": ["obi otoshi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "yama-arashi",
+    "names": {
+      "english": "Mountain storm",
+      "japaneseRomaji": "yama-arashi",
+      "japanese": "山嵐",
+      "kana": "やまあらし",
+      "aliases": ["yama arashi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "obi-tori-gaeshi",
+    "names": {
+      "english": "Belt-grab reversal",
+      "japaneseRomaji": "obi-tori-gaeshi",
+      "japanese": "帯取返",
+      "kana": "おびとりがえし",
+      "aliases": ["obi tori gaeshi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "morote-gari",
+    "names": {
+      "english": "Two-hand reap",
+      "japaneseRomaji": "morote-gari",
+      "japanese": "双手刈",
+      "kana": "もろてがり",
+      "aliases": ["morote gari", "double-leg takedown"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kuchiki-taoshi",
+    "names": {
+      "english": "Single-leg takedown",
+      "japaneseRomaji": "kuchiki-taoshi",
+      "japanese": "朽木倒",
+      "kana": "くちきたおし",
+      "aliases": ["kuchiki taoshi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kibisu-gaeshi",
+    "names": {
+      "english": "Heel trip reversal",
+      "japaneseRomaji": "kibisu-gaeshi",
+      "japanese": "踵返",
+      "kana": "きびすがえし",
+      "aliases": ["kibisu gaeshi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "uchi-mata-sukashi",
+    "names": {
+      "english": "Inner-thigh throw slip",
+      "japaneseRomaji": "uchi-mata-sukashi",
+      "japanese": "内股透",
+      "kana": "うちまたすかし",
+      "aliases": ["uchi mata sukashi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ko-uchi-gaeshi",
+    "names": {
+      "english": "Minor inner reap reversal",
+      "japaneseRomaji": "ko-uchi-gaeshi",
+      "japanese": "小内返",
+      "kana": "こうちがえし",
+      "aliases": ["ko uchi gaeshi", "kouchi gaeshi"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
     "slug": "hadaka-jime",
     "names": {
       "english": "Naked choke",
