@@ -1505,5 +1505,36 @@
     },
     "sourceIds": ["local-practice-advisory-v1"],
     "gripContextSlugs": ["mount", "frame-control", "guard"]
+  },
+  {
+    "slug": "north-south-frame-turn-in-escape",
+    "names": {
+      "english": "North-south frame-and-turn-in escape",
+      "japaneseRomaji": "kami-shiho-gatame no nogare-kata",
+      "japanese": "上四方固の逃れ方",
+      "kana": "かみしほうがためののがれかた",
+      "aliases": ["north-south escape", "north south escape", "kami shiho gatame escape", "kami shiho gatame no nogare-kata", "nogare-kata"]
+    },
+    "classifications": ["katame-waza", "ne-waza-escape"],
+    "domains": ["ground"],
+    "roles": ["escape", "transition"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Frame against uke to keep the shoulders from being pinned flat and turn the head-side pressure off the center line.",
+        "directionHints": ["left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "tsukuri": {
+        "summary": "Bring the elbows inside, turn toward a side, and make enough hip angle to avoid being followed head-to-head.",
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "kake": {
+        "summary": "Recover guard, turn to knees, or recompose to a side-control-safe frame before uke settles the hold again.",
+        "directionHints": ["back", "left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      }
+    },
+    "sourceIds": ["local-practice-advisory-v1"],
+    "gripContextSlugs": ["north-south", "frame-control", "guard"]
   }
 ]

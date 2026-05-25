@@ -57,12 +57,42 @@ const gripContextRows = Array.from(gripContextSlugSet)
 const hasBasePhases = Object.keys(technique.phases).length > 0;
 const variantMechanicsRows = variantRows.filter((row) => row.variant.mechanics);
 
-const comboRows = comboEdges
+const outgoingEdgeRows = comboEdges
   .filter((edge) => edge.fromSlug === technique.slug || variantRows.some((row) => row.variant.slug === edge.fromSlug))
   .map((edge) => ({
     edge,
-    target: techniques.find((item) => item.slug === edge.toSlug) ?? variants.find((item) => item.slug === edge.toSlug)
+    direction: "outgoing",
+    related: techniques.find((item) => item.slug === edge.toSlug) ?? variants.find((item) => item.slug === edge.toSlug)
   }));
+const incomingEdgeRows = comboEdges
+  .filter((edge) => edge.toSlug === technique.slug || variantRows.some((row) => row.variant.slug === edge.toSlug))
+  .map((edge) => ({
+    edge,
+    direction: "incoming",
+    related: techniques.find((item) => item.slug === edge.fromSlug) ?? variants.find((item) => item.slug === edge.fromSlug)
+  }));
+const relatedEdgeRows = [...outgoingEdgeRows, ...incomingEdgeRows]
+  .filter((row, index, rows) => {
+    const firstMatchingIndex = rows.findIndex((candidate) => (
+      candidate.direction === row.direction &&
+      candidate.edge.fromSlug === row.edge.fromSlug &&
+      candidate.edge.toSlug === row.edge.toSlug &&
+      candidate.edge.pattern === row.edge.pattern
+    ));
+    return firstMatchingIndex === index;
+  });
+const hasEscapeRole = technique.roles.includes("escape");
+const relatedEdgeLabel = (edge, direction) => {
+  if (edge.pattern === "counter-sequence") {
+    if (hasEscapeRole && direction === "incoming") return "Escapes from";
+    if (!hasEscapeRole && direction === "outgoing") return "Answered by";
+    return direction === "incoming" ? "Counter to" : "Counter";
+  }
+  if (edge.pattern === "same-direction-pressure") return "Same-direction combo";
+  if (edge.pattern === "alternating-direction-reaction") return "Reaction combo";
+  if (edge.pattern === "direct-follow-up") return "Follow-up";
+  return edge.pattern;
+};
 
 const sourceRows = technique.sourceIds
   .map((id) => sources.find((source) => source.id === id))
@@ -189,13 +219,17 @@ const sourceRows = technique.sourceIds
 
       <section class="panel" aria-labelledby="combos-title">
         <h2 id="combos-title">Combos And Counters</h2>
-        {comboRows.length > 0 ? (
+        {relatedEdgeRows.length > 0 ? (
           <ul class="list">
-            {comboRows.map(({ edge, target }) => (
+            {relatedEdgeRows.map(({ edge, direction, related }) => (
               <li>
-                <strong>{edge.pattern}</strong>
+                <strong>{relatedEdgeLabel(edge, direction)}</strong>
                 <div class="source">
-                  to {target?.names?.japaneseRomaji ?? target?.name ?? edge.toSlug}
+                  {related?.names ? (
+                    <a href={`/techniques/${related.slug}/`}>{related.names.japaneseRomaji}</a>
+                  ) : (
+                    related?.name ?? (direction === "outgoing" ? edge.toSlug : edge.fromSlug)
+                  )}
                   {edge.firstPressureDirection && ` · pressure ${edge.firstPressureDirection}`}
                   {edge.expectedUkeReaction && ` · reaction ${edge.expectedUkeReaction}`}
                   {edge.finishingDirection && ` · finish ${edge.finishingDirection}`}

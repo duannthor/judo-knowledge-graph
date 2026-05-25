@@ -148,6 +148,7 @@ export type ComboEdge = {
   toriSide?: ToriSide;
   timing: "immediate" | "reaction" | "transition" | "unknown";
   confidence: "official" | "common" | "coach-advisory" | "personal-note";
+  notes?: string;
   sourceIds: string[];
 };
 

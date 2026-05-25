@@ -6,6 +6,7 @@ import {
   getClassification,
   getTechnique,
   getCombosFor,
+  getCountersFor,
   getLegality,
   getSafetyAdvisories,
   getVariantsFor,
@@ -286,6 +287,7 @@ test("practical ground escape nodes are searchable and legal defensive actions",
   assert.deepEqual(slugs, [
     "mount-bridge-and-roll-escape",
     "mount-elbow-knee-escape",
+    "north-south-frame-turn-in-escape",
     "side-control-frame-shrimp-escape",
     "side-control-underhook-hip-escape"
   ]);
@@ -293,6 +295,18 @@ test("practical ground escape nodes are searchable and legal defensive actions",
   assert.ok(escapes.every((technique) => getLegality(technique.slug).status === "legal"));
   assert.ok(escapes.every((technique) => technique.names.japanese.includes("逃れ方")));
   assert.ok(escapes.every((technique) => technique.names.kana.includes("のがれかた")));
+});
+
+test("hold-down techniques are linked to practical escape counters", () => {
+  const kamiCounters = getCountersFor("kami-shiho-gatame");
+  const yokoCounters = getCountersFor("yoko-shiho-gatame");
+  const tateCounters = getCountersFor("tate-shiho-gatame");
+
+  assert.ok(kamiCounters.some((edge) => edge.toSlug === "north-south-frame-turn-in-escape"));
+  assert.ok(yokoCounters.some((edge) => edge.toSlug === "side-control-frame-shrimp-escape"));
+  assert.ok(yokoCounters.some((edge) => edge.toSlug === "side-control-underhook-hip-escape"));
+  assert.ok(tateCounters.some((edge) => edge.toSlug === "mount-bridge-and-roll-escape"));
+  assert.ok(tateCounters.some((edge) => edge.toSlug === "mount-elbow-knee-escape"));
 });
 
 test("ground hold aliases include common positional names", () => {
