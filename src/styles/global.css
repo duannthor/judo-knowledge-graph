@@ -178,8 +178,32 @@ h3 {
   padding: 10px 12px;
 }
 
-.toggle-group {
+.filter-groups {
   grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.45fr) minmax(160px, 0.45fr) auto;
+  gap: 14px;
+  align-items: end;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter-group {
+  min-width: 0;
+}
+
+.filter-label {
+  display: block;
+  margin: 0 0 7px;
+  color: var(--muted);
+  font: 0.75rem/1.2 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.toggle-group {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -268,6 +292,7 @@ h3 {
 
 .clear-filters {
   min-height: 36px;
+  align-self: end;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface-soft);
@@ -545,6 +570,7 @@ h3 {
   .site-nav,
   .intro,
   .toolbar,
+  .filter-groups,
   .detail-grid {
     grid-template-columns: 1fr;
   }

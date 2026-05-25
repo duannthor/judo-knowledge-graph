@@ -104,51 +104,66 @@ const cards = nageTechniques
           <option value={group.slug}>{group.label} · {group.english}</option>
         ))}
       </select>
-      <fieldset class="toggle-group" aria-label="Technique filters">
-        <label class="toggle">
-          <input type="checkbox" value="attack" data-role-toggle />
-          <span>Attacks</span>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" value="counter" data-role-toggle />
-          <span>Counters</span>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" value="transition" data-role-toggle />
-          <span>Transitions</span>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" value="escape" data-role-toggle />
-          <span>Escapes</span>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" value="has-variants" data-status-toggle />
-          <span>Has variants</span>
-        </label>
-        <label class="toggle success-toggle">
-          <input type="checkbox" value="competition-legal" data-status-toggle />
-          <span>Competition legal</span>
-        </label>
-        <label class="toggle danger-toggle">
-          <input type="checkbox" value="banned-variant" data-status-toggle />
-          <span>Banned variant</span>
-        </label>
-        <label class="toggle danger-toggle">
-          <input type="checkbox" value="classic-banned" data-status-toggle />
-          <span>Classic banned</span>
-        </label>
-        <label class="toggle danger-toggle">
-          <input type="checkbox" value="restricted-variant" data-status-toggle />
-          <span>Restricted</span>
-        </label>
-        <label class="toggle mixed-toggle">
-          <input type="checkbox" value="mixed-legality" data-status-toggle />
-          <span>Mixed legality</span>
-        </label>
-        <label class="toggle warning-toggle">
-          <input type="checkbox" value="safety-note" data-status-toggle />
-          <span>Safety note</span>
-        </label>
+      <fieldset class="filter-groups" aria-label="Technique filters">
+        <div class="filter-group">
+          <span class="filter-label">Role</span>
+          <div class="toggle-group">
+            <label class="toggle">
+              <input type="checkbox" value="attack" data-role-toggle />
+              <span>Attacks</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" value="counter" data-role-toggle />
+              <span>Counters</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" value="transition" data-role-toggle />
+              <span>Transitions</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" value="escape" data-role-toggle />
+              <span>Escapes</span>
+            </label>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Variants & Rules</span>
+          <div class="toggle-group">
+            <label class="toggle">
+              <input type="checkbox" value="has-variants" data-status-toggle />
+              <span>Has variants</span>
+            </label>
+            <label class="toggle success-toggle">
+              <input type="checkbox" value="competition-legal" data-status-toggle />
+              <span>Competition legal</span>
+            </label>
+            <label class="toggle danger-toggle">
+              <input type="checkbox" value="banned-variant" data-status-toggle />
+              <span>Banned variant</span>
+            </label>
+            <label class="toggle danger-toggle">
+              <input type="checkbox" value="classic-banned" data-status-toggle />
+              <span>Classic banned</span>
+            </label>
+            <label class="toggle danger-toggle">
+              <input type="checkbox" value="restricted-variant" data-status-toggle />
+              <span>Restricted</span>
+            </label>
+            <label class="toggle mixed-toggle">
+              <input type="checkbox" value="mixed-legality" data-status-toggle />
+              <span>Mixed legality</span>
+            </label>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Safety</span>
+          <div class="toggle-group">
+            <label class="toggle warning-toggle">
+              <input type="checkbox" value="safety-note" data-status-toggle />
+              <span>Safety note</span>
+            </label>
+          </div>
+        </div>
         <button class="clear-filters" type="button" id="clear-filters">Clear all</button>
       </fieldset>
     </div>
