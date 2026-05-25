@@ -6,30 +6,58 @@
       "japaneseRomaji": "kata-guruma",
       "japanese": "肩車",
       "kana": "かたぐるま",
-      "aliases": ["kata guruma"]
+      "aliases": [
+        "kata guruma"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "mechanicsTheme": "Shoulder-wheel family: tori lowers under uke's center, loads uke across the shoulder line, and rotates them forward or forward-diagonally. The exact grip, entry, and off-balancing line depend heavily on the variant.",
     "phases": {
       "kuzushi": {
         "summary": "Draw uke forward or forward-diagonal while lowering under the center of gravity.",
-        "directionHints": ["front", "front-right", "front-left"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "tsukuri": {
         "summary": "Enter under uke with shoulder and hip alignment appropriate to the variant.",
-        "sourceIds": ["kodokan-repertoire"]
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "kake": {
         "summary": "Rotate and project uke over the shoulder line.",
-        "directionHints": ["front", "front-right", "front-left"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       }
     },
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "ura-nage",
@@ -38,29 +66,55 @@
       "japaneseRomaji": "ura-nage",
       "japanese": "裏投",
       "kana": "うらなげ",
-      "aliases": ["ura nage"]
+      "aliases": [
+        "ura nage"
+      ]
     },
-    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "ma-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Load uke backward or back-diagonal as their attack commits forward.",
-        "directionHints": ["back", "back-right", "back-left"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "tsukuri": {
         "summary": "Fit behind or under uke's center while maintaining control of the upper body.",
-        "sourceIds": ["kodokan-repertoire"]
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "kake": {
         "summary": "Sacrifice backward and project uke over the rear line under control.",
-        "directionHints": ["back"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "back"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       }
     },
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "tomoe-nage",
@@ -69,29 +123,54 @@
       "japaneseRomaji": "tomoe-nage",
       "japanese": "巴投",
       "kana": "ともえなげ",
-      "aliases": ["tomoe nage"]
+      "aliases": [
+        "tomoe nage"
+      ]
     },
-    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "ma-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Draw uke forward while lowering into a rear sacrifice position.",
-        "directionHints": ["front"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "tsukuri": {
         "summary": "Place the lifting foot while sitting under uke's center with sleeve and lapel control.",
-        "sourceIds": ["kodokan-repertoire"]
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "kake": {
         "summary": "Extend and rotate uke forward over the body line.",
-        "directionHints": ["front"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       }
     },
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ]
   },
   {
     "slug": "sumi-gaeshi",
@@ -100,29 +179,59 @@
       "japaneseRomaji": "sumi-gaeshi",
       "japanese": "隅返",
       "kana": "すみがえし",
-      "aliases": ["sumi gaeshi"]
+      "aliases": [
+        "sumi gaeshi"
+      ]
     },
-    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "ma-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Draw uke forward or forward-diagonal into a corner of balance.",
-        "directionHints": ["front-right", "front-left"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "tsukuri": {
         "summary": "Enter beneath uke with a rear sacrifice position and lifting leg placement.",
-        "sourceIds": ["kodokan-repertoire"]
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "kake": {
         "summary": "Lift and rotate uke over the diagonal corner line.",
-        "directionHints": ["front-right", "front-left"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       }
     },
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu", "georgian-grip"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu",
+      "georgian-grip"
+    ]
   },
   {
     "slug": "hikikomi-gaeshi",
@@ -131,29 +240,57 @@
       "japaneseRomaji": "hikikomi-gaeshi",
       "japanese": "引込返",
       "kana": "ひきこみがえし",
-      "aliases": ["hikikomi gaeshi"]
+      "aliases": [
+        "hikikomi gaeshi"
+      ]
     },
-    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter", "transition"],
+    "classifications": [
+      "nage-waza",
+      "ma-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter",
+      "transition"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Pull uke forward and down into a committed reaction.",
-        "directionHints": ["front"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "tsukuri": {
         "summary": "Drop under uke while maintaining pulling control, often from over-the-back or belt control.",
-        "sourceIds": ["kodokan-repertoire"]
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "kake": {
         "summary": "Continue the pull and roll uke through the sacrifice action.",
-        "directionHints": ["front"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       }
     },
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu", "georgian-grip"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu",
+      "georgian-grip"
+    ]
   },
   {
     "slug": "tawara-gaeshi",
@@ -162,29 +299,54 @@
       "japaneseRomaji": "tawara-gaeshi",
       "japanese": "俵返",
       "kana": "たわらがえし",
-      "aliases": ["tawara gaeshi"]
+      "aliases": [
+        "tawara gaeshi"
+      ]
     },
-    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "ma-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Use uke's forward pressure, commonly from a low attack or bent posture.",
-        "directionHints": ["front"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "tsukuri": {
         "summary": "Wrap and load uke while dropping into rear sacrifice position.",
-        "sourceIds": ["kodokan-repertoire"]
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       },
       "kake": {
         "summary": "Roll backward and lift to reverse uke over the body line.",
-        "directionHints": ["front"],
-        "sourceIds": ["kodokan-repertoire"]
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
       }
     },
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "georgian-grip"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "georgian-grip"
+    ]
   },
   {
     "slug": "uki-goshi",
@@ -193,14 +355,29 @@
       "japaneseRomaji": "uki-goshi",
       "japanese": "浮腰",
       "kana": "うきごし",
-      "aliases": ["uki goshi"]
+      "aliases": [
+        "uki goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "o-goshi",
@@ -209,14 +386,30 @@
       "japaneseRomaji": "o-goshi",
       "japanese": "大腰",
       "kana": "おおごし",
-      "aliases": ["ogoshi", "o goshi"]
+      "aliases": [
+        "ogoshi",
+        "o goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "koshi-guruma",
@@ -225,14 +418,29 @@
       "japaneseRomaji": "koshi-guruma",
       "japanese": "腰車",
       "kana": "こしぐるま",
-      "aliases": ["koshi guruma"]
+      "aliases": [
+        "koshi guruma"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "tsurikomi-goshi",
@@ -241,14 +449,30 @@
       "japaneseRomaji": "tsurikomi-goshi",
       "japanese": "釣込腰",
       "kana": "つりこみごし",
-      "aliases": ["tsurikomi goshi", "tsuri-komi-goshi"]
+      "aliases": [
+        "tsurikomi goshi",
+        "tsuri-komi-goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "harai-goshi",
@@ -257,14 +481,29 @@
       "japaneseRomaji": "harai-goshi",
       "japanese": "払腰",
       "kana": "はらいごし",
-      "aliases": ["harai goshi"]
+      "aliases": [
+        "harai goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "tsuri-goshi",
@@ -273,14 +512,29 @@
       "japaneseRomaji": "tsuri-goshi",
       "japanese": "釣腰",
       "kana": "つりごし",
-      "aliases": ["tsuri goshi"]
+      "aliases": [
+        "tsuri goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "hane-goshi",
@@ -289,14 +543,29 @@
       "japaneseRomaji": "hane-goshi",
       "japanese": "跳腰",
       "kana": "はねごし",
-      "aliases": ["hane goshi"]
+      "aliases": [
+        "hane goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "utsuri-goshi",
@@ -305,14 +574,29 @@
       "japaneseRomaji": "utsuri-goshi",
       "japanese": "移腰",
       "kana": "うつりごし",
-      "aliases": ["utsuri goshi"]
+      "aliases": [
+        "utsuri goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "ushiro-goshi",
@@ -321,14 +605,28 @@
       "japaneseRomaji": "ushiro-goshi",
       "japanese": "後腰",
       "kana": "うしろごし",
-      "aliases": ["ushiro goshi"]
+      "aliases": [
+        "ushiro goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "sode-tsurikomi-goshi",
@@ -337,14 +635,30 @@
       "japaneseRomaji": "sode-tsurikomi-goshi",
       "japanese": "袖釣込腰",
       "kana": "そでつりこみごし",
-      "aliases": ["sode tsurikomi goshi", "sode-tsuri-komi-goshi"]
+      "aliases": [
+        "sode tsurikomi goshi",
+        "sode-tsuri-komi-goshi"
+      ]
     },
-    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "ippon-seoi-nage",
@@ -353,14 +667,31 @@
       "japaneseRomaji": "ippon-seoi-nage",
       "japanese": "一本背負投",
       "kana": "いっぽんせおいなげ",
-      "aliases": ["ippon seoi nage"]
+      "aliases": [
+        "ippon seoi nage"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza",
+      "turn-throw"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "seoi-otoshi",
@@ -369,14 +700,31 @@
       "japaneseRomaji": "seoi-otoshi",
       "japanese": "背負落",
       "kana": "せおいおとし",
-      "aliases": ["seoi otoshi", "drop seoi nage"]
+      "aliases": [
+        "seoi otoshi",
+        "drop seoi nage"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza",
+      "turn-throw"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ]
   },
   {
     "slug": "tai-otoshi",
@@ -385,14 +733,31 @@
       "japaneseRomaji": "tai-otoshi",
       "japanese": "体落",
       "kana": "たいおとし",
-      "aliases": ["tai otoshi"]
+      "aliases": [
+        "tai otoshi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza",
+      "turn-throw"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "sukui-nage",
@@ -401,14 +766,29 @@
       "japaneseRomaji": "sukui-nage",
       "japanese": "掬投",
       "kana": "すくいなげ",
-      "aliases": ["sukui nage"]
+      "aliases": [
+        "sukui nage"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["leg-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "leg-control"
+    ]
   },
   {
     "slug": "uki-otoshi",
@@ -417,14 +797,28 @@
       "japaneseRomaji": "uki-otoshi",
       "japanese": "浮落",
       "kana": "うきおとし",
-      "aliases": ["uki otoshi"]
+      "aliases": [
+        "uki otoshi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "sumi-otoshi",
@@ -433,14 +827,29 @@
       "japaneseRomaji": "sumi-otoshi",
       "japanese": "隅落",
       "kana": "すみおとし",
-      "aliases": ["sumi otoshi"]
+      "aliases": [
+        "sumi otoshi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "obi-otoshi",
@@ -449,14 +858,28 @@
       "japaneseRomaji": "obi-otoshi",
       "japanese": "帯落",
       "kana": "おびおとし",
-      "aliases": ["obi otoshi"]
+      "aliases": [
+        "obi otoshi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "yama-arashi",
@@ -465,14 +888,28 @@
       "japaneseRomaji": "yama-arashi",
       "japanese": "山嵐",
       "kana": "やまあらし",
-      "aliases": ["yama arashi"]
+      "aliases": [
+        "yama arashi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "obi-tori-gaeshi",
@@ -481,14 +918,30 @@
       "japaneseRomaji": "obi-tori-gaeshi",
       "japanese": "帯取返",
       "kana": "おびとりがえし",
-      "aliases": ["obi tori gaeshi"]
+      "aliases": [
+        "obi tori gaeshi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "georgian-grip"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "georgian-grip"
+    ]
   },
   {
     "slug": "morote-gari",
@@ -497,14 +950,30 @@
       "japaneseRomaji": "morote-gari",
       "japanese": "双手刈",
       "kana": "もろてがり",
-      "aliases": ["morote gari", "double-leg takedown"]
+      "aliases": [
+        "morote gari",
+        "double-leg takedown"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["leg-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "leg-control"
+    ]
   },
   {
     "slug": "kuchiki-taoshi",
@@ -513,14 +982,29 @@
       "japaneseRomaji": "kuchiki-taoshi",
       "japanese": "朽木倒",
       "kana": "くちきたおし",
-      "aliases": ["kuchiki taoshi"]
+      "aliases": [
+        "kuchiki taoshi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["leg-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "leg-control"
+    ]
   },
   {
     "slug": "kibisu-gaeshi",
@@ -529,14 +1013,29 @@
       "japaneseRomaji": "kibisu-gaeshi",
       "japanese": "踵返",
       "kana": "きびすがえし",
-      "aliases": ["kibisu gaeshi"]
+      "aliases": [
+        "kibisu gaeshi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["leg-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "leg-control"
+    ]
   },
   {
     "slug": "uchi-mata-sukashi",
@@ -545,14 +1044,29 @@
       "japaneseRomaji": "uchi-mata-sukashi",
       "japanese": "内股透",
       "kana": "うちまたすかし",
-      "aliases": ["uchi mata sukashi"]
+      "aliases": [
+        "uchi mata sukashi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ]
   },
   {
     "slug": "ko-uchi-gaeshi",
@@ -561,14 +1075,30 @@
       "japaneseRomaji": "ko-uchi-gaeshi",
       "japanese": "小内返",
       "kana": "こうちがえし",
-      "aliases": ["ko uchi gaeshi", "kouchi gaeshi"]
+      "aliases": [
+        "ko uchi gaeshi",
+        "kouchi gaeshi"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ]
   },
   {
     "slug": "yoko-otoshi",
@@ -577,14 +1107,29 @@
       "japaneseRomaji": "yoko-otoshi",
       "japanese": "横落",
       "kana": "よこおとし",
-      "aliases": ["yoko otoshi"]
+      "aliases": [
+        "yoko otoshi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "tani-otoshi",
@@ -593,14 +1138,30 @@
       "japaneseRomaji": "tani-otoshi",
       "japanese": "谷落",
       "kana": "たにおとし",
-      "aliases": ["tani otoshi"]
+      "aliases": [
+        "tani otoshi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "hane-makikomi",
@@ -609,14 +1170,28 @@
       "japaneseRomaji": "hane-makikomi",
       "japanese": "跳巻込",
       "kana": "はねまきこみ",
-      "aliases": ["hane makikomi"]
+      "aliases": [
+        "hane makikomi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "soto-makikomi",
@@ -625,14 +1200,28 @@
       "japaneseRomaji": "soto-makikomi",
       "japanese": "外巻込",
       "kana": "そとまきこみ",
-      "aliases": ["soto makikomi"]
+      "aliases": [
+        "soto makikomi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "uki-waza",
@@ -641,14 +1230,29 @@
       "japaneseRomaji": "uki-waza",
       "japanese": "浮技",
       "kana": "うきわざ",
-      "aliases": ["uki waza"]
+      "aliases": [
+        "uki waza"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "yoko-wakare",
@@ -657,14 +1261,28 @@
       "japaneseRomaji": "yoko-wakare",
       "japanese": "横分",
       "kana": "よこわかれ",
-      "aliases": ["yoko wakare"]
+      "aliases": [
+        "yoko wakare"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "yoko-guruma",
@@ -673,14 +1291,30 @@
       "japaneseRomaji": "yoko-guruma",
       "japanese": "横車",
       "kana": "よこぐるま",
-      "aliases": ["yoko guruma"]
+      "aliases": [
+        "yoko guruma"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "yoko-gake",
@@ -689,14 +1323,28 @@
       "japaneseRomaji": "yoko-gake",
       "japanese": "横掛",
       "kana": "よこがけ",
-      "aliases": ["yoko gake"]
+      "aliases": [
+        "yoko gake"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "daki-wakare",
@@ -705,14 +1353,28 @@
       "japaneseRomaji": "daki-wakare",
       "japanese": "抱分",
       "kana": "だきわかれ",
-      "aliases": ["daki wakare"]
+      "aliases": [
+        "daki wakare"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "uchi-makikomi",
@@ -721,14 +1383,28 @@
       "japaneseRomaji": "uchi-makikomi",
       "japanese": "内巻込",
       "kana": "うちまきこみ",
-      "aliases": ["uchi makikomi"]
+      "aliases": [
+        "uchi makikomi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "kani-basami",
@@ -737,14 +1413,29 @@
       "japaneseRomaji": "kani-basami",
       "japanese": "蟹挟",
       "kana": "かにばさみ",
-      "aliases": ["kani basami"]
+      "aliases": [
+        "kani basami"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "kawazu-gake",
@@ -753,14 +1444,29 @@
       "japaneseRomaji": "kawazu-gake",
       "japanese": "河津掛",
       "kana": "かわづがけ",
-      "aliases": ["kawazu gake"]
+      "aliases": [
+        "kawazu gake"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "o-soto-makikomi",
@@ -769,14 +1475,29 @@
       "japaneseRomaji": "o-soto-makikomi",
       "japanese": "大外巻込",
       "kana": "おおそとまきこみ",
-      "aliases": ["osoto makikomi", "o soto makikomi"]
+      "aliases": [
+        "osoto makikomi",
+        "o soto makikomi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "uchi-mata-makikomi",
@@ -785,14 +1506,28 @@
       "japaneseRomaji": "uchi-mata-makikomi",
       "japanese": "内股巻込",
       "kana": "うちまたまきこみ",
-      "aliases": ["uchi mata makikomi"]
+      "aliases": [
+        "uchi mata makikomi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "harai-makikomi",
@@ -801,14 +1536,28 @@
       "japaneseRomaji": "harai-makikomi",
       "japanese": "払巻込",
       "kana": "はらいまきこみ",
-      "aliases": ["harai makikomi"]
+      "aliases": [
+        "harai makikomi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "ko-uchi-makikomi",
@@ -817,14 +1566,29 @@
       "japaneseRomaji": "ko-uchi-makikomi",
       "japanese": "小内巻込",
       "kana": "こうちまきこみ",
-      "aliases": ["ko uchi makikomi", "kouchi makikomi"]
+      "aliases": [
+        "ko uchi makikomi",
+        "kouchi makikomi"
+      ]
     },
-    "classifications": ["nage-waza", "yoko-sutemi-waza", "sutemi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "yoko-sutemi-waza",
+      "sutemi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata"
+    ]
   },
   {
     "slug": "kesa-gatame",
@@ -833,13 +1597,25 @@
       "japaneseRomaji": "kesa-gatame",
       "japanese": "袈裟固",
       "kana": "けさがため",
-      "aliases": ["kesa gatame"]
+      "aliases": [
+        "kesa gatame"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "kuzure-kesa-gatame",
@@ -848,13 +1624,27 @@
       "japaneseRomaji": "kuzure-kesa-gatame",
       "japanese": "崩袈裟固",
       "kana": "くずれけさがため",
-      "aliases": ["kuzure kesa gatame", "side control", "modified side control"]
+      "aliases": [
+        "kuzure kesa gatame",
+        "side control",
+        "modified side control"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ushiro-kesa-gatame",
@@ -863,13 +1653,25 @@
       "japaneseRomaji": "ushiro-kesa-gatame",
       "japanese": "後袈裟固",
       "kana": "うしろけさがため",
-      "aliases": ["ushiro kesa gatame"]
+      "aliases": [
+        "ushiro kesa gatame"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "kata-gatame",
@@ -878,13 +1680,28 @@
       "japaneseRomaji": "kata-gatame",
       "japanese": "肩固",
       "kana": "かたがため",
-      "aliases": ["kata gatame", "arm triangle hold", "side control", "arm triangle hold from side control"]
+      "aliases": [
+        "kata gatame",
+        "arm triangle hold",
+        "side control",
+        "arm triangle hold from side control"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "kami-shiho-gatame",
@@ -893,14 +1710,32 @@
       "japaneseRomaji": "kami-shiho-gatame",
       "japanese": "上四方固",
       "kana": "かみしほうがため",
-      "aliases": ["kami shiho gatame", "north-south", "north south", "north-south hold", "north-south position"]
+      "aliases": [
+        "kami shiho gatame",
+        "north-south",
+        "north south",
+        "north-south hold",
+        "north-south position"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["north-south"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "north-south"
+    ]
   },
   {
     "slug": "kuzure-kami-shiho-gatame",
@@ -909,14 +1744,32 @@
       "japaneseRomaji": "kuzure-kami-shiho-gatame",
       "japanese": "崩上四方固",
       "kana": "くずれかみしほうがため",
-      "aliases": ["kuzure kami shiho gatame", "modified north-south", "north south", "north-south hold", "north-south position"]
+      "aliases": [
+        "kuzure kami shiho gatame",
+        "modified north-south",
+        "north south",
+        "north-south hold",
+        "north-south position"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["north-south"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "north-south"
+    ]
   },
   {
     "slug": "yoko-shiho-gatame",
@@ -925,13 +1778,28 @@
       "japaneseRomaji": "yoko-shiho-gatame",
       "japanese": "横四方固",
       "kana": "よこしほうがため",
-      "aliases": ["yoko shiho gatame", "side control", "side-control hold", "cross-side hold"]
+      "aliases": [
+        "yoko shiho gatame",
+        "side control",
+        "side-control hold",
+        "cross-side hold"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "tate-shiho-gatame",
@@ -940,14 +1808,29 @@
       "japaneseRomaji": "tate-shiho-gatame",
       "japanese": "縦四方固",
       "kana": "たてしほうがため",
-      "aliases": ["tate shiho gatame", "mount hold"]
+      "aliases": [
+        "tate shiho gatame",
+        "mount hold"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["mount"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "mount"
+    ]
   },
   {
     "slug": "uki-gatame",
@@ -956,13 +1839,25 @@
       "japaneseRomaji": "uki-gatame",
       "japanese": "浮固",
       "kana": "うきがため",
-      "aliases": ["uki gatame"]
+      "aliases": [
+        "uki gatame"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ura-gatame",
@@ -971,13 +1866,25 @@
       "japaneseRomaji": "ura-gatame",
       "japanese": "裏固",
       "kana": "うらがため",
-      "aliases": ["ura gatame"]
+      "aliases": [
+        "ura gatame"
+      ]
     },
-    "classifications": ["katame-waza", "osaekomi-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "nami-juji-jime",
@@ -986,14 +1893,28 @@
       "japaneseRomaji": "nami-juji-jime",
       "japanese": "並十字絞",
       "kana": "なみじゅうじじめ",
-      "aliases": ["nami juji jime"]
+      "aliases": [
+        "nami juji jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["mount", "guard"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "mount",
+      "guard"
+    ]
   },
   {
     "slug": "gyaku-juji-jime",
@@ -1002,14 +1923,28 @@
       "japaneseRomaji": "gyaku-juji-jime",
       "japanese": "逆十字絞",
       "kana": "ぎゃくじゅうじじめ",
-      "aliases": ["gyaku juji jime"]
+      "aliases": [
+        "gyaku juji jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["mount", "guard"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "mount",
+      "guard"
+    ]
   },
   {
     "slug": "kata-juji-jime",
@@ -1018,14 +1953,28 @@
       "japaneseRomaji": "kata-juji-jime",
       "japanese": "片十字絞",
       "kana": "かたじゅうじじめ",
-      "aliases": ["kata juji jime"]
+      "aliases": [
+        "kata juji jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["mount", "guard"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "mount",
+      "guard"
+    ]
   },
   {
     "slug": "okuri-eri-jime",
@@ -1034,13 +1983,24 @@
       "japaneseRomaji": "okuri-eri-jime",
       "japanese": "送襟絞",
       "kana": "おくりえりじめ",
-      "aliases": ["okuri eri jime"]
+      "aliases": [
+        "okuri eri jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "kataha-jime",
@@ -1049,13 +2009,24 @@
       "japaneseRomaji": "kataha-jime",
       "japanese": "片羽絞",
       "kana": "かたはじめ",
-      "aliases": ["kataha jime"]
+      "aliases": [
+        "kataha jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "katate-jime",
@@ -1064,13 +2035,24 @@
       "japaneseRomaji": "katate-jime",
       "japanese": "片手絞",
       "kana": "かたてじめ",
-      "aliases": ["katate jime"]
+      "aliases": [
+        "katate jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ryote-jime",
@@ -1079,13 +2061,24 @@
       "japaneseRomaji": "ryote-jime",
       "japanese": "両手絞",
       "kana": "りょうてじめ",
-      "aliases": ["ryote jime"]
+      "aliases": [
+        "ryote jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "sode-guruma-jime",
@@ -1094,14 +2087,28 @@
       "japaneseRomaji": "sode-guruma-jime",
       "japanese": "袖車絞",
       "kana": "そでぐるまじめ",
-      "aliases": ["sode guruma jime", "ezekiel choke"]
+      "aliases": [
+        "sode guruma jime",
+        "ezekiel choke"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["mount"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "mount"
+    ]
   },
   {
     "slug": "tsukkomi-jime",
@@ -1110,14 +2117,28 @@
       "japaneseRomaji": "tsukkomi-jime",
       "japanese": "突込絞",
       "kana": "つっこみじめ",
-      "aliases": ["tsukkomi jime"]
+      "aliases": [
+        "tsukkomi jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["guard", "collar-sleeve-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "collar-sleeve-control"
+    ]
   },
   {
     "slug": "sankaku-jime",
@@ -1126,14 +2147,28 @@
       "japaneseRomaji": "sankaku-jime",
       "japanese": "三角絞",
       "kana": "さんかくじめ",
-      "aliases": ["sankaku jime"]
+      "aliases": [
+        "sankaku jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["guard", "collar-sleeve-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "collar-sleeve-control"
+    ]
   },
   {
     "slug": "do-jime",
@@ -1142,13 +2177,24 @@
       "japaneseRomaji": "do-jime",
       "japanese": "胴絞",
       "kana": "どうじめ",
-      "aliases": ["do jime"]
+      "aliases": [
+        "do jime"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "hadaka-jime",
@@ -1157,13 +2203,25 @@
       "japaneseRomaji": "hadaka-jime",
       "japanese": "裸絞",
       "kana": "はだかじめ",
-      "aliases": ["rear naked choke"]
+      "aliases": [
+        "rear naked choke"
+      ]
     },
-    "classifications": ["katame-waza", "shime-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "transition"],
+    "classifications": [
+      "katame-waza",
+      "shime-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ude-garami",
@@ -1172,14 +2230,28 @@
       "japaneseRomaji": "ude-garami",
       "japanese": "腕緘",
       "kana": "うでがらみ",
-      "aliases": ["figure-four arm lock"]
+      "aliases": [
+        "figure-four arm lock"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["mount"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "mount"
+    ]
   },
   {
     "slug": "ude-hishigi-juji-gatame",
@@ -1188,14 +2260,31 @@
       "japaneseRomaji": "ude-hishigi-juji-gatame",
       "japanese": "腕挫十字固",
       "kana": "うでひしぎじゅうじがため",
-      "aliases": ["juji gatame", "armbar"]
+      "aliases": [
+        "juji gatame",
+        "armbar"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["mount", "guard", "collar-sleeve-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "mount",
+      "guard",
+      "collar-sleeve-control"
+    ]
   },
   {
     "slug": "ude-hishigi-ude-gatame",
@@ -1204,14 +2293,29 @@
       "japaneseRomaji": "ude-hishigi-ude-gatame",
       "japanese": "腕挫腕固",
       "kana": "うでひしぎうでがため",
-      "aliases": ["ude hishigi ude gatame"]
+      "aliases": [
+        "ude hishigi ude gatame"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["guard", "collar-sleeve-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "collar-sleeve-control"
+    ]
   },
   {
     "slug": "ude-hishigi-hiza-gatame",
@@ -1220,14 +2324,29 @@
       "japaneseRomaji": "ude-hishigi-hiza-gatame",
       "japanese": "腕挫膝固",
       "kana": "うでひしぎひざがため",
-      "aliases": ["ude hishigi hiza gatame"]
+      "aliases": [
+        "ude hishigi hiza gatame"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["guard", "collar-sleeve-control"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "collar-sleeve-control"
+    ]
   },
   {
     "slug": "ude-hishigi-waki-gatame",
@@ -1236,13 +2355,25 @@
       "japaneseRomaji": "ude-hishigi-waki-gatame",
       "japanese": "腕挫腋固",
       "kana": "うでひしぎわきがため",
-      "aliases": ["waki gatame"]
+      "aliases": [
+        "waki gatame"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ude-hishigi-hara-gatame",
@@ -1251,13 +2382,25 @@
       "japaneseRomaji": "ude-hishigi-hara-gatame",
       "japanese": "腕挫腹固",
       "kana": "うでひしぎはらがため",
-      "aliases": ["ude hishigi hara gatame"]
+      "aliases": [
+        "ude hishigi hara gatame"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ude-hishigi-ashi-gatame",
@@ -1266,13 +2409,25 @@
       "japaneseRomaji": "ude-hishigi-ashi-gatame",
       "japanese": "腕挫脚固",
       "kana": "うでひしぎあしがため",
-      "aliases": ["ude hishigi ashi gatame"]
+      "aliases": [
+        "ude hishigi ashi gatame"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ude-hishigi-te-gatame",
@@ -1281,13 +2436,25 @@
       "japaneseRomaji": "ude-hishigi-te-gatame",
       "japanese": "腕挫手固",
       "kana": "うでひしぎてがため",
-      "aliases": ["ude hishigi te gatame"]
+      "aliases": [
+        "ude hishigi te gatame"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ude-hishigi-sankaku-gatame",
@@ -1296,13 +2463,25 @@
       "japaneseRomaji": "ude-hishigi-sankaku-gatame",
       "japanese": "腕挫三角固",
       "kana": "うでひしぎさんかくがため",
-      "aliases": ["ude hishigi sankaku gatame"]
+      "aliases": [
+        "ude hishigi sankaku gatame"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "ashi-garami",
@@ -1311,13 +2490,25 @@
       "japaneseRomaji": "ashi-garami",
       "japanese": "足緘",
       "kana": "あしがらみ",
-      "aliases": ["ashi garami"]
+      "aliases": [
+        "ashi garami"
+      ]
     },
-    "classifications": ["katame-waza", "kansetsu-waza"],
-    "domains": ["ground"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "katame-waza",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   },
   {
     "slug": "kote-gaeshi",
@@ -1326,13 +2517,26 @@
       "japaneseRomaji": "kote-gaeshi",
       "japanese": "小手返",
       "kana": "こてがえし",
-      "aliases": ["wrist lock", "wrist turn throw"]
+      "aliases": [
+        "wrist lock",
+        "wrist turn throw"
+      ]
     },
-    "classifications": ["self-defense", "kansetsu-waza"],
-    "domains": ["standing"],
-    "roles": ["attack", "counter"],
+    "classifications": [
+      "self-defense",
+      "kansetsu-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack",
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "slug": "o-soto-gari",
@@ -1341,14 +2545,31 @@
       "japaneseRomaji": "o-soto-gari",
       "japanese": "大外刈",
       "kana": "おおそとがり",
-      "aliases": ["osoto gari", "o soto gari"]
+      "aliases": [
+        "osoto gari",
+        "o soto gari"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "o-soto-gaeshi",
@@ -1357,14 +2578,32 @@
       "japaneseRomaji": "o-soto-gaeshi",
       "japanese": "大外返",
       "kana": "おおそとがえし",
-      "aliases": ["osoto gaeshi", "o soto gaeshi", "o-soto-gari counter"]
+      "aliases": [
+        "osoto gaeshi",
+        "o soto gaeshi",
+        "o-soto-gari counter"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "o-uchi-gari",
@@ -1373,14 +2612,29 @@
       "japaneseRomaji": "o-uchi-gari",
       "japanese": "大内刈",
       "kana": "おおうちがり",
-      "aliases": ["ouchi gari"]
+      "aliases": [
+        "ouchi gari"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ]
   },
   {
     "slug": "ko-uchi-gari",
@@ -1389,14 +2643,29 @@
       "japaneseRomaji": "ko-uchi-gari",
       "japanese": "小内刈",
       "kana": "こうちがり",
-      "aliases": ["kouchi gari"]
+      "aliases": [
+        "kouchi gari"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ]
   },
   {
     "slug": "seoi-nage",
@@ -1405,14 +2674,31 @@
       "japaneseRomaji": "seoi-nage",
       "japanese": "背負投",
       "kana": "せおいなげ",
-      "aliases": ["seoi nage"]
+      "aliases": [
+        "seoi nage"
+      ]
     },
-    "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza",
+      "turn-throw"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "side-control-frame-shrimp-escape",
@@ -1421,29 +2707,63 @@
       "japaneseRomaji": "yoko-shiho-gatame no nogare-kata",
       "japanese": "横四方固の逃れ方",
       "kana": "よこしほうがためののがれかた",
-      "aliases": ["side control escape", "shrimp escape", "hip escape from side control", "ebi escape from side control", "yoko shiho gatame no nogare-kata", "nogare-kata"]
+      "aliases": [
+        "side control escape",
+        "shrimp escape",
+        "hip escape from side control",
+        "ebi escape from side control",
+        "yoko shiho gatame no nogare-kata",
+        "nogare-kata"
+      ]
     },
-    "classifications": ["katame-waza", "ne-waza-escape"],
-    "domains": ["ground"],
-    "roles": ["escape", "transition"],
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "transition"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Create a defensive frame to interrupt chest pressure and redirect top control away from the center line.",
-        "directionHints": ["left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "tsukuri": {
         "summary": "Turn onto the side, make hip space, and insert knee or shin as a wedge.",
-        "sourceIds": ["local-practice-advisory-v1"]
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "kake": {
         "summary": "Recover guard, come to knees, or recompose to a safer defensive position.",
-        "directionHints": ["back", "left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       }
     },
-    "sourceIds": ["local-practice-advisory-v1"],
-    "gripContextSlugs": ["side-control", "frame-control", "guard"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "side-control",
+      "frame-control",
+      "guard"
+    ]
   },
   {
     "slug": "side-control-underhook-hip-escape",
@@ -1452,29 +2772,63 @@
       "japaneseRomaji": "yoko-shiho-gatame no nogare-kata",
       "japanese": "横四方固の逃れ方",
       "kana": "よこしほうがためののがれかた",
-      "aliases": ["underhook escape from side control", "turn-in escape", "come-up escape from side control", "belt-control side control escape", "yoko shiho gatame no nogare-kata", "nogare-kata"]
+      "aliases": [
+        "underhook escape from side control",
+        "turn-in escape",
+        "come-up escape from side control",
+        "belt-control side control escape",
+        "yoko shiho gatame no nogare-kata",
+        "nogare-kata"
+      ]
     },
-    "classifications": ["katame-waza", "ne-waza-escape"],
-    "domains": ["ground"],
-    "roles": ["escape", "transition"],
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "transition"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Use an underhook, far-hip, or belt connection to prevent the top player from flattening the shoulders.",
-        "directionHints": ["left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "tsukuri": {
         "summary": "Turn toward uke, bring the near elbow inside, and connect the hips under the top pressure.",
-        "sourceIds": ["local-practice-advisory-v1"]
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "kake": {
         "summary": "Come to knees, reverse, or recover guard using the hip-control connection.",
-        "directionHints": ["front", "left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "front",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       }
     },
-    "sourceIds": ["local-practice-advisory-v1"],
-    "gripContextSlugs": ["side-control", "underhook-hip-control", "over-back-belt-control"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "side-control",
+      "underhook-hip-control",
+      "over-back-belt-control"
+    ]
   },
   {
     "slug": "mount-bridge-and-roll-escape",
@@ -1483,29 +2837,60 @@
       "japaneseRomaji": "tate-shiho-gatame no nogare-kata",
       "japanese": "縦四方固の逃れ方",
       "kana": "たてしほうがためののがれかた",
-      "aliases": ["mount escape", "upa escape", "bridge and roll", "tate shiho gatame escape", "tate shiho gatame no nogare-kata", "nogare-kata"]
+      "aliases": [
+        "mount escape",
+        "upa escape",
+        "bridge and roll",
+        "tate shiho gatame escape",
+        "tate shiho gatame no nogare-kata",
+        "nogare-kata"
+      ]
     },
-    "classifications": ["katame-waza", "ne-waza-escape"],
-    "domains": ["ground"],
-    "roles": ["escape", "transition"],
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "transition"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Trap one side of uke and load their weight onto the blocked post.",
-        "directionHints": ["left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "tsukuri": {
         "summary": "Bridge through the hips while keeping uke from posting with the trapped arm or leg.",
-        "sourceIds": ["local-practice-advisory-v1"]
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "kake": {
         "summary": "Roll over the trapped side and transition to top or guard-safe posture.",
-        "directionHints": ["left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       }
     },
-    "sourceIds": ["local-practice-advisory-v1"],
-    "gripContextSlugs": ["mount"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "mount"
+    ]
   },
   {
     "slug": "mount-elbow-knee-escape",
@@ -1514,29 +2899,64 @@
       "japaneseRomaji": "tate-shiho-gatame no nogare-kata",
       "japanese": "縦四方固の逃れ方",
       "kana": "たてしほうがためののがれかた",
-      "aliases": ["mount escape", "elbow knee escape", "knee elbow escape", "guard recovery from mount", "tate shiho gatame no nogare-kata", "nogare-kata"]
+      "aliases": [
+        "mount escape",
+        "elbow knee escape",
+        "knee elbow escape",
+        "guard recovery from mount",
+        "tate shiho gatame no nogare-kata",
+        "nogare-kata"
+      ]
     },
-    "classifications": ["katame-waza", "ne-waza-escape"],
-    "domains": ["ground"],
-    "roles": ["escape", "transition"],
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "transition"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Frame against uke and shift their weight enough to make knee space.",
-        "directionHints": ["back", "left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "tsukuri": {
         "summary": "Connect elbow to knee, turn onto the side, and slide one knee inside the mount line.",
-        "sourceIds": ["local-practice-advisory-v1"]
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "kake": {
         "summary": "Recover half guard or full guard while maintaining frames against renewed pressure.",
-        "directionHints": ["back", "left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       }
     },
-    "sourceIds": ["local-practice-advisory-v1"],
-    "gripContextSlugs": ["mount", "frame-control", "guard"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "mount",
+      "frame-control",
+      "guard"
+    ]
   },
   {
     "slug": "north-south-frame-turn-in-escape",
@@ -1545,29 +2965,62 @@
       "japaneseRomaji": "kami-shiho-gatame no nogare-kata",
       "japanese": "上四方固の逃れ方",
       "kana": "かみしほうがためののがれかた",
-      "aliases": ["north-south escape", "north south escape", "kami shiho gatame escape", "kami shiho gatame no nogare-kata", "nogare-kata"]
+      "aliases": [
+        "north-south escape",
+        "north south escape",
+        "kami shiho gatame escape",
+        "kami shiho gatame no nogare-kata",
+        "nogare-kata"
+      ]
     },
-    "classifications": ["katame-waza", "ne-waza-escape"],
-    "domains": ["ground"],
-    "roles": ["escape", "transition"],
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "transition"
+    ],
     "phases": {
       "kuzushi": {
         "summary": "Frame against uke to keep the shoulders from being pinned flat and turn the head-side pressure off the center line.",
-        "directionHints": ["left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "tsukuri": {
         "summary": "Bring the elbows inside, turn toward a side, and make enough hip angle to avoid being followed head-to-head.",
-        "sourceIds": ["local-practice-advisory-v1"]
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       },
       "kake": {
         "summary": "Recover guard, turn to knees, or recompose to a side-control-safe frame before uke settles the hold again.",
-        "directionHints": ["back", "left", "right"],
-        "sourceIds": ["local-practice-advisory-v1"]
+        "directionHints": [
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
       }
     },
-    "sourceIds": ["local-practice-advisory-v1"],
-    "gripContextSlugs": ["north-south", "frame-control", "guard"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "north-south",
+      "frame-control",
+      "guard"
+    ]
   },
   {
     "slug": "de-ashi-harai",
@@ -1576,14 +3029,32 @@
       "japaneseRomaji": "de-ashi-harai",
       "japanese": "出足払",
       "kana": "であしはらい",
-      "aliases": ["de ashi harai", "deashi harai", "de-ashi-barai"]
+      "aliases": [
+        "de ashi harai",
+        "deashi harai",
+        "de-ashi-barai"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "tsubame-gaeshi",
@@ -1592,14 +3063,31 @@
       "japaneseRomaji": "tsubame-gaeshi",
       "japanese": "燕返",
       "kana": "つばめがえし",
-      "aliases": ["tsubame gaeshi", "de-ashi-harai counter"]
+      "aliases": [
+        "tsubame gaeshi",
+        "de-ashi-harai counter"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "o-uchi-gaeshi",
@@ -1608,14 +3096,32 @@
       "japaneseRomaji": "o-uchi-gaeshi",
       "japanese": "大内返",
       "kana": "おおうちがえし",
-      "aliases": ["ouchi gaeshi", "o uchi gaeshi", "o-uchi-gari counter"]
+      "aliases": [
+        "ouchi gaeshi",
+        "o uchi gaeshi",
+        "o-uchi-gari counter"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "uchi-mata",
@@ -1624,14 +3130,30 @@
       "japaneseRomaji": "uchi-mata",
       "japanese": "内股",
       "kana": "うちまた",
-      "aliases": ["uchi mata"]
+      "aliases": [
+        "uchi mata"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["attack"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "uchi-mata-gaeshi",
@@ -1640,14 +3162,31 @@
       "japaneseRomaji": "uchi-mata-gaeshi",
       "japanese": "内股返",
       "kana": "うちまたがえし",
-      "aliases": ["uchi mata gaeshi", "uchi-mata counter"]
+      "aliases": [
+        "uchi mata gaeshi",
+        "uchi-mata counter"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "hane-goshi-gaeshi",
@@ -1656,14 +3195,31 @@
       "japaneseRomaji": "hane-goshi-gaeshi",
       "japanese": "跳腰返",
       "kana": "はねごしがえし",
-      "aliases": ["hane goshi gaeshi", "hane-goshi counter"]
+      "aliases": [
+        "hane goshi gaeshi",
+        "hane-goshi counter"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   },
   {
     "slug": "harai-goshi-gaeshi",
@@ -1672,13 +3228,97 @@
       "japaneseRomaji": "harai-goshi-gaeshi",
       "japanese": "払腰返",
       "kana": "はらいごしがえし",
-      "aliases": ["harai goshi gaeshi", "harai-goshi counter"]
+      "aliases": [
+        "harai goshi gaeshi",
+        "harai-goshi counter"
+      ]
     },
-    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
-    "domains": ["standing"],
-    "roles": ["counter"],
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "counter"
+    ],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"],
-    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
+  },
+  {
+    "slug": "eri-seoi-nage",
+    "names": {
+      "english": "Lapel shoulder throw",
+      "japaneseRomaji": "eri-seoi-nage",
+      "japanese": "襟背負投",
+      "kana": "えりせおいなげ",
+      "aliases": [
+        "eri seoi nage",
+        "reverse seoi nage",
+        "korean seoi nage",
+        "reverse / korean-style seoi-nage",
+        "korean-style seoi-nage"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "te-waza",
+      "tachi-waza",
+      "turn-throw"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "mechanicsTheme": "Lapel-based shoulder-throw family often described in English as reverse or Korean seoi-nage. It is modeled as its own searchable technique because the grip, turn, and arm-entanglement risk differ enough from standard seoi-nage to matter in lookup and safety views.",
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal while controlling the lapel-side upper body connection.",
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn under the controlled lapel and arm line while avoiding a trapped-arm or shoulder-locking finish.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Project uke forward over the shoulder line with enough release and rotation to avoid arm entanglement.",
+        "directionHints": [
+          "front",
+          "counter-clockwise",
+          "clockwise"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
   }
 ]

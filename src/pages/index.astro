@@ -97,6 +97,11 @@ const cards = browsableTechniques
     const legalVariantCount = variantLegalityRows.filter((row) => row.legality?.status === "legal").length;
     const bannedVariantCount = variantLegalityRows.filter((row) => row.legality?.status === "illegal").length;
     const restrictedVariantCount = variantLegalityRows.filter((row) => row.legality?.status === "restricted").length;
+    const hasDropEntry = variants.some((variant) => (
+      variant.actionFeatures?.includes("drop-entry") ||
+      variant.modifiers?.includes("drop-entry") ||
+      variant.modifiers?.includes("drop")
+    )) || technique.names.english.toLowerCase().includes("drop") || technique.names.aliases.some((alias) => alias.toLowerCase().includes("drop"));
     const classicBanned = variantLegalityRows.some((row) => (
       row.legality?.status === "illegal" &&
       row.variant.modifiers.some((modifier) => ["classic", "traditional"].includes(modifier))
@@ -106,9 +111,13 @@ const cards = browsableTechniques
     const baseRestricted = baseLegality?.status === "restricted";
     const hasCompetitionLegalRecord = baseLegal || legalVariantCount > 0;
     const hasMixedLegality = hasCompetitionLegalRecord && (bannedVariantCount > 0 || restrictedVariantCount > 0 || baseRestricted);
-    const advisories = variants.flatMap((variant) => getSafetyAdvisories(variant.slug));
+    const advisories = [
+      ...getSafetyAdvisories(technique.slug),
+      ...variants.flatMap((variant) => getSafetyAdvisories(variant.slug))
+    ];
     const filterFlags = [
       variants.length > 0 && "has-variants",
+      hasDropEntry && "drop-entry",
       hasCompetitionLegalRecord && "competition-legal",
       (bannedVariantCount > 0 || baseIllegal) && "banned-variant",
       classicBanned && "classic-banned",
@@ -131,6 +140,7 @@ const cards = browsableTechniques
       legalVariantCount,
       bannedVariantCount,
       restrictedVariantCount,
+      hasDropEntry,
       classicBanned,
       hasMixedLegality,
       advisories,
@@ -144,6 +154,11 @@ const cards = browsableTechniques
         technique.names.kana,
         ...technique.names.aliases,
         ...technique.classifications,
+        ...variants.flatMap((variant) => [
+          variant.name,
+          ...variant.modifiers,
+          ...(variant.actionFeatures ?? [])
+        ]),
         ...gripContextSlugs,
         ...gripContextLabels
       ].join(" ").toLowerCase()
@@ -245,6 +260,10 @@ const cards = browsableTechniques
               <input type="checkbox" value="has-variants" data-status-toggle />
               <span>Has variants</span>
             </label>
+            <label class="toggle">
+              <input type="checkbox" value="drop-entry" data-status-toggle />
+              <span>Drop entry</span>
+            </label>
             <label class="toggle success-toggle">
               <input type="checkbox" value="competition-legal" data-status-toggle />
               <span>Competition legal</span>
@@ -297,6 +316,7 @@ const cards = browsableTechniques
       legalVariantCount,
       bannedVariantCount,
       restrictedVariantCount,
+      hasDropEntry,
       classicBanned,
       hasMixedLegality,
       advisories,
@@ -329,6 +349,7 @@ const cards = browsableTechniques
           {technique.roles.map((role) => <span class="tag">{role}</span>)}
           {gripContextLabels.map((label) => <span class="tag">{label}</span>)}
           {variants.length > 0 && <span class="tag">{variants.length} variants</span>}
+          {hasDropEntry && <span class="tag">drop entry</span>}
           {baseLegal && <span class="tag success">competition legal</span>}
           {legalVariantCount > 0 && <span class="tag success">{legalVariantCount} legal variant{legalVariantCount === 1 ? "" : "s"}</span>}
           {classicBanned && <span class="tag danger">classic banned</span>}

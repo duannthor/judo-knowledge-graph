@@ -57,11 +57,12 @@ test("koshi-waza catalog chunk contains the ten hip throws with kana", () => {
   assert.ok(throws.every((technique) => technique.names.kana));
 });
 
-test("te-waza catalog chunk contains the sixteen hand throws with kana", () => {
+test("te-waza catalog chunk contains the hand throws with kana", () => {
   const throws = getByGrouping("te-waza");
   const slugs = throws.map((technique) => technique.slug).sort();
 
   assert.deepEqual(slugs, [
+    "eri-seoi-nage",
     "ippon-seoi-nage",
     "kata-guruma",
     "kibisu-gaeshi",
@@ -434,6 +435,70 @@ test("ura-nage can be competition legal while carrying practice caution", () => 
 
   const advisories = getSafetyAdvisories("ura-nage-standard", "randori");
   assert.ok(advisories.some((advisory) => advisory.level === "avoid-in-randori"));
+});
+
+test("spine-risk sacrifice throws carry practice safety advisories", () => {
+  const sumiGaeshi = getSafetyAdvisories("sumi-gaeshi", "randori");
+  const hikikomiGaeshi = getSafetyAdvisories("hikikomi-gaeshi", "drilling");
+
+  assert.ok(sumiGaeshi.some((advisory) => (
+    advisory.level === "supervision-only" &&
+    advisory.reasons.includes("spine-risk")
+  )));
+  assert.ok(hikikomiGaeshi.some((advisory) => (
+    advisory.level === "supervision-only" &&
+    advisory.reasons.includes("spine-risk")
+  )));
+});
+
+test("trapped-arm and reverse seoi-nage risks are represented separately from legality", () => {
+  const baseAdvisories = getSafetyAdvisories("seoi-nage", "randori");
+  const reverseAdvisories = getSafetyAdvisories("eri-seoi-nage", "randori");
+
+  assert.ok(isLegal("seoi-nage"));
+  assert.equal(getLegality("eri-seoi-nage").status, "penalty-risk");
+  assert.ok(baseAdvisories.some((advisory) => advisory.reasons.includes("trapped-arm-risk")));
+  assert.ok(reverseAdvisories.some((advisory) => (
+    advisory.level === "avoid-in-randori" &&
+    advisory.reasons.includes("arm-lock-risk")
+  )));
+});
+
+test("eri-seoi-nage is searchable as its own named reverse and Korean seoi technique", () => {
+  const technique = getTechnique("eri-seoi-nage");
+
+  assert.equal(technique.names.japaneseRomaji, "eri-seoi-nage");
+  assert.ok(technique.names.aliases.includes("reverse seoi nage"));
+  assert.ok(technique.names.aliases.includes("korean seoi nage"));
+  assert.ok(technique.classifications.includes("te-waza"));
+});
+
+test("drop-entry shoulder variants are legal searchable standing variants", () => {
+  const seoiDrops = getVariantsFor("seoi-nage", { legalOnly: true });
+  const ipponDrops = getVariantsFor("ippon-seoi-nage", { legalOnly: true });
+  const sodeDrops = getVariantsFor("sode-tsurikomi-goshi", { legalOnly: true });
+
+  assert.ok(seoiDrops.some((variant) => variant.slug === "seoi-nage-drop-entry"));
+  assert.ok(ipponDrops.some((variant) => variant.slug === "ippon-seoi-nage-drop-entry"));
+  assert.ok(sodeDrops.some((variant) => variant.slug === "sode-tsurikomi-goshi-drop-entry"));
+  assert.equal(getLegality("seoi-nage-drop-entry").status, "legal");
+  assert.ok(getSafetyAdvisories("seoi-nage-drop-entry", "randori").some((advisory) => advisory.reasons.includes("drop-entry")));
+});
+
+test("forbidden scissors, entanglements, body scissors, and wrist locks carry safety bans", () => {
+  for (const slug of ["kani-basami", "kawazu-gake", "ashi-garami", "do-jime", "kote-gaeshi"]) {
+    const advisories = getSafetyAdvisories(slug, "competition");
+
+    assert.ok(advisories.some((advisory) => advisory.level === "banned-in-competition"));
+  }
+});
+
+test("chokes and elbow locks carry controlled-application safety advisories", () => {
+  const chokeAdvisories = getSafetyAdvisories("hadaka-jime", "randori");
+  const elbowLockAdvisories = getSafetyAdvisories("ude-hishigi-juji-gatame", "drilling");
+
+  assert.ok(chokeAdvisories.some((advisory) => advisory.reasons.includes("shime-waza")));
+  assert.ok(elbowLockAdvisories.some((advisory) => advisory.reasons.includes("elbow-lock-risk")));
 });
 
 test("combo search distinguishes same-direction pressure from alternating-direction reaction", () => {

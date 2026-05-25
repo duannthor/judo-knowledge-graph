@@ -30,6 +30,7 @@ const classificationLabels = technique.classifications.map((slug) => {
 });
 
 const baseLegality = getLegality(technique.slug);
+const baseAdvisories = getSafetyAdvisories(technique.slug);
 
 const variantRows = variants
   .filter((variant) => variant.baseTechniqueSlug === technique.slug)
@@ -38,6 +39,18 @@ const variantRows = variants
     legality: getLegality(variant.slug),
     advisories: getSafetyAdvisories(variant.slug)
   }));
+const advisoryRows = [
+  ...baseAdvisories.map((advisory) => ({
+    advisory,
+    label: technique.names.japaneseRomaji
+  })),
+  ...variantRows.flatMap(({ variant, advisories }) => (
+    advisories.map((advisory) => ({
+      advisory,
+      label: variant.name
+    }))
+  ))
+];
 
 const gripContextSlugSet = new Set(technique.gripContextSlugs ?? []);
 for (const { variant } of variantRows) {
@@ -144,6 +157,7 @@ const sourceRows = technique.sourceIds
           {baseLegality?.status === "legal" && <span class="tag success">competition legal</span>}
           {baseLegality?.status === "illegal" && <span class="tag danger">competition banned</span>}
           {baseLegality?.status === "restricted" && <span class="tag danger">restricted</span>}
+          {baseAdvisories.length > 0 && <span class="tag warning">safety note</span>}
         </div>
       </section>
 
@@ -244,6 +258,29 @@ const sourceRows = technique.sourceIds
     </div>
 
     <aside>
+      <section class="panel" aria-labelledby="safety-title">
+        <h2 id="safety-title">Safety Advisories</h2>
+        {advisoryRows.length > 0 ? (
+          <ul class="list">
+            {advisoryRows.map(({ advisory, label }) => (
+              <li>
+                <strong>{label}</strong>
+                <div class="source">
+                  {advisory.level} · {advisory.context.join(", ")} · {advisory.authority}
+                </div>
+                <div class="tags">
+                  {advisory.reasons.map((reason) => (
+                    <span class={`tag ${advisory.level === "banned-in-competition" ? "danger" : "warning"}`}>{reason}</span>
+                  ))}
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="empty">No safety advisory has been added yet.</p>
+        )}
+      </section>
+
       <section class="panel" aria-labelledby="variants-title">
         <h2 id="variants-title">Variants</h2>
         {variantRows.length > 0 ? (

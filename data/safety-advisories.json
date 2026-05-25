@@ -3,54 +3,1483 @@
     "subjectSlug": "kata-guruma-traditional-leg-grab",
     "subjectType": "variant",
     "level": "banned-in-competition",
-    "context": ["competition"],
-    "reasons": ["leg-grab"],
+    "context": [
+      "competition"
+    ],
+    "reasons": [
+      "leg-grab"
+    ],
     "authority": "official-rule",
-    "sourceIds": ["ijf-sor-2026"]
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
   },
   {
     "subjectSlug": "ura-nage-standard",
     "subjectType": "variant",
     "level": "avoid-in-randori",
-    "context": ["randori"],
-    "reasons": ["dangerous-landing", "high-amplitude-counter"],
+    "context": [
+      "randori"
+    ],
+    "reasons": [
+      "dangerous-landing",
+      "high-amplitude-counter"
+    ],
     "authority": "coach-advisory",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "subjectSlug": "ura-nage-standard",
     "subjectType": "variant",
     "level": "supervision-only",
-    "context": ["drilling"],
-    "reasons": ["dangerous-landing", "ukemi-required"],
+    "context": [
+      "drilling"
+    ],
+    "reasons": [
+      "dangerous-landing",
+      "ukemi-required"
+    ],
     "authority": "coach-advisory",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "subjectSlug": "hadaka-jime-standing",
     "subjectType": "variant",
     "level": "banned-in-competition",
-    "context": ["competition", "randori"],
-    "reasons": ["standing-shime-waza"],
+    "context": [
+      "competition",
+      "randori"
+    ],
+    "reasons": [
+      "standing-shime-waza"
+    ],
     "authority": "official-rule",
-    "sourceIds": ["ijf-sor-2026"]
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
   },
   {
     "subjectSlug": "ude-garami-standing",
     "subjectType": "variant",
     "level": "banned-in-competition",
-    "context": ["competition", "randori"],
-    "reasons": ["standing-kansetsu-waza"],
+    "context": [
+      "competition",
+      "randori"
+    ],
+    "reasons": [
+      "standing-kansetsu-waza"
+    ],
     "authority": "official-rule",
-    "sourceIds": ["ijf-sor-2026"]
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
   },
   {
     "subjectSlug": "kote-gaeshi-wrist-lock",
     "subjectType": "variant",
     "level": "banned-in-competition",
-    "context": ["competition", "randori"],
-    "reasons": ["joint-lock-not-elbow", "wrist-lock"],
+    "context": [
+      "competition",
+      "randori"
+    ],
+    "reasons": [
+      "joint-lock-not-elbow",
+      "wrist-lock"
+    ],
     "authority": "official-rule",
-    "sourceIds": ["ijf-sor-2026"]
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "sumi-gaeshi",
+    "subjectType": "technique",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "spine-risk",
+      "neck-risk",
+      "sacrifice-entry",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "hikikomi-gaeshi",
+    "subjectType": "technique",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "spine-risk",
+      "neck-risk",
+      "sacrifice-entry",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "tawara-gaeshi",
+    "subjectType": "technique",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "dangerous-landing",
+      "high-amplitude-counter",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ura-nage",
+    "subjectType": "technique",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "dangerous-landing",
+      "high-amplitude-counter",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ushiro-goshi",
+    "subjectType": "technique",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "dangerous-landing",
+      "high-amplitude-counter",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "utsuri-goshi",
+    "subjectType": "technique",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "dangerous-landing",
+      "high-amplitude-counter",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "daki-wakare",
+    "subjectType": "technique",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "dangerous-landing",
+      "high-amplitude-counter",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "tani-otoshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "sacrifice-entry",
+      "knee-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "yoko-gake",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "sacrifice-entry",
+      "knee-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "yoko-otoshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "sacrifice-entry",
+      "knee-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "yoko-wakare",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "sacrifice-entry",
+      "knee-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "yoko-guruma",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "sacrifice-entry",
+      "knee-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "uki-waza",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "sacrifice-entry",
+      "knee-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "hane-makikomi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "wraparound-entry",
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "dangerous-landing"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "soto-makikomi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "wraparound-entry",
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "dangerous-landing"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "uchi-makikomi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "wraparound-entry",
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "dangerous-landing"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "o-soto-makikomi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "wraparound-entry",
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "dangerous-landing"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "uchi-mata-makikomi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "wraparound-entry",
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "dangerous-landing"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "harai-makikomi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "wraparound-entry",
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "dangerous-landing"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ko-uchi-makikomi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "wraparound-entry",
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "dangerous-landing"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "seoi-nage",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "arm-lock-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ippon-seoi-nage",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "arm-lock-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "seoi-otoshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "arm-lock-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "sode-tsurikomi-goshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "trapped-arm-risk",
+      "shoulder-risk",
+      "arm-lock-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kata-guruma",
+    "subjectType": "technique",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "neck-risk",
+      "head-control-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kata-guruma-traditional-leg-grab",
+    "subjectType": "variant",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "neck-risk",
+      "head-control-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kata-guruma-modified-no-leg-grab",
+    "subjectType": "variant",
+    "level": "supervision-only",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "neck-risk",
+      "head-control-risk",
+      "dangerous-landing",
+      "ukemi-required"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kani-basami",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition",
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "prohibited-technique",
+      "knee-risk",
+      "dangerous-landing"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "ijf-rules-forbidden-techniques-2023"
+    ]
+  },
+  {
+    "subjectSlug": "kawazu-gake",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition",
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "prohibited-technique",
+      "knee-risk",
+      "dangerous-landing"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "ijf-rules-forbidden-techniques-2023"
+    ]
+  },
+  {
+    "subjectSlug": "morote-gari",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition"
+    ],
+    "reasons": [
+      "leg-grab"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "sukui-nage",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition"
+    ],
+    "reasons": [
+      "leg-grab"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "kuchiki-taoshi",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition"
+    ],
+    "reasons": [
+      "leg-grab"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "kibisu-gaeshi",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition"
+    ],
+    "reasons": [
+      "leg-grab"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "do-jime",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition",
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "prohibited-technique",
+      "spine-risk",
+      "rib-risk"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "ijf-rules-forbidden-techniques-2023"
+    ]
+  },
+  {
+    "subjectSlug": "ashi-garami",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition",
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "prohibited-technique",
+      "joint-lock-not-elbow",
+      "knee-risk"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "ijf-rules-forbidden-techniques-2023"
+    ]
+  },
+  {
+    "subjectSlug": "nami-juji-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "gyaku-juji-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kata-juji-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "okuri-eri-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kataha-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "katate-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ryote-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "sode-guruma-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "tsukkomi-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "sankaku-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "hadaka-jime",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "shime-waza",
+      "tap-awareness",
+      "apply-gradually",
+      "airway-or-blood-choke-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-garami",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-juji-gatame",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-ude-gatame",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-hiza-gatame",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-waki-gatame",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-hara-gatame",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-ashi-gatame",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-te-gatame",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-sankaku-gatame",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "kansetsu-waza",
+      "elbow-lock-risk",
+      "tap-awareness",
+      "apply-gradually"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kote-gaeshi",
+    "subjectType": "technique",
+    "level": "banned-in-competition",
+    "context": [
+      "competition",
+      "randori"
+    ],
+    "reasons": [
+      "joint-lock-not-elbow",
+      "wrist-lock"
+    ],
+    "authority": "official-rule",
+    "sourceIds": [
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "tomoe-nage",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "yama-arashi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "obi-tori-gaeshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "o-soto-gari",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "o-soto-gaeshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "o-uchi-gari",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "o-uchi-gaeshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ko-uchi-gari",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ko-uchi-gaeshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "tsubame-gaeshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "uchi-mata",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "uchi-mata-gaeshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "uchi-mata-sukashi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "hane-goshi-gaeshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "harai-goshi-gaeshi",
+    "subjectType": "technique",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "timing-dependent-entry",
+      "knee-or-ankle-risk",
+      "controlled-follow-through"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "eri-seoi-nage",
+    "subjectType": "technique",
+    "level": "avoid-in-randori",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "trapped-arm-risk",
+      "arm-lock-risk",
+      "shoulder-risk",
+      "dangerous-landing"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "seoi-nage-drop-entry",
+    "subjectType": "variant",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "drop-entry",
+      "knee-risk",
+      "head-dive-risk",
+      "trapped-arm-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ippon-seoi-nage-drop-entry",
+    "subjectType": "variant",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "drop-entry",
+      "knee-risk",
+      "head-dive-risk",
+      "trapped-arm-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "sode-tsurikomi-goshi-drop-entry",
+    "subjectType": "variant",
+    "level": "caution",
+    "context": [
+      "randori",
+      "drilling"
+    ],
+    "reasons": [
+      "drop-entry",
+      "knee-risk",
+      "head-dive-risk",
+      "trapped-arm-risk"
+    ],
+    "authority": "coach-advisory",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   }
 ]

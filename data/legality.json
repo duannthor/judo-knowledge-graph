@@ -1620,5 +1620,72 @@
       "ijf-rules-explanation-2023",
       "ijf-sor-2026"
     ]
+  },
+  {
+    "subjectSlug": "eri-seoi-nage",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "penalty-risk",
+    "reasons": [
+      "dangerous-landing",
+      "joint-lock-risk"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as penalty-risk when the entry traps or hyperextends ukes arm, drives uke head-first, or creates an unsafe landing. Safe legality depends on execution and referee interpretation.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "seoi-nage-drop-entry",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique",
+      "continuous-action"
+    ],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when the drop entry remains a continuous recognizable throw and avoids head-diving, unsafe arm entanglement, or prohibited actions.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ippon-seoi-nage-drop-entry",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique",
+      "continuous-action"
+    ],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when the drop entry remains a continuous recognizable throw and avoids head-diving, unsafe arm entanglement, or prohibited actions.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "sode-tsurikomi-goshi-drop-entry",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique",
+      "continuous-action"
+    ],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when the drop entry remains a continuous recognizable throw and avoids head-diving, unsafe arm entanglement, or prohibited actions.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
   }
 ]
