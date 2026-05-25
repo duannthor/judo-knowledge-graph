@@ -198,5 +198,83 @@
       }
     ],
     "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+  },
+  {
+    "slug": "ko-uchi-gaeshi-evasion-counter",
+    "name": "Ko-uchi-gaeshi evasion counter",
+    "baseTechniqueSlug": "ko-uchi-gaeshi",
+    "modifiers": ["evasion", "counter"],
+    "actionFeatures": ["tachi-waza", "footwork-evasion"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"],
+    "directionSequences": [
+      {
+        "stanceContext": "aiyotsu",
+        "toriSide": "any",
+        "directions": ["back-right"]
+      }
+    ],
+    "mechanics": {
+      "kuzushi": {
+        "summary": "Evade or lighten the attacked foot so uke overcommits into the ko-uchi-gari line.",
+        "directionHints": ["back-right"],
+        "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+      },
+      "tsukuri": {
+        "summary": "Recover the foot position and catch uke as their attacking leg misses or becomes light.",
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "kake": {
+        "summary": "Return the counter along uke's failed attack line, often taking them backward or backward-diagonal.",
+        "directionHints": ["back-right"],
+        "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+      },
+      "directionSequences": [
+        {
+          "stanceContext": "aiyotsu",
+          "toriSide": "any",
+          "directions": ["back-right"]
+        }
+      ]
+    },
+    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+  },
+  {
+    "slug": "ko-uchi-gaeshi-pressure-counter",
+    "name": "Ko-uchi-gaeshi pressure counter",
+    "baseTechniqueSlug": "ko-uchi-gaeshi",
+    "modifiers": ["pressure", "counter"],
+    "actionFeatures": ["tachi-waza", "direct-pressure"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"],
+    "directionSequences": [
+      {
+        "stanceContext": "aiyotsu",
+        "toriSide": "any",
+        "directions": ["back-left"]
+      }
+    ],
+    "mechanics": {
+      "kuzushi": {
+        "summary": "Jam or absorb uke's ko-uchi-gari entry while keeping forward pressure through their center.",
+        "directionHints": ["back-left"],
+        "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+      },
+      "tsukuri": {
+        "summary": "Keep upper-body control and turn uke's attacking pressure into a reversed ko-uchi line.",
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "kake": {
+        "summary": "Drive the counter through uke's compromised base before they can reset the attacking foot.",
+        "directionHints": ["back-left"],
+        "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+      },
+      "directionSequences": [
+        {
+          "stanceContext": "aiyotsu",
+          "toriSide": "any",
+          "directions": ["back-left"]
+        }
+      ]
+    },
+    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
   }
 ]

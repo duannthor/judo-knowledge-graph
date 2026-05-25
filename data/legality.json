@@ -1455,5 +1455,170 @@
       "ijf-sor-2026",
       "local-practice-advisory-v1"
     ]
+  },
+  {
+    "subjectSlug": "o-soto-gari",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "o-soto-gaeshi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "ko-uchi-gaeshi-evasion-counter",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "ko-uchi-gaeshi-pressure-counter",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "de-ashi-harai",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "tsubame-gaeshi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "o-uchi-gaeshi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "uchi-mata",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "uchi-mata-gaeshi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "hane-goshi-gaeshi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "harai-goshi-gaeshi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
   }
 ]

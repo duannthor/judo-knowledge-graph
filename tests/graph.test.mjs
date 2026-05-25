@@ -309,6 +309,40 @@ test("hold-down techniques are linked to practical escape counters", () => {
   assert.ok(tateCounters.some((edge) => edge.toSlug === "mount-elbow-knee-escape"));
 });
 
+test("standing attacks are linked to named counter techniques", () => {
+  const oSotoCounters = getCountersFor("o-soto-gari");
+  const deAshiCounters = getCountersFor("de-ashi-harai");
+  const oUchiCounters = getCountersFor("o-uchi-gari");
+  const koUchiCounters = getCountersFor("ko-uchi-gari");
+  const koUchiRightCounters = getCountersFor("ko-uchi-gari-right", { stanceContext: "aiyotsu", toriSide: "right" });
+  const haneGoshiCounters = getCountersFor("hane-goshi");
+  const haraiGoshiCounters = getCountersFor("harai-goshi");
+  const uchiMataCounters = getCountersFor("uchi-mata");
+
+  assert.ok(oSotoCounters.some((edge) => edge.toSlug === "o-soto-gaeshi"));
+  assert.ok(deAshiCounters.some((edge) => edge.toSlug === "tsubame-gaeshi"));
+  assert.ok(oUchiCounters.some((edge) => edge.toSlug === "o-uchi-gaeshi"));
+  assert.ok(koUchiCounters.some((edge) => edge.toSlug === "ko-uchi-gaeshi-evasion-counter"));
+  assert.ok(koUchiCounters.some((edge) => edge.toSlug === "ko-uchi-gaeshi-pressure-counter"));
+  assert.ok(koUchiRightCounters.some((edge) => edge.toSlug === "ko-uchi-gaeshi-evasion-counter"));
+  assert.ok(koUchiRightCounters.some((edge) => edge.toSlug === "ko-uchi-gaeshi-pressure-counter"));
+  assert.ok(haneGoshiCounters.some((edge) => edge.toSlug === "hane-goshi-gaeshi"));
+  assert.ok(haraiGoshiCounters.some((edge) => edge.toSlug === "harai-goshi-gaeshi"));
+  assert.ok(uchiMataCounters.some((edge) => edge.toSlug === "uchi-mata-sukashi"));
+  assert.ok(uchiMataCounters.some((edge) => edge.toSlug === "uchi-mata-gaeshi"));
+});
+
+test("ko-uchi-gaeshi variants distinguish evasion and pressure counters", () => {
+  const variants = getVariantsFor("ko-uchi-gaeshi");
+  const evasion = variants.find((variant) => variant.slug === "ko-uchi-gaeshi-evasion-counter");
+  const pressure = variants.find((variant) => variant.slug === "ko-uchi-gaeshi-pressure-counter");
+
+  assert.ok(evasion.modifiers.includes("evasion"));
+  assert.ok(pressure.modifiers.includes("pressure"));
+  assert.equal(getLegality("ko-uchi-gaeshi-evasion-counter").status, "legal");
+  assert.equal(getLegality("ko-uchi-gaeshi-pressure-counter").status, "legal");
+});
+
 test("ground hold aliases include common positional names", () => {
   const kamiShiho = getTechnique("kami-shiho-gatame");
   const kuzureKamiShiho = getTechnique("kuzure-kami-shiho-gatame");
@@ -338,6 +372,13 @@ test("known IJF forbidden or leg-grab techniques are illegal or restricted", () 
 
 test("representative competition techniques are legal at base level", () => {
   assert.equal(getLegality("seoi-nage").status, "legal");
+  assert.equal(getLegality("de-ashi-harai").status, "legal");
+  assert.equal(getLegality("tsubame-gaeshi").status, "legal");
+  assert.equal(getLegality("o-soto-gari").status, "legal");
+  assert.equal(getLegality("o-soto-gaeshi").status, "legal");
+  assert.equal(getLegality("o-uchi-gaeshi").status, "legal");
+  assert.equal(getLegality("uchi-mata").status, "legal");
+  assert.equal(getLegality("uchi-mata-gaeshi").status, "legal");
   assert.equal(getLegality("o-goshi").status, "legal");
   assert.equal(getLegality("tomoe-nage").status, "legal");
   assert.equal(getLegality("kesa-gatame").status, "legal");

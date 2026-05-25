@@ -1335,6 +1335,38 @@
     "sourceIds": ["local-practice-advisory-v1"]
   },
   {
+    "slug": "o-soto-gari",
+    "names": {
+      "english": "Major outer reap",
+      "japaneseRomaji": "o-soto-gari",
+      "japanese": "大外刈",
+      "kana": "おおそとがり",
+      "aliases": ["osoto gari", "o soto gari"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
+    "slug": "o-soto-gaeshi",
+    "names": {
+      "english": "Major outer reap counter",
+      "japaneseRomaji": "o-soto-gaeshi",
+      "japanese": "大外返",
+      "kana": "おおそとがえし",
+      "aliases": ["osoto gaeshi", "o soto gaeshi", "o-soto-gari counter"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
     "slug": "o-uchi-gari",
     "names": {
       "english": "Major inner reap",
@@ -1536,5 +1568,117 @@
     },
     "sourceIds": ["local-practice-advisory-v1"],
     "gripContextSlugs": ["north-south", "frame-control", "guard"]
+  },
+  {
+    "slug": "de-ashi-harai",
+    "names": {
+      "english": "Advanced foot sweep",
+      "japaneseRomaji": "de-ashi-harai",
+      "japanese": "出足払",
+      "kana": "であしはらい",
+      "aliases": ["de ashi harai", "deashi harai", "de-ashi-barai"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
+    "slug": "tsubame-gaeshi",
+    "names": {
+      "english": "Swallow counter",
+      "japaneseRomaji": "tsubame-gaeshi",
+      "japanese": "燕返",
+      "kana": "つばめがえし",
+      "aliases": ["tsubame gaeshi", "de-ashi-harai counter"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
+    "slug": "o-uchi-gaeshi",
+    "names": {
+      "english": "Major inner reap counter",
+      "japaneseRomaji": "o-uchi-gaeshi",
+      "japanese": "大内返",
+      "kana": "おおうちがえし",
+      "aliases": ["ouchi gaeshi", "o uchi gaeshi", "o-uchi-gari counter"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
+    "slug": "uchi-mata",
+    "names": {
+      "english": "Inner thigh throw",
+      "japaneseRomaji": "uchi-mata",
+      "japanese": "内股",
+      "kana": "うちまた",
+      "aliases": ["uchi mata"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
+    "slug": "uchi-mata-gaeshi",
+    "names": {
+      "english": "Inner thigh throw counter",
+      "japaneseRomaji": "uchi-mata-gaeshi",
+      "japanese": "内股返",
+      "kana": "うちまたがえし",
+      "aliases": ["uchi mata gaeshi", "uchi-mata counter"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
+    "slug": "hane-goshi-gaeshi",
+    "names": {
+      "english": "Spring hip counter",
+      "japaneseRomaji": "hane-goshi-gaeshi",
+      "japanese": "跳腰返",
+      "kana": "はねごしがえし",
+      "aliases": ["hane goshi gaeshi", "hane-goshi counter"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
+    "slug": "harai-goshi-gaeshi",
+    "names": {
+      "english": "Sweeping hip counter",
+      "japaneseRomaji": "harai-goshi-gaeshi",
+      "japanese": "払腰返",
+      "kana": "はらいごしがえし",
+      "aliases": ["harai goshi gaeshi", "harai-goshi counter"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
   }
 ]
