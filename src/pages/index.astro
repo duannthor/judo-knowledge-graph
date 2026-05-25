@@ -23,8 +23,33 @@ const groupMeta = groups.map((slug) => ({
   slug,
   label: classifications.find((item) => item.slug === slug)?.japaneseRomaji ?? slug,
   english: classifications.find((item) => item.slug === slug)?.english ?? slug,
+  kanji: classifications.find((item) => item.slug === slug)?.japanese ?? "",
   count: browsableTechniques.filter((technique) => technique.classifications.includes(slug)).length
 }));
+const familyDisplay = {
+  "te-waza": { kanji: "手", english: "hand" },
+  "koshi-waza": { kanji: "腰", english: "hip" },
+  "ashi-waza": { kanji: "足", english: "foot/leg" },
+  "ma-sutemi-waza": { kanji: "真", english: "rear sacrifice" },
+  "yoko-sutemi-waza": { kanji: "横", english: "side sacrifice" },
+  "osaekomi-waza": { kanji: "抑", english: "hold-down" },
+  "shime-waza": { kanji: "絞", english: "choke" },
+  "kansetsu-waza": { kanji: "関", english: "joint lock" }
+};
+const familyGroups = [
+  {
+    title: "Nage-waza",
+    kanji: "投",
+    english: "throwing techniques",
+    groups: groupMeta.filter((group) => ["te-waza", "koshi-waza", "ashi-waza", "ma-sutemi-waza", "yoko-sutemi-waza"].includes(group.slug))
+  },
+  {
+    title: "Katame-waza",
+    kanji: "固",
+    english: "grappling techniques",
+    groups: groupMeta.filter((group) => ["osaekomi-waza", "shime-waza", "kansetsu-waza"].includes(group.slug))
+  }
+];
 
 const cards = browsableTechniques
   .slice()
@@ -103,24 +128,38 @@ const cards = browsableTechniques
     <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
   </section>
 
-  <section class="stats" aria-label="Technique groups">
-    {groupMeta.map((group) => (
-      <a class="stat" href={`/?group=${group.slug}`} data-group-link={group.slug}>
-        <strong>{group.count}</strong>
-        <span>{group.label} · {group.english}</span>
-      </a>
+  <section class="family-tabs" aria-label="Technical families">
+    <div class="family-tabs-header">
+      <button class="family-tab active" type="button" data-family-tab="all">
+        All techniques <span>{browsableTechniques.length}</span>
+      </button>
+      <button class="family-reset" type="button" id="clear-family-filter">Clear family</button>
+    </div>
+    <input type="hidden" id="group-filter" value="all" />
+    {familyGroups.map((family) => (
+      <div class="family-row">
+        <h2>
+          <span class="family-heading-kanji">{family.kanji}</span>
+          <span>{family.title}</span>
+          <small>{family.english}</small>
+        </h2>
+        <div class="family-tab-list">
+          {family.groups.map((group) => (
+            <button class="family-tab" type="button" data-family-tab={group.slug}>
+              <span class="tab-kanji">{familyDisplay[group.slug]?.kanji ?? group.kanji}</span>
+              <span class="tab-text">{group.label}</span>
+              <small>({familyDisplay[group.slug]?.english ?? group.english})</small>
+              <span>{group.count}</span>
+            </button>
+          ))}
+        </div>
+      </div>
     ))}
   </section>
 
   <section aria-label="Technique controls">
     <div class="toolbar">
       <input class="field" id="technique-search" type="search" placeholder="Search English, romaji, kana, kanji, alias" autocomplete="off" />
-      <select class="select" id="group-filter">
-        <option value="all">All groups</option>
-        {groupMeta.map((group) => (
-          <option value={group.slug}>{group.label} · {group.english}</option>
-        ))}
-      </select>
       <fieldset class="filter-groups" aria-label="Technique filters">
         <div class="filter-group">
           <span class="filter-label">Role</span>
@@ -247,6 +286,8 @@ const cards = browsableTechniques
   <script>
     const search = document.querySelector("#technique-search");
     const groupFilter = document.querySelector("#group-filter");
+    const familyTabs = Array.from(document.querySelectorAll("[data-family-tab]"));
+    const clearFamilyFilter = document.querySelector("#clear-family-filter");
     const roleToggles = Array.from(document.querySelectorAll("[data-role-toggle]"));
     const statusToggles = Array.from(document.querySelectorAll("[data-status-toggle]"));
     const clearFilters = document.querySelector("#clear-filters");
@@ -254,13 +295,20 @@ const cards = browsableTechniques
     const params = new URLSearchParams(window.location.search);
     const initialGroup = params.get("group");
 
-    if (initialGroup && groupFilter instanceof HTMLSelectElement) {
+    if (initialGroup && groupFilter instanceof HTMLInputElement) {
       groupFilter.value = initialGroup;
+    }
+
+    function syncFamilyTabs() {
+      const group = groupFilter instanceof HTMLInputElement ? groupFilter.value : "all";
+      for (const tab of familyTabs) {
+        tab.classList.toggle("active", tab instanceof HTMLElement && tab.dataset.familyTab === group);
+      }
     }
 
     function applyFilters() {
       const term = search instanceof HTMLInputElement ? search.value.trim().toLowerCase() : "";
-      const group = groupFilter instanceof HTMLSelectElement ? groupFilter.value : "all";
+      const group = groupFilter instanceof HTMLInputElement ? groupFilter.value : "all";
       const selectedRoles = roleToggles
         .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
         .map((toggle) => toggle.value);
@@ -277,10 +325,22 @@ const cards = browsableTechniques
         const matchesStatuses = selectedStatuses.every((status) => cardFilters.includes(status));
         card.hidden = !(matchesText && matchesGroup && matchesRoles && matchesStatuses);
       }
+      syncFamilyTabs();
     }
 
     search?.addEventListener("input", applyFilters);
-    groupFilter?.addEventListener("change", applyFilters);
+    for (const tab of familyTabs) {
+      tab.addEventListener("click", () => {
+        if (groupFilter instanceof HTMLInputElement && tab instanceof HTMLElement) {
+          groupFilter.value = tab.dataset.familyTab ?? "all";
+        }
+        applyFilters();
+      });
+    }
+    clearFamilyFilter?.addEventListener("click", () => {
+      if (groupFilter instanceof HTMLInputElement) groupFilter.value = "all";
+      applyFilters();
+    });
     for (const toggle of roleToggles) {
       toggle.addEventListener("change", applyFilters);
     }
@@ -289,7 +349,7 @@ const cards = browsableTechniques
     }
     clearFilters?.addEventListener("click", () => {
       if (search instanceof HTMLInputElement) search.value = "";
-      if (groupFilter instanceof HTMLSelectElement) groupFilter.value = "all";
+      if (groupFilter instanceof HTMLInputElement) groupFilter.value = "all";
 
       for (const toggle of [...roleToggles, ...statusToggles]) {
         if (toggle instanceof HTMLInputElement) toggle.checked = false;
