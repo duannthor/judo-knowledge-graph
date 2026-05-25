@@ -101,9 +101,9 @@ const cards = nageTechniques
         <div class="tags">
           {technique.roles.map((role) => <span class="tag">{role}</span>)}
           {variants.length > 0 && <span class="tag">{variants.length} variants</span>}
-          {legalityStatuses.includes("illegal") && <span class="tag">illegal variant</span>}
-          {legalityStatuses.includes("restricted") && <span class="tag">restricted</span>}
-          {advisories.length > 0 && <span class="tag">safety note</span>}
+          {legalityStatuses.includes("illegal") && <span class="tag danger">illegal variant</span>}
+          {legalityStatuses.includes("restricted") && <span class="tag danger">restricted</span>}
+          {advisories.length > 0 && <span class="tag warning">safety note</span>}
         </div>
       </article>
     ))}

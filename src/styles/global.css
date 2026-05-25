@@ -298,6 +298,18 @@ h3 {
   color: var(--accent-ink);
 }
 
+.tag.danger {
+  border-color: color-mix(in srgb, #b33a2f, transparent 34%);
+  background: color-mix(in srgb, #b33a2f, transparent 88%);
+  color: #9b2f27;
+}
+
+.tag.warning {
+  border-color: color-mix(in srgb, var(--gold), transparent 30%);
+  background: color-mix(in srgb, var(--gold), transparent 86%);
+  color: color-mix(in srgb, var(--gold), var(--text) 36%);
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.85fr);

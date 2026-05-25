@@ -142,7 +142,7 @@ const sourceRows = technique.sourceIds
                 </div>
                 {advisories.length > 0 && (
                   <div class="tags">
-                    {advisories.map((advisory) => <span class="tag">{advisory.level}</span>)}
+                    {advisories.map((advisory) => <span class={`tag ${advisory.level === "banned-in-competition" ? "danger" : "warning"}`}>{advisory.level}</span>)}
                   </div>
                 )}
               </li>
