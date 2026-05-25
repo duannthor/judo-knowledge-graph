@@ -227,6 +227,62 @@ h3 {
   color: var(--accent-ink);
 }
 
+.toggle.success-toggle span,
+.toggle.success-toggle input:checked + span {
+  border-color: color-mix(in srgb, var(--green), transparent 28%);
+  background: color-mix(in srgb, var(--green), transparent 86%);
+  color: color-mix(in srgb, var(--green), var(--text) 38%);
+}
+
+.toggle.danger-toggle span,
+.toggle.danger-toggle input:checked + span {
+  border-color: color-mix(in srgb, #b33a2f, transparent 34%);
+  background: color-mix(in srgb, #b33a2f, transparent 88%);
+  color: #9b2f27;
+}
+
+.toggle.warning-toggle span,
+.toggle.warning-toggle input:checked + span {
+  border-color: color-mix(in srgb, var(--gold), transparent 30%);
+  background: color-mix(in srgb, var(--gold), transparent 86%);
+  color: color-mix(in srgb, var(--gold), var(--text) 36%);
+}
+
+.toggle.mixed-toggle span,
+.toggle.mixed-toggle input:checked + span {
+  border-color: color-mix(in srgb, var(--green), transparent 35%);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--green), transparent 86%) 0 50%,
+    color-mix(in srgb, #b33a2f, transparent 88%) 50% 100%
+  );
+  color: var(--text);
+}
+
+.toggle.success-toggle input:checked + span,
+.toggle.danger-toggle input:checked + span,
+.toggle.warning-toggle input:checked + span,
+.toggle.mixed-toggle input:checked + span {
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.clear-filters {
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  cursor: pointer;
+  padding: 7px 12px;
+  font: 0.84rem/1 ui-sans-serif, system-ui, sans-serif;
+}
+
+.clear-filters:hover,
+.clear-filters:focus-visible {
+  border-color: color-mix(in srgb, var(--accent), transparent 45%);
+  color: var(--accent-ink);
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

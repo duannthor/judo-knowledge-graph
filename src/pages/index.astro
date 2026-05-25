@@ -125,30 +125,31 @@ const cards = nageTechniques
           <input type="checkbox" value="has-variants" data-status-toggle />
           <span>Has variants</span>
         </label>
-        <label class="toggle">
+        <label class="toggle success-toggle">
           <input type="checkbox" value="competition-legal" data-status-toggle />
           <span>Competition legal</span>
         </label>
-        <label class="toggle">
+        <label class="toggle danger-toggle">
           <input type="checkbox" value="banned-variant" data-status-toggle />
           <span>Banned variant</span>
         </label>
-        <label class="toggle">
+        <label class="toggle danger-toggle">
           <input type="checkbox" value="classic-banned" data-status-toggle />
           <span>Classic banned</span>
         </label>
-        <label class="toggle">
+        <label class="toggle danger-toggle">
           <input type="checkbox" value="restricted-variant" data-status-toggle />
           <span>Restricted</span>
         </label>
-        <label class="toggle">
+        <label class="toggle mixed-toggle">
           <input type="checkbox" value="mixed-legality" data-status-toggle />
           <span>Mixed legality</span>
         </label>
-        <label class="toggle">
+        <label class="toggle warning-toggle">
           <input type="checkbox" value="safety-note" data-status-toggle />
           <span>Safety note</span>
         </label>
+        <button class="clear-filters" type="button" id="clear-filters">Clear all</button>
       </fieldset>
     </div>
   </section>
@@ -209,6 +210,7 @@ const cards = nageTechniques
     const groupFilter = document.querySelector("#group-filter");
     const roleToggles = Array.from(document.querySelectorAll("[data-role-toggle]"));
     const statusToggles = Array.from(document.querySelectorAll("[data-status-toggle]"));
+    const clearFilters = document.querySelector("#clear-filters");
     const cards = Array.from(document.querySelectorAll("[data-technique-card]"));
     const params = new URLSearchParams(window.location.search);
     const initialGroup = params.get("group");
@@ -246,6 +248,16 @@ const cards = nageTechniques
     for (const toggle of statusToggles) {
       toggle.addEventListener("change", applyFilters);
     }
+    clearFilters?.addEventListener("click", () => {
+      if (search instanceof HTMLInputElement) search.value = "";
+      if (groupFilter instanceof HTMLSelectElement) groupFilter.value = "all";
+
+      for (const toggle of [...roleToggles, ...statusToggles]) {
+        if (toggle instanceof HTMLInputElement) toggle.checked = false;
+      }
+
+      applyFilters();
+    });
     applyFilters();
   </script>
 </BaseLayout>
