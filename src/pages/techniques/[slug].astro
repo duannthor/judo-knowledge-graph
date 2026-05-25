@@ -140,6 +140,11 @@ const sourceRows = technique.sourceIds
                 <div class="source">
                   {legality ? `${legality.status} · ${legality.reasons.join(", ")}` : "No legality record"}
                 </div>
+                {legality?.status === "legal" && (
+                  <div class="tags">
+                    <span class="tag success">competition legal</span>
+                  </div>
+                )}
                 {advisories.length > 0 && (
                   <div class="tags">
                     {advisories.map((advisory) => <span class={`tag ${advisory.level === "banned-in-competition" ? "danger" : "warning"}`}>{advisory.level}</span>)}

@@ -24,12 +24,14 @@ const cards = nageTechniques
     const primaryGroup = groups.find((group) => technique.classifications.includes(group)) ?? "other";
     const variants = getVariantsFor(technique.slug);
     const legalityStatuses = variants.map((variant) => getLegality(variant.slug)?.status).filter(Boolean);
+    const hasCompetitionLegalRecord = legalityStatuses.includes("legal");
     const advisories = variants.flatMap((variant) => getSafetyAdvisories(variant.slug));
     return {
       technique,
       primaryGroup,
       variants,
       legalityStatuses,
+      hasCompetitionLegalRecord,
       advisories,
       roles: technique.roles.join(" "),
       searchText: [
@@ -75,17 +77,33 @@ const cards = nageTechniques
           <option value={group.slug}>{group.label} · {group.english}</option>
         ))}
       </select>
-      <select class="select" id="role-filter">
-        <option value="all">All roles</option>
-        <option value="attack">Attacks</option>
-        <option value="counter">Counters</option>
-      </select>
+      <fieldset class="toggle-group" aria-label="Technique filters">
+        <label class="toggle">
+          <input type="checkbox" value="attack" data-role-toggle />
+          <span>Attacks</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="counter" data-role-toggle />
+          <span>Counters</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="competition-legal-filter" />
+          <span>Competition legal</span>
+        </label>
+      </fieldset>
     </div>
   </section>
 
   <section class="technique-grid" id="technique-grid" aria-label="Techniques">
-    {cards.map(({ technique, primaryGroup, variants, legalityStatuses, advisories, roles, searchText }) => (
-      <article class="technique-card" data-technique-card data-group={primaryGroup} data-roles={roles} data-search={searchText}>
+    {cards.map(({ technique, primaryGroup, variants, legalityStatuses, hasCompetitionLegalRecord, advisories, roles, searchText }) => (
+      <article
+        class="technique-card"
+        data-technique-card
+        data-group={primaryGroup}
+        data-roles={roles}
+        data-competition-legal={hasCompetitionLegalRecord ? "true" : "false"}
+        data-search={searchText}
+      >
         <div class="card-top">
           <div>
             <a class="name-stack" href={`/techniques/${technique.slug}/`}>
@@ -101,6 +119,7 @@ const cards = nageTechniques
         <div class="tags">
           {technique.roles.map((role) => <span class="tag">{role}</span>)}
           {variants.length > 0 && <span class="tag">{variants.length} variants</span>}
+          {hasCompetitionLegalRecord && <span class="tag success">competition legal</span>}
           {legalityStatuses.includes("illegal") && <span class="tag danger">illegal variant</span>}
           {legalityStatuses.includes("restricted") && <span class="tag danger">restricted</span>}
           {advisories.length > 0 && <span class="tag warning">safety note</span>}
@@ -112,7 +131,8 @@ const cards = nageTechniques
   <script>
     const search = document.querySelector("#technique-search");
     const groupFilter = document.querySelector("#group-filter");
-    const roleFilter = document.querySelector("#role-filter");
+    const roleToggles = Array.from(document.querySelectorAll("[data-role-toggle]"));
+    const competitionLegalFilter = document.querySelector("#competition-legal-filter");
     const cards = Array.from(document.querySelectorAll("[data-technique-card]"));
     const params = new URLSearchParams(window.location.search);
     const initialGroup = params.get("group");
@@ -124,19 +144,27 @@ const cards = nageTechniques
     function applyFilters() {
       const term = search instanceof HTMLInputElement ? search.value.trim().toLowerCase() : "";
       const group = groupFilter instanceof HTMLSelectElement ? groupFilter.value : "all";
-      const role = roleFilter instanceof HTMLSelectElement ? roleFilter.value : "all";
+      const selectedRoles = roleToggles
+        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
+        .map((toggle) => toggle.value);
+      const legalOnly = competitionLegalFilter instanceof HTMLInputElement && competitionLegalFilter.checked;
 
       for (const card of cards) {
         const matchesText = !term || card.dataset.search?.includes(term);
         const matchesGroup = group === "all" || card.dataset.group === group;
-        const matchesRole = role === "all" || card.dataset.roles?.split(" ").includes(role);
-        card.hidden = !(matchesText && matchesGroup && matchesRole);
+        const cardRoles = card.dataset.roles?.split(" ") ?? [];
+        const matchesRoles = selectedRoles.every((role) => cardRoles.includes(role));
+        const matchesLegality = !legalOnly || card.dataset.competitionLegal === "true";
+        card.hidden = !(matchesText && matchesGroup && matchesRoles && matchesLegality);
       }
     }
 
     search?.addEventListener("input", applyFilters);
     groupFilter?.addEventListener("change", applyFilters);
-    roleFilter?.addEventListener("change", applyFilters);
+    for (const toggle of roleToggles) {
+      toggle.addEventListener("change", applyFilters);
+    }
+    competitionLegalFilter?.addEventListener("change", applyFilters);
     applyFilters();
   </script>
 </BaseLayout>
