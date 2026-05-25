@@ -66,6 +66,14 @@ const cards = browsableTechniques
   .slice()
   .sort((a, b) => a.names.japaneseRomaji.localeCompare(b.names.japaneseRomaji))
   .map((technique) => {
+    const normalizeAlias = (value) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const hiddenAliasForms = new Set([
+      normalizeAlias(technique.names.japaneseRomaji),
+      normalizeAlias(technique.names.english)
+    ]);
+    const displayAliases = technique.names.aliases
+      .filter((alias) => !hiddenAliasForms.has(normalizeAlias(alias)))
+      .slice(0, 3);
     const primaryGroup = groups.find((group) => technique.classifications.includes(group)) ?? "other";
     const baseLegality = getLegality(technique.slug);
     const variants = getVariantsFor(technique.slug);
@@ -130,6 +138,7 @@ const cards = browsableTechniques
       primaryGroup,
       baseLegality,
       variants,
+      displayAliases,
       gripContextSlugs,
       gripContextLabels,
       legalityStatuses,
@@ -306,6 +315,7 @@ const cards = browsableTechniques
       primaryGroup,
       baseLegality,
       variants,
+      displayAliases,
       gripContextSlugs,
       gripContextLabels,
       legalityStatuses,
@@ -342,6 +352,11 @@ const cards = browsableTechniques
             <div class="english-name">
               {technique.names.english}
             </div>
+            {displayAliases.length > 0 && (
+              <div class="alias-line">
+                Also: {displayAliases.join(", ")}
+              </div>
+            )}
           </div>
           <span class="tag accent">{primaryGroup}</span>
         </div>
