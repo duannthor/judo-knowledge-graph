@@ -6,6 +6,7 @@ import {
   getLegality,
   getSafetyAdvisories,
   getTechnique,
+  gripContexts,
   sources,
   techniques,
   variants
@@ -37,6 +38,21 @@ const variantRows = variants
     legality: getLegality(variant.slug),
     advisories: getSafetyAdvisories(variant.slug)
   }));
+
+const gripContextSlugSet = new Set(technique.gripContextSlugs ?? []);
+for (const { variant } of variantRows) {
+  for (const slug of variant.gripContextSlugs ?? []) {
+    gripContextSlugSet.add(slug);
+  }
+  for (const sequence of variant.directionSequences ?? []) {
+    if (sequence.stanceContext && sequence.stanceContext !== "any") {
+      gripContextSlugSet.add(sequence.stanceContext);
+    }
+  }
+}
+const gripContextRows = Array.from(gripContextSlugSet)
+  .map((slug) => gripContexts.find((context) => context.slug === slug))
+  .filter(Boolean);
 
 const hasBasePhases = Object.keys(technique.phases).length > 0;
 const variantMechanicsRows = variantRows.filter((row) => row.variant.mechanics);
@@ -85,9 +101,16 @@ const sourceRows = technique.sourceIds
             <span>Roles</span>
             <strong>{technique.roles.join(", ")}</strong>
           </div>
+          {gripContextRows.length > 0 && (
+            <div class="fact">
+              <span>Grip / Position</span>
+              <strong>{gripContextRows.map((context) => context.label).join(", ")}</strong>
+            </div>
+          )}
         </div>
         <div class="tags">
           {technique.classifications.map((slug) => <span class="tag accent">{slug}</span>)}
+          {gripContextRows.map((context) => <span class="tag">{context.label}</span>)}
           {baseLegality?.status === "legal" && <span class="tag success">competition legal</span>}
           {baseLegality?.status === "illegal" && <span class="tag danger">competition banned</span>}
           {baseLegality?.status === "restricted" && <span class="tag danger">restricted</span>}

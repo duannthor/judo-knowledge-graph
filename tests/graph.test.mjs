@@ -187,6 +187,7 @@ test("grip and stance contexts are available for filtering", () => {
     "aiyotsu",
     "georgian-grip",
     "kenkayotsu",
+    "leg-control",
     "standard-kumi-kata"
   ]);
 
@@ -196,6 +197,37 @@ test("grip and stance contexts are available for filtering", () => {
   assert.ok(oUchi.gripContextSlugs.includes("standard-kumi-kata"));
   assert.ok(oUchi.gripContextSlugs.includes("aiyotsu"));
   assert.ok(hikikomi.gripContextSlugs.includes("georgian-grip"));
+});
+
+test("standing throwing techniques are hydrated with baseline kumi-kata context", () => {
+  const legControlTechniques = new Set(["sukui-nage", "morote-gari", "kuchiki-taoshi", "kibisu-gaeshi"]);
+  const missing = techniques
+    .filter((technique) => technique.classifications.includes("nage-waza") && technique.domains.includes("standing"))
+    .filter((technique) => !legControlTechniques.has(technique.slug))
+    .filter((technique) => !technique.gripContextSlugs?.includes("standard-kumi-kata"))
+    .map((technique) => technique.slug);
+
+  assert.deepEqual(missing, []);
+});
+
+test("classic leg-control techniques are not hydrated as standard kumi-kata", () => {
+  const legControlTechniques = ["sukui-nage", "morote-gari", "kuchiki-taoshi", "kibisu-gaeshi"];
+
+  for (const slug of legControlTechniques) {
+    const technique = techniques.find((item) => item.slug === slug);
+    assert.ok(technique.gripContextSlugs.includes("leg-control"));
+    assert.ok(!technique.gripContextSlugs.includes("standard-kumi-kata"));
+  }
+});
+
+test("contextual grip filters have reviewed technique seeds", () => {
+  const aiyotsuTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("aiyotsu"));
+  const kenkayotsuTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("kenkayotsu"));
+  const georgianGripTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("georgian-grip"));
+
+  assert.ok(aiyotsuTechniques.some((technique) => technique.slug === "seoi-nage"));
+  assert.ok(kenkayotsuTechniques.some((technique) => technique.slug === "harai-goshi"));
+  assert.ok(georgianGripTechniques.some((technique) => technique.slug === "hikikomi-gaeshi"));
 });
 
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {

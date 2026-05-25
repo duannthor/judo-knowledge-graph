@@ -32,5 +32,12 @@
     "type": "grip",
     "notes": "Over-the-back or belt-control gripping family. Competition use can depend on attack timing and ruleset context.",
     "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "slug": "leg-control",
+    "label": "Leg control",
+    "type": "position",
+    "notes": "Hand or arm control below the belt, including classic leg-grab entries. IJF legality must be checked separately.",
+    "sourceIds": ["local-practice-advisory-v1"]
   }
 ]

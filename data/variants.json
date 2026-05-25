@@ -5,7 +5,7 @@
     "baseTechniqueSlug": "kata-guruma",
     "modifiers": ["leg-grab", "traditional"],
     "actionFeatures": ["leg-grab", "tachi-waza"],
-    "gripContextSlugs": ["standard-kumi-kata"],
+    "gripContextSlugs": ["standard-kumi-kata", "leg-control"],
     "directionSequences": [
       {
         "stanceContext": "any",
