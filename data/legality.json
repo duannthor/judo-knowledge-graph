@@ -1153,13 +1153,13 @@
     "subjectSlug": "hadaka-jime",
     "subjectType": "technique",
     "rulesetId": "IJF_SENIOR_2026",
-    "status": "restricted",
+    "status": "legal",
     "reasons": [
-      "context-dependent",
-      "standing-shime-waza"
+      "permitted-shime-waza",
+      "ne-waza"
     ],
     "appliesTo": "base-technique",
-    "notes": "Legal in ne-waza; standing shime-waza variants are restricted.",
+    "notes": "Legal as shime-waza in ne-waza; standing shime-waza variants remain restricted.",
     "sourceIds": [
       "ijf-rules-explanation-2023",
       "ijf-sor-2026",
@@ -1170,13 +1170,13 @@
     "subjectSlug": "ude-garami",
     "subjectType": "technique",
     "rulesetId": "IJF_SENIOR_2026",
-    "status": "restricted",
+    "status": "legal",
     "reasons": [
-      "context-dependent",
-      "standing-kansetsu-waza"
+      "permitted-elbow-kansetsu-waza",
+      "ne-waza"
     ],
     "appliesTo": "base-technique",
-    "notes": "Legal as permitted elbow kansetsu-waza in ne-waza; standing kansetsu-waza variants are restricted.",
+    "notes": "Legal as permitted elbow kansetsu-waza in ne-waza; standing kansetsu-waza variants remain restricted.",
     "sourceIds": [
       "ijf-rules-explanation-2023",
       "ijf-sor-2026",

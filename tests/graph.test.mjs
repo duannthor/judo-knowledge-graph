@@ -201,6 +201,8 @@ test("representative competition techniques are legal at base level", () => {
   assert.equal(getLegality("o-goshi").status, "legal");
   assert.equal(getLegality("tomoe-nage").status, "legal");
   assert.equal(getLegality("kesa-gatame").status, "legal");
+  assert.equal(getLegality("hadaka-jime").status, "legal");
+  assert.equal(getLegality("ude-garami").status, "legal");
   assert.equal(getLegality("ude-hishigi-juji-gatame").status, "legal");
 });
 

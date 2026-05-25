@@ -230,7 +230,7 @@ const cards = browsableTechniques
         <div class="tags">
           {technique.roles.map((role) => <span class="tag">{role}</span>)}
           {variants.length > 0 && <span class="tag">{variants.length} variants</span>}
-          {baseLegal && variants.length === 0 && <span class="tag success">competition legal</span>}
+          {baseLegal && <span class="tag success">competition legal</span>}
           {legalVariantCount > 0 && <span class="tag success">{legalVariantCount} legal variant{legalVariantCount === 1 ? "" : "s"}</span>}
           {classicBanned && <span class="tag danger">classic banned</span>}
           {!classicBanned && bannedVariantCount > 0 && <span class="tag danger">{bannedVariantCount} banned variant{bannedVariantCount === 1 ? "" : "s"}</span>}
