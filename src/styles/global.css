@@ -353,6 +353,16 @@ h3 {
   color: color-mix(in srgb, var(--green), var(--text) 38%);
 }
 
+.tag.mixed {
+  border-color: color-mix(in srgb, var(--green), transparent 35%);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--green), transparent 86%) 0 50%,
+    color-mix(in srgb, #b33a2f, transparent 88%) 50% 100%
+  );
+  color: var(--text);
+}
+
 .tag.danger {
   border-color: color-mix(in srgb, #b33a2f, transparent 34%);
   background: color-mix(in srgb, #b33a2f, transparent 88%);
