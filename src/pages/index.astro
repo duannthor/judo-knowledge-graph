@@ -38,6 +38,15 @@ const cards = nageTechniques
     const hasCompetitionLegalRecord = legalVariantCount > 0;
     const hasMixedLegality = hasCompetitionLegalRecord && (bannedVariantCount > 0 || restrictedVariantCount > 0);
     const advisories = variants.flatMap((variant) => getSafetyAdvisories(variant.slug));
+    const filterFlags = [
+      variants.length > 0 && "has-variants",
+      hasCompetitionLegalRecord && "competition-legal",
+      bannedVariantCount > 0 && "banned-variant",
+      classicBanned && "classic-banned",
+      restrictedVariantCount > 0 && "restricted-variant",
+      hasMixedLegality && "mixed-legality",
+      advisories.length > 0 && "safety-note"
+    ].filter(Boolean).join(" ");
     return {
       technique,
       primaryGroup,
@@ -51,6 +60,7 @@ const cards = nageTechniques
       hasMixedLegality,
       advisories,
       roles: technique.roles.join(" "),
+      filterFlags,
       searchText: [
         technique.slug,
         technique.names.english,
@@ -104,8 +114,40 @@ const cards = nageTechniques
           <span>Counters</span>
         </label>
         <label class="toggle">
-          <input type="checkbox" id="competition-legal-filter" />
+          <input type="checkbox" value="transition" data-role-toggle />
+          <span>Transitions</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="escape" data-role-toggle />
+          <span>Escapes</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="has-variants" data-status-toggle />
+          <span>Has variants</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="competition-legal" data-status-toggle />
           <span>Competition legal</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="banned-variant" data-status-toggle />
+          <span>Banned variant</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="classic-banned" data-status-toggle />
+          <span>Classic banned</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="restricted-variant" data-status-toggle />
+          <span>Restricted</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="mixed-legality" data-status-toggle />
+          <span>Mixed legality</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" value="safety-note" data-status-toggle />
+          <span>Safety note</span>
         </label>
       </fieldset>
     </div>
@@ -125,6 +167,7 @@ const cards = nageTechniques
       hasMixedLegality,
       advisories,
       roles,
+      filterFlags,
       searchText
     }) => (
       <article
@@ -132,7 +175,7 @@ const cards = nageTechniques
         data-technique-card
         data-group={primaryGroup}
         data-roles={roles}
-        data-competition-legal={hasCompetitionLegalRecord ? "true" : "false"}
+        data-filters={filterFlags}
         data-search={searchText}
       >
         <div class="card-top">
@@ -165,7 +208,7 @@ const cards = nageTechniques
     const search = document.querySelector("#technique-search");
     const groupFilter = document.querySelector("#group-filter");
     const roleToggles = Array.from(document.querySelectorAll("[data-role-toggle]"));
-    const competitionLegalFilter = document.querySelector("#competition-legal-filter");
+    const statusToggles = Array.from(document.querySelectorAll("[data-status-toggle]"));
     const cards = Array.from(document.querySelectorAll("[data-technique-card]"));
     const params = new URLSearchParams(window.location.search);
     const initialGroup = params.get("group");
@@ -180,15 +223,18 @@ const cards = nageTechniques
       const selectedRoles = roleToggles
         .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
         .map((toggle) => toggle.value);
-      const legalOnly = competitionLegalFilter instanceof HTMLInputElement && competitionLegalFilter.checked;
+      const selectedStatuses = statusToggles
+        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
+        .map((toggle) => toggle.value);
 
       for (const card of cards) {
         const matchesText = !term || card.dataset.search?.includes(term);
         const matchesGroup = group === "all" || card.dataset.group === group;
         const cardRoles = card.dataset.roles?.split(" ") ?? [];
+        const cardFilters = card.dataset.filters?.split(" ").filter(Boolean) ?? [];
         const matchesRoles = selectedRoles.every((role) => cardRoles.includes(role));
-        const matchesLegality = !legalOnly || card.dataset.competitionLegal === "true";
-        card.hidden = !(matchesText && matchesGroup && matchesRoles && matchesLegality);
+        const matchesStatuses = selectedStatuses.every((status) => cardFilters.includes(status));
+        card.hidden = !(matchesText && matchesGroup && matchesRoles && matchesStatuses);
       }
     }
 
@@ -197,7 +243,9 @@ const cards = nageTechniques
     for (const toggle of roleToggles) {
       toggle.addEventListener("change", applyFilters);
     }
-    competitionLegalFilter?.addEventListener("change", applyFilters);
+    for (const toggle of statusToggles) {
+      toggle.addEventListener("change", applyFilters);
+    }
     applyFilters();
   </script>
 </BaseLayout>

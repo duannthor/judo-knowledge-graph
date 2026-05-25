@@ -161,7 +161,7 @@ h3 {
 
 .toolbar {
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) 220px minmax(300px, auto);
+  grid-template-columns: minmax(220px, 1fr) 220px;
   gap: 12px;
   align-items: start;
   margin: 26px 0;
@@ -179,6 +179,7 @@ h3 {
 }
 
 .toggle-group {
+  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
