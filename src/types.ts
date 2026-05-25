@@ -23,6 +23,7 @@ export type ComboPattern =
 export type StanceContext = "aiyotsu" | "kenkayotsu" | "any";
 export type ToriSide = "right" | "left" | "any";
 export type GripContextType = "grip" | "stance-relation" | "position";
+export type EngagementPhase = "standing" | "ground" | "any";
 
 export type Source = {
   id: string;
@@ -50,6 +51,7 @@ export type GripContext = {
   japanese?: string;
   kana?: string;
   type: GripContextType;
+  phase: EngagementPhase;
   notes?: string;
   sourceIds: string[];
 };

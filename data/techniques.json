@@ -899,7 +899,8 @@
     "domains": ["ground"],
     "roles": ["attack", "transition"],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["north-south"]
   },
   {
     "slug": "kuzure-kami-shiho-gatame",
@@ -914,7 +915,8 @@
     "domains": ["ground"],
     "roles": ["attack", "transition"],
     "phases": {},
-    "sourceIds": ["kodokan-repertoire"]
+    "sourceIds": ["kodokan-repertoire"],
+    "gripContextSlugs": ["north-south"]
   },
   {
     "slug": "yoko-shiho-gatame",

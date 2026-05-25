@@ -64,6 +64,7 @@ for (const gripContext of gripContexts) {
   assert.ok(gripContext.slug, "Grip context needs slug");
   assert.ok(gripContext.label, `${gripContext.slug} needs label`);
   assert.ok(gripContext.type, `${gripContext.slug} needs type`);
+  assert.ok(gripContext.phase, `${gripContext.slug} needs phase`);
   assertSources(gripContext);
 }
 

@@ -191,6 +191,7 @@ test("grip and stance contexts are available for filtering", () => {
     "kenkayotsu",
     "leg-control",
     "mount",
+    "north-south",
     "standard-kumi-kata"
   ]);
 
@@ -200,6 +201,31 @@ test("grip and stance contexts are available for filtering", () => {
   assert.ok(oUchi.gripContextSlugs.includes("standard-kumi-kata"));
   assert.ok(oUchi.gripContextSlugs.includes("aiyotsu"));
   assert.ok(hikikomi.gripContextSlugs.includes("georgian-grip"));
+});
+
+test("engagement contexts are split by standing and ground phase", () => {
+  const standing = gripContexts
+    .filter((context) => context.phase === "standing")
+    .map((context) => context.slug)
+    .sort();
+  const ground = gripContexts
+    .filter((context) => context.phase === "ground")
+    .map((context) => context.slug)
+    .sort();
+
+  assert.deepEqual(standing, [
+    "aiyotsu",
+    "georgian-grip",
+    "kenkayotsu",
+    "leg-control",
+    "standard-kumi-kata"
+  ]);
+  assert.deepEqual(ground, [
+    "collar-sleeve-control",
+    "guard",
+    "mount",
+    "north-south"
+  ]);
 });
 
 test("standing throwing techniques are hydrated with baseline kumi-kata context", () => {
@@ -228,6 +254,7 @@ test("contextual grip filters have reviewed technique seeds", () => {
   const kenkayotsuTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("kenkayotsu"));
   const georgianGripTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("georgian-grip"));
   const mountTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("mount"));
+  const northSouthTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("north-south"));
   const guardTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("guard"));
   const collarSleeveTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("collar-sleeve-control"));
 
@@ -235,6 +262,7 @@ test("contextual grip filters have reviewed technique seeds", () => {
   assert.ok(kenkayotsuTechniques.some((technique) => technique.slug === "harai-goshi"));
   assert.ok(georgianGripTechniques.some((technique) => technique.slug === "hikikomi-gaeshi"));
   assert.ok(mountTechniques.some((technique) => technique.slug === "tate-shiho-gatame"));
+  assert.ok(northSouthTechniques.some((technique) => technique.slug === "kami-shiho-gatame"));
   assert.ok(guardTechniques.some((technique) => technique.slug === "sankaku-jime"));
   assert.ok(collarSleeveTechniques.some((technique) => technique.slug === "ude-hishigi-juji-gatame"));
 });

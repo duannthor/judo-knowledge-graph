@@ -51,11 +51,16 @@ const familyGroups = [
     groups: groupMeta.filter((group) => ["osaekomi-waza", "shime-waza", "kansetsu-waza"].includes(group.slug))
   }
 ];
-const gripFilterOptions = gripContexts.map((context) => ({
-  slug: context.slug,
-  label: context.label,
-  japanese: context.japanese
-}));
+const contextFilterGroups = [
+  {
+    title: "Standing",
+    contexts: gripContexts.filter((context) => context.phase === "standing")
+  },
+  {
+    title: "Ground",
+    contexts: gripContexts.filter((context) => context.phase === "ground")
+  }
+];
 
 const cards = browsableTechniques
   .slice()
@@ -214,15 +219,22 @@ const cards = browsableTechniques
         </div>
         <div class="filter-group">
           <span class="filter-label">Grip / Position</span>
-          <div class="toggle-group">
-            {gripFilterOptions.map((context) => (
-              <label class="toggle">
-                <input type="checkbox" value={context.slug} data-grip-toggle />
-                <span>
-                  {context.label}
-                  {context.japanese && <small>{context.japanese}</small>}
-                </span>
-              </label>
+          <div class="context-filter-stack">
+            {contextFilterGroups.map((group) => (
+              <div class="context-filter-group">
+                <span class="context-filter-label">{group.title}</span>
+                <div class="toggle-group">
+                  {group.contexts.map((context) => (
+                    <label class="toggle">
+                      <input type="checkbox" value={context.slug} data-grip-toggle />
+                      <span>
+                        {context.label}
+                        {context.japanese && <small>{context.japanese}</small>}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>

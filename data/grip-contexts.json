@@ -6,7 +6,8 @@
     "kana": "くみかた",
     "type": "grip",
     "notes": "Standard sleeve-and-lapel gripping context.",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "standing"
   },
   {
     "slug": "aiyotsu",
@@ -15,7 +16,8 @@
     "kana": "あいよつ",
     "type": "stance-relation",
     "notes": "Same-sided stance relationship, such as right-versus-right or left-versus-left.",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "standing"
   },
   {
     "slug": "kenkayotsu",
@@ -24,41 +26,55 @@
     "kana": "けんかよつ",
     "type": "stance-relation",
     "notes": "Opposite-sided stance relationship, such as right-versus-left.",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "standing"
   },
   {
     "slug": "georgian-grip",
     "label": "Georgian grip",
     "type": "grip",
     "notes": "Over-the-back or belt-control gripping family. Competition use can depend on attack timing and ruleset context.",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "standing"
   },
   {
     "slug": "leg-control",
     "label": "Leg control",
     "type": "position",
     "notes": "Hand or arm control below the belt, including classic leg-grab entries. IJF legality must be checked separately.",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "standing"
   },
   {
     "slug": "mount",
     "label": "Mount",
     "type": "position",
     "notes": "Top position with tori straddling uke. In judo this overlaps with tate-shiho-gatame contexts; in BJJ it is a primary control position.",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "ground"
+  },
+  {
+    "slug": "north-south",
+    "label": "North-south",
+    "type": "position",
+    "notes": "Top-to-head orientation over uke. In judo this overlaps with kami-shiho-gatame and kuzure-kami-shiho-gatame contexts.",
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "ground"
   },
   {
     "slug": "guard",
     "label": "Guard",
     "type": "position",
     "notes": "Ground position where the bottom player uses the legs to control distance, posture, or attacking angles.",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "ground"
   },
   {
     "slug": "collar-sleeve-control",
     "label": "Collar-sleeve control",
     "type": "grip",
     "notes": "Gi grip family controlling uke with one collar grip and one sleeve grip. From guard this is commonly called collar-sleeve guard; same-side and cross-side versions should be modeled as variants when needed.",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": ["local-practice-advisory-v1"],
+    "phase": "ground"
   }
 ]
