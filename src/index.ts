@@ -3,8 +3,10 @@ export * from "./types";
 export {
   DEFAULT_RULESET_ID,
   comboEdges,
+  classifications,
   explainCompetitionUse,
   getByGrouping,
+  getClassification,
   getCombosFor,
   getCountersFor,
   getLegality,

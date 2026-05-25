@@ -1,6 +1,7 @@
 import type {
   ComboEdge,
   ComboFilters,
+  Classification,
   Ruleset,
   RulesetLegality,
   SafetyAdvisory,
@@ -12,6 +13,7 @@ import type {
 
 export const sources: Source[];
 export const rulesets: Ruleset[];
+export const classifications: Classification[];
 export const techniques: Technique[];
 export const variants: TechniqueVariant[];
 export const legality: RulesetLegality[];
@@ -28,6 +30,7 @@ export function searchTechniques(query: string, filters?: {
   domain?: "standing" | "ground";
 }): Technique[];
 export function getByGrouping(groupSlug: string): Technique[];
+export function getClassification(slug: string): Classification | undefined;
 export function getVariantsFor(baseTechniqueSlug: string, filters?: {
   legalOnly?: boolean;
   practiceSafeOnly?: boolean;

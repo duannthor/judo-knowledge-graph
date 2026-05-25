@@ -5,6 +5,7 @@
       "english": "Shoulder wheel",
       "japaneseRomaji": "kata-guruma",
       "japanese": "肩車",
+      "kana": "かたぐるま",
       "aliases": ["kata guruma"]
     },
     "classifications": ["nage-waza", "te-waza", "tachi-waza"],
@@ -34,6 +35,7 @@
       "english": "Rear throw",
       "japaneseRomaji": "ura-nage",
       "japanese": "裏投",
+      "kana": "うらなげ",
       "aliases": ["ura nage"]
     },
     "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
@@ -58,11 +60,132 @@
     "sourceIds": ["kodokan-repertoire"]
   },
   {
+    "slug": "tomoe-nage",
+    "names": {
+      "english": "Circle throw",
+      "japaneseRomaji": "tomoe-nage",
+      "japanese": "巴投",
+      "kana": "ともえなげ",
+      "aliases": ["tomoe nage"]
+    },
+    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward while lowering into a rear sacrifice position.",
+        "directionHints": ["front"],
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "tsukuri": {
+        "summary": "Place the lifting foot while sitting under uke's center with sleeve and lapel control.",
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "kake": {
+        "summary": "Extend and rotate uke forward over the body line.",
+        "directionHints": ["front"],
+        "sourceIds": ["kodokan-repertoire"]
+      }
+    },
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "sumi-gaeshi",
+    "names": {
+      "english": "Corner reversal",
+      "japaneseRomaji": "sumi-gaeshi",
+      "japanese": "隅返",
+      "kana": "すみがえし",
+      "aliases": ["sumi gaeshi"]
+    },
+    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal into a corner of balance.",
+        "directionHints": ["front-right", "front-left"],
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "tsukuri": {
+        "summary": "Enter beneath uke with a rear sacrifice position and lifting leg placement.",
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "kake": {
+        "summary": "Lift and rotate uke over the diagonal corner line.",
+        "directionHints": ["front-right", "front-left"],
+        "sourceIds": ["kodokan-repertoire"]
+      }
+    },
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "hikikomi-gaeshi",
+    "names": {
+      "english": "Pulling-in reversal",
+      "japaneseRomaji": "hikikomi-gaeshi",
+      "japanese": "引込返",
+      "kana": "ひきこみがえし",
+      "aliases": ["hikikomi gaeshi"]
+    },
+    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter", "transition"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Pull uke forward and down into a committed reaction.",
+        "directionHints": ["front"],
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "tsukuri": {
+        "summary": "Drop under uke while maintaining pulling control, often from over-the-back or belt control.",
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "kake": {
+        "summary": "Continue the pull and roll uke through the sacrifice action.",
+        "directionHints": ["front"],
+        "sourceIds": ["kodokan-repertoire"]
+      }
+    },
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "tawara-gaeshi",
+    "names": {
+      "english": "Rice-bale reversal",
+      "japaneseRomaji": "tawara-gaeshi",
+      "japanese": "俵返",
+      "kana": "たわらがえし",
+      "aliases": ["tawara gaeshi"]
+    },
+    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Use uke's forward pressure, commonly from a low attack or bent posture.",
+        "directionHints": ["front"],
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "tsukuri": {
+        "summary": "Wrap and load uke while dropping into rear sacrifice position.",
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "kake": {
+        "summary": "Roll backward and lift to reverse uke over the body line.",
+        "directionHints": ["front"],
+        "sourceIds": ["kodokan-repertoire"]
+      }
+    },
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
     "slug": "hadaka-jime",
     "names": {
       "english": "Naked choke",
       "japaneseRomaji": "hadaka-jime",
       "japanese": "裸絞",
+      "kana": "はだかじめ",
       "aliases": ["rear naked choke"]
     },
     "classifications": ["katame-waza", "shime-waza"],
@@ -77,6 +200,7 @@
       "english": "Entangled arm lock",
       "japaneseRomaji": "ude-garami",
       "japanese": "腕緘",
+      "kana": "うでがらみ",
       "aliases": ["figure-four arm lock"]
     },
     "classifications": ["katame-waza", "kansetsu-waza"],
@@ -91,6 +215,7 @@
       "english": "Wrist turn",
       "japaneseRomaji": "kote-gaeshi",
       "japanese": "小手返",
+      "kana": "こてがえし",
       "aliases": ["wrist lock", "wrist turn throw"]
     },
     "classifications": ["self-defense", "kansetsu-waza"],
@@ -105,6 +230,7 @@
       "english": "Major inner reap",
       "japaneseRomaji": "o-uchi-gari",
       "japanese": "大内刈",
+      "kana": "おおうちがり",
       "aliases": ["ouchi gari"]
     },
     "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
@@ -119,6 +245,7 @@
       "english": "Minor inner reap",
       "japaneseRomaji": "ko-uchi-gari",
       "japanese": "小内刈",
+      "kana": "こうちがり",
       "aliases": ["kouchi gari"]
     },
     "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
@@ -133,6 +260,7 @@
       "english": "Shoulder throw",
       "japaneseRomaji": "seoi-nage",
       "japanese": "背負投",
+      "kana": "せおいなげ",
       "aliases": ["seoi nage"]
     },
     "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],

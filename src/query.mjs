@@ -9,6 +9,7 @@ const readJson = (name) => JSON.parse(readFileSync(join(dataDir, name), "utf8"))
 
 export const sources = readJson("sources.json");
 export const rulesets = readJson("rulesets.json");
+export const classifications = readJson("classifications.json");
 export const techniques = readJson("techniques.json");
 export const variants = readJson("variants.json");
 export const legality = readJson("legality.json");
@@ -23,6 +24,7 @@ const searchableText = (technique) =>
     technique.names.english,
     technique.names.japaneseRomaji,
     technique.names.japanese,
+    technique.names.kana,
     ...technique.names.aliases,
     ...technique.classifications
   ]
@@ -56,6 +58,10 @@ export function searchTechniques(query, filters = {}) {
 
 export function getByGrouping(groupSlug) {
   return techniques.filter((technique) => technique.classifications.includes(groupSlug));
+}
+
+export function getClassification(slug) {
+  return classifications.find((classification) => classification.slug === slug);
 }
 
 export function getVariantsFor(baseTechniqueSlug, filters = {}) {

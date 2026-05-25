@@ -33,6 +33,16 @@ export type Source = {
   notes?: string;
 };
 
+export type Classification = {
+  slug: string;
+  english: string;
+  japaneseRomaji: string;
+  japanese?: string;
+  kana: string;
+  notes?: string;
+  sourceIds: string[];
+};
+
 export type Phase = {
   summary: string;
   directionHints?: Direction[];
@@ -45,6 +55,7 @@ export type Technique = {
     english: string;
     japaneseRomaji: string;
     japanese?: string;
+    kana: string;
     aliases: string[];
   };
   classifications: string[];

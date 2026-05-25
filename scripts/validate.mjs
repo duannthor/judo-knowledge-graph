@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import {
   comboEdges,
+  classifications,
   legality,
   rulesets,
   safetyAdvisories,
@@ -12,6 +13,7 @@ import {
 const sourceIds = new Set(sources.map((source) => source.id));
 const rulesetIds = new Set(rulesets.map((ruleset) => ruleset.id));
 const techniqueSlugs = new Set(techniques.map((technique) => technique.slug));
+const classificationSlugs = new Set(classifications.map((classification) => classification.slug));
 const variantSlugs = new Set(variants.map((variant) => variant.slug));
 const graphSlugs = new Set([...techniqueSlugs, ...variantSlugs]);
 
@@ -26,8 +28,20 @@ for (const technique of techniques) {
   assert.ok(technique.slug, "Technique needs slug");
   assert.ok(technique.names?.english, `${technique.slug} needs English name`);
   assert.ok(technique.names?.japaneseRomaji, `${technique.slug} needs Japanese romanization`);
+  assert.ok(technique.names?.kana, `${technique.slug} needs kana`);
   assert.ok(Array.isArray(technique.classifications) && technique.classifications.length > 0, `${technique.slug} needs classifications`);
+  for (const classification of technique.classifications) {
+    assert.ok(classificationSlugs.has(classification), `${technique.slug} has unknown classification ${classification}`);
+  }
   assertSources(technique);
+}
+
+for (const classification of classifications) {
+  assert.ok(classification.slug, "Classification needs slug");
+  assert.ok(classification.english, `${classification.slug} needs English translation`);
+  assert.ok(classification.japaneseRomaji, `${classification.slug} needs Japanese romanization`);
+  assert.ok(classification.kana, `${classification.slug} needs kana`);
+  assertSources(classification);
 }
 
 for (const variant of variants) {
@@ -63,4 +77,4 @@ for (const edge of comboEdges) {
   assertSources(edge);
 }
 
-console.log(`Validated ${techniques.length} techniques, ${variants.length} variants, ${legality.length} legality records.`);
+console.log(`Validated ${techniques.length} techniques, ${classifications.length} classifications, ${variants.length} variants, ${legality.length} legality records.`);

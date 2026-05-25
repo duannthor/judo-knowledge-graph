@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   explainCompetitionUse,
+  getByGrouping,
+  getClassification,
   getCombosFor,
   getLegality,
   getSafetyAdvisories,
@@ -9,6 +11,28 @@ import {
   isLegal,
   isPracticeSafe
 } from "../src/query.mjs";
+
+test("ma-sutemi-waza classification includes translation and kana", () => {
+  const classification = getClassification("ma-sutemi-waza");
+
+  assert.equal(classification.english, "rear sacrifice techniques");
+  assert.equal(classification.japanese, "真捨身技");
+  assert.equal(classification.kana, "ますてみわざ");
+});
+
+test("ma-sutemi-waza catalog chunk contains the five base throws with kana", () => {
+  const throws = getByGrouping("ma-sutemi-waza");
+  const slugs = throws.map((technique) => technique.slug).sort();
+
+  assert.deepEqual(slugs, [
+    "hikikomi-gaeshi",
+    "sumi-gaeshi",
+    "tawara-gaeshi",
+    "tomoe-nage",
+    "ura-nage"
+  ]);
+  assert.ok(throws.every((technique) => technique.names.kana));
+});
 
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {
   const legalVariants = getVariantsFor("kata-guruma", { legalOnly: true });
