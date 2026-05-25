@@ -123,6 +123,18 @@ const sourceRows = technique.sourceIds
     <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
   </section>
 
+  <fieldset class="side-toggle detail-side-toggle" aria-label="Tori side">
+    <legend>Tori side</legend>
+    <label class="toggle">
+      <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
+      <span>Right</span>
+    </label>
+    <label class="toggle">
+      <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
+      <span>Left</span>
+    </label>
+  </fieldset>
+
   <div class="detail-grid">
     <div>
       <section class="panel" aria-labelledby="facts-title">
@@ -191,7 +203,9 @@ const sourceRows = technique.sourceIds
                       <p>{variant.mechanics[phaseName].summary}</p>
                       {variant.mechanics[phaseName].directionHints && (
                         <div class="tags">
-                          {variant.mechanics[phaseName].directionHints.map((direction) => <span class="tag">{direction}</span>)}
+                          {variant.mechanics[phaseName].directionHints.map((direction) => (
+                            <span class="tag" data-direction-label data-canonical-direction={direction}>{direction}</span>
+                          ))}
                         </div>
                       )}
                     </article>
@@ -201,9 +215,11 @@ const sourceRows = technique.sourceIds
                   <div class="direction-strip">
                     {variant.mechanics.directionSequences.map((sequence) => (
                       <div>
-                        <span class="mini-label">{sequence.stanceContext} · {sequence.toriSide}</span>
+                        <span class="mini-label">{sequence.stanceContext} · <span data-tori-side-label data-canonical-tori-side={sequence.toriSide}>{sequence.toriSide}</span></span>
                         <div class="tags">
-                          {sequence.directions.map((direction) => <span class="tag">{direction}</span>)}
+                          {sequence.directions.map((direction) => (
+                            <span class="tag" data-direction-label data-canonical-direction={direction}>{direction}</span>
+                          ))}
                         </div>
                       </div>
                     ))}
@@ -220,7 +236,9 @@ const sourceRows = technique.sourceIds
                 <p>{technique.phases[phaseName].summary}</p>
                 {technique.phases[phaseName].directionHints && (
                   <div class="tags">
-                    {technique.phases[phaseName].directionHints.map((direction) => <span class="tag">{direction}</span>)}
+                    {technique.phases[phaseName].directionHints.map((direction) => (
+                      <span class="tag" data-direction-label data-canonical-direction={direction}>{direction}</span>
+                    ))}
                   </div>
                 )}
               </article>
@@ -244,9 +262,24 @@ const sourceRows = technique.sourceIds
                   ) : (
                     related?.name ?? (direction === "outgoing" ? edge.toSlug : edge.fromSlug)
                   )}
-                  {edge.firstPressureDirection && ` · pressure ${edge.firstPressureDirection}`}
-                  {edge.expectedUkeReaction && ` · reaction ${edge.expectedUkeReaction}`}
-                  {edge.finishingDirection && ` · finish ${edge.finishingDirection}`}
+                  {edge.firstPressureDirection && (
+                    <>
+                      {" · pressure "}
+                      <span data-direction-label data-canonical-direction={edge.firstPressureDirection}>{edge.firstPressureDirection}</span>
+                    </>
+                  )}
+                  {edge.expectedUkeReaction && (
+                    <>
+                      {" · reaction "}
+                      <span data-direction-label data-canonical-direction={edge.expectedUkeReaction}>{edge.expectedUkeReaction}</span>
+                    </>
+                  )}
+                  {edge.finishingDirection && (
+                    <>
+                      {" · finish "}
+                      <span data-direction-label data-canonical-direction={edge.finishingDirection}>{edge.finishingDirection}</span>
+                    </>
+                  )}
                 </div>
               </li>
             ))}
@@ -325,4 +358,54 @@ const sourceRows = technique.sourceIds
       </section>
     </aside>
   </div>
+
+  <script>
+    const directionMirrorMap = {
+      "front-right": "front-left",
+      "front-left": "front-right",
+      "back-right": "back-left",
+      "back-left": "back-right",
+      "clockwise": "counter-clockwise",
+      "counter-clockwise": "clockwise"
+    };
+    const toriSideMirrorMap = {
+      right: "left",
+      left: "right"
+    };
+    const directionLabels = Array.from(document.querySelectorAll("[data-direction-label]"));
+    const toriSideLabels = Array.from(document.querySelectorAll("[data-tori-side-label]"));
+    const toriSideToggles = Array.from(document.querySelectorAll("[data-tori-side-toggle]"));
+    const storedToriSide = localStorage.getItem("judo-tori-side") ?? "right";
+
+    function mirrorValue(value, map, side) {
+      if (side !== "left") return value;
+      return map[value] ?? value;
+    }
+
+    function setToriSide(side) {
+      const nextSide = side === "left" ? "left" : "right";
+      document.documentElement.dataset.toriSide = nextSide;
+      localStorage.setItem("judo-tori-side", nextSide);
+
+      for (const label of directionLabels) {
+        if (!(label instanceof HTMLElement)) continue;
+        label.textContent = mirrorValue(label.dataset.canonicalDirection ?? "", directionMirrorMap, nextSide);
+      }
+      for (const label of toriSideLabels) {
+        if (!(label instanceof HTMLElement)) continue;
+        label.textContent = mirrorValue(label.dataset.canonicalToriSide ?? "", toriSideMirrorMap, nextSide);
+      }
+      for (const toggle of toriSideToggles) {
+        if (toggle instanceof HTMLInputElement) toggle.checked = toggle.value === nextSide;
+      }
+    }
+
+    setToriSide(storedToriSide);
+
+    for (const toggle of toriSideToggles) {
+      toggle.addEventListener("change", () => {
+        if (toggle instanceof HTMLInputElement && toggle.checked) setToriSide(toggle.value);
+      });
+    }
+  </script>
 </BaseLayout>

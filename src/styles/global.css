@@ -191,6 +191,29 @@ h3 {
   border: 0;
 }
 
+.side-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.side-toggle legend {
+  margin-right: 2px;
+  color: var(--muted);
+  font: 0.75rem/1.2 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.detail-side-toggle {
+  margin: -10px 0 22px;
+}
+
 .filter-group {
   min-width: 0;
 }
