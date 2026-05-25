@@ -1,0 +1,144 @@
+[
+  {
+    "slug": "kata-guruma",
+    "names": {
+      "english": "Shoulder wheel",
+      "japaneseRomaji": "kata-guruma",
+      "japanese": "肩車",
+      "aliases": ["kata guruma"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal while lowering under the center of gravity.",
+        "directionHints": ["front", "front-right", "front-left"],
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "tsukuri": {
+        "summary": "Enter under uke with shoulder and hip alignment appropriate to the variant.",
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "kake": {
+        "summary": "Rotate and project uke over the shoulder line.",
+        "directionHints": ["front", "front-right", "front-left"],
+        "sourceIds": ["kodokan-repertoire"]
+      }
+    },
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ura-nage",
+    "names": {
+      "english": "Rear throw",
+      "japaneseRomaji": "ura-nage",
+      "japanese": "裏投",
+      "aliases": ["ura nage"]
+    },
+    "classifications": ["nage-waza", "ma-sutemi-waza", "sutemi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Load uke backward or back-diagonal as their attack commits forward.",
+        "directionHints": ["back", "back-right", "back-left"],
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "tsukuri": {
+        "summary": "Fit behind or under uke's center while maintaining control of the upper body.",
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "kake": {
+        "summary": "Sacrifice backward and project uke over the rear line under control.",
+        "directionHints": ["back"],
+        "sourceIds": ["kodokan-repertoire"]
+      }
+    },
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "hadaka-jime",
+    "names": {
+      "english": "Naked choke",
+      "japaneseRomaji": "hadaka-jime",
+      "japanese": "裸絞",
+      "aliases": ["rear naked choke"]
+    },
+    "classifications": ["katame-waza", "shime-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "transition"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ude-garami",
+    "names": {
+      "english": "Entangled arm lock",
+      "japaneseRomaji": "ude-garami",
+      "japanese": "腕緘",
+      "aliases": ["figure-four arm lock"]
+    },
+    "classifications": ["katame-waza", "kansetsu-waza"],
+    "domains": ["ground"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "kote-gaeshi",
+    "names": {
+      "english": "Wrist turn",
+      "japaneseRomaji": "kote-gaeshi",
+      "japanese": "小手返",
+      "aliases": ["wrist lock", "wrist turn throw"]
+    },
+    "classifications": ["self-defense", "kansetsu-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "slug": "o-uchi-gari",
+    "names": {
+      "english": "Major inner reap",
+      "japaneseRomaji": "o-uchi-gari",
+      "japanese": "大内刈",
+      "aliases": ["ouchi gari"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ko-uchi-gari",
+    "names": {
+      "english": "Minor inner reap",
+      "japaneseRomaji": "ko-uchi-gari",
+      "japanese": "小内刈",
+      "aliases": ["kouchi gari"]
+    },
+    "classifications": ["nage-waza", "ashi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "seoi-nage",
+    "names": {
+      "english": "Shoulder throw",
+      "japaneseRomaji": "seoi-nage",
+      "japanese": "背負投",
+      "aliases": ["seoi nage"]
+    },
+    "classifications": ["nage-waza", "te-waza", "tachi-waza", "turn-throw"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  }
+]

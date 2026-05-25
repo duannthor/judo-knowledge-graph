@@ -1,0 +1,56 @@
+[
+  {
+    "subjectSlug": "kata-guruma-traditional-leg-grab",
+    "subjectType": "variant",
+    "level": "banned-in-competition",
+    "context": ["competition"],
+    "reasons": ["leg-grab"],
+    "authority": "official-rule",
+    "sourceIds": ["ijf-sor-2026"]
+  },
+  {
+    "subjectSlug": "ura-nage-standard",
+    "subjectType": "variant",
+    "level": "avoid-in-randori",
+    "context": ["randori"],
+    "reasons": ["dangerous-landing", "high-amplitude-counter"],
+    "authority": "coach-advisory",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "subjectSlug": "ura-nage-standard",
+    "subjectType": "variant",
+    "level": "supervision-only",
+    "context": ["drilling"],
+    "reasons": ["dangerous-landing", "ukemi-required"],
+    "authority": "coach-advisory",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "subjectSlug": "hadaka-jime-standing",
+    "subjectType": "variant",
+    "level": "banned-in-competition",
+    "context": ["competition", "randori"],
+    "reasons": ["standing-shime-waza"],
+    "authority": "official-rule",
+    "sourceIds": ["ijf-sor-2026"]
+  },
+  {
+    "subjectSlug": "ude-garami-standing",
+    "subjectType": "variant",
+    "level": "banned-in-competition",
+    "context": ["competition", "randori"],
+    "reasons": ["standing-kansetsu-waza"],
+    "authority": "official-rule",
+    "sourceIds": ["ijf-sor-2026"]
+  },
+  {
+    "subjectSlug": "kote-gaeshi-wrist-lock",
+    "subjectType": "variant",
+    "level": "banned-in-competition",
+    "context": ["competition", "randori"],
+    "reasons": ["joint-lock-not-elbow", "wrist-lock"],
+    "authority": "official-rule",
+    "sourceIds": ["ijf-sor-2026"]
+  }
+]

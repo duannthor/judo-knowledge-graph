@@ -1,0 +1,41 @@
+[
+  {
+    "fromSlug": "o-uchi-gari-right",
+    "toSlug": "ko-uchi-gari-right",
+    "pattern": "same-direction-pressure",
+    "firstPressureDirection": "back-left",
+    "expectedUkeReaction": "back-left",
+    "finishingDirection": "back-left",
+    "stanceContext": "aiyotsu",
+    "toriSide": "right",
+    "timing": "immediate",
+    "confidence": "common",
+    "sourceIds": ["common-combo-seed-v1"]
+  },
+  {
+    "fromSlug": "ko-uchi-gari-right",
+    "toSlug": "seoi-nage-right-turn",
+    "pattern": "alternating-direction-reaction",
+    "firstPressureDirection": "back-left",
+    "expectedUkeReaction": "front-right",
+    "finishingDirection": "front",
+    "stanceContext": "aiyotsu",
+    "toriSide": "right",
+    "timing": "reaction",
+    "confidence": "common",
+    "sourceIds": ["common-combo-seed-v1"]
+  },
+  {
+    "fromSlug": "seoi-nage-right-turn",
+    "toSlug": "ura-nage-standard",
+    "pattern": "counter-sequence",
+    "firstPressureDirection": "front",
+    "expectedUkeReaction": "back",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "sourceIds": ["common-combo-seed-v1", "local-practice-advisory-v1"]
+  }
+]

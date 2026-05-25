@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ijf-rules-explanation-2023",
+    "title": "Detailed Explanation of the IJF Judo Refereeing Rules",
+    "publisher": "International Judo Federation",
+    "url": "https://rules.ijf.org/",
+    "publishedDate": "2023-03-25",
+    "authority": "official-rule",
+    "notes": "Used for recognizable Kodokan technique and continuity requirements."
+  },
+  {
+    "id": "ijf-sor-2026",
+    "title": "Sport and Organisation Rules of the International Judo Federation",
+    "publisher": "International Judo Federation",
+    "url": "https://78884ca60822a34fb0e6-082b8fd5551e97bc65e327988b444396.ssl.cf3.rackcdn.com/up/2026/01/IJF_Sport_and_Organisation_Rul-1769443746.pdf",
+    "publishedDate": "2026-01-21",
+    "authority": "official-rule",
+    "notes": "Used for IJF senior legality restrictions, including leg grabs and standing shime-waza/kansetsu-waza."
+  },
+  {
+    "id": "kodokan-repertoire",
+    "title": "Kodokan/IJF Accepted Technique Repertoire",
+    "publisher": "Kodokan / International Judo Federation",
+    "url": "https://judo.ijf.org/",
+    "authority": "official-technique",
+    "notes": "Used for base technique identity and official classification."
+  },
+  {
+    "id": "local-practice-advisory-v1",
+    "title": "Local Practice Advisory Seed Data",
+    "publisher": "Project",
+    "authority": "coach-advisory",
+    "notes": "Seed advisory records that should be reviewed by a qualified coach before publication."
+  },
+  {
+    "id": "common-combo-seed-v1",
+    "title": "Common Combo Seed Data",
+    "publisher": "Project",
+    "authority": "common",
+    "notes": "Initial combo examples used to exercise pressure-pattern modeling."
+  }
+]

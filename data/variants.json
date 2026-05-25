@@ -1,0 +1,135 @@
+[
+  {
+    "slug": "kata-guruma-traditional-leg-grab",
+    "name": "Traditional kata-guruma with leg grab",
+    "baseTechniqueSlug": "kata-guruma",
+    "modifiers": ["leg-grab", "traditional"],
+    "actionFeatures": ["leg-grab", "tachi-waza"],
+    "directionSequences": [
+      {
+        "stanceContext": "any",
+        "toriSide": "any",
+        "directions": ["front", "front-right", "clockwise"]
+      }
+    ],
+    "sourceIds": ["kodokan-repertoire", "ijf-sor-2026"]
+  },
+  {
+    "slug": "kata-guruma-modified-no-leg-grab",
+    "name": "Modified kata-guruma without leg grab",
+    "baseTechniqueSlug": "kata-guruma",
+    "modifiers": ["modified", "no-leg-grab"],
+    "actionFeatures": ["tachi-waza", "no-leg-grab"],
+    "directionSequences": [
+      {
+        "stanceContext": "any",
+        "toriSide": "any",
+        "directions": ["front", "front-right", "clockwise"]
+      }
+    ],
+    "sourceIds": ["kodokan-repertoire", "ijf-rules-explanation-2023", "ijf-sor-2026"]
+  },
+  {
+    "slug": "ura-nage-standard",
+    "name": "Standard ura-nage",
+    "baseTechniqueSlug": "ura-nage",
+    "modifiers": ["standard", "sacrifice"],
+    "actionFeatures": ["tachi-waza", "sacrifice"],
+    "directionSequences": [
+      {
+        "stanceContext": "any",
+        "toriSide": "any",
+        "directions": ["back"]
+      }
+    ],
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "hadaka-jime-standing",
+    "name": "Standing hadaka-jime",
+    "baseTechniqueSlug": "hadaka-jime",
+    "modifiers": ["standing"],
+    "actionFeatures": ["standing-shime-waza", "tachi-waza"],
+    "directionSequences": [],
+    "sourceIds": ["kodokan-repertoire", "ijf-sor-2026"]
+  },
+  {
+    "slug": "ude-garami-standing",
+    "name": "Standing ude-garami",
+    "baseTechniqueSlug": "ude-garami",
+    "modifiers": ["standing"],
+    "actionFeatures": ["standing-kansetsu-waza", "tachi-waza"],
+    "directionSequences": [],
+    "sourceIds": ["kodokan-repertoire", "ijf-sor-2026"]
+  },
+  {
+    "slug": "kote-gaeshi-wrist-lock",
+    "name": "Kote-gaeshi wrist lock",
+    "baseTechniqueSlug": "kote-gaeshi",
+    "modifiers": ["wrist-lock"],
+    "actionFeatures": ["joint-lock-not-elbow", "wrist-lock"],
+    "directionSequences": [
+      {
+        "stanceContext": "any",
+        "toriSide": "any",
+        "directions": ["clockwise", "front"]
+      }
+    ],
+    "sourceIds": ["ijf-sor-2026", "local-practice-advisory-v1"]
+  },
+  {
+    "slug": "o-uchi-gari-right",
+    "name": "Right o-uchi-gari",
+    "baseTechniqueSlug": "o-uchi-gari",
+    "modifiers": ["right"],
+    "actionFeatures": ["tachi-waza"],
+    "chirality": {
+      "toriSide": "right"
+    },
+    "directionSequences": [
+      {
+        "stanceContext": "aiyotsu",
+        "toriSide": "right",
+        "directions": ["back-left"]
+      }
+    ],
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ko-uchi-gari-right",
+    "name": "Right ko-uchi-gari",
+    "baseTechniqueSlug": "ko-uchi-gari",
+    "modifiers": ["right"],
+    "actionFeatures": ["tachi-waza"],
+    "chirality": {
+      "toriSide": "right"
+    },
+    "directionSequences": [
+      {
+        "stanceContext": "aiyotsu",
+        "toriSide": "right",
+        "directions": ["back-left"]
+      }
+    ],
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "seoi-nage-right-turn",
+    "name": "Right-turn seoi-nage",
+    "baseTechniqueSlug": "seoi-nage",
+    "modifiers": ["right", "turn"],
+    "actionFeatures": ["tachi-waza", "turn"],
+    "chirality": {
+      "toriSide": "right",
+      "turn": "clockwise"
+    },
+    "directionSequences": [
+      {
+        "stanceContext": "aiyotsu",
+        "toriSide": "right",
+        "directions": ["front-right", "clockwise", "front"]
+      }
+    ],
+    "sourceIds": ["kodokan-repertoire"]
+  }
+]

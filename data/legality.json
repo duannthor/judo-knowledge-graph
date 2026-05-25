@@ -1,0 +1,89 @@
+[
+  {
+    "subjectSlug": "kata-guruma-traditional-leg-grab",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "illegal",
+    "reasons": ["leg-grab"],
+    "appliesTo": "variant",
+    "notes": "Leg grabbing, trouser grabbing, blocking, or pushing the opponent's leg with hand or arm is restricted in tachi-waza except clear ne-waza.",
+    "sourceIds": ["ijf-sor-2026"]
+  },
+  {
+    "subjectSlug": "kata-guruma-modified-no-leg-grab",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": ["recognizable-kodokan-technique", "no-leg-grab"],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when no prohibited leg control is used and the action remains recognizable as a Kodokan technique.",
+    "sourceIds": ["ijf-rules-explanation-2023", "ijf-sor-2026"]
+  },
+  {
+    "subjectSlug": "ura-nage-standard",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": ["recognizable-kodokan-technique"],
+    "appliesTo": "variant",
+    "notes": "Legality is separate from practice safety advisory.",
+    "sourceIds": ["ijf-rules-explanation-2023", "kodokan-repertoire"]
+  },
+  {
+    "subjectSlug": "hadaka-jime-standing",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "restricted",
+    "reasons": ["standing-shime-waza"],
+    "appliesTo": "variant",
+    "notes": "Standing shime-waza is restricted while both athletes are in tachi-waza.",
+    "sourceIds": ["ijf-sor-2026"]
+  },
+  {
+    "subjectSlug": "ude-garami-standing",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "restricted",
+    "reasons": ["standing-kansetsu-waza"],
+    "appliesTo": "variant",
+    "notes": "Standing kansetsu-waza is restricted while both athletes are in tachi-waza.",
+    "sourceIds": ["ijf-sor-2026"]
+  },
+  {
+    "subjectSlug": "kote-gaeshi-wrist-lock",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "illegal",
+    "reasons": ["joint-lock-not-elbow", "wrist-lock"],
+    "appliesTo": "variant",
+    "notes": "Modeled as illegal because competition kansetsu-waza is limited to permitted elbow attacks.",
+    "sourceIds": ["ijf-sor-2026"]
+  },
+  {
+    "subjectSlug": "o-uchi-gari-right",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": ["recognizable-kodokan-technique"],
+    "appliesTo": "variant",
+    "sourceIds": ["ijf-rules-explanation-2023", "kodokan-repertoire"]
+  },
+  {
+    "subjectSlug": "ko-uchi-gari-right",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": ["recognizable-kodokan-technique"],
+    "appliesTo": "variant",
+    "sourceIds": ["ijf-rules-explanation-2023", "kodokan-repertoire"]
+  },
+  {
+    "subjectSlug": "seoi-nage-right-turn",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": ["recognizable-kodokan-technique"],
+    "appliesTo": "variant",
+    "sourceIds": ["ijf-rules-explanation-2023", "kodokan-repertoire"]
+  }
+]
