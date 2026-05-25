@@ -8,16 +8,25 @@ import {
   techniques
 } from "../query.mjs";
 
-const nageTechniques = techniques.filter((technique) => technique.classifications.includes("nage-waza"));
-const groups = ["te-waza", "koshi-waza", "ashi-waza", "ma-sutemi-waza", "yoko-sutemi-waza"];
+const browsableTechniques = techniques;
+const groups = [
+  "te-waza",
+  "koshi-waza",
+  "ashi-waza",
+  "ma-sutemi-waza",
+  "yoko-sutemi-waza",
+  "osaekomi-waza",
+  "shime-waza",
+  "kansetsu-waza"
+];
 const groupMeta = groups.map((slug) => ({
   slug,
   label: classifications.find((item) => item.slug === slug)?.japaneseRomaji ?? slug,
   english: classifications.find((item) => item.slug === slug)?.english ?? slug,
-  count: nageTechniques.filter((technique) => technique.classifications.includes(slug)).length
+  count: browsableTechniques.filter((technique) => technique.classifications.includes(slug)).length
 }));
 
-const cards = nageTechniques
+const cards = browsableTechniques
   .slice()
   .sort((a, b) => a.names.japaneseRomaji.localeCompare(b.names.japaneseRomaji))
   .map((technique) => {
@@ -82,19 +91,19 @@ const cards = nageTechniques
   });
 ---
 
-<BaseLayout title="Judo Throw Browser">
+<BaseLayout title="Judo Technique Browser">
   <section class="intro" aria-labelledby="page-title">
     <div>
-      <p class="eyebrow">Nage-waza catalog</p>
-      <h1 id="page-title">Judo throws, grouped by technique family.</h1>
+      <p class="eyebrow">Technique catalog</p>
+      <h1 id="page-title">Judo techniques, grouped by technical family.</h1>
       <p class="lede">
-        {nageTechniques.length} throws with Japanese names, kana, classifications, variants, legality notes, safety advisories, and combo hooks.
+        {browsableTechniques.length} techniques with Japanese names, kana, classifications, variants, legality notes, safety advisories, and combo hooks.
       </p>
     </div>
     <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
   </section>
 
-  <section class="stats" aria-label="Throw groups">
+  <section class="stats" aria-label="Technique groups">
     {groupMeta.map((group) => (
       <a class="stat" href={`/?group=${group.slug}`} data-group-link={group.slug}>
         <strong>{group.count}</strong>
