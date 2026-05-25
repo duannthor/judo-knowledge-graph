@@ -52,10 +52,9 @@ const sourceRows = technique.sourceIds
   <section class="intro" aria-labelledby="technique-title">
     <div>
       <p class="eyebrow">{classificationLabels[0]}</p>
-      <h1 id="technique-title">{technique.names.japaneseRomaji}</h1>
-      <p class="lede">
-        {technique.names.english} · {technique.names.japanese} · {technique.names.kana}
-      </p>
+      <h1 id="technique-title" class="detail-kanji">{technique.names.japanese}</h1>
+      <p class="reading-line detail-reading">{technique.names.japaneseRomaji} · {technique.names.kana}</p>
+      <p class="lede">{technique.names.english}</p>
     </div>
     <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
   </section>

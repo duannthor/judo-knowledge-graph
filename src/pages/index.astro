@@ -31,6 +31,7 @@ const cards = nageTechniques
       variants,
       legalityStatuses,
       advisories,
+      roles: technique.roles.join(" "),
       searchText: [
         technique.slug,
         technique.names.english,
@@ -74,18 +75,25 @@ const cards = nageTechniques
           <option value={group.slug}>{group.label} · {group.english}</option>
         ))}
       </select>
+      <select class="select" id="role-filter">
+        <option value="all">All roles</option>
+        <option value="attack">Attacks</option>
+        <option value="counter">Counters</option>
+      </select>
     </div>
   </section>
 
   <section class="technique-grid" id="technique-grid" aria-label="Techniques">
-    {cards.map(({ technique, primaryGroup, variants, legalityStatuses, advisories, searchText }) => (
-      <article class="technique-card" data-technique-card data-group={primaryGroup} data-search={searchText}>
+    {cards.map(({ technique, primaryGroup, variants, legalityStatuses, advisories, roles, searchText }) => (
+      <article class="technique-card" data-technique-card data-group={primaryGroup} data-roles={roles} data-search={searchText}>
         <div class="card-top">
           <div>
-            <h2><a href={`/techniques/${technique.slug}/`}>{technique.names.japaneseRomaji}</a></h2>
-            <div class="names">
-              <div>{technique.names.english}</div>
-              <div class="kana">{technique.names.japanese} · {technique.names.kana}</div>
+            <a class="name-stack" href={`/techniques/${technique.slug}/`}>
+              <span class="kanji-title">{technique.names.japanese}</span>
+              <span class="reading-line">{technique.names.japaneseRomaji} · {technique.names.kana}</span>
+            </a>
+            <div class="english-name">
+              {technique.names.english}
             </div>
           </div>
           <span class="tag accent">{primaryGroup}</span>
@@ -103,28 +111,32 @@ const cards = nageTechniques
 
   <script>
     const search = document.querySelector("#technique-search");
-    const filter = document.querySelector("#group-filter");
+    const groupFilter = document.querySelector("#group-filter");
+    const roleFilter = document.querySelector("#role-filter");
     const cards = Array.from(document.querySelectorAll("[data-technique-card]"));
     const params = new URLSearchParams(window.location.search);
     const initialGroup = params.get("group");
 
-    if (initialGroup && filter instanceof HTMLSelectElement) {
-      filter.value = initialGroup;
+    if (initialGroup && groupFilter instanceof HTMLSelectElement) {
+      groupFilter.value = initialGroup;
     }
 
     function applyFilters() {
       const term = search instanceof HTMLInputElement ? search.value.trim().toLowerCase() : "";
-      const group = filter instanceof HTMLSelectElement ? filter.value : "all";
+      const group = groupFilter instanceof HTMLSelectElement ? groupFilter.value : "all";
+      const role = roleFilter instanceof HTMLSelectElement ? roleFilter.value : "all";
 
       for (const card of cards) {
         const matchesText = !term || card.dataset.search?.includes(term);
         const matchesGroup = group === "all" || card.dataset.group === group;
-        card.hidden = !(matchesText && matchesGroup);
+        const matchesRole = role === "all" || card.dataset.roles?.split(" ").includes(role);
+        card.hidden = !(matchesText && matchesGroup && matchesRole);
       }
     }
 
     search?.addEventListener("input", applyFilters);
-    filter?.addEventListener("change", applyFilters);
+    groupFilter?.addEventListener("change", applyFilters);
+    roleFilter?.addEventListener("change", applyFilters);
     applyFilters();
   </script>
 </BaseLayout>
