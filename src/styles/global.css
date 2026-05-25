@@ -195,7 +195,7 @@ h3 {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   min-width: 0;
   margin: 0;
   padding: 0;
@@ -212,6 +212,65 @@ h3 {
 
 .detail-side-toggle {
   margin: -10px 0 22px;
+}
+
+.side-switch {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(56px, 1fr));
+  min-width: 144px;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  padding: 3px;
+}
+
+.side-switch-thumb {
+  position: absolute;
+  inset-block: 3px;
+  inset-inline-start: 3px;
+  width: calc(50% - 3px);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: 0 5px 14px rgb(38 34 30 / 0.12);
+  transition: transform 160ms ease;
+}
+
+html[data-tori-side="right"] .side-switch-thumb {
+  transform: translateX(100%);
+}
+
+.side-switch label {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  min-height: 28px;
+  cursor: pointer;
+}
+
+.side-switch input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  opacity: 0;
+}
+
+.side-switch span:not(.side-switch-thumb) {
+  color: var(--muted);
+  font: 0.82rem/1 ui-sans-serif, system-ui, sans-serif;
+  transition: color 160ms ease;
+}
+
+.side-switch input:checked + span {
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.side-switch:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .filter-group {

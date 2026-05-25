@@ -221,14 +221,17 @@ const cards = browsableTechniques
       <input class="field" id="technique-search" type="search" placeholder="Search English, romaji, kana, kanji, alias" autocomplete="off" />
       <fieldset class="side-toggle" aria-label="Tori side">
         <legend>Tori side</legend>
-        <label class="toggle">
-          <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
-          <span>Right</span>
-        </label>
-        <label class="toggle">
-          <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
-          <span>Left</span>
-        </label>
+        <div class="side-switch">
+          <span class="side-switch-thumb" aria-hidden="true"></span>
+          <label>
+            <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
+            <span>Left</span>
+          </label>
+          <label>
+            <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
+            <span>Right</span>
+          </label>
+        </div>
       </fieldset>
       <fieldset class="filter-groups" aria-label="Technique filters">
         <div class="filter-group">

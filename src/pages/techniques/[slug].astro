@@ -125,14 +125,17 @@ const sourceRows = technique.sourceIds
 
   <fieldset class="side-toggle detail-side-toggle" aria-label="Tori side">
     <legend>Tori side</legend>
-    <label class="toggle">
-      <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
-      <span>Right</span>
-    </label>
-    <label class="toggle">
-      <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
-      <span>Left</span>
-    </label>
+    <div class="side-switch">
+      <span class="side-switch-thumb" aria-hidden="true"></span>
+      <label>
+        <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
+        <span>Left</span>
+      </label>
+      <label>
+        <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
+        <span>Right</span>
+      </label>
+    </div>
   </fieldset>
 
   <div class="detail-grid">
