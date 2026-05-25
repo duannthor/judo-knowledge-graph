@@ -30,22 +30,22 @@ const familyDisplay = {
   "te-waza": { kanji: "手", english: "hand" },
   "koshi-waza": { kanji: "腰", english: "hip" },
   "ashi-waza": { kanji: "足", english: "foot/leg" },
-  "ma-sutemi-waza": { kanji: "真", english: "rear sacrifice" },
-  "yoko-sutemi-waza": { kanji: "横", english: "side sacrifice" },
-  "osaekomi-waza": { kanji: "抑", english: "hold-down" },
+  "ma-sutemi-waza": { kanji: "真捨身", english: "rear sacrifice" },
+  "yoko-sutemi-waza": { kanji: "横捨身", english: "side sacrifice" },
+  "osaekomi-waza": { kanji: "抑込", english: "hold-down" },
   "shime-waza": { kanji: "絞", english: "choke" },
-  "kansetsu-waza": { kanji: "関", english: "joint lock" }
+  "kansetsu-waza": { kanji: "関節", english: "joint lock" }
 };
 const familyGroups = [
   {
     title: "Nage-waza",
-    kanji: "投",
+    kanji: "投技",
     english: "throwing techniques",
     groups: groupMeta.filter((group) => ["te-waza", "koshi-waza", "ashi-waza", "ma-sutemi-waza", "yoko-sutemi-waza"].includes(group.slug))
   },
   {
     title: "Katame-waza",
-    kanji: "固",
+    kanji: "固技",
     english: "grappling techniques",
     groups: groupMeta.filter((group) => ["osaekomi-waza", "shime-waza", "kansetsu-waza"].includes(group.slug))
   }
