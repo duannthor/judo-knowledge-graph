@@ -13,6 +13,7 @@
   --shadow: 0 14px 36px rgb(38 34 30 / 0.08);
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --jp-calligraphy: "Yuji Boku", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Kozuka Mincho Pro", "Noto Serif JP", "Source Han Serif JP", serif;
+  --jp-title-brush: "Yuji Syuku", "Yuji Boku", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Kozuka Mincho Pro", "Noto Serif JP", "Source Han Serif JP", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -483,7 +484,7 @@ h3 {
 
 .kanji-title {
   display: block;
-  font-family: var(--jp-calligraphy);
+  font-family: var(--jp-title-brush);
   color: color-mix(in srgb, var(--text), var(--muted) 18%);
   font-size: clamp(1.55rem, 3.4vw, 2.25rem);
   font-weight: 400;
@@ -508,7 +509,7 @@ h3 {
 
 .detail-kanji {
   max-width: 100%;
-  font-family: var(--jp-calligraphy);
+  font-family: var(--jp-title-brush);
   color: color-mix(in srgb, var(--text), var(--muted) 18%);
   font-size: clamp(2.6rem, 7vw, 4.9rem);
   font-weight: 400;

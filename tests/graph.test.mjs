@@ -107,7 +107,7 @@ test("yoko-sutemi-waza catalog chunk contains the sixteen side sacrifice throws 
 });
 
 test("katame-waza catalog contains the thirty-two grappling techniques with kana", () => {
-  const techniques = getByGrouping("katame-waza");
+  const techniques = getByGrouping("katame-waza").filter((technique) => technique.sourceIds.includes("kodokan-repertoire"));
 
   assert.equal(techniques.length, 32);
   assert.ok(techniques.every((technique) => technique.names.kana));
@@ -186,13 +186,17 @@ test("grip and stance contexts are available for filtering", () => {
   assert.deepEqual(slugs, [
     "aiyotsu",
     "collar-sleeve-control",
+    "frame-control",
     "georgian-grip",
     "guard",
     "kenkayotsu",
     "leg-control",
     "mount",
     "north-south",
-    "standard-kumi-kata"
+    "over-back-belt-control",
+    "side-control",
+    "standard-kumi-kata",
+    "underhook-hip-control"
   ]);
 
   const oUchi = getVariantsFor("o-uchi-gari").find((variant) => variant.slug === "o-uchi-gari-right");
@@ -222,9 +226,13 @@ test("engagement contexts are split by standing and ground phase", () => {
   ]);
   assert.deepEqual(ground, [
     "collar-sleeve-control",
+    "frame-control",
     "guard",
     "mount",
-    "north-south"
+    "north-south",
+    "over-back-belt-control",
+    "side-control",
+    "underhook-hip-control"
   ]);
 });
 
@@ -257,6 +265,8 @@ test("contextual grip filters have reviewed technique seeds", () => {
   const northSouthTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("north-south"));
   const guardTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("guard"));
   const collarSleeveTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("collar-sleeve-control"));
+  const sideControlTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("side-control"));
+  const overBackBeltTechniques = techniques.filter((technique) => technique.gripContextSlugs?.includes("over-back-belt-control"));
 
   assert.ok(aiyotsuTechniques.some((technique) => technique.slug === "seoi-nage"));
   assert.ok(kenkayotsuTechniques.some((technique) => technique.slug === "harai-goshi"));
@@ -265,6 +275,34 @@ test("contextual grip filters have reviewed technique seeds", () => {
   assert.ok(northSouthTechniques.some((technique) => technique.slug === "kami-shiho-gatame"));
   assert.ok(guardTechniques.some((technique) => technique.slug === "sankaku-jime"));
   assert.ok(collarSleeveTechniques.some((technique) => technique.slug === "ude-hishigi-juji-gatame"));
+  assert.ok(sideControlTechniques.some((technique) => technique.slug === "side-control-frame-shrimp-escape"));
+  assert.ok(overBackBeltTechniques.some((technique) => technique.slug === "side-control-underhook-hip-escape"));
+});
+
+test("practical ground escape nodes are searchable and legal defensive actions", () => {
+  const escapes = getByGrouping("ne-waza-escape");
+  const slugs = escapes.map((technique) => technique.slug).sort();
+
+  assert.deepEqual(slugs, [
+    "mount-bridge-and-roll-escape",
+    "mount-elbow-knee-escape",
+    "side-control-frame-shrimp-escape",
+    "side-control-underhook-hip-escape"
+  ]);
+  assert.ok(escapes.every((technique) => technique.roles.includes("escape")));
+  assert.ok(escapes.every((technique) => getLegality(technique.slug).status === "legal"));
+  assert.ok(escapes.every((technique) => technique.names.japanese.includes("逃れ方")));
+  assert.ok(escapes.every((technique) => technique.names.kana.includes("のがれかた")));
+});
+
+test("ground hold aliases include common positional names", () => {
+  const kamiShiho = getTechnique("kami-shiho-gatame");
+  const kuzureKamiShiho = getTechnique("kuzure-kami-shiho-gatame");
+  const yokoShiho = getTechnique("yoko-shiho-gatame");
+
+  assert.ok(kamiShiho.names.aliases.includes("north-south"));
+  assert.ok(kuzureKamiShiho.names.aliases.includes("modified north-south"));
+  assert.ok(yokoShiho.names.aliases.includes("side control"));
 });
 
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {

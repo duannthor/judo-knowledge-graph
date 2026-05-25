@@ -848,7 +848,7 @@
       "japaneseRomaji": "kuzure-kesa-gatame",
       "japanese": "崩袈裟固",
       "kana": "くずれけさがため",
-      "aliases": ["kuzure kesa gatame"]
+      "aliases": ["kuzure kesa gatame", "side control", "modified side control"]
     },
     "classifications": ["katame-waza", "osaekomi-waza"],
     "domains": ["ground"],
@@ -878,7 +878,7 @@
       "japaneseRomaji": "kata-gatame",
       "japanese": "肩固",
       "kana": "かたがため",
-      "aliases": ["kata gatame", "arm triangle hold"]
+      "aliases": ["kata gatame", "arm triangle hold", "side control", "arm triangle hold from side control"]
     },
     "classifications": ["katame-waza", "osaekomi-waza"],
     "domains": ["ground"],
@@ -893,7 +893,7 @@
       "japaneseRomaji": "kami-shiho-gatame",
       "japanese": "上四方固",
       "kana": "かみしほうがため",
-      "aliases": ["kami shiho gatame"]
+      "aliases": ["kami shiho gatame", "north-south", "north south", "north-south hold", "north-south position"]
     },
     "classifications": ["katame-waza", "osaekomi-waza"],
     "domains": ["ground"],
@@ -909,7 +909,7 @@
       "japaneseRomaji": "kuzure-kami-shiho-gatame",
       "japanese": "崩上四方固",
       "kana": "くずれかみしほうがため",
-      "aliases": ["kuzure kami shiho gatame"]
+      "aliases": ["kuzure kami shiho gatame", "modified north-south", "north south", "north-south hold", "north-south position"]
     },
     "classifications": ["katame-waza", "osaekomi-waza"],
     "domains": ["ground"],
@@ -925,7 +925,7 @@
       "japaneseRomaji": "yoko-shiho-gatame",
       "japanese": "横四方固",
       "kana": "よこしほうがため",
-      "aliases": ["yoko shiho gatame"]
+      "aliases": ["yoko shiho gatame", "side control", "side-control hold", "cross-side hold"]
     },
     "classifications": ["katame-waza", "osaekomi-waza"],
     "domains": ["ground"],
@@ -1381,5 +1381,129 @@
     "phases": {},
     "sourceIds": ["kodokan-repertoire"],
     "gripContextSlugs": ["standard-kumi-kata", "aiyotsu", "kenkayotsu"]
+  },
+  {
+    "slug": "side-control-frame-shrimp-escape",
+    "names": {
+      "english": "Side-control frame-and-shrimp escape",
+      "japaneseRomaji": "yoko-shiho-gatame no nogare-kata",
+      "japanese": "横四方固の逃れ方",
+      "kana": "よこしほうがためののがれかた",
+      "aliases": ["side control escape", "shrimp escape", "hip escape from side control", "ebi escape from side control", "yoko shiho gatame no nogare-kata", "nogare-kata"]
+    },
+    "classifications": ["katame-waza", "ne-waza-escape"],
+    "domains": ["ground"],
+    "roles": ["escape", "transition"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create a defensive frame to interrupt chest pressure and redirect top control away from the center line.",
+        "directionHints": ["left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "tsukuri": {
+        "summary": "Turn onto the side, make hip space, and insert knee or shin as a wedge.",
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "kake": {
+        "summary": "Recover guard, come to knees, or recompose to a safer defensive position.",
+        "directionHints": ["back", "left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      }
+    },
+    "sourceIds": ["local-practice-advisory-v1"],
+    "gripContextSlugs": ["side-control", "frame-control", "guard"]
+  },
+  {
+    "slug": "side-control-underhook-hip-escape",
+    "names": {
+      "english": "Side-control underhook hip escape",
+      "japaneseRomaji": "yoko-shiho-gatame no nogare-kata",
+      "japanese": "横四方固の逃れ方",
+      "kana": "よこしほうがためののがれかた",
+      "aliases": ["underhook escape from side control", "turn-in escape", "come-up escape from side control", "belt-control side control escape", "yoko shiho gatame no nogare-kata", "nogare-kata"]
+    },
+    "classifications": ["katame-waza", "ne-waza-escape"],
+    "domains": ["ground"],
+    "roles": ["escape", "transition"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Use an underhook, far-hip, or belt connection to prevent the top player from flattening the shoulders.",
+        "directionHints": ["left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "tsukuri": {
+        "summary": "Turn toward uke, bring the near elbow inside, and connect the hips under the top pressure.",
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "kake": {
+        "summary": "Come to knees, reverse, or recover guard using the hip-control connection.",
+        "directionHints": ["front", "left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      }
+    },
+    "sourceIds": ["local-practice-advisory-v1"],
+    "gripContextSlugs": ["side-control", "underhook-hip-control", "over-back-belt-control"]
+  },
+  {
+    "slug": "mount-bridge-and-roll-escape",
+    "names": {
+      "english": "Mount bridge-and-roll escape",
+      "japaneseRomaji": "tate-shiho-gatame no nogare-kata",
+      "japanese": "縦四方固の逃れ方",
+      "kana": "たてしほうがためののがれかた",
+      "aliases": ["mount escape", "upa escape", "bridge and roll", "tate shiho gatame escape", "tate shiho gatame no nogare-kata", "nogare-kata"]
+    },
+    "classifications": ["katame-waza", "ne-waza-escape"],
+    "domains": ["ground"],
+    "roles": ["escape", "transition"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Trap one side of uke and load their weight onto the blocked post.",
+        "directionHints": ["left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "tsukuri": {
+        "summary": "Bridge through the hips while keeping uke from posting with the trapped arm or leg.",
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "kake": {
+        "summary": "Roll over the trapped side and transition to top or guard-safe posture.",
+        "directionHints": ["left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      }
+    },
+    "sourceIds": ["local-practice-advisory-v1"],
+    "gripContextSlugs": ["mount"]
+  },
+  {
+    "slug": "mount-elbow-knee-escape",
+    "names": {
+      "english": "Mount elbow-knee escape",
+      "japaneseRomaji": "tate-shiho-gatame no nogare-kata",
+      "japanese": "縦四方固の逃れ方",
+      "kana": "たてしほうがためののがれかた",
+      "aliases": ["mount escape", "elbow knee escape", "knee elbow escape", "guard recovery from mount", "tate shiho gatame no nogare-kata", "nogare-kata"]
+    },
+    "classifications": ["katame-waza", "ne-waza-escape"],
+    "domains": ["ground"],
+    "roles": ["escape", "transition"],
+    "phases": {
+      "kuzushi": {
+        "summary": "Frame against uke and shift their weight enough to make knee space.",
+        "directionHints": ["back", "left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "tsukuri": {
+        "summary": "Connect elbow to knee, turn onto the side, and slide one knee inside the mount line.",
+        "sourceIds": ["local-practice-advisory-v1"]
+      },
+      "kake": {
+        "summary": "Recover half guard or full guard while maintaining frames against renewed pressure.",
+        "directionHints": ["back", "left", "right"],
+        "sourceIds": ["local-practice-advisory-v1"]
+      }
+    },
+    "sourceIds": ["local-practice-advisory-v1"],
+    "gripContextSlugs": ["mount", "frame-control", "guard"]
   }
 ]

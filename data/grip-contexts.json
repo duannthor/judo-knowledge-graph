@@ -76,5 +76,37 @@
     "notes": "Gi grip family controlling uke with one collar grip and one sleeve grip. From guard this is commonly called collar-sleeve guard; same-side and cross-side versions should be modeled as variants when needed.",
     "sourceIds": ["local-practice-advisory-v1"],
     "phase": "ground"
+  },
+  {
+    "slug": "side-control",
+    "label": "Side control",
+    "type": "position",
+    "phase": "ground",
+    "notes": "Cross-body top control orientation. In judo this overlaps with yoko-shiho-gatame and related hold-down contexts.",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "slug": "frame-control",
+    "label": "Frame control",
+    "type": "position",
+    "phase": "ground",
+    "notes": "Defensive structure using forearms, hands, knees, or shins to manage distance and create escape space.",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "slug": "underhook-hip-control",
+    "label": "Underhook / hip control",
+    "type": "grip",
+    "phase": "ground",
+    "notes": "Ground escape control built from an underhook, far-hip, belt, or waist connection used to turn in, come up, or recover guard.",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "slug": "over-back-belt-control",
+    "label": "Over-back / belt control",
+    "type": "grip",
+    "phase": "ground",
+    "notes": "Georgian-grip-adjacent ground control using over-back, belt, or far-side waist connection during escapes or reversals.",
+    "sourceIds": ["local-practice-advisory-v1"]
   }
 ]

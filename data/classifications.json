@@ -105,6 +105,15 @@
     "sourceIds": ["local-practice-advisory-v1"]
   },
   {
+    "slug": "ne-waza-escape",
+    "english": "ground escape",
+    "japaneseRomaji": "ne-waza no nogare-kata",
+    "japanese": "寝技の逃れ方",
+    "kana": "ねわざののがれかた",
+    "notes": "Practical project tag for ground escape actions. Uses nogare-kata, \"method of escaping,\" rather than the loanword escape.",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
     "slug": "turn-throw",
     "english": "turn throw",
     "japaneseRomaji": "mawari-komi-kei",
