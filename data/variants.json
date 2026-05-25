@@ -12,6 +12,29 @@
         "directions": ["front", "front-right", "clockwise"]
       }
     ],
+    "mechanics": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal while creating space to drop beneath their center.",
+        "directionHints": ["front", "front-right"],
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "tsukuri": {
+        "summary": "Control uke's leg with the hand or arm while fitting the shoulder and hips under uke's center line.",
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "kake": {
+        "summary": "Lift and rotate uke over the shoulder-wheel line, finishing forward or forward-diagonal.",
+        "directionHints": ["front", "front-right", "clockwise"],
+        "sourceIds": ["kodokan-repertoire"]
+      },
+      "directionSequences": [
+        {
+          "stanceContext": "any",
+          "toriSide": "any",
+          "directions": ["front", "front-right", "clockwise"]
+        }
+      ]
+    },
     "sourceIds": ["kodokan-repertoire", "ijf-sor-2026"]
   },
   {
@@ -27,6 +50,29 @@
         "directions": ["front", "front-right", "clockwise"]
       }
     ],
+    "mechanics": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal without using prohibited hand or arm control on the leg.",
+        "directionHints": ["front", "front-right"],
+        "sourceIds": ["kodokan-repertoire", "ijf-rules-explanation-2023"]
+      },
+      "tsukuri": {
+        "summary": "Fit under uke with shoulder and hip alignment while using upper-body control instead of a leg grab.",
+        "sourceIds": ["kodokan-repertoire", "ijf-rules-explanation-2023"]
+      },
+      "kake": {
+        "summary": "Rotate uke across the shoulder-wheel line while preserving recognizable kata-guruma mechanics.",
+        "directionHints": ["front", "front-right", "clockwise"],
+        "sourceIds": ["kodokan-repertoire", "ijf-rules-explanation-2023"]
+      },
+      "directionSequences": [
+        {
+          "stanceContext": "any",
+          "toriSide": "any",
+          "directions": ["front", "front-right", "clockwise"]
+        }
+      ]
+    },
     "sourceIds": ["kodokan-repertoire", "ijf-rules-explanation-2023", "ijf-sor-2026"]
   },
   {

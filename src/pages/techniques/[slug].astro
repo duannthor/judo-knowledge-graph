@@ -36,6 +36,9 @@ const variantRows = variants
     advisories: getSafetyAdvisories(variant.slug)
   }));
 
+const hasBasePhases = Object.keys(technique.phases).length > 0;
+const variantMechanicsRows = variantRows.filter((row) => row.variant.mechanics);
+
 const comboRows = comboEdges
   .filter((edge) => edge.fromSlug === technique.slug || variantRows.some((row) => row.variant.slug === edge.fromSlug))
   .map((edge) => ({
@@ -87,8 +90,57 @@ const sourceRows = technique.sourceIds
       </section>
 
       <section class="panel" aria-labelledby="phases-title">
-        <h2 id="phases-title">Kuzushi · Tsukuri · Kake</h2>
-        {Object.keys(technique.phases).length > 0 ? (
+        <h2 id="phases-title">Technique Theme</h2>
+        {technique.mechanicsTheme ? (
+          <p class="empty">{technique.mechanicsTheme}</p>
+        ) : hasBasePhases ? (
+          <p class="empty">Base-level mechanics have been captured, but variant-specific mechanics have not been added yet.</p>
+        ) : (
+          <p class="empty">Mechanics have not been added yet.</p>
+        )}
+      </section>
+
+      <section class="panel" aria-labelledby="variant-mechanics-title">
+        <h2 id="variant-mechanics-title">Mechanics By Variant</h2>
+        {variantMechanicsRows.length > 0 ? (
+          <div class="variant-mechanics">
+            {variantMechanicsRows.map(({ variant, legality }) => (
+              <article class="mechanics-card">
+                <div class="mechanics-heading">
+                  <h3>{variant.name}</h3>
+                  {legality?.status === "legal" && <span class="tag success">competition legal</span>}
+                  {legality?.status === "illegal" && <span class="tag danger">banned variant</span>}
+                  {legality?.status === "restricted" && <span class="tag danger">restricted</span>}
+                </div>
+                <div class="phase-list">
+                  {["kuzushi", "tsukuri", "kake"].map((phaseName) => variant.mechanics[phaseName] && (
+                    <article class="phase">
+                      <h3>{phaseName}</h3>
+                      <p>{variant.mechanics[phaseName].summary}</p>
+                      {variant.mechanics[phaseName].directionHints && (
+                        <div class="tags">
+                          {variant.mechanics[phaseName].directionHints.map((direction) => <span class="tag">{direction}</span>)}
+                        </div>
+                      )}
+                    </article>
+                  ))}
+                </div>
+                {variant.mechanics.directionSequences && (
+                  <div class="direction-strip">
+                    {variant.mechanics.directionSequences.map((sequence) => (
+                      <div>
+                        <span class="mini-label">{sequence.stanceContext} · {sequence.toriSide}</span>
+                        <div class="tags">
+                          {sequence.directions.map((direction) => <span class="tag">{direction}</span>)}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        ) : hasBasePhases ? (
           <div class="phase-list">
             {["kuzushi", "tsukuri", "kake"].map((phaseName) => technique.phases[phaseName] && (
               <article class="phase">
@@ -103,7 +155,7 @@ const sourceRows = technique.sourceIds
             ))}
           </div>
         ) : (
-          <p class="empty">Phase data has not been added yet.</p>
+          <p class="empty">Variant mechanics have not been added yet.</p>
         )}
       </section>
 

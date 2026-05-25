@@ -420,6 +420,30 @@ h3 {
   gap: 12px;
 }
 
+.variant-mechanics {
+  display: grid;
+  gap: 16px;
+}
+
+.mechanics-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 16px;
+}
+
+.mechanics-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.mechanics-heading .tag {
+  margin-top: 0;
+}
+
 .phase {
   border-left: 3px solid var(--accent);
   padding-left: 14px;
@@ -429,6 +453,14 @@ h3 {
 .empty {
   color: var(--muted);
   line-height: 1.55;
+}
+
+.direction-strip {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
 }
 
 .list {

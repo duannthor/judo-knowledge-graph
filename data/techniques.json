@@ -11,6 +11,7 @@
     "classifications": ["nage-waza", "te-waza", "tachi-waza"],
     "domains": ["standing"],
     "roles": ["attack"],
+    "mechanicsTheme": "Shoulder-wheel family: tori lowers under uke's center, loads uke across the shoulder line, and rotates them forward or forward-diagonally. The exact grip, entry, and off-balancing line depend heavily on the variant.",
     "phases": {
       "kuzushi": {
         "summary": "Draw uke forward or forward-diagonal while lowering under the center of gravity.",

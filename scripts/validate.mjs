@@ -24,6 +24,16 @@ const assertSources = (record) => {
   }
 };
 
+const assertMechanicsSources = (owner, mechanics) => {
+  if (!mechanics) return;
+
+  for (const phaseName of ["kuzushi", "tsukuri", "kake"]) {
+    if (mechanics[phaseName]) {
+      assertSources({ ...mechanics[phaseName], slug: `${owner}.${phaseName}` });
+    }
+  }
+};
+
 for (const technique of techniques) {
   assert.ok(technique.slug, "Technique needs slug");
   assert.ok(technique.names?.english, `${technique.slug} needs English name`);
@@ -34,6 +44,7 @@ for (const technique of techniques) {
     assert.ok(classificationSlugs.has(classification), `${technique.slug} has unknown classification ${classification}`);
   }
   assertSources(technique);
+  assertMechanicsSources(technique.slug, technique.phases);
 }
 
 for (const classification of classifications) {
@@ -47,6 +58,7 @@ for (const classification of classifications) {
 for (const variant of variants) {
   assert.ok(techniqueSlugs.has(variant.baseTechniqueSlug), `${variant.slug} points to missing base ${variant.baseTechniqueSlug}`);
   assertSources(variant);
+  assertMechanicsSources(variant.slug, variant.mechanics);
 }
 
 for (const record of legality) {

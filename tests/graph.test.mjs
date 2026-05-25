@@ -4,6 +4,7 @@ import {
   explainCompetitionUse,
   getByGrouping,
   getClassification,
+  getTechnique,
   getCombosFor,
   getLegality,
   getSafetyAdvisories,
@@ -172,6 +173,18 @@ test("kansetsu-waza catalog chunk contains the ten joint lock techniques", () =>
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {
   const legalVariants = getVariantsFor("kata-guruma", { legalOnly: true });
   assert.ok(!legalVariants.some((variant) => variant.slug === "kata-guruma-traditional-leg-grab"));
+});
+
+test("kata-guruma separates base technique theme from variant mechanics", () => {
+  const kataGuruma = getTechnique("kata-guruma");
+  const traditional = getVariantsFor("kata-guruma").find((variant) => variant.slug === "kata-guruma-traditional-leg-grab");
+  const modified = getVariantsFor("kata-guruma").find((variant) => variant.slug === "kata-guruma-modified-no-leg-grab");
+
+  assert.ok(kataGuruma.mechanicsTheme.includes("Shoulder-wheel family"));
+  assert.ok(traditional.mechanics.kuzushi.summary.includes("Draw uke forward"));
+  assert.ok(traditional.mechanics.tsukuri.summary.includes("leg"));
+  assert.ok(modified.mechanics.kuzushi.summary.includes("without using prohibited"));
+  assert.ok(modified.mechanics.tsukuri.summary.includes("upper-body control"));
 });
 
 test("modified no-leg-grab kata-guruma is returned as IJF-legal", () => {

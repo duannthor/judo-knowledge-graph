@@ -49,6 +49,10 @@ export type Phase = {
   sourceIds: string[];
 };
 
+export type Mechanics = Partial<Record<"kuzushi" | "tsukuri" | "kake", Phase>> & {
+  directionSequences?: DirectionSequence[];
+};
+
 export type Technique = {
   slug: string;
   names: {
@@ -61,6 +65,7 @@ export type Technique = {
   classifications: string[];
   domains: Array<"standing" | "ground">;
   roles: Array<"attack" | "counter" | "escape" | "transition">;
+  mechanicsTheme?: string;
   phases: Partial<Record<"kuzushi" | "tsukuri" | "kake", Phase>>;
   sourceIds: string[];
 };
@@ -82,6 +87,7 @@ export type TechniqueVariant = {
     turn?: "clockwise" | "counterClockwise";
   };
   directionSequences: DirectionSequence[];
+  mechanics?: Mechanics;
   sourceIds: string[];
 };
 
