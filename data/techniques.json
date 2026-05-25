@@ -180,6 +180,156 @@
     "sourceIds": ["kodokan-repertoire"]
   },
   {
+    "slug": "uki-goshi",
+    "names": {
+      "english": "Floating hip throw",
+      "japaneseRomaji": "uki-goshi",
+      "japanese": "浮腰",
+      "kana": "うきごし",
+      "aliases": ["uki goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "o-goshi",
+    "names": {
+      "english": "Full hip throw",
+      "japaneseRomaji": "o-goshi",
+      "japanese": "大腰",
+      "kana": "おおごし",
+      "aliases": ["ogoshi", "o goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "koshi-guruma",
+    "names": {
+      "english": "Hip wheel",
+      "japaneseRomaji": "koshi-guruma",
+      "japanese": "腰車",
+      "kana": "こしぐるま",
+      "aliases": ["koshi guruma"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "tsurikomi-goshi",
+    "names": {
+      "english": "Lifting pulling hip throw",
+      "japaneseRomaji": "tsurikomi-goshi",
+      "japanese": "釣込腰",
+      "kana": "つりこみごし",
+      "aliases": ["tsurikomi goshi", "tsuri-komi-goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "harai-goshi",
+    "names": {
+      "english": "Sweeping hip throw",
+      "japaneseRomaji": "harai-goshi",
+      "japanese": "払腰",
+      "kana": "はらいごし",
+      "aliases": ["harai goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "tsuri-goshi",
+    "names": {
+      "english": "Lifting hip throw",
+      "japaneseRomaji": "tsuri-goshi",
+      "japanese": "釣腰",
+      "kana": "つりごし",
+      "aliases": ["tsuri goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "hane-goshi",
+    "names": {
+      "english": "Spring hip throw",
+      "japaneseRomaji": "hane-goshi",
+      "japanese": "跳腰",
+      "kana": "はねごし",
+      "aliases": ["hane goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "utsuri-goshi",
+    "names": {
+      "english": "Shifting hip throw",
+      "japaneseRomaji": "utsuri-goshi",
+      "japanese": "移腰",
+      "kana": "うつりごし",
+      "aliases": ["utsuri goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack", "counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "ushiro-goshi",
+    "names": {
+      "english": "Rear hip throw",
+      "japaneseRomaji": "ushiro-goshi",
+      "japanese": "後腰",
+      "kana": "うしろごし",
+      "aliases": ["ushiro goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["counter"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "sode-tsurikomi-goshi",
+    "names": {
+      "english": "Sleeve lifting pulling hip throw",
+      "japaneseRomaji": "sode-tsurikomi-goshi",
+      "japanese": "袖釣込腰",
+      "kana": "そでつりこみごし",
+      "aliases": ["sode tsurikomi goshi", "sode-tsuri-komi-goshi"]
+    },
+    "classifications": ["nage-waza", "koshi-waza", "tachi-waza"],
+    "domains": ["standing"],
+    "roles": ["attack"],
+    "phases": {},
+    "sourceIds": ["kodokan-repertoire"]
+  },
+  {
     "slug": "hadaka-jime",
     "names": {
       "english": "Naked choke",

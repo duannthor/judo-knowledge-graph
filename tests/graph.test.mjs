@@ -34,6 +34,25 @@ test("ma-sutemi-waza catalog chunk contains the five base throws with kana", () 
   assert.ok(throws.every((technique) => technique.names.kana));
 });
 
+test("koshi-waza catalog chunk contains the ten hip throws with kana", () => {
+  const throws = getByGrouping("koshi-waza");
+  const slugs = throws.map((technique) => technique.slug).sort();
+
+  assert.deepEqual(slugs, [
+    "hane-goshi",
+    "harai-goshi",
+    "koshi-guruma",
+    "o-goshi",
+    "sode-tsurikomi-goshi",
+    "tsuri-goshi",
+    "tsurikomi-goshi",
+    "uki-goshi",
+    "ushiro-goshi",
+    "utsuri-goshi"
+  ]);
+  assert.ok(throws.every((technique) => technique.names.kana));
+});
+
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {
   const legalVariants = getVariantsFor("kata-guruma", { legalOnly: true });
   assert.ok(!legalVariants.some((variant) => variant.slug === "kata-guruma-traditional-leg-grab"));
