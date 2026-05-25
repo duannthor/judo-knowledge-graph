@@ -22,6 +22,7 @@ const cards = nageTechniques
   .sort((a, b) => a.names.japaneseRomaji.localeCompare(b.names.japaneseRomaji))
   .map((technique) => {
     const primaryGroup = groups.find((group) => technique.classifications.includes(group)) ?? "other";
+    const baseLegality = getLegality(technique.slug);
     const variants = getVariantsFor(technique.slug);
     const variantLegalityRows = variants.map((variant) => ({
       variant,
@@ -35,24 +36,31 @@ const cards = nageTechniques
       row.legality?.status === "illegal" &&
       row.variant.modifiers.some((modifier) => ["classic", "traditional"].includes(modifier))
     ));
-    const hasCompetitionLegalRecord = legalVariantCount > 0;
-    const hasMixedLegality = hasCompetitionLegalRecord && (bannedVariantCount > 0 || restrictedVariantCount > 0);
+    const baseLegal = baseLegality?.status === "legal";
+    const baseIllegal = baseLegality?.status === "illegal";
+    const baseRestricted = baseLegality?.status === "restricted";
+    const hasCompetitionLegalRecord = baseLegal || legalVariantCount > 0;
+    const hasMixedLegality = hasCompetitionLegalRecord && (bannedVariantCount > 0 || restrictedVariantCount > 0 || baseRestricted);
     const advisories = variants.flatMap((variant) => getSafetyAdvisories(variant.slug));
     const filterFlags = [
       variants.length > 0 && "has-variants",
       hasCompetitionLegalRecord && "competition-legal",
-      bannedVariantCount > 0 && "banned-variant",
+      (bannedVariantCount > 0 || baseIllegal) && "banned-variant",
       classicBanned && "classic-banned",
-      restrictedVariantCount > 0 && "restricted-variant",
+      (restrictedVariantCount > 0 || baseRestricted) && "restricted-variant",
       hasMixedLegality && "mixed-legality",
       advisories.length > 0 && "safety-note"
     ].filter(Boolean).join(" ");
     return {
       technique,
       primaryGroup,
+      baseLegality,
       variants,
       legalityStatuses,
       hasCompetitionLegalRecord,
+      baseLegal,
+      baseIllegal,
+      baseRestricted,
       legalVariantCount,
       bannedVariantCount,
       restrictedVariantCount,
@@ -173,9 +181,13 @@ const cards = nageTechniques
     {cards.map(({
       technique,
       primaryGroup,
+      baseLegality,
       variants,
       legalityStatuses,
       hasCompetitionLegalRecord,
+      baseLegal,
+      baseIllegal,
+      baseRestricted,
       legalVariantCount,
       bannedVariantCount,
       restrictedVariantCount,
@@ -209,10 +221,13 @@ const cards = nageTechniques
         <div class="tags">
           {technique.roles.map((role) => <span class="tag">{role}</span>)}
           {variants.length > 0 && <span class="tag">{variants.length} variants</span>}
-          {hasCompetitionLegalRecord && <span class="tag success">{legalVariantCount} legal variant{legalVariantCount === 1 ? "" : "s"}</span>}
+          {baseLegal && variants.length === 0 && <span class="tag success">competition legal</span>}
+          {legalVariantCount > 0 && <span class="tag success">{legalVariantCount} legal variant{legalVariantCount === 1 ? "" : "s"}</span>}
           {classicBanned && <span class="tag danger">classic banned</span>}
           {!classicBanned && bannedVariantCount > 0 && <span class="tag danger">{bannedVariantCount} banned variant{bannedVariantCount === 1 ? "" : "s"}</span>}
+          {baseIllegal && variants.length === 0 && <span class="tag danger">competition banned</span>}
           {restrictedVariantCount > 0 && <span class="tag danger">{restrictedVariantCount} restricted variant{restrictedVariantCount === 1 ? "" : "s"}</span>}
+          {baseRestricted && variants.length === 0 && <span class="tag danger">restricted</span>}
           {hasMixedLegality && <span class="tag mixed">mixed legality</span>}
           {advisories.length > 0 && <span class="tag warning">safety note</span>}
         </div>

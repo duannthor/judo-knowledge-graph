@@ -28,6 +28,8 @@ const classificationLabels = technique.classifications.map((slug) => {
   return classification ? `${classification.japaneseRomaji} · ${classification.english}` : slug;
 });
 
+const baseLegality = getLegality(technique.slug);
+
 const variantRows = variants
   .filter((variant) => variant.baseTechniqueSlug === technique.slug)
   .map((variant) => ({
@@ -86,6 +88,9 @@ const sourceRows = technique.sourceIds
         </div>
         <div class="tags">
           {technique.classifications.map((slug) => <span class="tag accent">{slug}</span>)}
+          {baseLegality?.status === "legal" && <span class="tag success">competition legal</span>}
+          {baseLegality?.status === "illegal" && <span class="tag danger">competition banned</span>}
+          {baseLegality?.status === "restricted" && <span class="tag danger">restricted</span>}
         </div>
       </section>
 

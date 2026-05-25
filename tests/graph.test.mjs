@@ -10,7 +10,8 @@ import {
   getSafetyAdvisories,
   getVariantsFor,
   isLegal,
-  isPracticeSafe
+  isPracticeSafe,
+  techniques
 } from "../src/query.mjs";
 
 test("ma-sutemi-waza classification includes translation and kana", () => {
@@ -170,9 +171,37 @@ test("kansetsu-waza catalog chunk contains the ten joint lock techniques", () =>
   ]);
 });
 
+test("every technique has an IJF senior legality record", () => {
+  const missing = techniques
+    .filter((technique) => !getLegality(technique.slug))
+    .map((technique) => technique.slug);
+
+  assert.deepEqual(missing, []);
+});
+
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {
   const legalVariants = getVariantsFor("kata-guruma", { legalOnly: true });
   assert.ok(!legalVariants.some((variant) => variant.slug === "kata-guruma-traditional-leg-grab"));
+});
+
+test("known IJF forbidden or leg-grab techniques are illegal or restricted", () => {
+  assert.equal(getLegality("kani-basami").status, "illegal");
+  assert.equal(getLegality("kawazu-gake").status, "illegal");
+  assert.equal(getLegality("do-jime").status, "illegal");
+  assert.equal(getLegality("ashi-garami").status, "illegal");
+  assert.equal(getLegality("morote-gari").status, "illegal");
+  assert.equal(getLegality("kuchiki-taoshi").status, "illegal");
+  assert.equal(getLegality("kibisu-gaeshi").status, "illegal");
+  assert.equal(getLegality("sukui-nage").status, "illegal");
+  assert.equal(getLegality("kata-guruma").status, "restricted");
+});
+
+test("representative competition techniques are legal at base level", () => {
+  assert.equal(getLegality("seoi-nage").status, "legal");
+  assert.equal(getLegality("o-goshi").status, "legal");
+  assert.equal(getLegality("tomoe-nage").status, "legal");
+  assert.equal(getLegality("kesa-gatame").status, "legal");
+  assert.equal(getLegality("ude-hishigi-juji-gatame").status, "legal");
 });
 
 test("kata-guruma separates base technique theme from variant mechanics", () => {

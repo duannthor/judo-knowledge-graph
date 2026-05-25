@@ -74,6 +74,13 @@ for (const record of legality) {
   }
 }
 
+for (const technique of techniques) {
+  assert.ok(
+    legality.some((record) => record.subjectSlug === technique.slug && record.subjectType === "technique"),
+    `${technique.slug} needs a technique-level legality record`
+  );
+}
+
 for (const advisory of safetyAdvisories) {
   assert.ok(graphSlugs.has(advisory.subjectSlug), `${advisory.subjectSlug} advisory points to missing graph node`);
   assert.ok(advisory.level, `${advisory.subjectSlug} advisory needs level`);
