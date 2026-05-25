@@ -5,6 +5,7 @@ export {
   comboEdges,
   classifications,
   explainCompetitionUse,
+  gripContexts,
   getByGrouping,
   getClassification,
   getCombosFor,

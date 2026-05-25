@@ -22,6 +22,7 @@ export type ComboPattern =
   | "counter-sequence";
 export type StanceContext = "aiyotsu" | "kenkayotsu" | "any";
 export type ToriSide = "right" | "left" | "any";
+export type GripContextType = "grip" | "stance-relation" | "position";
 
 export type Source = {
   id: string;
@@ -39,6 +40,16 @@ export type Classification = {
   japaneseRomaji: string;
   japanese?: string;
   kana: string;
+  notes?: string;
+  sourceIds: string[];
+};
+
+export type GripContext = {
+  slug: string;
+  label: string;
+  japanese?: string;
+  kana?: string;
+  type: GripContextType;
   notes?: string;
   sourceIds: string[];
 };
@@ -65,6 +76,7 @@ export type Technique = {
   classifications: string[];
   domains: Array<"standing" | "ground">;
   roles: Array<"attack" | "counter" | "escape" | "transition">;
+  gripContextSlugs?: string[];
   mechanicsTheme?: string;
   phases: Partial<Record<"kuzushi" | "tsukuri" | "kake", Phase>>;
   sourceIds: string[];
@@ -82,6 +94,7 @@ export type TechniqueVariant = {
   baseTechniqueSlug: string;
   modifiers: string[];
   actionFeatures: string[];
+  gripContextSlugs?: string[];
   chirality?: {
     toriSide?: "right" | "left";
     turn?: "clockwise" | "counterClockwise";

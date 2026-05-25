@@ -11,6 +11,7 @@ const readJson = (name) => JSON.parse(readFileSync(join(dataDir, name), "utf8"))
 export const sources = readJson("sources.json");
 export const rulesets = readJson("rulesets.json");
 export const classifications = readJson("classifications.json");
+export const gripContexts = readJson("grip-contexts.json");
 export const techniques = readJson("techniques.json");
 export const variants = readJson("variants.json");
 export const legality = readJson("legality.json");

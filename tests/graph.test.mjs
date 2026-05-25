@@ -9,6 +9,7 @@ import {
   getLegality,
   getSafetyAdvisories,
   getVariantsFor,
+  gripContexts,
   isLegal,
   isPracticeSafe,
   techniques
@@ -177,6 +178,24 @@ test("every technique has an IJF senior legality record", () => {
     .map((technique) => technique.slug);
 
   assert.deepEqual(missing, []);
+});
+
+test("grip and stance contexts are available for filtering", () => {
+  const slugs = gripContexts.map((context) => context.slug).sort();
+
+  assert.deepEqual(slugs, [
+    "aiyotsu",
+    "georgian-grip",
+    "kenkayotsu",
+    "standard-kumi-kata"
+  ]);
+
+  const oUchi = getVariantsFor("o-uchi-gari").find((variant) => variant.slug === "o-uchi-gari-right");
+  const hikikomi = getVariantsFor("hikikomi-gaeshi").find((variant) => variant.slug === "hikikomi-gaeshi-georgian-grip");
+
+  assert.ok(oUchi.gripContextSlugs.includes("standard-kumi-kata"));
+  assert.ok(oUchi.gripContextSlugs.includes("aiyotsu"));
+  assert.ok(hikikomi.gripContextSlugs.includes("georgian-grip"));
 });
 
 test("traditional leg-grab kata-guruma is not returned in IJF-legal variant searches", () => {

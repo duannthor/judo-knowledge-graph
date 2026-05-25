@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "standard-kumi-kata",
+    "label": "Standard kumi-kata",
+    "japanese": "組方",
+    "kana": "くみかた",
+    "type": "grip",
+    "notes": "Standard sleeve-and-lapel gripping context.",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "slug": "aiyotsu",
+    "label": "Aiyotsu",
+    "japanese": "相四つ",
+    "kana": "あいよつ",
+    "type": "stance-relation",
+    "notes": "Same-sided stance relationship, such as right-versus-right or left-versus-left.",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "slug": "kenkayotsu",
+    "label": "Kenkayotsu",
+    "japanese": "喧嘩四つ",
+    "kana": "けんかよつ",
+    "type": "stance-relation",
+    "notes": "Opposite-sided stance relationship, such as right-versus-left.",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
+    "slug": "georgian-grip",
+    "label": "Georgian grip",
+    "type": "grip",
+    "notes": "Over-the-back or belt-control gripping family. Competition use can depend on attack timing and ruleset context.",
+    "sourceIds": ["local-practice-advisory-v1"]
+  }
+]

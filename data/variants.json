@@ -5,6 +5,7 @@
     "baseTechniqueSlug": "kata-guruma",
     "modifiers": ["leg-grab", "traditional"],
     "actionFeatures": ["leg-grab", "tachi-waza"],
+    "gripContextSlugs": ["standard-kumi-kata"],
     "directionSequences": [
       {
         "stanceContext": "any",
@@ -43,6 +44,7 @@
     "baseTechniqueSlug": "kata-guruma",
     "modifiers": ["modified", "no-leg-grab"],
     "actionFeatures": ["tachi-waza", "no-leg-grab"],
+    "gripContextSlugs": ["standard-kumi-kata"],
     "directionSequences": [
       {
         "stanceContext": "any",
@@ -129,6 +131,7 @@
     "baseTechniqueSlug": "o-uchi-gari",
     "modifiers": ["right"],
     "actionFeatures": ["tachi-waza"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"],
     "chirality": {
       "toriSide": "right"
     },
@@ -147,6 +150,7 @@
     "baseTechniqueSlug": "ko-uchi-gari",
     "modifiers": ["right"],
     "actionFeatures": ["tachi-waza"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"],
     "chirality": {
       "toriSide": "right"
     },
@@ -165,6 +169,7 @@
     "baseTechniqueSlug": "seoi-nage",
     "modifiers": ["right", "turn"],
     "actionFeatures": ["tachi-waza", "turn"],
+    "gripContextSlugs": ["standard-kumi-kata", "aiyotsu"],
     "chirality": {
       "toriSide": "right",
       "turn": "clockwise"
@@ -177,5 +182,21 @@
       }
     ],
     "sourceIds": ["kodokan-repertoire"]
+  },
+  {
+    "slug": "hikikomi-gaeshi-georgian-grip",
+    "name": "Hikikomi-gaeshi from Georgian grip",
+    "baseTechniqueSlug": "hikikomi-gaeshi",
+    "modifiers": ["georgian-grip", "belt-control"],
+    "actionFeatures": ["tachi-waza", "sacrifice", "belt-control"],
+    "gripContextSlugs": ["georgian-grip"],
+    "directionSequences": [
+      {
+        "stanceContext": "any",
+        "toriSide": "any",
+        "directions": ["front"]
+      }
+    ],
+    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
   }
 ]

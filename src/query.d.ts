@@ -2,6 +2,7 @@ import type {
   ComboEdge,
   ComboFilters,
   Classification,
+  GripContext,
   Ruleset,
   RulesetLegality,
   SafetyAdvisory,
@@ -14,6 +15,7 @@ import type {
 export const sources: Source[];
 export const rulesets: Ruleset[];
 export const classifications: Classification[];
+export const gripContexts: GripContext[];
 export const techniques: Technique[];
 export const variants: TechniqueVariant[];
 export const legality: RulesetLegality[];

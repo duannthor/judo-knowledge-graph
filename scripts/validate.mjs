@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import {
   comboEdges,
   classifications,
+  gripContexts,
   legality,
   rulesets,
   safetyAdvisories,
@@ -14,6 +15,7 @@ const sourceIds = new Set(sources.map((source) => source.id));
 const rulesetIds = new Set(rulesets.map((ruleset) => ruleset.id));
 const techniqueSlugs = new Set(techniques.map((technique) => technique.slug));
 const classificationSlugs = new Set(classifications.map((classification) => classification.slug));
+const gripContextSlugs = new Set(gripContexts.map((gripContext) => gripContext.slug));
 const variantSlugs = new Set(variants.map((variant) => variant.slug));
 const graphSlugs = new Set([...techniqueSlugs, ...variantSlugs]);
 
@@ -43,6 +45,9 @@ for (const technique of techniques) {
   for (const classification of technique.classifications) {
     assert.ok(classificationSlugs.has(classification), `${technique.slug} has unknown classification ${classification}`);
   }
+  for (const gripContextSlug of technique.gripContextSlugs ?? []) {
+    assert.ok(gripContextSlugs.has(gripContextSlug), `${technique.slug} has unknown grip context ${gripContextSlug}`);
+  }
   assertSources(technique);
   assertMechanicsSources(technique.slug, technique.phases);
 }
@@ -55,8 +60,18 @@ for (const classification of classifications) {
   assertSources(classification);
 }
 
+for (const gripContext of gripContexts) {
+  assert.ok(gripContext.slug, "Grip context needs slug");
+  assert.ok(gripContext.label, `${gripContext.slug} needs label`);
+  assert.ok(gripContext.type, `${gripContext.slug} needs type`);
+  assertSources(gripContext);
+}
+
 for (const variant of variants) {
   assert.ok(techniqueSlugs.has(variant.baseTechniqueSlug), `${variant.slug} points to missing base ${variant.baseTechniqueSlug}`);
+  for (const gripContextSlug of variant.gripContextSlugs ?? []) {
+    assert.ok(gripContextSlugs.has(gripContextSlug), `${variant.slug} has unknown grip context ${gripContextSlug}`);
+  }
   assertSources(variant);
   assertMechanicsSources(variant.slug, variant.mechanics);
 }
