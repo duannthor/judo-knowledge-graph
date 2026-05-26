@@ -16,6 +16,14 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Yuji+Syuku&display=swap" rel="stylesheet" />
+    <script is:inline>
+      const storedTheme = localStorage.getItem("judo-theme");
+      if (storedTheme === "light" || storedTheme === "dark") {
+        document.documentElement.dataset.theme = storedTheme;
+      } else {
+        document.documentElement.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+    </script>
     <title>{title}</title>
   </head>
   <body>
@@ -29,11 +37,37 @@ const {
           <a href="/">Techniques</a>
           <a href="/kata/nage-no-kata/">Nage-no-kata</a>
           <a href="/promotion/">Promotion</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+            <span class="theme-toggle-thumb" aria-hidden="true"></span>
+            <span>Light</span>
+            <span>Dark</span>
+          </button>
         </div>
       </nav>
     </header>
     <main class="shell page">
       <slot />
     </main>
+    <script is:inline>
+      const themeToggle = document.querySelector("[data-theme-toggle]");
+      const themePreference = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function currentTheme() {
+        return document.documentElement.dataset.theme || (themePreference.matches ? "dark" : "light");
+      }
+
+      function setTheme(theme) {
+        const nextTheme = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = nextTheme;
+        localStorage.setItem("judo-theme", nextTheme);
+        themeToggle?.setAttribute("aria-pressed", String(nextTheme === "dark"));
+      }
+
+      themeToggle?.addEventListener("click", () => {
+        setTheme(currentTheme() === "dark" ? "light" : "dark");
+      });
+
+      themeToggle?.setAttribute("aria-pressed", String(currentTheme() === "dark"));
+    </script>
   </body>
 </html>
