@@ -3,6 +3,12 @@
 ## Overview
 Technical Machine is a comprehensive digital knowledge base for judo technique study and reference. Built from the ground up as an interactive catalog, v1.0 consolidates essential judo techniques, context-aware filtering, and authoritative reference materials in a single, searchable platform.
 
+## Who It's For
+- **Judo students** preparing for belt promotions
+- **Enthusiasts** exploring the complete taxonomy of judo movements
+- **Instructors** building lesson plans and technique references
+- **Competitors** studying competition rules and approved techniques
+
 ## Core Features
 
 ### Complete Technique Catalog
@@ -36,12 +42,6 @@ Technical Machine is a comprehensive digital knowledge base for judo technique s
 - **Responsive card layout** — Technique cards scale intelligently across devices
 - **Soft kanji rendering** — Beautifully typeset Japanese characters using refined font styling
 - **Decluttered interface** — Smart use of hover tooltips and contextual information to keep the main view clean
-
-## Who It's For
-- **Judo students** preparing for belt promotions
-- **Instructors** building lesson plans and technique references
-- **Competitors** studying competition rules and approved techniques
-- **Enthusiasts** exploring the complete taxonomy of judo movements
 
 ## What's Next
 Future versions will continue to expand with video tutorials, training progression paths, and community contributions.
