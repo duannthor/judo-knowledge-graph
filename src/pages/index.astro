@@ -156,7 +156,8 @@ const cards = browsableTechniques
       advisories.length > 0 && "safety-note",
       hasComboLinks && "has-combo-links",
       startsCombo && "combo-starter",
-      followsCombo && "combo-follow-up"
+      followsCombo && "combo-follow-up",
+      promotionRankIds.length > 0 && "promotion-requirement"
     ].filter(Boolean).join(" ");
     return {
       technique,
@@ -262,22 +263,35 @@ const cards = browsableTechniques
 
   <section aria-label="Technique controls">
     <div class="toolbar">
-      <input class="field" id="technique-search" type="search" placeholder="Search English, romaji, kana, kanji, alias" autocomplete="off" />
-      <fieldset class="side-toggle" aria-label="Tori side">
-        <legend>Tori side</legend>
-        <div class="side-switch">
-          <span class="side-switch-thumb" aria-hidden="true"></span>
-          <label>
-            <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
-            <span>Left</span>
-          </label>
-          <label>
-            <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
-            <span>Right</span>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset class="filter-groups" aria-label="Technique filters">
+      <div class="toolbar-primary">
+        <input class="field" id="technique-search" type="search" placeholder="Search English, romaji, kana, kanji, alias" autocomplete="off" />
+        <fieldset class="side-toggle" aria-label="Tori side">
+          <legend>Tori side</legend>
+          <div class="side-switch">
+            <span class="side-switch-thumb" aria-hidden="true"></span>
+            <label>
+              <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
+              <span>Left</span>
+            </label>
+            <label>
+              <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
+              <span>Right</span>
+            </label>
+          </div>
+        </fieldset>
+        <button class="clear-filters" type="button" id="clear-filters">Clear all</button>
+      </div>
+
+      <div class="filter-presets" aria-label="Filter presets">
+        <button class="preset-chip" type="button" data-filter-preset="competition">Competition legal</button>
+        <button class="preset-chip" type="button" data-filter-preset="promotion">Promotion study</button>
+        <button class="preset-chip" type="button" data-filter-preset="combos">Combos</button>
+        <button class="preset-chip" type="button" data-filter-preset="counters">Counters</button>
+        <button class="preset-chip" type="button" data-filter-preset="groundwork">Groundwork</button>
+        <button class="preset-chip" type="button" data-filter-preset="opposite-side">Opposite-side stance</button>
+      </div>
+
+      <fieldset class="filter-groups primary-filter-groups" aria-label="Primary technique filters">
         <div class="filter-group">
           <span class="filter-label">Role</span>
           <div class="toggle-group">
@@ -290,46 +304,9 @@ const cards = browsableTechniques
               <span>Counters</span>
             </label>
             <label class="toggle">
-              <input type="checkbox" value="transition" data-role-toggle />
-              <span>Transitions</span>
-            </label>
-            <label class="toggle">
               <input type="checkbox" value="escape" data-role-toggle />
               <span>Escapes</span>
             </label>
-            <label class="toggle">
-              <input type="checkbox" value="has-combo-links" data-status-toggle />
-              <span>Has combo links</span>
-            </label>
-            <label class="toggle">
-              <input type="checkbox" value="combo-starter" data-status-toggle />
-              <span>Combo starter</span>
-            </label>
-            <label class="toggle">
-              <input type="checkbox" value="combo-follow-up" data-status-toggle />
-              <span>Combo follow-up</span>
-            </label>
-          </div>
-        </div>
-        <div class="filter-group">
-          <span class="filter-label">Grip / Position</span>
-          <div class="context-filter-stack">
-            {contextFilterGroups.map((group) => (
-              <div class="context-filter-group">
-                <span class="context-filter-label">{group.title}</span>
-                <div class="toggle-group">
-                  {group.contexts.map((context) => (
-                    <label class="toggle" title={context.shortGloss}>
-                      <input type="checkbox" value={context.slug} data-grip-toggle />
-                      <span>
-                        {context.label}
-                        {context.japanese && <small>{context.japanese}</small>}
-                      </span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
         <div class="filter-group">
@@ -338,67 +315,123 @@ const cards = browsableTechniques
             <small>IJF Senior rules, 2026</small>
           </span>
           <div class="toggle-group">
-            <label class="toggle">
-              <input type="checkbox" value="has-variants" data-status-toggle />
-              <span>Has variants</span>
-            </label>
-            <label class="toggle">
-              <input type="checkbox" value="drop-entry" data-status-toggle />
-              <span>Drop entry</span>
-            </label>
             <label class="toggle success-toggle">
               <input type="checkbox" value="competition-legal" data-status-toggle />
               <span>IJF senior legal</span>
+            </label>
+            <label class="toggle warning-toggle">
+              <input type="checkbox" value="safety-note" data-status-toggle />
+              <span>Safety note</span>
             </label>
             <label class="toggle danger-toggle">
               <input type="checkbox" value="banned-variant" data-status-toggle />
               <span>Banned variant</span>
             </label>
             <label class="toggle danger-toggle">
-              <input type="checkbox" value="classic-banned" data-status-toggle />
-              <span>Classic banned</span>
-            </label>
-            <label class="toggle danger-toggle">
               <input type="checkbox" value="restricted-variant" data-status-toggle />
               <span>Restricted</span>
             </label>
-            <label class="toggle mixed-toggle">
-              <input type="checkbox" value="mixed-legality" data-status-toggle />
-              <span>Mixed legality</span>
-            </label>
           </div>
         </div>
-        <div class="filter-group">
-          <span class="filter-label">
-            Promotion Requirements
-            <small>{promotionRequirementLabel}</small>
-          </span>
-          <div class="toggle-group">
-            {promotionRanks.map((rank) => (
-              <label class={`toggle rank-toggle rank-${rank.beltColor}`}>
-                <input type="checkbox" value={rank.id} data-promotion-toggle />
-                <span>{rank.label} · {rank.beltColor}</span>
-              </label>
-            ))}
-            {kataFilters.map((kata) => (
-              <label class="toggle kata-toggle">
-                <input type="checkbox" value={kata.id} data-kata-toggle />
-                <span>{kata.label}</span>
-              </label>
-            ))}
-          </div>
-        </div>
-        <div class="filter-group">
-          <span class="filter-label">Safety</span>
-          <div class="toggle-group">
-            <label class="toggle warning-toggle">
-              <input type="checkbox" value="safety-note" data-status-toggle />
-              <span>Safety note</span>
-            </label>
-          </div>
-        </div>
-        <button class="clear-filters" type="button" id="clear-filters">Clear all</button>
       </fieldset>
+
+      <details class="more-filters" id="more-filters">
+        <summary>More filters</summary>
+        <fieldset class="filter-groups advanced-filter-groups" aria-label="Additional technique filters">
+          <div class="filter-group">
+            <span class="filter-label">Grip / Position</span>
+            <div class="context-filter-stack">
+              {contextFilterGroups.map((group) => (
+                <div class="context-filter-group">
+                  <span class="context-filter-label">{group.title}</span>
+                  <div class="toggle-group">
+                    {group.contexts.map((context) => (
+                      <label class="toggle" title={context.shortGloss}>
+                        <input type="checkbox" value={context.slug} data-grip-toggle />
+                        <span>
+                          {context.label}
+                          {context.japanese && <small>{context.japanese}</small>}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Sequence Links</span>
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" value="has-combo-links" data-status-toggle />
+                <span>Has combo links</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" value="combo-starter" data-status-toggle />
+                <span>Combo starter</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" value="combo-follow-up" data-status-toggle />
+                <span>Combo follow-up</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" value="transition" data-role-toggle />
+                <span>Transitions</span>
+              </label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Variants</span>
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" value="has-variants" data-status-toggle />
+                <span>Has variants</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" value="drop-entry" data-status-toggle />
+                <span>Drop entry</span>
+              </label>
+              <label class="toggle danger-toggle">
+                <input type="checkbox" value="classic-banned" data-status-toggle />
+                <span>Classic banned</span>
+              </label>
+              <label class="toggle mixed-toggle">
+                <input type="checkbox" value="mixed-legality" data-status-toggle />
+                <span>Mixed legality</span>
+              </label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">
+              Promotion Requirements
+              <small>{promotionRequirementLabel}</small>
+            </span>
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" value="promotion-requirement" data-status-toggle />
+                <span>Any promotion requirement</span>
+              </label>
+              {promotionRanks.map((rank) => (
+                <label class={`toggle rank-toggle rank-${rank.beltColor}`}>
+                  <input type="checkbox" value={rank.id} data-promotion-toggle />
+                  <span>{rank.label} · {rank.beltColor}</span>
+                </label>
+              ))}
+              {kataFilters.map((kata) => (
+                <label class="toggle kata-toggle">
+                  <input type="checkbox" value={kata.id} data-kata-toggle />
+                  <span>{kata.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        </fieldset>
+      </details>
+
+      <div class="active-filter-summary" id="active-filter-summary" hidden>
+        <span class="filter-label">Active filters</span>
+        <div class="tags" id="active-filter-tags"></div>
+      </div>
     </div>
   </section>
 
@@ -501,6 +534,10 @@ const cards = browsableTechniques
     const promotionToggles = Array.from(document.querySelectorAll("[data-promotion-toggle]"));
     const kataToggles = Array.from(document.querySelectorAll("[data-kata-toggle]"));
     const clearFilters = document.querySelector("#clear-filters");
+    const presetButtons = Array.from(document.querySelectorAll("[data-filter-preset]"));
+    const moreFilters = document.querySelector("#more-filters");
+    const activeFilterSummary = document.querySelector("#active-filter-summary");
+    const activeFilterTags = document.querySelector("#active-filter-tags");
     const cards = Array.from(document.querySelectorAll("[data-technique-card]"));
     const toriSideToggles = Array.from(document.querySelectorAll("[data-tori-side-toggle]"));
     const params = new URLSearchParams(window.location.search);
@@ -513,6 +550,37 @@ const cards = browsableTechniques
     const paramValues = (...keys) => keys.flatMap((key) => (
       params.getAll(key).flatMap((value) => value.split(",").map((item) => item.trim()).filter(Boolean))
     ));
+    const filterLabels = {
+      attack: "Attacks",
+      counter: "Counters",
+      transition: "Transitions",
+      escape: "Escapes",
+      aiyotsu: "Aiyotsu",
+      kenkayotsu: "Kenkayotsu",
+      "standard-kumi-kata": "Standard grip",
+      "georgian-grip": "Georgian grip",
+      "leg-control": "Leg control",
+      "side-control": "Side control",
+      mount: "Mount",
+      guard: "Guard",
+      "north-south": "North-south",
+      "collar-sleeve-control": "Collar-sleeve control",
+      "frame-control": "Frame control",
+      "underhook-hip-control": "Underhook / hip control",
+      "over-back-belt-control": "Over-back / belt control",
+      "competition-legal": "IJF senior legal",
+      "safety-note": "Safety note",
+      "banned-variant": "Banned variant",
+      "restricted-variant": "Restricted",
+      "has-combo-links": "Has combo links",
+      "combo-starter": "Combo starter",
+      "combo-follow-up": "Combo follow-up",
+      "has-variants": "Has variants",
+      "drop-entry": "Drop entry",
+      "classic-banned": "Classic banned",
+      "mixed-legality": "Mixed legality",
+      "promotion-requirement": "Any promotion requirement"
+    };
 
     function setToriSide(side) {
       const nextSide = side === "left" ? "left" : "right";
@@ -521,6 +589,95 @@ const cards = browsableTechniques
       for (const toggle of toriSideToggles) {
         if (toggle instanceof HTMLInputElement) toggle.checked = toggle.value === nextSide;
       }
+    }
+
+    function clearAllFilterInputs() {
+      if (search instanceof HTMLInputElement) search.value = "";
+      if (groupFilter instanceof HTMLInputElement) groupFilter.value = "all";
+
+      for (const toggle of [...roleToggles, ...gripToggles, ...statusToggles, ...promotionToggles, ...kataToggles]) {
+        if (toggle instanceof HTMLInputElement) toggle.checked = false;
+      }
+    }
+
+    function setChecked(toggles, value, checked = true) {
+      for (const toggle of toggles) {
+        if (toggle instanceof HTMLInputElement && toggle.value === value) toggle.checked = checked;
+      }
+    }
+
+    function labelForToggle(toggle) {
+      if (!(toggle instanceof HTMLInputElement)) return "";
+      return filterLabels[toggle.value] ?? toggle.nextElementSibling?.textContent?.trim() ?? toggle.value;
+    }
+
+    function updateActiveFilterSummary({
+      selectedRoles,
+      selectedGrips,
+      selectedStatuses,
+      selectedPromotions,
+      selectedKatas,
+      group,
+      term
+    }) {
+      if (!(activeFilterSummary instanceof HTMLElement) || !(activeFilterTags instanceof HTMLElement)) return;
+
+      const labels = [];
+      if (term) labels.push(`Search: ${term}`);
+      if (group !== "all") labels.push(groupAliases[group] ? group : group);
+
+      for (const value of selectedRoles) labels.push(filterLabels[value] ?? value);
+      for (const value of selectedGrips) labels.push(filterLabels[value] ?? value);
+      for (const value of selectedStatuses) labels.push(filterLabels[value] ?? value);
+      for (const value of selectedPromotions) {
+        const toggle = promotionToggles.find((item) => item instanceof HTMLInputElement && item.value === value);
+        labels.push(labelForToggle(toggle));
+      }
+      for (const value of selectedKatas) {
+        const toggle = kataToggles.find((item) => item instanceof HTMLInputElement && item.value === value);
+        labels.push(labelForToggle(toggle));
+      }
+
+      activeFilterTags.replaceChildren(...labels.map((label) => {
+        const tag = document.createElement("span");
+        tag.className = "tag";
+        tag.textContent = label;
+        return tag;
+      }));
+      activeFilterSummary.hidden = labels.length === 0;
+    }
+
+    function applyPreset(preset) {
+      clearAllFilterInputs();
+
+      if (preset === "competition") {
+        setChecked(statusToggles, "competition-legal");
+      }
+      if (preset === "promotion") {
+        setChecked(statusToggles, "promotion-requirement");
+        if (moreFilters instanceof HTMLDetailsElement) moreFilters.open = true;
+      }
+      if (preset === "combos") {
+        if (groupFilter instanceof HTMLInputElement) groupFilter.value = "nage-waza";
+        setChecked(roleToggles, "attack");
+        setChecked(statusToggles, "has-combo-links");
+        if (moreFilters instanceof HTMLDetailsElement) moreFilters.open = true;
+      }
+      if (preset === "counters") {
+        setChecked(roleToggles, "counter");
+      }
+      if (preset === "groundwork") {
+        if (groupFilter instanceof HTMLInputElement) groupFilter.value = "katame-waza";
+        if (moreFilters instanceof HTMLDetailsElement) moreFilters.open = true;
+      }
+      if (preset === "opposite-side") {
+        if (groupFilter instanceof HTMLInputElement) groupFilter.value = "nage-waza";
+        setChecked(roleToggles, "attack");
+        setChecked(gripToggles, "kenkayotsu");
+        if (moreFilters instanceof HTMLDetailsElement) moreFilters.open = true;
+      }
+
+      applyFilters();
     }
 
     if (initialGroup && groupFilter instanceof HTMLInputElement) {
@@ -543,6 +700,26 @@ const cards = browsableTechniques
     }
     for (const toggle of kataToggles) {
       if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("kata", "katas").includes(toggle.value);
+    }
+    const advancedStatusValues = new Set([
+      "has-combo-links",
+      "combo-starter",
+      "combo-follow-up",
+      "has-variants",
+      "drop-entry",
+      "classic-banned",
+      "mixed-legality",
+      "promotion-requirement"
+    ]);
+    if (
+      moreFilters instanceof HTMLDetailsElement &&
+      (
+        [...gripToggles, ...promotionToggles, ...kataToggles].some((toggle) => toggle instanceof HTMLInputElement && toggle.checked) ||
+        statusToggles.some((toggle) => toggle instanceof HTMLInputElement && toggle.checked && advancedStatusValues.has(toggle.value)) ||
+        roleToggles.some((toggle) => toggle instanceof HTMLInputElement && toggle.checked && toggle.value === "transition")
+      )
+    ) {
+      moreFilters.open = true;
     }
     setToriSide(storedToriSide);
 
@@ -593,6 +770,15 @@ const cards = browsableTechniques
         const matchesKatas = selectedKatas.every((kata) => cardKatas.includes(kata));
         card.hidden = !(matchesText && matchesGroup && matchesRoles && matchesGrips && matchesStatuses && matchesPromotions && matchesKatas);
       }
+      updateActiveFilterSummary({
+        selectedRoles,
+        selectedGrips,
+        selectedStatuses,
+        selectedPromotions,
+        selectedKatas,
+        group,
+        term
+      });
       syncFamilyTabs();
     }
 
@@ -629,14 +815,13 @@ const cards = browsableTechniques
         if (toggle instanceof HTMLInputElement && toggle.checked) setToriSide(toggle.value);
       });
     }
+    for (const button of presetButtons) {
+      button.addEventListener("click", () => {
+        if (button instanceof HTMLElement) applyPreset(button.dataset.filterPreset ?? "");
+      });
+    }
     clearFilters?.addEventListener("click", () => {
-      if (search instanceof HTMLInputElement) search.value = "";
-      if (groupFilter instanceof HTMLInputElement) groupFilter.value = "all";
-
-      for (const toggle of [...roleToggles, ...gripToggles, ...statusToggles, ...promotionToggles, ...kataToggles]) {
-        if (toggle instanceof HTMLInputElement) toggle.checked = false;
-      }
-
+      clearAllFilterInputs();
       applyFilters();
     });
     applyFilters();
