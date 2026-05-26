@@ -3,7 +3,82 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { promotionRequirements, techniques } from "../../query.mjs";
 
 const ranks = promotionRequirements.slice().sort((a, b) => a.band - b.band);
-const techniqueName = (slug) => techniques.find((technique) => technique.slug === slug)?.names.japaneseRomaji ?? slug;
+const techniqueBySlug = new Map(techniques.map((technique) => [technique.slug, technique]));
+const groupDefinitions = [
+  {
+    id: "nage-waza",
+    title: "Nage-waza",
+    subtitle: "throwing techniques",
+    matches: (technique) => !technique.roles.includes("escape") && technique.classifications.includes("nage-waza")
+  },
+  {
+    id: "osaekomi-waza",
+    title: "Osaekomi-waza",
+    subtitle: "hold-down techniques",
+    matches: (technique) => !technique.roles.includes("escape") && technique.classifications.includes("osaekomi-waza")
+  },
+  {
+    id: "shime-waza",
+    title: "Shime-waza",
+    subtitle: "strangling techniques",
+    matches: (technique) => !technique.roles.includes("escape") && technique.classifications.includes("shime-waza")
+  },
+  {
+    id: "kansetsu-waza",
+    title: "Kansetsu-waza",
+    subtitle: "joint lock techniques",
+    matches: (technique) => !technique.roles.includes("escape") && technique.classifications.includes("kansetsu-waza")
+  },
+  {
+    id: "escapes",
+    title: "Escapes / defenses",
+    subtitle: "defensive requirements",
+    matches: (technique) => technique.roles.includes("escape")
+  }
+];
+
+const openRequirementLabels = {
+  fundamental: "Fundamentals",
+  "opposite-side-throw": "Opposite-side throws",
+  combination: "Combinations",
+  counter: "Counters",
+  "kata-role": "Kata"
+};
+
+const groupTechniques = (rank) => {
+  const rows = rank.techniqueSlugs
+    .map((slug) => techniqueBySlug.get(slug))
+    .filter(Boolean);
+
+  const grouped = groupDefinitions.map((group) => ({
+    ...group,
+    techniques: rows.filter((technique) => group.matches(technique))
+  }));
+
+  const groupedSlugs = new Set(grouped.flatMap((group) => group.techniques.map((technique) => technique.slug)));
+  const supplemental = rows.filter((technique) => !groupedSlugs.has(technique.slug));
+  return supplemental.length > 0
+    ? [...grouped, { id: "supplemental", title: "Supplemental", subtitle: "other mapped requirements", techniques: supplemental }]
+    : grouped;
+};
+
+const groupStubs = (rank) => {
+  const stubs = rank.requirementStubs ?? [];
+  const groups = stubs.reduce((acc, stub) => {
+    acc[stub.type] ??= [];
+    acc[stub.type].push(stub);
+    return acc;
+  }, {});
+
+  return Object.entries(groups).map(([type, items]) => ({
+    type,
+    title: openRequirementLabels[type] ?? type,
+    items
+  }));
+};
+
+const getFundamentalStubs = (rank) => (rank.requirementStubs ?? []).filter((stub) => stub.type === "fundamental");
+const getOpenStubGroups = (rank) => groupStubs(rank).filter((group) => group.type !== "fundamental");
 ---
 
 <BaseLayout title="USJF Promotion Requirements · Judo Knowledge Graph">
@@ -12,30 +87,145 @@ const techniqueName = (slug) => techniques.find((technique) => technique.slug ==
       <p class="eyebrow">Promotion</p>
       <h1 id="page-title">USJF senior promotion requirements.</h1>
       <p class="lede">
-        Rank filters are modeled separately from IJF competition rules. These pages will become the exam breakout views.
+        Exam requirements are modeled separately from IJF competition legality. Use the rank tabs to focus the page without losing the cross-rank comparison.
       </p>
     </div>
     <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
   </section>
 
-  <section class="rank-grid" aria-label="Promotion ranks">
+  <section class="promotion-filter-bar" aria-label="Promotion rank filters">
+    <button class="family-tab promotion-rank-tab active" type="button" data-rank-filter="all">All ranks</button>
     {ranks.map((rank) => (
-      <article class="rank-card">
-        <div class="card-top">
-          <div>
-            <p class="eyebrow">Band {rank.band}</p>
-            <h2>{rank.label} · {rank.beltColor}</h2>
-            <p class="empty">{rank.japaneseRomaji}</p>
-          </div>
-          <span class={`tag rank-tag rank-${rank.beltColor}`}>{rank.beltColor}</span>
-        </div>
-        <div class="tags">
-          {rank.techniqueSlugs.slice(0, 8).map((slug) => (
-            <a class="tag" href={`/techniques/${slug}/`}>{techniqueName(slug)}</a>
-          ))}
-          {rank.techniqueSlugs.length > 8 && <span class="tag">+{rank.techniqueSlugs.length - 8} more</span>}
-        </div>
-      </article>
+      <button class={`family-tab promotion-rank-tab rank-${rank.beltColor}`} type="button" data-rank-filter={rank.id}>
+        <span class="rank-tab-kanji">{rank.japanese}</span>
+        <span class={`tag rank-tag rank-${rank.beltColor}`}>{rank.label} · {rank.beltColor}</span>
+      </button>
     ))}
   </section>
+
+  <section class="promotion-rank-list" aria-label="Promotion rank requirements">
+    {ranks.map((rank) => {
+      const grouped = groupTechniques(rank).filter((group) => group.techniques.length > 0);
+      const fundamentalStubs = getFundamentalStubs(rank);
+      const stubGroups = getOpenStubGroups(rank);
+      return (
+        <article class="panel promotion-rank-section" id={rank.id} data-rank-section={rank.id}>
+          <header class="promotion-rank-header">
+            <div>
+              <p class="eyebrow">USJF Senior Promotion Requirements, 2026</p>
+              <h2><span class="rank-heading-kanji">{rank.japanese}</span> {rank.label} · {rank.beltColor}</h2>
+              <p class="empty">{rank.japaneseRomaji} · {rank.techniqueSlugs.length} mapped technique{rank.techniqueSlugs.length === 1 ? "" : "s"}</p>
+            </div>
+            <span class={`tag rank-tag rank-${rank.beltColor}`}>{rank.beltColor}</span>
+          </header>
+
+          <div class="promotion-requirement-groups">
+            {fundamentalStubs.length > 0 && (
+              <section class="promotion-requirement-group" aria-labelledby={`${rank.id}-fundamentals-title`}>
+                <div class="promotion-group-heading">
+                  <h3 id={`${rank.id}-fundamentals-title`}>Fundamentals</h3>
+                  <span>green belt exam basics</span>
+                </div>
+                <ul class="list compact-list promotion-fundamentals-list">
+                  {fundamentalStubs.map((stub) => (
+                    <li>{stub.label}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {grouped.map((group) => (
+              <section class="promotion-requirement-group" aria-labelledby={`${rank.id}-${group.id}-title`}>
+                <div class="promotion-group-heading">
+                  <h3 id={`${rank.id}-${group.id}-title`}>{group.title}</h3>
+                  <span>{group.subtitle}</span>
+                </div>
+                <div class="promotion-technique-list">
+                  {group.techniques.map((technique) => (
+                    <a class="technique-row-link promotion-technique-link" href={`/techniques/${technique.slug}/`}>
+                      <span class="kanji-title">{technique.names.japanese}</span>
+                      <span>
+                        <strong>{technique.names.japaneseRomaji}</strong>
+                        <small>{technique.names.english}</small>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            ))}
+
+            {stubGroups.length > 0 && (
+              <section class="promotion-requirement-group" aria-labelledby={`${rank.id}-open-requirements-title`}>
+                <div class="promotion-group-heading">
+                  <h3 id={`${rank.id}-open-requirements-title`}>Open requirements</h3>
+                  <span>not mapped to a single technique yet</span>
+                </div>
+                <div class="promotion-open-groups">
+                  {stubGroups.map((group) => (
+                    <div>
+                      <h4>{group.title}</h4>
+                      <ul class="list compact-list">
+                        {group.items.map((stub) => (
+                          <li>
+                            {stub.type === "kata-role" ? (
+                              <a class="linked-requirement" href="/kata/nage-no-kata/">
+                                <span>{stub.label}</span>
+                                <strong>Open Nage-no-kata</strong>
+                              </a>
+                            ) : (
+                              stub.label
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+          </div>
+        </article>
+      );
+    })}
+  </section>
+
+  <script>
+    const rankButtons = Array.from(document.querySelectorAll("[data-rank-filter]"));
+    const rankSections = Array.from(document.querySelectorAll("[data-rank-section]"));
+
+    function setRankFilter(rankId, shouldUpdateUrl = true) {
+      const nextRank = rankId && rankId !== "all" ? rankId : "all";
+
+      for (const button of rankButtons) {
+        if (!(button instanceof HTMLElement)) continue;
+        button.classList.toggle("active", button.dataset.rankFilter === nextRank);
+      }
+
+      for (const section of rankSections) {
+        if (!(section instanceof HTMLElement)) continue;
+        section.hidden = nextRank !== "all" && section.dataset.rankSection !== nextRank;
+      }
+
+      if (!shouldUpdateUrl) return;
+
+      const url = new URL(window.location.href);
+      if (nextRank === "all") {
+        url.searchParams.delete("rank");
+        history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+      } else {
+        url.searchParams.set("rank", nextRank);
+        history.replaceState(null, "", `${url.pathname}${url.search}#${nextRank}`);
+      }
+    }
+
+    const initialUrl = new URL(window.location.href);
+    setRankFilter(initialUrl.searchParams.get("rank") ?? "all", false);
+
+    for (const button of rankButtons) {
+      button.addEventListener("click", () => {
+        if (!(button instanceof HTMLElement)) return;
+        setRankFilter(button.dataset.rankFilter ?? "all");
+      });
+    }
+  </script>
 </BaseLayout>

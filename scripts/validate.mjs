@@ -119,6 +119,7 @@ for (const requirement of promotionRequirements) {
   assert.ok(requirement.id, "Promotion requirement needs id");
   assert.ok(requirement.rulesetId, `${requirement.id} needs rulesetId`);
   assert.ok(requirement.label, `${requirement.id} needs label`);
+  assert.ok(requirement.japanese, `${requirement.id} needs Japanese rank text`);
   assert.ok(requirement.beltColor, `${requirement.id} needs beltColor`);
   assert.ok(Array.isArray(requirement.techniqueSlugs), `${requirement.id} needs techniqueSlugs`);
   for (const techniqueSlug of requirement.techniqueSlugs) {

@@ -231,17 +231,25 @@ test("USJF senior promotion requirements tag concrete graph techniques by rank",
     "usjf-senior-2026-shodan"
   ]);
   assert.ok(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-go-kyu").techniqueSlugs.includes("o-soto-gari"));
+  assert.equal(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-go-kyu").japanese, "五級");
+  assert.equal(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan").japanese, "初段");
   assert.ok(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-yon-kyu").techniqueSlugs.includes("seoi-nage"));
   assert.ok(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan").techniqueSlugs.includes("morote-gari"));
 });
 
 test("USJF promotion requirements map named techniques and preserve requirement stubs", () => {
   const ranks = promotionRequirements;
+  const goKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-go-kyu");
   const niKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-ni-kyu");
   const shodan = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan");
 
   assert.ok(ranks.every((rank) => rank.unmappedItems.length === 0));
   assert.ok(shodan.techniqueSlugs.includes("ashi-guruma"));
+  assert.ok(goKyu.requirementStubs.some((stub) => stub.type === "fundamental" && stub.label.includes("Happo-no-kuzushi")));
+  assert.ok(goKyu.requirementStubs.some((stub) => stub.type === "fundamental" && stub.label.includes("zenpo-kaiten")));
+  assert.ok(goKyu.requirementStubs.some((stub) => stub.type === "fundamental" && stub.label.includes("natural posture")));
+  assert.ok(goKyu.requirementStubs.some((stub) => stub.type === "fundamental" && stub.label.includes("defensive posture")));
+  assert.ok(goKyu.requirementStubs.some((stub) => stub.type === "fundamental" && stub.id.endsWith("suriashi")));
   assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "combination"));
   assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "counter"));
   assert.ok(ranks.every((rank) => !rank.requirementStubs.some((stub) => ["defense", "aggregate-requirement"].includes(stub.type))));

@@ -3,6 +3,7 @@
     "id": "usjf-senior-2026-go-kyu",
     "rulesetId": "USJF_SENIOR_PROMOTION_2026",
     "label": "5 kyu",
+    "japanese": "五級",
     "japaneseRomaji": "go-kyu",
     "beltColor": "green",
     "band": 1,
@@ -21,12 +22,59 @@
     "sourceIds": [
       "usjf-promotion-requirements-2026"
     ],
-    "requirementStubs": []
+    "requirementStubs": [
+      {
+        "id": "usjf-senior-2026-go-kyu-kumikata",
+        "type": "fundamental",
+        "label": "Kumi-kata: basic gripping"
+      },
+      {
+        "id": "usjf-senior-2026-go-kyu-shizentai",
+        "type": "fundamental",
+        "label": "Shizentai: natural posture; hon-shizentai (basic natural posture), migi-shizentai (right natural posture), hidari-shizentai (left natural posture)"
+      },
+      {
+        "id": "usjf-senior-2026-go-kyu-jigotai",
+        "type": "fundamental",
+        "label": "Jigotai: defensive posture; hon-jigotai (basic defensive posture), migi-jigotai (right defensive posture), hidari-jigotai (left defensive posture)"
+      },
+      {
+        "id": "usjf-senior-2026-go-kyu-shintai",
+        "type": "fundamental",
+        "label": "Shintai: advancing and retreating movement; ayumi-ashi (normal alternating walking steps) and tsugi-ashi (following footwork where one foot advances and the other follows)"
+      },
+      {
+        "id": "usjf-senior-2026-go-kyu-suriashi",
+        "type": "fundamental",
+        "label": "Suri-ashi: sliding footwork; related to shintai but emphasized separately because the feet glide without lifting high from the tatami"
+      },
+      {
+        "id": "usjf-senior-2026-go-kyu-taisabaki",
+        "type": "fundamental",
+        "label": "Tai-sabaki: body management / body turning concept"
+      },
+      {
+        "id": "usjf-senior-2026-go-kyu-ukemi",
+        "type": "fundamental",
+        "label": "Ukemi: backward, left/right side, forward, and zenpo-kaiten shoulder roll"
+      },
+      {
+        "id": "usjf-senior-2026-go-kyu-kuzushi-tsukuri-kake",
+        "type": "fundamental",
+        "label": "Explain kuzushi, tsukuri, and kake for one exam throw"
+      },
+      {
+        "id": "usjf-senior-2026-go-kyu-happo-no-kuzushi",
+        "type": "fundamental",
+        "label": "Happo-no-kuzushi: eight directions of off-balancing from uke's perspective"
+      }
+    ]
   },
   {
     "id": "usjf-senior-2026-yon-kyu",
     "rulesetId": "USJF_SENIOR_PROMOTION_2026",
     "label": "4 kyu",
+    "japanese": "四級",
     "japaneseRomaji": "yon-kyu",
     "beltColor": "blue",
     "band": 2,
@@ -58,6 +106,7 @@
     "id": "usjf-senior-2026-san-kyu",
     "rulesetId": "USJF_SENIOR_PROMOTION_2026",
     "label": "3 kyu",
+    "japanese": "三級",
     "japaneseRomaji": "san-kyu",
     "beltColor": "brown",
     "band": 3,
@@ -99,6 +148,7 @@
     "id": "usjf-senior-2026-ni-kyu",
     "rulesetId": "USJF_SENIOR_PROMOTION_2026",
     "label": "2 kyu",
+    "japanese": "二級",
     "japaneseRomaji": "ni-kyu",
     "beltColor": "brown",
     "band": 4,
@@ -156,6 +206,7 @@
     "id": "usjf-senior-2026-ikkyu",
     "rulesetId": "USJF_SENIOR_PROMOTION_2026",
     "label": "1 kyu",
+    "japanese": "一級",
     "japaneseRomaji": "ikkyu",
     "beltColor": "brown",
     "band": 5,
@@ -224,6 +275,7 @@
     "id": "usjf-senior-2026-shodan",
     "rulesetId": "USJF_SENIOR_PROMOTION_2026",
     "label": "Shodan",
+    "japanese": "初段",
     "japaneseRomaji": "shodan",
     "beltColor": "black",
     "band": 6,
