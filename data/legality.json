@@ -1382,6 +1382,21 @@
     ]
   },
   {
+    "subjectSlug": "kesa-gatame-frame-turn-in-escape",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical escape modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
     "subjectSlug": "side-control-frame-shrimp-escape",
     "subjectType": "technique",
     "rulesetId": "IJF_SENIOR_2026",

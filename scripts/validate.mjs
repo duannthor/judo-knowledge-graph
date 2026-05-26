@@ -123,6 +123,11 @@ for (const requirement of promotionRequirements) {
   for (const techniqueSlug of requirement.techniqueSlugs) {
     assert.ok(techniqueSlugs.has(techniqueSlug), `${requirement.id} points to missing technique ${techniqueSlug}`);
   }
+  for (const stub of requirement.requirementStubs ?? []) {
+    assert.ok(stub.id, `${requirement.id} has requirement stub without id`);
+    assert.ok(stub.type, `${stub.id} needs type`);
+    assert.ok(stub.label, `${stub.id} needs label`);
+  }
   assertSources(requirement);
 }
 

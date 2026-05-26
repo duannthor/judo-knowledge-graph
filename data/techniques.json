@@ -2701,6 +2701,71 @@
     ]
   },
   {
+    "slug": "kesa-gatame-frame-turn-in-escape",
+    "names": {
+      "english": "Kesa-gatame frame-and-turn-in escape",
+      "japaneseRomaji": "kesa-gatame no nogare-kata",
+      "japanese": "袈裟固の逃れ方",
+      "kana": "けさがためののがれかた",
+      "aliases": [
+        "kesa gatame escape",
+        "scarf hold escape",
+        "head and arm escape",
+        "turn-in escape from kesa gatame",
+        "kesa gatame no nogare-kata",
+        "nogare-kata"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "transition"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Build a frame against uke's hip or shoulder line and prevent the head-and-arm hold from fully flattening the torso.",
+        "directionHints": [
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn toward uke, recover the trapped arm line when possible, and make enough hip space to face the hold.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Come to the knees, recover guard, or reverse before uke resets scarf-hold pressure.",
+        "directionHints": [
+          "front",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "side-control",
+      "frame-control",
+      "underhook-hip-control"
+    ]
+  },
+  {
     "slug": "side-control-frame-shrimp-escape",
     "names": {
       "english": "Side-control frame-and-shrimp escape",

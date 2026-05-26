@@ -37,6 +37,7 @@
       "o-soto-gaeshi",
       "kami-shiho-gatame",
       "yoko-shiho-gatame",
+      "kesa-gatame-frame-turn-in-escape",
       "hadaka-jime",
       "okuri-eri-jime",
       "ude-hishigi-juji-gatame"
@@ -44,8 +45,19 @@
     "unmappedItems": [
       "Sasae-tsurikomi-ashi",
       "Hiza-guruma",
-      "Kuzure-yoko-shiho-gatame",
-      "One escape from kesa-gatame"
+      "Kuzure-yoko-shiho-gatame"
+    ],
+    "requirementStubs": [
+      {
+        "id": "usjf-senior-2026-yon-kyu-shime-defense",
+        "type": "defense",
+        "label": "Defense against each listed shime-waza"
+      },
+      {
+        "id": "usjf-senior-2026-yon-kyu-kansetsu-defense",
+        "type": "defense",
+        "label": "Defense against each listed kansetsu-waza"
+      }
     ],
     "sourceIds": [
       "usjf-promotion-requirements-2026"
@@ -66,6 +78,7 @@
       "kuzure-kami-shiho-gatame",
       "tate-shiho-gatame",
       "ushiro-kesa-gatame",
+      "side-control-frame-shrimp-escape",
       "nami-juji-jime",
       "kata-juji-jime",
       "gyaku-juji-jime",
@@ -74,9 +87,24 @@
     ],
     "unmappedItems": [
       "Ko-soto-gari",
-      "Okuri-ashi-barai",
-      "One escape from yoko-shiho-gatame",
-      "Nage-no-kata, Uke role, first 3 sets"
+      "Okuri-ashi-barai"
+    ],
+    "requirementStubs": [
+      {
+        "id": "usjf-senior-2026-san-kyu-nage-no-kata-uke-first-3",
+        "type": "kata-role",
+        "label": "Nage-no-kata, Uke role, first 3 sets"
+      },
+      {
+        "id": "usjf-senior-2026-san-kyu-shime-defense",
+        "type": "defense",
+        "label": "Defense against each listed shime-waza"
+      },
+      {
+        "id": "usjf-senior-2026-san-kyu-kansetsu-defense",
+        "type": "defense",
+        "label": "Defense against each listed kansetsu-waza"
+      }
     ],
     "sourceIds": [
       "usjf-promotion-requirements-2026"
@@ -107,11 +135,38 @@
       "ude-hishigi-hiza-gatame",
       "ude-hishigi-waki-gatame"
     ],
-    "unmappedItems": [
-      "One opposite-side throw",
-      "One combination",
-      "One counter",
-      "Nage-no-kata, Tori role, first 3 sets"
+    "unmappedItems": [],
+    "requirementStubs": [
+      {
+        "id": "usjf-senior-2026-ni-kyu-opposite-side-throw",
+        "type": "opposite-side-throw",
+        "label": "One opposite-side throw"
+      },
+      {
+        "id": "usjf-senior-2026-ni-kyu-combination",
+        "type": "combination",
+        "label": "One combination"
+      },
+      {
+        "id": "usjf-senior-2026-ni-kyu-counter",
+        "type": "counter",
+        "label": "One counter"
+      },
+      {
+        "id": "usjf-senior-2026-ni-kyu-nage-no-kata-tori-first-3",
+        "type": "kata-role",
+        "label": "Nage-no-kata, Tori role, first 3 sets"
+      },
+      {
+        "id": "usjf-senior-2026-ni-kyu-shime-defense",
+        "type": "defense",
+        "label": "Defense against each listed shime-waza"
+      },
+      {
+        "id": "usjf-senior-2026-ni-kyu-kansetsu-defense",
+        "type": "defense",
+        "label": "Defense against each listed kansetsu-waza"
+      }
     ],
     "sourceIds": [
       "usjf-promotion-requirements-2026"
@@ -151,11 +206,39 @@
       "ude-hishigi-sankaku-gatame"
     ],
     "unmappedItems": [
-      "Ko-soto-gake",
-      "Two opposite-side throws",
-      "Two combinations",
-      "Two counters",
-      "Nage-no-kata, Uke role, all 5 sets"
+      "Ko-soto-gake"
+    ],
+    "requirementStubs": [
+      {
+        "id": "usjf-senior-2026-ikkyu-opposite-side-throws",
+        "type": "opposite-side-throw",
+        "label": "Two opposite-side throws"
+      },
+      {
+        "id": "usjf-senior-2026-ikkyu-combinations",
+        "type": "combination",
+        "label": "Two combinations"
+      },
+      {
+        "id": "usjf-senior-2026-ikkyu-counters",
+        "type": "counter",
+        "label": "Two counters"
+      },
+      {
+        "id": "usjf-senior-2026-ikkyu-nage-no-kata-uke-all-5",
+        "type": "kata-role",
+        "label": "Nage-no-kata, Uke role, all 5 sets"
+      },
+      {
+        "id": "usjf-senior-2026-ikkyu-shime-defense",
+        "type": "defense",
+        "label": "Defense against each listed shime-waza"
+      },
+      {
+        "id": "usjf-senior-2026-ikkyu-kansetsu-defense",
+        "type": "defense",
+        "label": "Defense against each listed kansetsu-waza"
+      }
     ],
     "sourceIds": [
       "usjf-promotion-requirements-2026"
@@ -205,11 +288,39 @@
       "Ashi-guruma",
       "O-tsuri-goshi",
       "Ko-tsuri-goshi",
-      "Harai-tsurikomi-ashi",
-      "Three throws from opposite side",
-      "Three combinations",
-      "Three counters",
-      "Nage-no-kata, Tori role, all 5 sets"
+      "Harai-tsurikomi-ashi"
+    ],
+    "requirementStubs": [
+      {
+        "id": "usjf-senior-2026-shodan-opposite-side-throws",
+        "type": "opposite-side-throw",
+        "label": "Three throws from opposite side"
+      },
+      {
+        "id": "usjf-senior-2026-shodan-combinations",
+        "type": "combination",
+        "label": "Three combinations"
+      },
+      {
+        "id": "usjf-senior-2026-shodan-counters",
+        "type": "counter",
+        "label": "Three counters"
+      },
+      {
+        "id": "usjf-senior-2026-shodan-nage-no-kata-tori-all-5",
+        "type": "kata-role",
+        "label": "Nage-no-kata, Tori role, all 5 sets"
+      },
+      {
+        "id": "usjf-senior-2026-shodan-shime-defense",
+        "type": "defense",
+        "label": "Defense against each listed shime-waza"
+      },
+      {
+        "id": "usjf-senior-2026-shodan-kansetsu-understanding",
+        "type": "aggregate-requirement",
+        "label": "All kansetsu-waza with improved understanding and ability"
+      }
     ],
     "sourceIds": [
       "usjf-promotion-requirements-2026"

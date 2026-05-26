@@ -230,9 +230,23 @@ test("USJF senior promotion requirements tag concrete graph techniques by rank",
 test("USJF promotion requirements preserve unmapped syllabus items as stubs", () => {
   const shodan = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan");
   const yonKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-yon-kyu");
+  const niKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-ni-kyu");
 
   assert.ok(shodan.unmappedItems.includes("Ashi-guruma"));
   assert.ok(yonKyu.unmappedItems.includes("Sasae-tsurikomi-ashi"));
+  assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "combination"));
+  assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "counter"));
+  assert.equal(niKyu.unmappedItems.length, 0);
+});
+
+test("USJF syllabus-specific escape requirements map to concrete escape nodes", () => {
+  const yonKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-yon-kyu");
+  const sanKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-san-kyu");
+
+  assert.ok(yonKyu.techniqueSlugs.includes("kesa-gatame-frame-turn-in-escape"));
+  assert.ok(sanKyu.techniqueSlugs.includes("side-control-frame-shrimp-escape"));
+  assert.ok(!yonKyu.unmappedItems.includes("One escape from kesa-gatame"));
+  assert.ok(!sanKyu.unmappedItems.includes("One escape from yoko-shiho-gatame"));
 });
 
 test("Nage-no-kata membership tags existing graph techniques and stubs missing throws", () => {
@@ -322,6 +336,7 @@ test("practical ground escape nodes are searchable and legal defensive actions",
   const slugs = escapes.map((technique) => technique.slug).sort();
 
   assert.deepEqual(slugs, [
+    "kesa-gatame-frame-turn-in-escape",
     "mount-bridge-and-roll-escape",
     "mount-elbow-knee-escape",
     "north-south-frame-turn-in-escape",
@@ -336,10 +351,12 @@ test("practical ground escape nodes are searchable and legal defensive actions",
 
 test("hold-down techniques are linked to practical escape counters", () => {
   const kamiCounters = getCountersFor("kami-shiho-gatame");
+  const kesaCounters = getCountersFor("kesa-gatame");
   const yokoCounters = getCountersFor("yoko-shiho-gatame");
   const tateCounters = getCountersFor("tate-shiho-gatame");
 
   assert.ok(kamiCounters.some((edge) => edge.toSlug === "north-south-frame-turn-in-escape"));
+  assert.ok(kesaCounters.some((edge) => edge.toSlug === "kesa-gatame-frame-turn-in-escape"));
   assert.ok(yokoCounters.some((edge) => edge.toSlug === "side-control-frame-shrimp-escape"));
   assert.ok(yokoCounters.some((edge) => edge.toSlug === "side-control-underhook-hip-escape"));
   assert.ok(tateCounters.some((edge) => edge.toSlug === "mount-bridge-and-roll-escape"));

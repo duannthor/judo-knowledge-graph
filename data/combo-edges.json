@@ -39,6 +39,19 @@
     "sourceIds": ["common-combo-seed-v1", "local-practice-advisory-v1"]
   },
   {
+    "fromSlug": "kesa-gatame",
+    "toSlug": "kesa-gatame-frame-turn-in-escape",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "left",
+    "finishingDirection": "front",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "transition",
+    "confidence": "coach-advisory",
+    "notes": "common frame-and-turn-in answer to scarf-hold control",
+    "sourceIds": ["local-practice-advisory-v1"]
+  },
+  {
     "fromSlug": "yoko-shiho-gatame",
     "toSlug": "side-control-frame-shrimp-escape",
     "pattern": "counter-sequence",
