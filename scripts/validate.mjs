@@ -3,7 +3,9 @@ import {
   comboEdges,
   classifications,
   gripContexts,
+  kataMemberships,
   legality,
+  promotionRequirements,
   rulesets,
   safetyAdvisories,
   sources,
@@ -112,4 +114,26 @@ for (const edge of comboEdges) {
   assertSources(edge);
 }
 
-console.log(`Validated ${techniques.length} techniques, ${classifications.length} classifications, ${variants.length} variants, ${legality.length} legality records.`);
+for (const requirement of promotionRequirements) {
+  assert.ok(requirement.id, "Promotion requirement needs id");
+  assert.ok(requirement.rulesetId, `${requirement.id} needs rulesetId`);
+  assert.ok(requirement.label, `${requirement.id} needs label`);
+  assert.ok(requirement.beltColor, `${requirement.id} needs beltColor`);
+  assert.ok(Array.isArray(requirement.techniqueSlugs), `${requirement.id} needs techniqueSlugs`);
+  for (const techniqueSlug of requirement.techniqueSlugs) {
+    assert.ok(techniqueSlugs.has(techniqueSlug), `${requirement.id} points to missing technique ${techniqueSlug}`);
+  }
+  assertSources(requirement);
+}
+
+for (const kata of kataMemberships) {
+  assert.ok(kata.id, "Kata membership needs id");
+  assert.ok(kata.label, `${kata.id} needs label`);
+  assert.ok(Array.isArray(kata.techniqueSlugs), `${kata.id} needs techniqueSlugs`);
+  for (const techniqueSlug of kata.techniqueSlugs) {
+    assert.ok(techniqueSlugs.has(techniqueSlug), `${kata.id} points to missing technique ${techniqueSlug}`);
+  }
+  assertSources(kata);
+}
+
+console.log(`Validated ${techniques.length} techniques, ${classifications.length} classifications, ${variants.length} variants, ${legality.length} legality records, ${promotionRequirements.length} promotion ranks, ${kataMemberships.length} kata memberships.`);

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "nage-no-kata",
+    "label": "Nage-no-kata",
+    "english": "Forms of throwing",
+    "japanese": "投の形",
+    "kana": "なげのかた",
+    "techniqueSlugs": [
+      "uki-otoshi",
+      "seoi-nage",
+      "kata-guruma",
+      "uki-goshi",
+      "harai-goshi",
+      "tsurikomi-goshi",
+      "uchi-mata",
+      "tomoe-nage",
+      "ura-nage",
+      "sumi-gaeshi",
+      "yoko-gake",
+      "yoko-guruma",
+      "uki-waza"
+    ],
+    "unmappedItems": [
+      "Okuri-ashi-barai",
+      "Sasae-tsurikomi-ashi"
+    ],
+    "sourceIds": [
+      "kodokan-nage-no-kata"
+    ]
+  }
+]

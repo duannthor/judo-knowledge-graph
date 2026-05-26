@@ -56,5 +56,22 @@
     "publisher": "Project",
     "authority": "common",
     "notes": "Initial combo examples used to exercise pressure-pattern modeling."
+  },
+  {
+    "id": "usjf-promotion-requirements-2026",
+    "title": "USJF Senior Promotion Requirements",
+    "publisher": "United States Judo Federation",
+    "url": "https://www.usjf.com/promotion-requirements/",
+    "publishedDate": "2026",
+    "authority": "promotion-curriculum",
+    "notes": "Used for senior rank promotion requirement filters; competition legality remains modeled separately under IJF senior rules."
+  },
+  {
+    "id": "kodokan-nage-no-kata",
+    "title": "Nage-no-Kata",
+    "publisher": "Kodokan",
+    "url": "https://kdkjd.org/nage-no-kata/",
+    "authority": "official-kata",
+    "notes": "Used for tagging techniques that appear in Nage-no-kata."
   }
 ]

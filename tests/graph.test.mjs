@@ -13,6 +13,8 @@ import {
   gripContexts,
   isLegal,
   isPracticeSafe,
+  kataMemberships,
+  promotionRequirements,
   techniques
 } from "../src/query.mjs";
 
@@ -207,6 +209,40 @@ test("grip and stance contexts are available for filtering", () => {
   assert.ok(oUchi.gripContextSlugs.includes("standard-kumi-kata"));
   assert.ok(oUchi.gripContextSlugs.includes("aiyotsu"));
   assert.ok(hikikomi.gripContextSlugs.includes("georgian-grip"));
+});
+
+test("USJF senior promotion requirements tag concrete graph techniques by rank", () => {
+  const ranks = promotionRequirements.map((rank) => rank.id);
+
+  assert.deepEqual(ranks, [
+    "usjf-senior-2026-go-kyu",
+    "usjf-senior-2026-yon-kyu",
+    "usjf-senior-2026-san-kyu",
+    "usjf-senior-2026-ni-kyu",
+    "usjf-senior-2026-ikkyu",
+    "usjf-senior-2026-shodan"
+  ]);
+  assert.ok(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-go-kyu").techniqueSlugs.includes("o-soto-gari"));
+  assert.ok(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-yon-kyu").techniqueSlugs.includes("seoi-nage"));
+  assert.ok(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan").techniqueSlugs.includes("morote-gari"));
+});
+
+test("USJF promotion requirements preserve unmapped syllabus items as stubs", () => {
+  const shodan = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan");
+  const yonKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-yon-kyu");
+
+  assert.ok(shodan.unmappedItems.includes("Ashi-guruma"));
+  assert.ok(yonKyu.unmappedItems.includes("Sasae-tsurikomi-ashi"));
+});
+
+test("Nage-no-kata membership tags existing graph techniques and stubs missing throws", () => {
+  const nageNoKata = kataMemberships.find((kata) => kata.id === "nage-no-kata");
+
+  assert.ok(nageNoKata.techniqueSlugs.includes("uki-otoshi"));
+  assert.ok(nageNoKata.techniqueSlugs.includes("kata-guruma"));
+  assert.ok(nageNoKata.techniqueSlugs.includes("uki-waza"));
+  assert.ok(nageNoKata.unmappedItems.includes("Okuri-ashi-barai"));
+  assert.ok(nageNoKata.unmappedItems.includes("Sasae-tsurikomi-ashi"));
 });
 
 test("engagement contexts are split by standing and ground phase", () => {

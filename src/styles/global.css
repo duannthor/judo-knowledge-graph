@@ -182,7 +182,7 @@ h3 {
 .filter-groups {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.1fr) minmax(0, 1.35fr) minmax(150px, 0.45fr) auto;
+  grid-template-columns: minmax(0, 0.65fr) minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr) minmax(150px, 0.42fr) auto;
   gap: 14px;
   align-items: start;
   min-width: 0;
@@ -402,8 +402,44 @@ html[data-tori-side="right"] .side-switch-thumb {
 .toggle.success-toggle input:checked + span,
 .toggle.danger-toggle input:checked + span,
 .toggle.warning-toggle input:checked + span,
-.toggle.mixed-toggle input:checked + span {
+.toggle.mixed-toggle input:checked + span,
+.toggle.rank-toggle input:checked + span {
   box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.toggle.rank-green span,
+.tag.rank-green {
+  border-color: color-mix(in srgb, #3f7f4b, transparent 32%);
+  background: color-mix(in srgb, #3f7f4b, transparent 88%);
+  color: color-mix(in srgb, #2f6f3c, var(--text) 26%);
+}
+
+.toggle.rank-blue span,
+.tag.rank-blue {
+  border-color: color-mix(in srgb, #356fa8, transparent 32%);
+  background: color-mix(in srgb, #356fa8, transparent 88%);
+  color: color-mix(in srgb, #2d649a, var(--text) 24%);
+}
+
+.toggle.rank-brown span,
+.tag.rank-brown {
+  border-color: color-mix(in srgb, #8a5b34, transparent 30%);
+  background: color-mix(in srgb, #8a5b34, transparent 86%);
+  color: color-mix(in srgb, #71451f, var(--text) 24%);
+}
+
+.toggle.rank-black span,
+.tag.rank-black {
+  border-color: color-mix(in srgb, var(--text), transparent 26%);
+  background: color-mix(in srgb, var(--text), transparent 90%);
+  color: var(--text);
+}
+
+.toggle.kata-toggle span,
+.tag.kata-tag {
+  border-color: color-mix(in srgb, var(--accent), transparent 28%);
+  background: color-mix(in srgb, var(--accent), transparent 88%);
+  color: var(--accent-ink);
 }
 
 .clear-filters {

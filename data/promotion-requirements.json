@@ -1,0 +1,218 @@
+[
+  {
+    "id": "usjf-senior-2026-go-kyu",
+    "rulesetId": "USJF_SENIOR_PROMOTION_2026",
+    "label": "5 kyu",
+    "japaneseRomaji": "go-kyu",
+    "beltColor": "green",
+    "band": 1,
+    "techniqueSlugs": [
+      "o-soto-gari",
+      "o-goshi",
+      "de-ashi-harai",
+      "ippon-seoi-nage",
+      "uki-goshi",
+      "kesa-gatame",
+      "kuzure-kesa-gatame",
+      "kata-gatame"
+    ],
+    "unmappedItems": [
+      "Makura-kesa-gatame"
+    ],
+    "sourceIds": [
+      "usjf-promotion-requirements-2026"
+    ]
+  },
+  {
+    "id": "usjf-senior-2026-yon-kyu",
+    "rulesetId": "USJF_SENIOR_PROMOTION_2026",
+    "label": "4 kyu",
+    "japaneseRomaji": "yon-kyu",
+    "beltColor": "blue",
+    "band": 2,
+    "techniqueSlugs": [
+      "o-uchi-gari",
+      "ko-uchi-gari",
+      "seoi-nage",
+      "o-soto-gaeshi",
+      "kami-shiho-gatame",
+      "yoko-shiho-gatame",
+      "hadaka-jime",
+      "okuri-eri-jime",
+      "ude-hishigi-juji-gatame"
+    ],
+    "unmappedItems": [
+      "Sasae-tsurikomi-ashi",
+      "Hiza-guruma",
+      "Kuzure-yoko-shiho-gatame",
+      "One escape from kesa-gatame"
+    ],
+    "sourceIds": [
+      "usjf-promotion-requirements-2026"
+    ]
+  },
+  {
+    "id": "usjf-senior-2026-san-kyu",
+    "rulesetId": "USJF_SENIOR_PROMOTION_2026",
+    "label": "3 kyu",
+    "japaneseRomaji": "san-kyu",
+    "beltColor": "brown",
+    "band": 3,
+    "techniqueSlugs": [
+      "tsurikomi-goshi",
+      "sode-tsurikomi-goshi",
+      "harai-goshi",
+      "ko-uchi-gaeshi",
+      "kuzure-kami-shiho-gatame",
+      "tate-shiho-gatame",
+      "ushiro-kesa-gatame",
+      "nami-juji-jime",
+      "kata-juji-jime",
+      "gyaku-juji-jime",
+      "ude-garami",
+      "ude-hishigi-ude-gatame"
+    ],
+    "unmappedItems": [
+      "Ko-soto-gari",
+      "Okuri-ashi-barai",
+      "One escape from yoko-shiho-gatame",
+      "Nage-no-kata, Uke role, first 3 sets"
+    ],
+    "sourceIds": [
+      "usjf-promotion-requirements-2026"
+    ]
+  },
+  {
+    "id": "usjf-senior-2026-ni-kyu",
+    "rulesetId": "USJF_SENIOR_PROMOTION_2026",
+    "label": "2 kyu",
+    "japaneseRomaji": "ni-kyu",
+    "beltColor": "brown",
+    "band": 4,
+    "techniqueSlugs": [
+      "koshi-guruma",
+      "tai-otoshi",
+      "uchi-mata",
+      "tomoe-nage",
+      "tsubame-gaeshi",
+      "o-uchi-gaeshi",
+      "harai-goshi-gaeshi",
+      "ude-hishigi-sankaku-gatame",
+      "north-south-frame-turn-in-escape",
+      "mount-bridge-and-roll-escape",
+      "mount-elbow-knee-escape",
+      "sankaku-jime",
+      "kataha-jime",
+      "katate-jime",
+      "ude-hishigi-hiza-gatame",
+      "ude-hishigi-waki-gatame"
+    ],
+    "unmappedItems": [
+      "One opposite-side throw",
+      "One combination",
+      "One counter",
+      "Nage-no-kata, Tori role, first 3 sets"
+    ],
+    "sourceIds": [
+      "usjf-promotion-requirements-2026"
+    ]
+  },
+  {
+    "id": "usjf-senior-2026-ikkyu",
+    "rulesetId": "USJF_SENIOR_PROMOTION_2026",
+    "label": "1 kyu",
+    "japaneseRomaji": "ikkyu",
+    "beltColor": "brown",
+    "band": 5,
+    "techniqueSlugs": [
+      "kata-guruma",
+      "hane-goshi",
+      "uchi-mata-sukashi",
+      "uchi-mata-gaeshi",
+      "hane-goshi-gaeshi",
+      "kesa-gatame",
+      "kuzure-kesa-gatame",
+      "ushiro-kesa-gatame",
+      "kata-gatame",
+      "kami-shiho-gatame",
+      "kuzure-kami-shiho-gatame",
+      "yoko-shiho-gatame",
+      "tate-shiho-gatame",
+      "uki-gatame",
+      "ura-gatame",
+      "side-control-frame-shrimp-escape",
+      "side-control-underhook-hip-escape",
+      "north-south-frame-turn-in-escape",
+      "mount-bridge-and-roll-escape",
+      "mount-elbow-knee-escape",
+      "sode-guruma-jime",
+      "sankaku-jime",
+      "ude-hishigi-te-gatame",
+      "ude-hishigi-sankaku-gatame"
+    ],
+    "unmappedItems": [
+      "Ko-soto-gake",
+      "Two opposite-side throws",
+      "Two combinations",
+      "Two counters",
+      "Nage-no-kata, Uke role, all 5 sets"
+    ],
+    "sourceIds": [
+      "usjf-promotion-requirements-2026"
+    ]
+  },
+  {
+    "id": "usjf-senior-2026-shodan",
+    "rulesetId": "USJF_SENIOR_PROMOTION_2026",
+    "label": "Shodan",
+    "japaneseRomaji": "shodan",
+    "beltColor": "black",
+    "band": 6,
+    "techniqueSlugs": [
+      "yoko-otoshi",
+      "morote-gari",
+      "kuchiki-taoshi",
+      "kibisu-gaeshi",
+      "kesa-gatame",
+      "kuzure-kesa-gatame",
+      "ushiro-kesa-gatame",
+      "kata-gatame",
+      "kami-shiho-gatame",
+      "kuzure-kami-shiho-gatame",
+      "yoko-shiho-gatame",
+      "tate-shiho-gatame",
+      "uki-gatame",
+      "ura-gatame",
+      "side-control-frame-shrimp-escape",
+      "side-control-underhook-hip-escape",
+      "north-south-frame-turn-in-escape",
+      "mount-bridge-and-roll-escape",
+      "mount-elbow-knee-escape",
+      "tsukkomi-jime",
+      "ryote-jime",
+      "ashi-garami",
+      "ude-garami",
+      "ude-hishigi-ashi-gatame",
+      "ude-hishigi-hara-gatame",
+      "ude-hishigi-hiza-gatame",
+      "ude-hishigi-juji-gatame",
+      "ude-hishigi-sankaku-gatame",
+      "ude-hishigi-te-gatame",
+      "ude-hishigi-ude-gatame",
+      "ude-hishigi-waki-gatame"
+    ],
+    "unmappedItems": [
+      "Ashi-guruma",
+      "O-tsuri-goshi",
+      "Ko-tsuri-goshi",
+      "Harai-tsurikomi-ashi",
+      "Three throws from opposite side",
+      "Three combinations",
+      "Three counters",
+      "Nage-no-kata, Tori role, all 5 sets"
+    ],
+    "sourceIds": [
+      "usjf-promotion-requirements-2026"
+    ]
+  }
+]

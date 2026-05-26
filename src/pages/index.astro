@@ -6,6 +6,8 @@ import {
   getSafetyAdvisories,
   getVariantsFor,
   gripContexts,
+  kataMemberships,
+  promotionRequirements,
   techniques
 } from "../query.mjs";
 
@@ -61,6 +63,11 @@ const contextFilterGroups = [
     contexts: gripContexts.filter((context) => context.phase === "ground")
   }
 ];
+const promotionRequirementLabel = "USJF Senior Promotion Requirements, 2026";
+const promotionRanks = promotionRequirements
+  .slice()
+  .sort((a, b) => a.band - b.band);
+const kataFilters = kataMemberships.filter((kata) => kata.id === "nage-no-kata");
 
 const cards = browsableTechniques
   .slice()
@@ -123,6 +130,10 @@ const cards = browsableTechniques
       ...getSafetyAdvisories(technique.slug),
       ...variants.flatMap((variant) => getSafetyAdvisories(variant.slug))
     ];
+    const promotionRanksForTechnique = promotionRanks.filter((rank) => rank.techniqueSlugs.includes(technique.slug));
+    const promotionRankIds = promotionRanksForTechnique.map((rank) => rank.id);
+    const kataMembershipsForTechnique = kataFilters.filter((kata) => kata.techniqueSlugs.includes(technique.slug));
+    const kataMembershipIds = kataMembershipsForTechnique.map((kata) => kata.id);
     const filterFlags = [
       variants.length > 0 && "has-variants",
       hasDropEntry && "drop-entry",
@@ -153,6 +164,10 @@ const cards = browsableTechniques
       classicBanned,
       hasMixedLegality,
       advisories,
+      promotionRanksForTechnique,
+      promotionRankIds,
+      kataMembershipsForTechnique,
+      kataMembershipIds,
       roles: technique.roles.join(" "),
       filterFlags,
       searchText: [
@@ -169,7 +184,19 @@ const cards = browsableTechniques
           ...(variant.actionFeatures ?? [])
         ]),
         ...gripContextSlugs,
-        ...gripContextLabels
+        ...gripContextLabels,
+        ...promotionRanksForTechnique.flatMap((rank) => [
+          rank.label,
+          rank.japaneseRomaji,
+          rank.beltColor,
+          promotionRequirementLabel
+        ]),
+        ...kataMembershipsForTechnique.flatMap((kata) => [
+          kata.label,
+          kata.english,
+          kata.japanese,
+          kata.kana
+        ])
       ].join(" ").toLowerCase()
     };
   });
@@ -313,6 +340,26 @@ const cards = browsableTechniques
           </div>
         </div>
         <div class="filter-group">
+          <span class="filter-label">
+            Promotion Requirements
+            <small>{promotionRequirementLabel}</small>
+          </span>
+          <div class="toggle-group">
+            {promotionRanks.map((rank) => (
+              <label class={`toggle rank-toggle rank-${rank.beltColor}`}>
+                <input type="checkbox" value={rank.id} data-promotion-toggle />
+                <span>{rank.label} · {rank.beltColor}</span>
+              </label>
+            ))}
+            {kataFilters.map((kata) => (
+              <label class="toggle kata-toggle">
+                <input type="checkbox" value={kata.id} data-kata-toggle />
+                <span>{kata.label}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+        <div class="filter-group">
           <span class="filter-label">Safety</span>
           <div class="toggle-group">
             <label class="toggle warning-toggle">
@@ -347,6 +394,10 @@ const cards = browsableTechniques
       classicBanned,
       hasMixedLegality,
       advisories,
+      promotionRanksForTechnique,
+      promotionRankIds,
+      kataMembershipsForTechnique,
+      kataMembershipIds,
       roles,
       filterFlags,
       searchText
@@ -357,6 +408,8 @@ const cards = browsableTechniques
         data-group={primaryGroup}
         data-roles={roles}
         data-grips={gripContextSlugs.join(" ")}
+        data-promotions={promotionRankIds.join(" ")}
+        data-katas={kataMembershipIds.join(" ")}
         data-filters={filterFlags}
         data-search={searchText}
       >
@@ -391,6 +444,12 @@ const cards = browsableTechniques
           {baseRestricted && variants.length === 0 && <span class="tag danger">restricted</span>}
           {hasMixedLegality && <span class="tag mixed">mixed legality</span>}
           {advisories.length > 0 && <span class="tag warning">safety note</span>}
+          {promotionRanksForTechnique.map((rank) => (
+            <span class={`tag rank-tag rank-${rank.beltColor}`}>{rank.label} · {rank.beltColor}</span>
+          ))}
+          {kataMembershipsForTechnique.map((kata) => (
+            <span class="tag kata-tag">{kata.label}</span>
+          ))}
         </div>
       </article>
     ))}
@@ -404,6 +463,8 @@ const cards = browsableTechniques
     const roleToggles = Array.from(document.querySelectorAll("[data-role-toggle]"));
     const gripToggles = Array.from(document.querySelectorAll("[data-grip-toggle]"));
     const statusToggles = Array.from(document.querySelectorAll("[data-status-toggle]"));
+    const promotionToggles = Array.from(document.querySelectorAll("[data-promotion-toggle]"));
+    const kataToggles = Array.from(document.querySelectorAll("[data-kata-toggle]"));
     const clearFilters = document.querySelector("#clear-filters");
     const cards = Array.from(document.querySelectorAll("[data-technique-card]"));
     const toriSideToggles = Array.from(document.querySelectorAll("[data-tori-side-toggle]"));
@@ -444,6 +505,12 @@ const cards = browsableTechniques
       const selectedStatuses = statusToggles
         .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
         .map((toggle) => toggle.value);
+      const selectedPromotions = promotionToggles
+        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
+        .map((toggle) => toggle.value);
+      const selectedKatas = kataToggles
+        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
+        .map((toggle) => toggle.value);
 
       for (const card of cards) {
         const matchesText = !term || card.dataset.search?.includes(term);
@@ -451,10 +518,14 @@ const cards = browsableTechniques
         const cardRoles = card.dataset.roles?.split(" ") ?? [];
         const cardGrips = card.dataset.grips?.split(" ").filter(Boolean) ?? [];
         const cardFilters = card.dataset.filters?.split(" ").filter(Boolean) ?? [];
+        const cardPromotions = card.dataset.promotions?.split(" ").filter(Boolean) ?? [];
+        const cardKatas = card.dataset.katas?.split(" ").filter(Boolean) ?? [];
         const matchesRoles = selectedRoles.every((role) => cardRoles.includes(role));
         const matchesGrips = selectedGrips.every((grip) => cardGrips.includes(grip));
         const matchesStatuses = selectedStatuses.every((status) => cardFilters.includes(status));
-        card.hidden = !(matchesText && matchesGroup && matchesRoles && matchesGrips && matchesStatuses);
+        const matchesPromotions = selectedPromotions.every((promotion) => cardPromotions.includes(promotion));
+        const matchesKatas = selectedKatas.every((kata) => cardKatas.includes(kata));
+        card.hidden = !(matchesText && matchesGroup && matchesRoles && matchesGrips && matchesStatuses && matchesPromotions && matchesKatas);
       }
       syncFamilyTabs();
     }
@@ -481,6 +552,12 @@ const cards = browsableTechniques
     for (const toggle of statusToggles) {
       toggle.addEventListener("change", applyFilters);
     }
+    for (const toggle of promotionToggles) {
+      toggle.addEventListener("change", applyFilters);
+    }
+    for (const toggle of kataToggles) {
+      toggle.addEventListener("change", applyFilters);
+    }
     for (const toggle of toriSideToggles) {
       toggle.addEventListener("change", () => {
         if (toggle instanceof HTMLInputElement && toggle.checked) setToriSide(toggle.value);
@@ -490,7 +567,7 @@ const cards = browsableTechniques
       if (search instanceof HTMLInputElement) search.value = "";
       if (groupFilter instanceof HTMLInputElement) groupFilter.value = "all";
 
-      for (const toggle of [...roleToggles, ...gripToggles, ...statusToggles]) {
+      for (const toggle of [...roleToggles, ...gripToggles, ...statusToggles, ...promotionToggles, ...kataToggles]) {
         if (toggle instanceof HTMLInputElement) toggle.checked = false;
       }
 
