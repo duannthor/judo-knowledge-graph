@@ -1253,6 +1253,36 @@ html[data-tori-side="right"] .side-switch-thumb {
   border-top: 1px solid var(--line);
 }
 
+.relationship-section-list {
+  display: grid;
+  gap: 16px;
+}
+
+.relationship-section {
+  display: grid;
+  gap: 8px;
+}
+
+.relationship-heading {
+  display: grid;
+  gap: 3px;
+}
+
+.relationship-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.relationship-heading p {
+  margin: 0;
+  color: var(--muted);
+  font: 0.88rem/1.45 ui-sans-serif, system-ui, sans-serif;
+}
+
+.relationship-list {
+  gap: 7px;
+}
+
 .list {
   display: grid;
   gap: 10px;

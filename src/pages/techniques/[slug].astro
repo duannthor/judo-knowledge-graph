@@ -99,6 +99,62 @@ const relatedEdgeRows = [...outgoingEdgeRows, ...incomingEdgeRows]
     return firstMatchingIndex === index;
   });
 const hasEscapeRole = technique.roles.includes("escape");
+const edgePatternOrder = {
+  "same-direction-pressure": 0,
+  "alternating-direction-reaction": 1,
+  "direct-follow-up": 2,
+  "counter-sequence": 3
+};
+const edgeSort = (a, b) => {
+  const patternDelta = (edgePatternOrder[a.edge.pattern] ?? 99) - (edgePatternOrder[b.edge.pattern] ?? 99);
+  if (patternDelta !== 0) return patternDelta;
+  const aName = a.related?.names?.japaneseRomaji ?? a.related?.name ?? a.edge.toSlug;
+  const bName = b.related?.names?.japaneseRomaji ?? b.related?.name ?? b.edge.toSlug;
+  return aName.localeCompare(bName);
+};
+const comboEdgeRows = relatedEdgeRows
+  .filter((row) => row.edge.pattern !== "counter-sequence")
+  .sort(edgeSort);
+const counterEdgeRows = relatedEdgeRows
+  .filter((row) => row.edge.pattern === "counter-sequence")
+  .sort(edgeSort);
+const comboSections = [
+  {
+    title: "Starts from this technique",
+    subtitle: "Attacks that commonly follow this entry or pressure.",
+    rows: comboEdgeRows.filter((row) => row.direction === "outgoing")
+  },
+  {
+    title: "Leads into this technique",
+    subtitle: "Sequences where this technique is the follow-up.",
+    rows: comboEdgeRows.filter((row) => row.direction === "incoming")
+  }
+].filter((section) => section.rows.length > 0);
+const counterSections = hasEscapeRole
+  ? [
+      {
+        title: "Escapes from",
+        subtitle: "Controls or attacks this defensive action answers.",
+        rows: counterEdgeRows.filter((row) => row.direction === "incoming")
+      },
+      {
+        title: "Follow-up counters",
+        subtitle: "Responses that can follow this defensive action.",
+        rows: counterEdgeRows.filter((row) => row.direction === "outgoing")
+      }
+    ].filter((section) => section.rows.length > 0)
+  : [
+      {
+        title: "Answered by",
+        subtitle: "Counters, escapes, or defenses against this technique.",
+        rows: counterEdgeRows.filter((row) => row.direction === "outgoing")
+      },
+      {
+        title: "Counters",
+        subtitle: "Attacks this technique can answer.",
+        rows: counterEdgeRows.filter((row) => row.direction === "incoming")
+      }
+    ].filter((section) => section.rows.length > 0);
 const relatedEdgeLabel = (edge, direction) => {
   if (edge.pattern === "counter-sequence") {
     if (hasEscapeRole && direction === "incoming") return "Escapes from";
@@ -109,6 +165,11 @@ const relatedEdgeLabel = (edge, direction) => {
   if (edge.pattern === "alternating-direction-reaction") return "Reaction combo";
   if (edge.pattern === "direct-follow-up") return "Follow-up";
   return edge.pattern;
+};
+const edgeRelatedHref = (related) => related?.names ? `/techniques/${related.slug}/` : undefined;
+const edgeRelatedLabel = (row) => {
+  if (row.related?.names) return row.related.names.japaneseRomaji;
+  return row.related?.name ?? (row.direction === "outgoing" ? row.edge.toSlug : row.edge.fromSlug);
 };
 
 const techniqueVideo = getTechniqueVideo(technique.slug);
@@ -291,42 +352,102 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
       </section>
 
       <section class="panel" aria-labelledby="combos-title">
-        <h2 id="combos-title">Combos And Counters</h2>
-        {relatedEdgeRows.length > 0 ? (
-          <ul class="list">
-            {relatedEdgeRows.map(({ edge, direction, related }) => (
-              <li>
-                <strong>{relatedEdgeLabel(edge, direction)}</strong>
-                <div class="source">
-                  {related?.names ? (
-                    <a href={`/techniques/${related.slug}/`}>{related.names.japaneseRomaji}</a>
-                  ) : (
-                    related?.name ?? (direction === "outgoing" ? edge.toSlug : edge.fromSlug)
-                  )}
-                  {edge.firstPressureDirection && (
-                    <>
-                      {" · pressure "}
-                      <span data-direction-label data-canonical-direction={edge.firstPressureDirection}>{edge.firstPressureDirection}</span>
-                    </>
-                  )}
-                  {edge.expectedUkeReaction && (
-                    <>
-                      {" · reaction "}
-                      <span data-direction-label data-canonical-direction={edge.expectedUkeReaction}>{edge.expectedUkeReaction}</span>
-                    </>
-                  )}
-                  {edge.finishingDirection && (
-                    <>
-                      {" · finish "}
-                      <span data-direction-label data-canonical-direction={edge.finishingDirection}>{edge.finishingDirection}</span>
-                    </>
-                  )}
+        <h2 id="combos-title">Combinations</h2>
+        {comboSections.length > 0 ? (
+          <div class="relationship-section-list">
+            {comboSections.map((section) => (
+              <section class="relationship-section">
+                <div class="relationship-heading">
+                  <h3>{section.title}</h3>
+                  <p>{section.subtitle}</p>
                 </div>
-              </li>
+                <ul class="list relationship-list">
+                  {section.rows.map((row) => (
+                    <li>
+                      <strong>{relatedEdgeLabel(row.edge, row.direction)}</strong>
+                      <div class="source">
+                        {edgeRelatedHref(row.related) ? (
+                          <a href={edgeRelatedHref(row.related)}>{edgeRelatedLabel(row)}</a>
+                        ) : (
+                          edgeRelatedLabel(row)
+                        )}
+                        {row.edge.firstPressureDirection && (
+                          <>
+                            {" · pressure "}
+                            <span data-direction-label data-canonical-direction={row.edge.firstPressureDirection}>{row.edge.firstPressureDirection}</span>
+                          </>
+                        )}
+                        {row.edge.expectedUkeReaction && (
+                          <>
+                            {" · reaction "}
+                            <span data-direction-label data-canonical-direction={row.edge.expectedUkeReaction}>{row.edge.expectedUkeReaction}</span>
+                          </>
+                        )}
+                        {row.edge.finishingDirection && (
+                          <>
+                            {" · finish "}
+                            <span data-direction-label data-canonical-direction={row.edge.finishingDirection}>{row.edge.finishingDirection}</span>
+                          </>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             ))}
-          </ul>
+          </div>
         ) : (
-          <p class="empty">No combo edges have been added yet.</p>
+          <p class="empty">No combination edges have been added yet.</p>
+        )}
+      </section>
+
+      <section class="panel" aria-labelledby="counters-title">
+        <h2 id="counters-title">Counters / Defenses</h2>
+        {counterSections.length > 0 ? (
+          <div class="relationship-section-list">
+            {counterSections.map((section) => (
+              <section class="relationship-section">
+                <div class="relationship-heading">
+                  <h3>{section.title}</h3>
+                  <p>{section.subtitle}</p>
+                </div>
+                <ul class="list relationship-list">
+                  {section.rows.map((row) => (
+                    <li>
+                      <strong>{relatedEdgeLabel(row.edge, row.direction)}</strong>
+                      <div class="source">
+                        {edgeRelatedHref(row.related) ? (
+                          <a href={edgeRelatedHref(row.related)}>{edgeRelatedLabel(row)}</a>
+                        ) : (
+                          edgeRelatedLabel(row)
+                        )}
+                        {row.edge.firstPressureDirection && (
+                          <>
+                            {" · pressure "}
+                            <span data-direction-label data-canonical-direction={row.edge.firstPressureDirection}>{row.edge.firstPressureDirection}</span>
+                          </>
+                        )}
+                        {row.edge.expectedUkeReaction && (
+                          <>
+                            {" · reaction "}
+                            <span data-direction-label data-canonical-direction={row.edge.expectedUkeReaction}>{row.edge.expectedUkeReaction}</span>
+                          </>
+                        )}
+                        {row.edge.finishingDirection && (
+                          <>
+                            {" · finish "}
+                            <span data-direction-label data-canonical-direction={row.edge.finishingDirection}>{row.edge.finishingDirection}</span>
+                          </>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        ) : (
+          <p class="empty">No counter or defense edges have been added yet.</p>
         )}
       </section>
     </div>
