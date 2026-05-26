@@ -370,6 +370,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Kata sequence note: uki-goshi is a turn-entry hip throw, but Nage-no-kata demonstrates the left-hand version first as an exception. For ordinary lookup, model side by tori side first, then derive the absolute rotation from that side.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -402,6 +403,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Turn-entry hip throw: model as a standard-side hip turn for the selected tori side. Absolute clockwise or counter-clockwise rotation should be derived from right/left tori side rather than treated as the variant name.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -433,6 +435,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Rotational hip-wheel entry: model side by tori's chosen hip side first. Absolute clockwise or counter-clockwise turn should be displayed as a derived detail.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -465,6 +468,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Lifting-pulling hip entry: model as a standard-side fit-in for the selected tori side. The rotation label should mirror when the tori-side switch changes.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -496,6 +500,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Sweeping hip entry: model side by tori's sweeping hip/leg side first. The rotation direction is derived from tori side, not a separate left/right-turn variant.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -527,6 +532,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Belt-grip hip throw: model as a standard-side hip entry for the selected tori side. The belt grip changes control, but the left/right display should still mirror from tori side.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -558,6 +564,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Spring hip entry: model side by tori's springing hip/leg side first. Absolute rotation should be derived from tori side and not used as the primary variant label.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -651,6 +658,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Sleeve-controlled turn entry: model as standard-side or drop-entry relative to the selected tori side. This avoids treating clockwise/counter-clockwise as the main variant identity.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -683,6 +691,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "One-arm seoi uses a standard-side turn for ordinary right/left tori entries. Reverse or Korean-style entries should be modeled as reverse-turn variants; absolute clockwise/counter-clockwise is derived from the selected tori side.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -717,6 +726,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Shoulder-drop entries inherit the seoi side model: standard-side or reverse-turn relative to tori side, with drop mechanics as the entry modifier.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -749,6 +759,7 @@
     "roles": [
       "attack"
     ],
+    "mechanicsTheme": "Body-drop turn entry: model as a standard-side fit-in for the selected tori side. Absolute clockwise/counter-clockwise should be derived for display rather than treated as a named variant.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -2698,7 +2709,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Shoulder-throw family: model standard-side seoi and reverse-turn seoi separately. For right tori, standard-side seoi rotates counter-clockwise and reverse-turn seoi rotates clockwise; left tori mirrors those rotations."
   },
   {
     "slug": "kesa-gatame-frame-turn-in-escape",
@@ -3346,7 +3358,7 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Lapel-based shoulder-throw family often described in English as reverse or Korean seoi-nage. It is modeled as its own searchable technique because the grip, turn, and arm-entanglement risk differ enough from standard seoi-nage to matter in lookup and safety views.",
+    "mechanicsTheme": "Lapel-based shoulder-throw family often described in English as reverse or Korean seoi-nage. It is modeled as its own searchable technique because the grip, turn, and arm-entanglement risk differ enough from standard seoi-nage to matter in lookup and safety views. Treat it as a reverse-turn seoi family entry: right tori rotates clockwise, left tori rotates counter-clockwise.",
     "phases": {
       "kuzushi": {
         "summary": "Draw uke forward or forward-diagonal while controlling the lapel-side upper body connection.",
@@ -3615,7 +3627,8 @@
       "aiyotsu",
       "kenkayotsu",
       "over-back-belt-control"
-    ]
+    ],
+    "mechanicsTheme": "Major lifting hip throw: model as a belt-grip hip entry on the selected tori side. The absolute rotation should be derived from the right/left tori-side toggle."
   },
   {
     "slug": "ko-tsuri-goshi",
@@ -3649,7 +3662,8 @@
       "aiyotsu",
       "kenkayotsu",
       "over-back-belt-control"
-    ]
+    ],
+    "mechanicsTheme": "Minor lifting hip throw: model as a belt-grip hip entry on the selected tori side. The absolute rotation should be derived from the right/left tori-side toggle."
   },
   {
     "slug": "harai-tsurikomi-ashi",

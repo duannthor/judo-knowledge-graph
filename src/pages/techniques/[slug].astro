@@ -75,7 +75,30 @@ const contextDisplayLabel = (context) => (
 );
 
 const hasBasePhases = Object.keys(technique.phases).length > 0;
-const variantMechanicsRows = variantRows.filter((row) => row.variant.mechanics);
+const variantTurnRelation = (variant) => {
+  if (variant.chirality?.turnRelation) return variant.chirality.turnRelation;
+  if (variant.actionFeatures?.includes("standard-turn")) return "standard";
+  if (variant.actionFeatures?.includes("reverse-turn")) return "reverse";
+  return undefined;
+};
+const variantTurnSummary = (variant) => {
+  const relation = variantTurnRelation(variant);
+  if (!relation && !variant.chirality?.toriSide && !variant.chirality?.turn) return undefined;
+
+  return {
+    relation,
+    label: relation === "reverse" ? "Reverse-side turn" : relation === "standard" ? "Standard-side turn" : undefined,
+    toriSide: variant.chirality?.toriSide,
+    turn: variant.chirality?.turn
+  };
+};
+const variantMechanicsRows = variantRows
+  .filter((row) => row.variant.mechanics)
+  .map((row) => ({
+    ...row,
+    turnSummary: variantTurnSummary(row.variant)
+  }))
+  .filter((row) => !(row.turnSummary?.relation && row.turnSummary.toriSide === "left"));
 
 const outgoingEdgeRows = comboEdges
   .filter((edge) => edge.fromSlug === technique.slug || variantRows.some((row) => row.variant.slug === edge.fromSlug))
@@ -293,10 +316,29 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
         <h2 id="variant-mechanics-title">Mechanics By Variant</h2>
         {variantMechanicsRows.length > 0 ? (
           <div class="variant-mechanics">
-            {variantMechanicsRows.map(({ variant, legality }) => (
+            {variantMechanicsRows.map(({ variant, legality, turnSummary }) => (
               <article class="mechanics-card">
                 <div class="mechanics-heading">
-                  <h3>{variant.name}</h3>
+                  <div>
+                    <h3>{variant.name}</h3>
+                    {turnSummary && (
+                      <p class="chiral-note">
+                        {turnSummary.label}
+                        {turnSummary.toriSide && (
+                          <>
+                            {" · "}
+                            <span data-tori-side-label data-canonical-tori-side={turnSummary.toriSide}>{turnSummary.toriSide}</span> tori
+                          </>
+                        )}
+                        {turnSummary.turn && (
+                          <>
+                            {" · "}
+                            <span data-direction-label data-canonical-direction={turnSummary.turn}>{turnSummary.turn}</span>
+                          </>
+                        )}
+                      </p>
+                    )}
+                  </div>
                   {legality?.status === "legal" && <span class="tag success">competition legal</span>}
                   {legality?.status === "illegal" && <span class="tag danger">banned variant</span>}
                   {legality?.status === "restricted" && <span class="tag danger">restricted</span>}
@@ -486,6 +528,23 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
             {variantRows.map(({ variant, legality, advisories }) => (
               <li>
                 <strong>{variant.name}</strong>
+                {variantTurnSummary(variant) && (
+                  <div class="source">
+                    {variantTurnSummary(variant).label}
+                    {variantTurnSummary(variant).toriSide && (
+                      <>
+                        {" · "}
+                        {variantTurnSummary(variant).toriSide} tori
+                      </>
+                    )}
+                    {variantTurnSummary(variant).turn && (
+                      <>
+                        {" · "}
+                        {variantTurnSummary(variant).turn}
+                      </>
+                    )}
+                  </div>
+                )}
                 <div class="source">
                   {legality ? `${legality.status} · ${legality.reasons.join(", ")}` : "No legality record"}
                 </div>

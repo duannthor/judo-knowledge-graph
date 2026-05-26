@@ -293,15 +293,17 @@
   },
   {
     "slug": "seoi-nage-right-turn",
-    "name": "Right-turn seoi-nage",
+    "name": "Reverse-turn seoi-nage",
     "baseTechniqueSlug": "seoi-nage",
     "modifiers": [
-      "right",
+      "reverse-turn",
+      "right-tori",
       "turn"
     ],
     "actionFeatures": [
       "tachi-waza",
-      "turn"
+      "turn",
+      "reverse-turn"
     ],
     "gripContextSlugs": [
       "standard-kumi-kata",
@@ -309,7 +311,8 @@
     ],
     "chirality": {
       "toriSide": "right",
-      "turn": "clockwise"
+      "turn": "clockwise",
+      "turnRelation": "reverse"
     },
     "directionSequences": [
       {
@@ -322,6 +325,45 @@
         ]
       }
     ],
+    "mechanics": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal into the reverse-turn shoulder-throw line.",
+        "directionHints": [
+          "front-right",
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn opposite the standard-side seoi entry while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "kake": {
+        "summary": "Rotate through the clockwise turn and project uke forward over the shoulder line.",
+        "directionHints": [
+          "front",
+          "clockwise"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "directionSequences": [
+        {
+          "stanceContext": "aiyotsu",
+          "toriSide": "right",
+          "directions": [
+            "front-right",
+            "clockwise",
+            "front"
+          ]
+        }
+      ]
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ]
@@ -496,12 +538,14 @@
     "baseTechniqueSlug": "seoi-nage",
     "modifiers": [
       "drop",
-      "drop-entry"
+      "drop-entry",
+      "standard-turn"
     ],
     "actionFeatures": [
       "tachi-waza",
       "drop-entry",
-      "turn"
+      "turn",
+      "standard-turn"
     ],
     "gripContextSlugs": [
       "standard-kumi-kata",
@@ -569,12 +613,14 @@
     "modifiers": [
       "drop",
       "drop-entry",
-      "one-arm"
+      "one-arm",
+      "standard-turn"
     ],
     "actionFeatures": [
       "tachi-waza",
       "drop-entry",
-      "turn"
+      "turn",
+      "standard-turn"
     ],
     "gripContextSlugs": [
       "standard-kumi-kata",
@@ -642,12 +688,14 @@
     "modifiers": [
       "drop",
       "drop-entry",
-      "sleeve-control"
+      "sleeve-control",
+      "standard-turn"
     ],
     "actionFeatures": [
       "tachi-waza",
       "drop-entry",
-      "turn"
+      "turn",
+      "standard-turn"
     ],
     "gripContextSlugs": [
       "standard-kumi-kata",
@@ -712,15 +760,17 @@
   },
   {
     "slug": "seoi-nage-left-turn",
-    "name": "Left-turn seoi-nage",
+    "name": "Reverse-turn seoi-nage",
     "baseTechniqueSlug": "seoi-nage",
     "modifiers": [
-      "left",
+      "reverse-turn",
+      "left-tori",
       "turn"
     ],
     "actionFeatures": [
       "tachi-waza",
-      "turn"
+      "turn",
+      "reverse-turn"
     ],
     "gripContextSlugs": [
       "standard-kumi-kata",
@@ -728,7 +778,8 @@
     ],
     "chirality": {
       "toriSide": "left",
-      "turn": "counter-clockwise"
+      "turn": "counter-clockwise",
+      "turnRelation": "reverse"
     },
     "directionSequences": [
       {
@@ -743,7 +794,7 @@
     ],
     "mechanics": {
       "kuzushi": {
-        "summary": "Draw uke forward or forward-diagonal into the left-turn shoulder-throw line.",
+        "summary": "Draw uke forward or forward-diagonal into the reverse-turn shoulder-throw line.",
         "directionHints": [
           "front-left",
           "front"
@@ -753,7 +804,7 @@
         ]
       },
       "tsukuri": {
-        "summary": "Turn left under uke while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
+        "summary": "Turn opposite the standard-side seoi entry while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
         "sourceIds": [
           "kodokan-repertoire"
         ]
@@ -786,16 +837,18 @@
   },
   {
     "slug": "ippon-seoi-nage-right-turn",
-    "name": "Right-turn ippon-seoi-nage",
+    "name": "Reverse-turn ippon-seoi-nage",
     "baseTechniqueSlug": "ippon-seoi-nage",
     "modifiers": [
-      "right",
+      "reverse-turn",
+      "right-tori",
       "turn",
       "one-arm"
     ],
     "actionFeatures": [
       "tachi-waza",
-      "turn"
+      "turn",
+      "reverse-turn"
     ],
     "gripContextSlugs": [
       "standard-kumi-kata",
@@ -803,7 +856,8 @@
     ],
     "chirality": {
       "toriSide": "right",
-      "turn": "clockwise"
+      "turn": "clockwise",
+      "turnRelation": "reverse"
     },
     "directionSequences": [
       {
@@ -818,7 +872,7 @@
     ],
     "mechanics": {
       "kuzushi": {
-        "summary": "Draw uke forward or forward-diagonal into the right-turn shoulder-throw line.",
+        "summary": "Draw uke forward or forward-diagonal into the reverse-turn one-arm shoulder-throw line.",
         "directionHints": [
           "front-right",
           "front"
@@ -828,7 +882,7 @@
         ]
       },
       "tsukuri": {
-        "summary": "Turn right under uke while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
+        "summary": "Turn opposite the standard-side one-arm seoi entry while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
         "sourceIds": [
           "kodokan-repertoire"
         ]
@@ -861,16 +915,18 @@
   },
   {
     "slug": "ippon-seoi-nage-left-turn",
-    "name": "Left-turn ippon-seoi-nage",
+    "name": "Reverse-turn ippon-seoi-nage",
     "baseTechniqueSlug": "ippon-seoi-nage",
     "modifiers": [
-      "left",
+      "reverse-turn",
+      "left-tori",
       "turn",
       "one-arm"
     ],
     "actionFeatures": [
       "tachi-waza",
-      "turn"
+      "turn",
+      "reverse-turn"
     ],
     "gripContextSlugs": [
       "standard-kumi-kata",
@@ -878,7 +934,8 @@
     ],
     "chirality": {
       "toriSide": "left",
-      "turn": "counter-clockwise"
+      "turn": "counter-clockwise",
+      "turnRelation": "reverse"
     },
     "directionSequences": [
       {
@@ -893,7 +950,7 @@
     ],
     "mechanics": {
       "kuzushi": {
-        "summary": "Draw uke forward or forward-diagonal into the left-turn shoulder-throw line.",
+        "summary": "Draw uke forward or forward-diagonal into the reverse-turn one-arm shoulder-throw line.",
         "directionHints": [
           "front-left",
           "front"
@@ -903,7 +960,7 @@
         ]
       },
       "tsukuri": {
-        "summary": "Turn left under uke while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
+        "summary": "Turn opposite the standard-side one-arm seoi entry while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
         "sourceIds": [
           "kodokan-repertoire"
         ]

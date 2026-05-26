@@ -100,6 +100,7 @@ export type TechniqueVariant = {
   chirality?: {
     toriSide?: "right" | "left";
     turn?: "clockwise" | "counterClockwise";
+    turnRelation?: "standard" | "reverse";
   };
   directionSequences: DirectionSequence[];
   mechanics?: Mechanics;
