@@ -143,7 +143,10 @@ for (const requirement of promotionRequirements) {
 const phaseRequiredPromotionRankIds = new Set([
   "usjf-senior-2026-go-kyu",
   "usjf-senior-2026-yon-kyu",
-  "usjf-senior-2026-san-kyu"
+  "usjf-senior-2026-san-kyu",
+  "usjf-senior-2026-ni-kyu",
+  "usjf-senior-2026-ikkyu",
+  "usjf-senior-2026-shodan"
 ]);
 for (const requirement of promotionRequirements.filter((item) => phaseRequiredPromotionRankIds.has(item.id))) {
   for (const techniqueSlug of requirement.techniqueSlugs) {
