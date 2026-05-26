@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { kataMemberships, techniques } from "../../query.mjs";
 
+const baseUrl = import.meta.env.BASE_URL;
+const urlFor = (path) => `${baseUrl.replace(/\/?$/, "/")}${path.replace(/^\//, "")}`;
 const kata = kataMemberships.find((item) => item.id === "nage-no-kata");
 const kataTechniques = kata.techniqueSlugs
   .map((slug) => techniques.find((technique) => technique.slug === slug))
@@ -73,7 +75,7 @@ const etiquetteNotes = [
       <p class="reading-line detail-reading">{kata.label} · {kata.kana}</p>
       <p class="lede">{kata.english}</p>
     </div>
-    <img class="mark" src="/technical-machine-icon.svg" alt="" width="150" height="150" />
+    <img class="mark" src={urlFor("/technical-machine-icon.svg")} alt="" width="150" height="150" />
   </section>
 
   <div class="detail-grid">
@@ -150,7 +152,7 @@ const etiquetteNotes = [
                   const technique = techniqueBySlug.get(slug);
                   return technique && (
                     <li>
-                      <a class="technique-row-link kata-technique-link" href={`/techniques/${technique.slug}/`}>
+                      <a class="technique-row-link kata-technique-link" href={urlFor(`/techniques/${technique.slug}/`)}>
                         <span class="kata-sequence-number" aria-hidden="true"></span>
                         <span class="kanji-title">{technique.names.japanese}</span>
                         <span>

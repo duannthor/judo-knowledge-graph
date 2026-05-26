@@ -13,6 +13,9 @@ import {
   variants
 } from "../../query.mjs";
 
+const baseUrl = import.meta.env.BASE_URL;
+const urlFor = (path) => `${baseUrl.replace(/\/?$/, "/")}${path.replace(/^\//, "")}`;
+
 export function getStaticPaths() {
   return techniques.map((technique) => ({
     params: { slug: technique.slug }
@@ -166,7 +169,7 @@ const relatedEdgeLabel = (edge, direction) => {
   if (edge.pattern === "direct-follow-up") return "Follow-up";
   return edge.pattern;
 };
-const edgeRelatedHref = (related) => related?.names ? `/techniques/${related.slug}/` : undefined;
+const edgeRelatedHref = (related) => related?.names ? urlFor(`/techniques/${related.slug}/`) : undefined;
 const edgeRelatedLabel = (row) => {
   if (row.related?.names) return row.related.names.japaneseRomaji;
   return row.related?.name ?? (row.direction === "outgoing" ? row.edge.toSlug : row.edge.fromSlug);
@@ -191,7 +194,7 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
       <p class="reading-line detail-reading">{technique.names.japaneseRomaji} · {technique.names.kana}</p>
       <p class="lede">{technique.names.english}</p>
     </div>
-    <img class="mark" src="/technical-machine-icon.svg" alt="" width="150" height="150" />
+    <img class="mark" src={urlFor("/technical-machine-icon.svg")} alt="" width="150" height="150" />
   </section>
 
   <fieldset class="side-toggle detail-side-toggle" aria-label="Tori side">

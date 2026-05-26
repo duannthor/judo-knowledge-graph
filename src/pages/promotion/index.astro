@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { promotionRequirements, techniques } from "../../query.mjs";
 
+const baseUrl = import.meta.env.BASE_URL;
+const urlFor = (path) => `${baseUrl.replace(/\/?$/, "/")}${path.replace(/^\//, "")}`;
 const ranks = promotionRequirements.slice().sort((a, b) => a.band - b.band);
 const techniqueBySlug = new Map(techniques.map((technique) => [technique.slug, technique]));
 const groupDefinitions = [
@@ -92,7 +94,7 @@ const japaneseParts = (japanese) => japanese?.split(/(の)/).filter(Boolean) ?? 
         Exam requirements are modeled separately from IJF competition legality. Use the rank tabs to focus the page without losing the cross-rank comparison.
       </p>
     </div>
-    <img class="mark" src="/technical-machine-icon.svg" alt="" width="150" height="150" />
+    <img class="mark" src={urlFor("/technical-machine-icon.svg")} alt="" width="150" height="150" />
   </section>
 
   <section class="promotion-filter-bar" aria-label="Promotion rank filters">
@@ -144,7 +146,7 @@ const japaneseParts = (japanese) => japanese?.split(/(の)/).filter(Boolean) ?? 
                 </div>
                 <div class="promotion-technique-list">
                   {group.techniques.map((technique) => (
-                    <a class="technique-row-link promotion-technique-link" href={`/techniques/${technique.slug}/`}>
+                    <a class="technique-row-link promotion-technique-link" href={urlFor(`/techniques/${technique.slug}/`)}>
                       <span class="kanji-title kanji-break">{japaneseParts(technique.names.japanese).map((part) => part === "の" ? <><wbr />{part}</> : part)}</span>
                       <span>
                         <strong class="romaji-break">{romajiParts(technique.names.japaneseRomaji).map((part) => part.trim().toLowerCase() === "no" ? <><wbr />{part}</> : part)}</strong>
@@ -170,7 +172,7 @@ const japaneseParts = (japanese) => japanese?.split(/(の)/).filter(Boolean) ?? 
                         {group.items.map((stub) => (
                           <li>
                             {stub.type === "kata-role" ? (
-                              <a class="linked-requirement" href="/kata/nage-no-kata/">
+                              <a class="linked-requirement" href={urlFor("/kata/nage-no-kata/")}>
                                 <span>{stub.label}</span>
                                 <strong>Open Nage-no-kata</strong>
                               </a>
@@ -185,7 +187,7 @@ const japaneseParts = (japanese) => japanese?.split(/(の)/).filter(Boolean) ?? 
                                       {stub.exampleSlugs.map((slug) => {
                                         const technique = techniqueBySlug.get(slug);
                                         return technique ? (
-                                          <a class="tag" href={`/techniques/${technique.slug}/`}>{romajiParts(technique.names.japaneseRomaji).map((part) => part.trim().toLowerCase() === "no" ? <><wbr />{part}</> : part)}</a>
+                                          <a class="tag" href={urlFor(`/techniques/${technique.slug}/`)}>{romajiParts(technique.names.japaneseRomaji).map((part) => part.trim().toLowerCase() === "no" ? <><wbr />{part}</> : part)}</a>
                                         ) : (
                                           <span class="tag">{slug}</span>
                                         );
@@ -194,7 +196,7 @@ const japaneseParts = (japanese) => japanese?.split(/(の)/).filter(Boolean) ?? 
                                   </div>
                                 )}
                                 {stub.action && (
-                                  <a class="requirement-action" href={stub.action.href}>{stub.action.label}</a>
+                                  <a class="requirement-action" href={urlFor(stub.action.href)}>{stub.action.label}</a>
                                 )}
                               </div>
                             )}
