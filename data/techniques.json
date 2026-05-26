@@ -3748,5 +3748,1140 @@
       "side-control",
       "underhook-hip-control"
     ]
+  },
+  {
+    "slug": "hadaka-jime-defense",
+    "names": {
+      "english": "Hadaka-jime defense",
+      "japaneseRomaji": "hadaka-jime no fusegi-kata",
+      "japanese": "裸絞の防ぎ方",
+      "kana": "はだかじめのふせぎかた",
+      "aliases": [
+        "defense against hadaka-jime",
+        "hadaka jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts hadaka-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "okuri-eri-jime-defense",
+    "names": {
+      "english": "Okuri-eri-jime defense",
+      "japaneseRomaji": "okuri-eri-jime no fusegi-kata",
+      "japanese": "送襟絞の防ぎ方",
+      "kana": "おくりえりじめのふせぎかた",
+      "aliases": [
+        "defense against okuri-eri-jime",
+        "okuri eri jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts okuri-eri-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "ude-hishigi-juji-gatame-defense",
+    "names": {
+      "english": "Juji-gatame defense",
+      "japaneseRomaji": "ude-hishigi-juji-gatame no fusegi-kata",
+      "japanese": "腕挫十字固の防ぎ方",
+      "kana": "うでひしぎじゅうじがためのふせぎかた",
+      "aliases": [
+        "defense against juji-gatame",
+        "armbar defense",
+        "juji gatame defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts ude-hishigi-juji-gatame's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "nami-juji-jime-defense",
+    "names": {
+      "english": "Nami-juji-jime defense",
+      "japaneseRomaji": "nami-juji-jime no fusegi-kata",
+      "japanese": "並十字絞の防ぎ方",
+      "kana": "なみじゅうじじめのふせぎかた",
+      "aliases": [
+        "defense against nami-juji-jime",
+        "nami juji jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts nami-juji-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "kata-juji-jime-defense",
+    "names": {
+      "english": "Kata-juji-jime defense",
+      "japaneseRomaji": "kata-juji-jime no fusegi-kata",
+      "japanese": "片十字絞の防ぎ方",
+      "kana": "かたじゅうじじめのふせぎかた",
+      "aliases": [
+        "defense against kata-juji-jime",
+        "kata juji jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts kata-juji-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "gyaku-juji-jime-defense",
+    "names": {
+      "english": "Gyaku-juji-jime defense",
+      "japaneseRomaji": "gyaku-juji-jime no fusegi-kata",
+      "japanese": "逆十字絞の防ぎ方",
+      "kana": "ぎゃくじゅうじじめのふせぎかた",
+      "aliases": [
+        "defense against gyaku-juji-jime",
+        "gyaku juji jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts gyaku-juji-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "ude-garami-defense",
+    "names": {
+      "english": "Ude-garami defense",
+      "japaneseRomaji": "ude-garami no fusegi-kata",
+      "japanese": "腕緘の防ぎ方",
+      "kana": "うでがらみのふせぎかた",
+      "aliases": [
+        "defense against ude-garami",
+        "ude garami defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts ude-garami's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "ude-hishigi-ude-gatame-defense",
+    "names": {
+      "english": "Ude-gatame defense",
+      "japaneseRomaji": "ude-hishigi-ude-gatame no fusegi-kata",
+      "japanese": "腕挫腕固の防ぎ方",
+      "kana": "うでひしぎうでがためのふせぎかた",
+      "aliases": [
+        "defense against ude-gatame",
+        "ude gatame defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts ude-hishigi-ude-gatame's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "sankaku-jime-defense",
+    "names": {
+      "english": "Sankaku-jime defense",
+      "japaneseRomaji": "sankaku-jime no fusegi-kata",
+      "japanese": "三角絞の防ぎ方",
+      "kana": "さんかくじめのふせぎかた",
+      "aliases": [
+        "defense against sankaku-jime",
+        "triangle choke defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts sankaku-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "kataha-jime-defense",
+    "names": {
+      "english": "Kataha-jime defense",
+      "japaneseRomaji": "kataha-jime no fusegi-kata",
+      "japanese": "片羽絞の防ぎ方",
+      "kana": "かたはじめのふせぎかた",
+      "aliases": [
+        "defense against kataha-jime",
+        "kataha jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts kataha-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "katate-jime-defense",
+    "names": {
+      "english": "Katate-jime defense",
+      "japaneseRomaji": "katate-jime no fusegi-kata",
+      "japanese": "片手絞の防ぎ方",
+      "kana": "かたてじめのふせぎかた",
+      "aliases": [
+        "defense against katate-jime",
+        "katate jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts katate-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "ude-hishigi-hiza-gatame-defense",
+    "names": {
+      "english": "Hiza-gatame defense",
+      "japaneseRomaji": "ude-hishigi-hiza-gatame no fusegi-kata",
+      "japanese": "腕挫膝固の防ぎ方",
+      "kana": "うでひしぎひざがためのふせぎかた",
+      "aliases": [
+        "defense against hiza-gatame",
+        "hiza gatame defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts ude-hishigi-hiza-gatame's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "ude-hishigi-waki-gatame-defense",
+    "names": {
+      "english": "Waki-gatame defense",
+      "japaneseRomaji": "ude-hishigi-waki-gatame no fusegi-kata",
+      "japanese": "腕挫腋固の防ぎ方",
+      "kana": "うでひしぎわきがためのふせぎかた",
+      "aliases": [
+        "defense against waki-gatame",
+        "waki gatame defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts ude-hishigi-waki-gatame's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "sode-guruma-jime-defense",
+    "names": {
+      "english": "Sode-guruma-jime defense",
+      "japaneseRomaji": "sode-guruma-jime no fusegi-kata",
+      "japanese": "袖車絞の防ぎ方",
+      "kana": "そでぐるまじめのふせぎかた",
+      "aliases": [
+        "defense against sode-guruma-jime",
+        "sode guruma jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts sode-guruma-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "ude-hishigi-te-gatame-defense",
+    "names": {
+      "english": "Te-gatame defense",
+      "japaneseRomaji": "ude-hishigi-te-gatame no fusegi-kata",
+      "japanese": "腕挫手固の防ぎ方",
+      "kana": "うでひしぎてがためのふせぎかた",
+      "aliases": [
+        "defense against te-gatame",
+        "te gatame defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts ude-hishigi-te-gatame's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "ude-hishigi-sankaku-gatame-defense",
+    "names": {
+      "english": "Sankaku-gatame defense",
+      "japaneseRomaji": "ude-hishigi-sankaku-gatame no fusegi-kata",
+      "japanese": "腕挫三角固の防ぎ方",
+      "kana": "うでひしぎさんかくがためのふせぎかた",
+      "aliases": [
+        "defense against sankaku-gatame",
+        "sankaku gatame defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts ude-hishigi-sankaku-gatame's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "tsukkomi-jime-defense",
+    "names": {
+      "english": "Tsukkomi-jime defense",
+      "japaneseRomaji": "tsukkomi-jime no fusegi-kata",
+      "japanese": "突込絞の防ぎ方",
+      "kana": "つっこみじめのふせぎかた",
+      "aliases": [
+        "defense against tsukkomi-jime",
+        "tsukkomi jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts tsukkomi-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
+  },
+  {
+    "slug": "ryote-jime-defense",
+    "names": {
+      "english": "Ryote-jime defense",
+      "japaneseRomaji": "ryote-jime no fusegi-kata",
+      "japanese": "両手絞の防ぎ方",
+      "kana": "りょうてじめのふせぎかた",
+      "aliases": [
+        "defense against ryote-jime",
+        "ryote jime defense"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "ne-waza-escape"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "escape",
+      "counter"
+    ],
+    "phases": {
+      "kuzushi": {
+        "summary": "Create space, posture, or hand position that interrupts ryote-jime's control before the finish is settled.",
+        "directionHints": [
+          "left",
+          "right",
+          "back"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Protect the vulnerable line, clear the controlling limb or grip, and angle toward a safer defensive frame.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Recover guard, turn out, stack safely, or return to a neutral ne-waza position depending on the attack.",
+        "directionHints": [
+          "front",
+          "back",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "guard",
+      "frame-control",
+      "collar-sleeve-control"
+    ]
   }
 ]

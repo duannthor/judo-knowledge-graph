@@ -20,7 +20,8 @@
     "unmappedItems": [],
     "sourceIds": [
       "usjf-promotion-requirements-2026"
-    ]
+    ],
+    "requirementStubs": []
   },
   {
     "id": "usjf-senior-2026-yon-kyu",
@@ -42,21 +43,13 @@
       "kesa-gatame-frame-turn-in-escape",
       "hadaka-jime",
       "okuri-eri-jime",
-      "ude-hishigi-juji-gatame"
+      "ude-hishigi-juji-gatame",
+      "hadaka-jime-defense",
+      "okuri-eri-jime-defense",
+      "ude-hishigi-juji-gatame-defense"
     ],
     "unmappedItems": [],
-    "requirementStubs": [
-      {
-        "id": "usjf-senior-2026-yon-kyu-shime-defense",
-        "type": "defense",
-        "label": "Defense against each listed shime-waza"
-      },
-      {
-        "id": "usjf-senior-2026-yon-kyu-kansetsu-defense",
-        "type": "defense",
-        "label": "Defense against each listed kansetsu-waza"
-      }
-    ],
+    "requirementStubs": [],
     "sourceIds": [
       "usjf-promotion-requirements-2026"
     ]
@@ -83,7 +76,12 @@
       "kata-juji-jime",
       "gyaku-juji-jime",
       "ude-garami",
-      "ude-hishigi-ude-gatame"
+      "ude-hishigi-ude-gatame",
+      "nami-juji-jime-defense",
+      "kata-juji-jime-defense",
+      "gyaku-juji-jime-defense",
+      "ude-garami-defense",
+      "ude-hishigi-ude-gatame-defense"
     ],
     "unmappedItems": [],
     "requirementStubs": [
@@ -91,16 +89,6 @@
         "id": "usjf-senior-2026-san-kyu-nage-no-kata-uke-first-3",
         "type": "kata-role",
         "label": "Nage-no-kata, Uke role, first 3 sets"
-      },
-      {
-        "id": "usjf-senior-2026-san-kyu-shime-defense",
-        "type": "defense",
-        "label": "Defense against each listed shime-waza"
-      },
-      {
-        "id": "usjf-senior-2026-san-kyu-kansetsu-defense",
-        "type": "defense",
-        "label": "Defense against each listed kansetsu-waza"
       }
     ],
     "sourceIds": [
@@ -130,7 +118,12 @@
       "kataha-jime",
       "katate-jime",
       "ude-hishigi-hiza-gatame",
-      "ude-hishigi-waki-gatame"
+      "ude-hishigi-waki-gatame",
+      "sankaku-jime-defense",
+      "kataha-jime-defense",
+      "katate-jime-defense",
+      "ude-hishigi-hiza-gatame-defense",
+      "ude-hishigi-waki-gatame-defense"
     ],
     "unmappedItems": [],
     "requirementStubs": [
@@ -153,16 +146,6 @@
         "id": "usjf-senior-2026-ni-kyu-nage-no-kata-tori-first-3",
         "type": "kata-role",
         "label": "Nage-no-kata, Tori role, first 3 sets"
-      },
-      {
-        "id": "usjf-senior-2026-ni-kyu-shime-defense",
-        "type": "defense",
-        "label": "Defense against each listed shime-waza"
-      },
-      {
-        "id": "usjf-senior-2026-ni-kyu-kansetsu-defense",
-        "type": "defense",
-        "label": "Defense against each listed kansetsu-waza"
       }
     ],
     "sourceIds": [
@@ -201,7 +184,14 @@
       "sode-guruma-jime",
       "sankaku-jime",
       "ude-hishigi-te-gatame",
-      "ude-hishigi-sankaku-gatame"
+      "ude-hishigi-sankaku-gatame",
+      "makura-kesa-gatame",
+      "kuzure-yoko-shiho-gatame",
+      "kesa-gatame-frame-turn-in-escape",
+      "sode-guruma-jime-defense",
+      "sankaku-jime-defense",
+      "ude-hishigi-te-gatame-defense",
+      "ude-hishigi-sankaku-gatame-defense"
     ],
     "unmappedItems": [],
     "requirementStubs": [
@@ -224,16 +214,6 @@
         "id": "usjf-senior-2026-ikkyu-nage-no-kata-uke-all-5",
         "type": "kata-role",
         "label": "Nage-no-kata, Uke role, all 5 sets"
-      },
-      {
-        "id": "usjf-senior-2026-ikkyu-shime-defense",
-        "type": "defense",
-        "label": "Defense against each listed shime-waza"
-      },
-      {
-        "id": "usjf-senior-2026-ikkyu-kansetsu-defense",
-        "type": "defense",
-        "label": "Defense against each listed kansetsu-waza"
       }
     ],
     "sourceIds": [
@@ -282,7 +262,12 @@
       "ude-hishigi-sankaku-gatame",
       "ude-hishigi-te-gatame",
       "ude-hishigi-ude-gatame",
-      "ude-hishigi-waki-gatame"
+      "ude-hishigi-waki-gatame",
+      "makura-kesa-gatame",
+      "kuzure-yoko-shiho-gatame",
+      "kesa-gatame-frame-turn-in-escape",
+      "tsukkomi-jime-defense",
+      "ryote-jime-defense"
     ],
     "unmappedItems": [],
     "requirementStubs": [
@@ -305,16 +290,6 @@
         "id": "usjf-senior-2026-shodan-nage-no-kata-tori-all-5",
         "type": "kata-role",
         "label": "Nage-no-kata, Tori role, all 5 sets"
-      },
-      {
-        "id": "usjf-senior-2026-shodan-shime-defense",
-        "type": "defense",
-        "label": "Defense against each listed shime-waza"
-      },
-      {
-        "id": "usjf-senior-2026-shodan-kansetsu-understanding",
-        "type": "aggregate-requirement",
-        "label": "All kansetsu-waza with improved understanding and ability"
       }
     ],
     "sourceIds": [

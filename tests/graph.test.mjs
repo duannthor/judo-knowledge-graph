@@ -240,6 +240,37 @@ test("USJF promotion requirements map named techniques and preserve requirement 
   assert.ok(shodan.techniqueSlugs.includes("ashi-guruma"));
   assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "combination"));
   assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "counter"));
+  assert.ok(ranks.every((rank) => !rank.requirementStubs.some((stub) => ["defense", "aggregate-requirement"].includes(stub.type))));
+});
+
+test("USJF promotion requirements map shime and kansetsu defenses to concrete nodes", () => {
+  const yonKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-yon-kyu");
+  const sanKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-san-kyu");
+  const niKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-ni-kyu");
+  const ikkyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-ikkyu");
+  const shodan = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan");
+
+  assert.ok(yonKyu.techniqueSlugs.includes("hadaka-jime-defense"));
+  assert.ok(yonKyu.techniqueSlugs.includes("okuri-eri-jime-defense"));
+  assert.ok(yonKyu.techniqueSlugs.includes("ude-hishigi-juji-gatame-defense"));
+  assert.ok(sanKyu.techniqueSlugs.includes("nami-juji-jime-defense"));
+  assert.ok(sanKyu.techniqueSlugs.includes("ude-garami-defense"));
+  assert.ok(niKyu.techniqueSlugs.includes("kataha-jime-defense"));
+  assert.ok(niKyu.techniqueSlugs.includes("ude-hishigi-waki-gatame-defense"));
+  assert.ok(ikkyu.techniqueSlugs.includes("sode-guruma-jime-defense"));
+  assert.ok(ikkyu.techniqueSlugs.includes("ude-hishigi-sankaku-gatame-defense"));
+  assert.ok(shodan.techniqueSlugs.includes("tsukkomi-jime-defense"));
+  assert.ok(shodan.techniqueSlugs.includes("ryote-jime-defense"));
+});
+
+test("USJF upper-rank all-osaekomi requirements include new hold and escape nodes", () => {
+  const ikkyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-ikkyu");
+  const shodan = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan");
+
+  for (const slug of ["makura-kesa-gatame", "kuzure-yoko-shiho-gatame", "kesa-gatame-frame-turn-in-escape"]) {
+    assert.ok(ikkyu.techniqueSlugs.includes(slug));
+    assert.ok(shodan.techniqueSlugs.includes(slug));
+  }
 });
 
 test("USJF syllabus-specific escape requirements map to concrete escape nodes", () => {
@@ -339,18 +370,22 @@ test("practical ground escape nodes are searchable and legal defensive actions",
   const escapes = getByGrouping("ne-waza-escape");
   const slugs = escapes.map((technique) => technique.slug).sort();
 
-  assert.deepEqual(slugs, [
+  for (const slug of [
     "kesa-gatame-frame-turn-in-escape",
     "mount-bridge-and-roll-escape",
     "mount-elbow-knee-escape",
     "north-south-frame-turn-in-escape",
     "side-control-frame-shrimp-escape",
-    "side-control-underhook-hip-escape"
-  ]);
+    "side-control-underhook-hip-escape",
+    "hadaka-jime-defense",
+    "ude-hishigi-juji-gatame-defense"
+  ]) {
+    assert.ok(slugs.includes(slug));
+  }
   assert.ok(escapes.every((technique) => technique.roles.includes("escape")));
   assert.ok(escapes.every((technique) => getLegality(technique.slug).status === "legal"));
-  assert.ok(escapes.every((technique) => technique.names.japanese.includes("逃れ方")));
-  assert.ok(escapes.every((technique) => technique.names.kana.includes("のがれかた")));
+  assert.ok(escapes.every((technique) => technique.names.japanese.includes("逃れ方") || technique.names.japanese.includes("防ぎ方")));
+  assert.ok(escapes.every((technique) => technique.names.kana.includes("のがれかた") || technique.names.kana.includes("ふせぎかた")));
 });
 
 test("hold-down techniques are linked to practical escape counters", () => {

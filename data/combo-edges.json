@@ -10,7 +10,9 @@
     "toriSide": "right",
     "timing": "immediate",
     "confidence": "common",
-    "sourceIds": ["common-combo-seed-v1"]
+    "sourceIds": [
+      "common-combo-seed-v1"
+    ]
   },
   {
     "fromSlug": "ko-uchi-gari-right",
@@ -23,7 +25,9 @@
     "toriSide": "right",
     "timing": "reaction",
     "confidence": "common",
-    "sourceIds": ["common-combo-seed-v1"]
+    "sourceIds": [
+      "common-combo-seed-v1"
+    ]
   },
   {
     "fromSlug": "seoi-nage-right-turn",
@@ -36,7 +40,10 @@
     "toriSide": "any",
     "timing": "reaction",
     "confidence": "coach-advisory",
-    "sourceIds": ["common-combo-seed-v1", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "common-combo-seed-v1",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "kesa-gatame",
@@ -49,7 +56,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "common frame-and-turn-in answer to scarf-hold control",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "yoko-shiho-gatame",
@@ -62,7 +71,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "common frame-and-hip escape from side-control pressure",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "yoko-shiho-gatame",
@@ -75,7 +86,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "common underhook or hip-control escape from side-control pressure",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "kuzure-kesa-gatame",
@@ -88,7 +101,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "side-control-like modified scarf hold can be escaped by framing and recovering space",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "kata-gatame",
@@ -101,7 +116,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "shoulder-hold pressure can be answered by turning in before the hold settles",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "tate-shiho-gatame",
@@ -114,7 +131,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "common bridge-and-roll answer to mount-like hold-down control",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "tate-shiho-gatame",
@@ -127,7 +146,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "common elbow-knee guard recovery answer to mount-like hold-down control",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "kami-shiho-gatame",
@@ -140,7 +161,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "common frame-and-turn-in answer to north-south hold-down control",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "kuzure-kami-shiho-gatame",
@@ -153,7 +176,9 @@
     "timing": "transition",
     "confidence": "coach-advisory",
     "notes": "common frame-and-turn-in answer to modified north-south hold-down control",
-    "sourceIds": ["local-practice-advisory-v1"]
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "o-soto-gari",
@@ -167,7 +192,10 @@
     "timing": "reaction",
     "confidence": "common",
     "notes": "O-soto-gaeshi is the named counter family for o-soto-gari pressure.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "ko-uchi-gari",
@@ -181,7 +209,10 @@
     "timing": "reaction",
     "confidence": "coach-advisory",
     "notes": "Evasion counter: tori removes or lightens the attacked foot, then returns ko-uchi-gaeshi as uke overcommits.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "ko-uchi-gari",
@@ -195,7 +226,10 @@
     "timing": "reaction",
     "confidence": "coach-advisory",
     "notes": "Pressure counter: tori jams the ko-uchi-gari entry and counters through uke's attacking pressure.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "ko-uchi-gari-right",
@@ -209,7 +243,10 @@
     "timing": "reaction",
     "confidence": "coach-advisory",
     "notes": "Right-side evasion counter seed for ko-uchi-gari.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "ko-uchi-gari-right",
@@ -223,7 +260,10 @@
     "timing": "reaction",
     "confidence": "coach-advisory",
     "notes": "Right-side pressure counter seed for ko-uchi-gari.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "de-ashi-harai",
@@ -237,7 +277,10 @@
     "timing": "reaction",
     "confidence": "common",
     "notes": "Tsubame-gaeshi is the named counter to de-ashi-harai: tori withdraws the swept foot and immediately sweeps uke in return.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "o-uchi-gari",
@@ -251,7 +294,10 @@
     "timing": "reaction",
     "confidence": "common",
     "notes": "O-uchi-gaeshi is the named counter family for o-uchi-gari pressure.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "hane-goshi",
@@ -265,7 +311,10 @@
     "timing": "reaction",
     "confidence": "common",
     "notes": "Hane-goshi-gaeshi is the named counter family for hane-goshi.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "harai-goshi",
@@ -279,7 +328,10 @@
     "timing": "reaction",
     "confidence": "common",
     "notes": "Harai-goshi-gaeshi is the named counter family for harai-goshi.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "uchi-mata",
@@ -293,7 +345,10 @@
     "timing": "reaction",
     "confidence": "common",
     "notes": "Uchi-mata-sukashi is a named slipping/evasion counter to uchi-mata.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
   },
   {
     "fromSlug": "uchi-mata",
@@ -307,6 +362,279 @@
     "timing": "reaction",
     "confidence": "common",
     "notes": "Uchi-mata-gaeshi is a named counter family for uchi-mata.",
-    "sourceIds": ["kodokan-repertoire", "local-practice-advisory-v1"]
+    "sourceIds": [
+      "kodokan-repertoire",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "hadaka-jime",
+    "toSlug": "hadaka-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for hadaka-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "okuri-eri-jime",
+    "toSlug": "okuri-eri-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for okuri-eri-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "ude-hishigi-juji-gatame",
+    "toSlug": "ude-hishigi-juji-gatame-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for ude-hishigi-juji-gatame",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "nami-juji-jime",
+    "toSlug": "nami-juji-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for nami-juji-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "kata-juji-jime",
+    "toSlug": "kata-juji-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for kata-juji-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "gyaku-juji-jime",
+    "toSlug": "gyaku-juji-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for gyaku-juji-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "ude-garami",
+    "toSlug": "ude-garami-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for ude-garami",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "ude-hishigi-ude-gatame",
+    "toSlug": "ude-hishigi-ude-gatame-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for ude-hishigi-ude-gatame",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "sankaku-jime",
+    "toSlug": "sankaku-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for sankaku-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "kataha-jime",
+    "toSlug": "kataha-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for kataha-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "katate-jime",
+    "toSlug": "katate-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for katate-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "ude-hishigi-hiza-gatame",
+    "toSlug": "ude-hishigi-hiza-gatame-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for ude-hishigi-hiza-gatame",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "ude-hishigi-waki-gatame",
+    "toSlug": "ude-hishigi-waki-gatame-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for ude-hishigi-waki-gatame",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "sode-guruma-jime",
+    "toSlug": "sode-guruma-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for sode-guruma-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "ude-hishigi-te-gatame",
+    "toSlug": "ude-hishigi-te-gatame-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for ude-hishigi-te-gatame",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "ude-hishigi-sankaku-gatame",
+    "toSlug": "ude-hishigi-sankaku-gatame-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for ude-hishigi-sankaku-gatame",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "tsukkomi-jime",
+    "toSlug": "tsukkomi-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for tsukkomi-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "fromSlug": "ryote-jime",
+    "toSlug": "ryote-jime-defense",
+    "pattern": "counter-sequence",
+    "expectedUkeReaction": "front",
+    "finishingDirection": "back",
+    "stanceContext": "any",
+    "toriSide": "any",
+    "timing": "reaction",
+    "confidence": "coach-advisory",
+    "notes": "curriculum defense seed for ryote-jime",
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ]
   }
 ]

@@ -1867,5 +1867,275 @@
       "ijf-sor-2026",
       "local-practice-advisory-v1"
     ]
+  },
+  {
+    "subjectSlug": "hadaka-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "okuri-eri-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-juji-gatame-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "nami-juji-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kata-juji-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "gyaku-juji-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-garami-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-ude-gatame-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "sankaku-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kataha-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "katate-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-hiza-gatame-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-waki-gatame-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "sode-guruma-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-te-gatame-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ude-hishigi-sankaku-gatame-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "tsukkomi-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "ryote-jime-defense",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Practical defense modeled as a legal defensive ne-waza action when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
   }
 ]
