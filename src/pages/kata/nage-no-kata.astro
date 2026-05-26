@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { kataMemberships, techniques } from "../../query.mjs";
+
+const kata = kataMemberships.find((item) => item.id === "nage-no-kata");
+const kataTechniques = kata.techniqueSlugs
+  .map((slug) => techniques.find((technique) => technique.slug === slug))
+  .filter(Boolean);
+const techniqueBySlug = new Map(kataTechniques.map((technique) => [technique.slug, technique]));
+const firstThreeSetExamTags = [
+  { label: "3+ kyu · Uke · first 3 sets", rankClass: "rank-brown" },
+  { label: "2+ kyu · Tori · first 3 sets", rankClass: "rank-brown" },
+  { label: "1 kyu · Uke · all 5 sets", rankClass: "rank-brown" },
+  { label: "Shodan · Tori · all 5 sets", rankClass: "rank-black" }
+];
+const allSetExamTags = [
+  { label: "1 kyu · Uke · all 5 sets", rankClass: "rank-brown" },
+  { label: "Shodan · Tori · all 5 sets", rankClass: "rank-black" }
+];
+const kataSets = [
+  {
+    title: "Te-waza",
+    english: "hand techniques",
+    note: "Visual pause: reset judogi and obi before moving into the hip-technique set.",
+    sideOrder: "Each technique is demonstrated right-hand variant first, then left-hand variant.",
+    examTags: firstThreeSetExamTags,
+    slugs: ["uki-otoshi", "seoi-nage", "kata-guruma"]
+  },
+  {
+    title: "Koshi-waza",
+    english: "hip techniques",
+    note: "Visual pause: return to composure, straighten the jacket, and reestablish spacing.",
+    sideOrder: "Uki-goshi is the exception: left-hand variant first, then right-hand variant. Harai-goshi and tsurikomi-goshi continue right first, then left.",
+    examTags: firstThreeSetExamTags,
+    slugs: ["uki-goshi", "harai-goshi", "tsurikomi-goshi"]
+  },
+  {
+    title: "Ashi-waza",
+    english: "foot and leg techniques",
+    note: "Visual pause: settle the belt and sleeves before the sacrifice techniques begin.",
+    sideOrder: "Each technique is demonstrated right-hand variant first, then left-hand variant.",
+    examTags: firstThreeSetExamTags,
+    slugs: ["okuri-ashi-harai", "sasae-tsurikomi-ashi", "uchi-mata"]
+  },
+  {
+    title: "Ma-sutemi-waza",
+    english: "rear sacrifice techniques",
+    note: "Visual pause: recover breathing and presentation after the larger ukemi demands.",
+    sideOrder: "Each technique is demonstrated right-hand variant first, then left-hand variant.",
+    examTags: allSetExamTags,
+    slugs: ["tomoe-nage", "ura-nage", "sumi-gaeshi"]
+  },
+  {
+    title: "Yoko-sutemi-waza",
+    english: "side sacrifice techniques",
+    note: "Final set: keep the closing rhythm calm and formal after the last recovery.",
+    sideOrder: "Each technique is demonstrated right-hand variant first, then left-hand variant.",
+    examTags: allSetExamTags,
+    slugs: ["yoko-gake", "yoko-guruma", "uki-waza"]
+  }
+];
+const etiquetteNotes = [
+  "Opening position: with both performers oriented toward joseki, tori is on joseki's left and uke is on joseki's right; from the adjudicator's view, tori appears stage right and uke stage left.",
+  "Approach calmly from opposite sides, bow on entering the mat area, then take the formal opening distance.",
+  "Opening rei: turn toward joseki for ritsu-rei, then turn toward each other for zarei before rising and stepping into the kata.",
+  "Between sets, return to a composed standing posture and adjust judogi or obi neatly without rushing the rhythm.",
+  "After each throw, uke recovers deliberately to the next starting position while tori also resets spacing and posture.",
+  "Closing reverses the opening feeling: complete the final recovery, return to formal distance, bow to each other, bow toward joseki, then leave the mat with composure."
+];
+---
+
+<BaseLayout title="Nage-no-kata · Judo Knowledge Graph">
+  <section class="intro" aria-labelledby="page-title">
+    <div>
+      <p class="eyebrow">Kata</p>
+      <h1 id="page-title">{kata.japanese}</h1>
+      <p class="reading-line detail-reading">{kata.label} · {kata.kana}</p>
+      <p class="lede">{kata.english}</p>
+    </div>
+    <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
+  </section>
+
+  <div class="detail-grid">
+    <div>
+      <section class="panel" aria-labelledby="kata-techniques-title">
+        <h2 id="kata-techniques-title">Technique Sets</h2>
+        <div class="kata-set-list">
+          {kataSets.map((set) => (
+            <section class="kata-set" aria-labelledby={`${set.title}-title`}>
+              <div class="kata-set-heading">
+                <div>
+                  <h3 id={`${set.title}-title`}>{set.title}</h3>
+                  <p class="empty">{set.english}</p>
+                </div>
+                <div class="kata-set-tags">
+                  <span class="tag">{set.slugs.length} techniques</span>
+                  {set.examTags.map((tag) => <span class={`tag rank-tag ${tag.rankClass}`}>{tag.label}</span>)}
+                </div>
+              </div>
+              <p class="kata-side-note">{set.sideOrder}</p>
+              <div class="technique-list-grid">
+                {set.slugs.map((slug) => {
+                  const technique = techniqueBySlug.get(slug);
+                  return technique && (
+                    <a class="technique-row-link" href={`/techniques/${technique.slug}/`}>
+                      <span class="kanji-title">{technique.names.japanese}</span>
+                      <span>
+                        <strong>{technique.names.japaneseRomaji}</strong>
+                        <small>{technique.names.english}</small>
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+              <p class="kata-break-note">{set.note}</p>
+            </section>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section class="panel" aria-labelledby="etiquette-title">
+        <h2 id="etiquette-title">Etiquette Notes</h2>
+        <ul class="list">
+          {etiquetteNotes.map((note) => (
+            <li>{note}</li>
+          ))}
+        </ul>
+        <p class="source">
+          Check local exam-board preference for exact distances and staging language.
+        </p>
+      </section>
+    </aside>
+  </div>
+</BaseLayout>

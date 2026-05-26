@@ -100,6 +100,10 @@ select {
   font-size: 0.95rem;
 }
 
+.nav-links a {
+  text-decoration: none;
+}
+
 .page {
   padding: 42px 0 64px;
 }
@@ -467,6 +471,104 @@ html[data-tori-side="right"] .side-switch-thumb {
   margin: 26px 0 30px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--line);
+}
+
+.rank-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rank-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.technique-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.technique-row-link {
+  display: grid;
+  grid-template-columns: minmax(70px, 0.35fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 72px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: var(--surface-soft);
+  text-decoration: none;
+}
+
+.technique-row-link .kanji-title {
+  font-size: 1.45rem;
+}
+
+.technique-row-link span:last-child {
+  display: grid;
+  gap: 4px;
+}
+
+.technique-row-link small {
+  color: var(--muted);
+  font: 0.86rem/1.35 ui-sans-serif, system-ui, sans-serif;
+}
+
+.kata-set-list {
+  display: grid;
+  gap: 24px;
+}
+
+.kata-set {
+  display: grid;
+  gap: 14px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.kata-set:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.kata-set-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kata-set-heading h3 {
+  font-size: 1.2rem;
+}
+
+.kata-set-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+  max-width: 430px;
+}
+
+.kata-side-note {
+  margin: 0;
+  color: var(--text);
+  font: 0.95rem/1.5 ui-sans-serif, system-ui, sans-serif;
+}
+
+.kata-break-note {
+  margin: 0;
+  border-left: 3px solid var(--gold);
+  padding: 8px 0 8px 12px;
+  color: var(--muted);
+  font: 0.92rem/1.45 ui-sans-serif, system-ui, sans-serif;
 }
 
 .family-tabs-header {
@@ -839,6 +941,8 @@ html[data-tori-side="right"] .side-switch-thumb {
 
   .stats,
   .technique-grid,
+  .rank-grid,
+  .technique-list-grid,
   .facts {
     grid-template-columns: 1fr;
   }

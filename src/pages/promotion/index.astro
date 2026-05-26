@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { promotionRequirements, techniques } from "../../query.mjs";
+
+const ranks = promotionRequirements.slice().sort((a, b) => a.band - b.band);
+const techniqueName = (slug) => techniques.find((technique) => technique.slug === slug)?.names.japaneseRomaji ?? slug;
+---
+
+<BaseLayout title="USJF Promotion Requirements · Judo Knowledge Graph">
+  <section class="intro" aria-labelledby="page-title">
+    <div>
+      <p class="eyebrow">Promotion</p>
+      <h1 id="page-title">USJF senior promotion requirements.</h1>
+      <p class="lede">
+        Rank filters are modeled separately from IJF competition rules. These pages will become the exam breakout views.
+      </p>
+    </div>
+    <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
+  </section>
+
+  <section class="rank-grid" aria-label="Promotion ranks">
+    {ranks.map((rank) => (
+      <article class="rank-card">
+        <div class="card-top">
+          <div>
+            <p class="eyebrow">Band {rank.band}</p>
+            <h2>{rank.label} · {rank.beltColor}</h2>
+            <p class="empty">{rank.japaneseRomaji}</p>
+          </div>
+          <span class={`tag rank-tag rank-${rank.beltColor}`}>{rank.beltColor}</span>
+        </div>
+        <div class="tags">
+          {rank.techniqueSlugs.slice(0, 8).map((slug) => (
+            <a class="tag" href={`/techniques/${slug}/`}>{techniqueName(slug)}</a>
+          ))}
+          {rank.techniqueSlugs.length > 8 && <span class="tag">+{rank.techniqueSlugs.length - 8} more</span>}
+        </div>
+      </article>
+    ))}
+  </section>
+</BaseLayout>
