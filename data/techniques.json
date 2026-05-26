@@ -370,7 +370,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward and slightly to the throwing side so their weight rises onto the front corner.",
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn in with hip contact high enough to load uke while keeping sleeve and lapel control connected.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Rotate the hip and upper body together to float uke over the hip line.",
+        "directionHints": [
+          "front",
+          "clockwise",
+          "counter-clockwise"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -403,7 +432,32 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward onto the front of their balance while bringing their upper body close.",
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Step in deeply, wrap or control the back, and place the hips below uke's center.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Lift with the hips and rotate uke forward over the hip shelf.",
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -468,7 +522,34 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Lift and pull uke forward-upward so their posture rises and their weight comes onto the front line.",
+        "directionHints": [
+          "front"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Fit the hips in while maintaining the lifting-pulling action through sleeve and lapel.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Continue the lift-pull and rotate uke forward over the hip line.",
+        "directionHints": [
+          "front",
+          "clockwise",
+          "counter-clockwise"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -500,7 +581,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal so their weight loads onto the side to be swept.",
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn in with hip contact and align the sweeping leg along uke's loaded leg line.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Sweep the loaded leg while rotating the upper body through the hip line.",
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -658,7 +768,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Lift and pull through sleeve control to raise uke's posture and expose the forward corner.",
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn in under the sleeve-controlled arm while keeping both hands active and posture compact.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Continue the sleeve lift and hip rotation to project uke forward.",
+        "directionHints": [
+          "front",
+          "clockwise",
+          "counter-clockwise"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -691,7 +830,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal onto the shoulder-throw line.",
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn in under uke's arm with the one-arm shoulder connection tight to the body.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Rotate through the shoulder line and project uke forward without trapping the arm through the landing.",
+        "directionHints": [
+          "front",
+          "clockwise",
+          "counter-clockwise"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -1102,7 +1270,36 @@
     "roles": [
       "counter"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Receive uke's ko-uchi pressure and redirect their weight onto the attacked line.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Lighten or evade the attacked foot while maintaining upper-body connection.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Return the reap, block, or pressure line to take uke backward as their attack overcommits.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -1623,7 +1820,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Break uke's defensive frames and turn their shoulders away from a strong bridge line.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set scarf-hold chest pressure with head-and-arm control, hip angle, and a wide base.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Settle weight through the ribs and shoulder line while denying uke's turn-in and bridge.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ]
@@ -1652,7 +1868,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Collapse uke's frames and separate their near shoulder from a strong turn-in path.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set the modified scarf-hold angle with arm control, chest pressure, and hips low.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Hold the modified scarf line while following uke's bridge, shrimp, or turn-in attempt.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ]
@@ -1679,7 +1914,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Turn uke's upper body away from a strong frame and expose the reverse scarf angle.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set reverse scarf-hold control with hips angled and chest pressure across uke's torso.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Hold the reverse scarf line while following bridges and keeping the shoulder line pinned.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ]
@@ -1709,7 +1963,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Isolate uke's arm across their neck and weaken the shoulder line.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set shoulder-hold head-and-arm control with chest pressure and a stable base.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Settle the pin or choking pressure while preventing uke from turning toward space.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ]
@@ -1740,7 +2013,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Flatten uke's shoulders and remove their ability to turn toward either side.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set upper four-quarter control from the head side with hips low and arms controlling the belt or upper body.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Hold head-side pressure while following bridges and keeping uke's shoulders pinned.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -1774,7 +2066,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Break uke's frames from the head-side position and flatten their upper body.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set modified upper four-quarter control with an adjusted grip, hip angle, or arm position.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Maintain head-side pressure while adapting to uke's bridge or turn-in escape.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -1807,7 +2118,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Flatten uke from the side and separate their near elbow and knee frames.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set side four-quarter control with chest pressure, head control, and hip or belt control.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Pin through the torso while blocking bridge, shrimp, and guard recovery lines.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ]
@@ -1835,7 +2165,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Flatten uke from a mounted line and remove their knee-elbow frames.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set straight four-quarter control with knees or legs controlling uke's hips and upper body.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Hold mount-style pressure while denying bridge, roll, and elbow-knee recovery.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -1918,7 +2267,26 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Break uke's posture and expose the collar line for normal cross-grip control.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set both hands in normal cross-choke orientation with wrists aligned and elbows controlled.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Close the elbows and apply collar pressure gradually until uke submits or the hold is released.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -1948,7 +2316,26 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Break uke's posture and expose the opposite collar line for reverse cross-grip control.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set both hands in reverse cross-choke orientation with the wrists and forearms aligned.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Draw the elbows and wrists into the choke line gradually while monitoring uke's safety.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -1978,7 +2365,26 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Break posture and expose one deep collar grip with the second hand supporting the choke line.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set the half-cross grip configuration with one palm-up and one palm-down orientation.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Close the choke line with controlled elbow and wrist pressure until uke submits or the hold is released.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -2008,7 +2414,26 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Break uke's posture from behind or the side and expose the sliding collar path.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set the choking hand deep on the collar while the support hand controls the opposite lapel, shoulder, or lower body.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Slide and tighten the collar line gradually while maintaining body control and release readiness.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ]
@@ -2229,7 +2654,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Break uke's posture from behind and align the neck safely before the choke is applied.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set the forearm and supporting hand around the neck without twisting the head or jaw.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Apply controlled strangle pressure gradually and release immediately on tap or unsafe movement.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ]
@@ -2256,7 +2700,26 @@
       "attack",
       "counter"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Isolate uke's bent arm and control the shoulder so they cannot turn freely.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set the figure-four arm control with the elbow bent and shoulder stabilized.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Apply the entangled arm lock gradually through the shoulder/elbow line with clear release control.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -2287,7 +2750,26 @@
       "attack",
       "counter"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Isolate uke's arm and break their posture so the elbow line can be controlled.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set the cross-body armbar position with hips close to the shoulder and thumb orientation controlled.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Extend the hips and control the wrist gradually to attack the elbow joint safely.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -2319,7 +2801,26 @@
       "attack",
       "counter"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Isolate uke's arm and align the elbow against a stable control surface.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set arm-control pressure with the wrist, elbow, and shoulder prevented from rotating out.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Apply elbow extension pressure gradually while keeping the rest of uke's body controlled.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -2572,7 +3073,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Drive uke backward or backward-diagonal onto the heel of the leg to be reaped.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Step beside uke, align chest and shoulder pressure, and place the reaping leg behind uke's loaded leg.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Reap through uke's loaded leg while continuing upper-body pressure backward.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -2607,7 +3137,36 @@
     "roles": [
       "counter"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Accept uke's o-soto entry and turn their backward pressure into a returning outer-reap line.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Stabilize the attacked leg, keep chest contact, and position to reap or counter along uke's committed line.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Return the outer reap or drive through the counter line as uke's attack stalls.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -2640,7 +3199,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Drive uke backward or backward-diagonal between their feet to load the inner line.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Step in close and place the reaping leg inside uke's stance while keeping upper-body pressure connected.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Reap uke's leg from the inside while continuing the backward drive.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -2672,7 +3260,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw or drive uke's weight onto the near foot so the small inner line becomes available.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Enter compactly with the attacking foot close to uke's heel or ankle line.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Reap or hook the near foot inward while controlling uke's upper body backward.",
+        "directionHints": [
+          "back",
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -2705,7 +3322,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Pull uke forward or forward-diagonal onto the shoulder-throw line.",
+        "directionHints": [
+          "front",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn in under uke with both hands connected and the back aligned to receive uke's center.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Extend the legs and rotate through the shoulder line to project uke forward.",
+        "directionHints": [
+          "front",
+          "clockwise",
+          "counter-clockwise"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -3127,7 +3773,38 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Catch uke as the advancing foot is light or just receiving weight.",
+        "directionHints": [
+          "front-right",
+          "front-left",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Maintain sleeve-lapel control and match the timing of uke's step without overreaching.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Sweep the advancing foot across the mat while the upper body guides uke over the swept line.",
+        "directionHints": [
+          "left",
+          "right",
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -3430,7 +4107,34 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Lift and pull uke forward-diagonal so their step is committed into the propping foot.",
+        "directionHints": [
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Place the sole of the foot as a prop near uke's ankle or lower leg while keeping the tsurikomi action active.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Block the stepping foot and rotate uke over the propped corner.",
+        "directionHints": [
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -3463,7 +4167,34 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Draw uke forward-diagonal so their knee line becomes light and extended.",
+        "directionHints": [
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Place the foot near the knee line as a wheel point while turning the upper body.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Wheel uke over the blocked knee line with continuous sleeve-lapel rotation.",
+        "directionHints": [
+          "front-right",
+          "front-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -3497,7 +4228,36 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Load uke onto the near outside foot as their weight moves backward or sideways.",
+        "directionHints": [
+          "back-right",
+          "back-left",
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Step to the outside and place the attacking foot behind or beside uke's near heel.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Reap the near foot from the outside while drawing uke over that corner.",
+        "directionHints": [
+          "back-right",
+          "back-left"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -3532,7 +4292,34 @@
     "roles": [
       "attack"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Move uke laterally so both feet travel together and become sweepable.",
+        "directionHints": [
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Stay connected through the hands and match the timing of uke's sliding step.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Sweep both feet in the direction of travel before uke can reset their base.",
+        "directionHints": [
+          "left",
+          "right"
+        ],
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "kodokan-repertoire"
     ],
@@ -3737,7 +4524,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Turn uke's head-and-shoulder line away from their escape direction.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Build pillow-style head control with scarf-hold hip angle and a stable base.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Pin through the head, shoulder, and rib line while keeping enough mobility to follow bridges.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "local-practice-advisory-v1"
     ],
@@ -3770,7 +4576,26 @@
       "attack",
       "transition"
     ],
-    "phases": {},
+    "phases": {
+      "kuzushi": {
+        "summary": "Defeat uke's side-control frames and flatten the near shoulder and hip.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Set modified side four-quarter control with adjusted arm, hip, or belt control.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      },
+      "kake": {
+        "summary": "Hold side pressure while following uke's hip escape and turn-in attempts.",
+        "sourceIds": [
+          "local-practice-advisory-v1"
+        ]
+      }
+    },
     "sourceIds": [
       "local-practice-advisory-v1"
     ],

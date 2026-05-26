@@ -140,6 +140,20 @@ for (const requirement of promotionRequirements) {
   assertSources(requirement);
 }
 
+const phaseRequiredPromotionRankIds = new Set([
+  "usjf-senior-2026-go-kyu",
+  "usjf-senior-2026-yon-kyu",
+  "usjf-senior-2026-san-kyu"
+]);
+for (const requirement of promotionRequirements.filter((item) => phaseRequiredPromotionRankIds.has(item.id))) {
+  for (const techniqueSlug of requirement.techniqueSlugs) {
+    const technique = techniques.find((item) => item.slug === techniqueSlug);
+    assert.ok(technique?.phases?.kuzushi, `${requirement.id} technique ${techniqueSlug} needs kuzushi`);
+    assert.ok(technique?.phases?.tsukuri, `${requirement.id} technique ${techniqueSlug} needs tsukuri`);
+    assert.ok(technique?.phases?.kake, `${requirement.id} technique ${techniqueSlug} needs kake`);
+  }
+}
+
 for (const kata of kataMemberships) {
   assert.ok(kata.id, "Kata membership needs id");
   assert.ok(kata.label, `${kata.id} needs label`);
