@@ -278,12 +278,21 @@ html[data-tori-side="right"] .side-switch-thumb {
 }
 
 .filter-label {
-  display: block;
+  display: grid;
+  gap: 3px;
   margin: 0 0 7px;
   color: var(--muted);
   font: 0.75rem/1.2 ui-sans-serif, system-ui, sans-serif;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.filter-label small {
+  color: color-mix(in srgb, var(--muted), var(--text) 14%);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: none;
 }
 
 .toggle-group {
