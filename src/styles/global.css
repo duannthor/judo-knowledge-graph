@@ -520,6 +520,120 @@ html[data-tori-side="right"] .side-switch-thumb {
   font: 0.86rem/1.35 ui-sans-serif, system-ui, sans-serif;
 }
 
+.table-scroll {
+  overflow-x: auto;
+}
+
+.kata-requirement-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.kata-requirement-table th,
+.kata-requirement-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 9px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.kata-requirement-table thead th {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kata-requirement-table th:first-child,
+.kata-requirement-table td:first-child {
+  text-align: left;
+}
+
+.kata-requirement-table tbody tr:last-child th,
+.kata-requirement-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.kata-requirement-table tbody th {
+  font-weight: 700;
+}
+
+.kata-requirement-table tbody th span,
+.kata-requirement-table tbody th small {
+  display: block;
+}
+
+.kata-requirement-table tbody th small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.kata-requirement-table .tag {
+  justify-content: center;
+}
+
+.empty-cell {
+  color: color-mix(in srgb, var(--muted), transparent 38%);
+}
+
+.kata-technique-sequence {
+  counter-reset: kata-technique;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kata-technique-sequence li {
+  counter-increment: kata-technique;
+}
+
+.kata-technique-link {
+  grid-template-columns: 34px minmax(96px, max-content) minmax(0, 1fr);
+  min-height: 64px;
+}
+
+.kata-technique-link .kanji-title {
+  white-space: nowrap;
+  font-size: 1.28rem;
+}
+
+.kata-sequence-number {
+  display: grid;
+  place-items: center;
+  inline-size: 26px;
+  block-size: 26px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font: 0.76rem/1 ui-sans-serif, system-ui, sans-serif;
+}
+
+.kata-sequence-number::before {
+  content: counter(kata-technique);
+}
+
+.video-embed {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  aspect-ratio: 16 / 9;
+}
+
+.video-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .kata-set-list {
   display: grid;
   gap: 24px;
@@ -945,5 +1059,14 @@ html[data-tori-side="right"] .side-switch-thumb {
   .technique-list-grid,
   .facts {
     grid-template-columns: 1fr;
+  }
+
+  .kata-technique-link {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .kata-technique-link .kanji-title,
+  .kata-technique-link span:last-child {
+    grid-column: 2;
   }
 }

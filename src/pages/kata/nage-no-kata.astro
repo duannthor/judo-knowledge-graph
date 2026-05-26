@@ -7,15 +7,11 @@ const kataTechniques = kata.techniqueSlugs
   .map((slug) => techniques.find((technique) => technique.slug === slug))
   .filter(Boolean);
 const techniqueBySlug = new Map(kataTechniques.map((technique) => [technique.slug, technique]));
-const firstThreeSetExamTags = [
-  { label: "3+ kyu · Uke · first 3 sets", rankClass: "rank-brown" },
-  { label: "2+ kyu · Tori · first 3 sets", rankClass: "rank-brown" },
-  { label: "1 kyu · Uke · all 5 sets", rankClass: "rank-brown" },
-  { label: "Shodan · Tori · all 5 sets", rankClass: "rank-black" }
-];
-const allSetExamTags = [
-  { label: "1 kyu · Uke · all 5 sets", rankClass: "rank-brown" },
-  { label: "Shodan · Tori · all 5 sets", rankClass: "rank-black" }
+const requirementColumns = [
+  { key: "sanKyu", label: "3 kyu", beltColor: "brown" },
+  { key: "niKyu", label: "2 kyu", beltColor: "brown" },
+  { key: "ikkyu", label: "1 kyu", beltColor: "brown" },
+  { key: "shodan", label: "Shodan", beltColor: "black" }
 ];
 const kataSets = [
   {
@@ -23,7 +19,7 @@ const kataSets = [
     english: "hand techniques",
     note: "Visual pause: reset judogi and obi before moving into the hip-technique set.",
     sideOrder: "Each technique is demonstrated right-hand variant first, then left-hand variant.",
-    examTags: firstThreeSetExamTags,
+    requirements: { sanKyu: "Uke", niKyu: "Tori", ikkyu: "Uke", shodan: "Tori" },
     slugs: ["uki-otoshi", "seoi-nage", "kata-guruma"]
   },
   {
@@ -31,7 +27,7 @@ const kataSets = [
     english: "hip techniques",
     note: "Visual pause: return to composure, straighten the jacket, and reestablish spacing.",
     sideOrder: "Uki-goshi is the exception: left-hand variant first, then right-hand variant. Harai-goshi and tsurikomi-goshi continue right first, then left.",
-    examTags: firstThreeSetExamTags,
+    requirements: { sanKyu: "Uke", niKyu: "Tori", ikkyu: "Uke", shodan: "Tori" },
     slugs: ["uki-goshi", "harai-goshi", "tsurikomi-goshi"]
   },
   {
@@ -39,7 +35,7 @@ const kataSets = [
     english: "foot and leg techniques",
     note: "Visual pause: settle the belt and sleeves before the sacrifice techniques begin.",
     sideOrder: "Each technique is demonstrated right-hand variant first, then left-hand variant.",
-    examTags: firstThreeSetExamTags,
+    requirements: { sanKyu: "Uke", niKyu: "Tori", ikkyu: "Uke", shodan: "Tori" },
     slugs: ["okuri-ashi-harai", "sasae-tsurikomi-ashi", "uchi-mata"]
   },
   {
@@ -47,7 +43,7 @@ const kataSets = [
     english: "rear sacrifice techniques",
     note: "Visual pause: recover breathing and presentation after the larger ukemi demands.",
     sideOrder: "Each technique is demonstrated right-hand variant first, then left-hand variant.",
-    examTags: allSetExamTags,
+    requirements: { sanKyu: "", niKyu: "", ikkyu: "Uke", shodan: "Tori" },
     slugs: ["tomoe-nage", "ura-nage", "sumi-gaeshi"]
   },
   {
@@ -55,7 +51,7 @@ const kataSets = [
     english: "side sacrifice techniques",
     note: "Final set: keep the closing rhythm calm and formal after the last recovery.",
     sideOrder: "Each technique is demonstrated right-hand variant first, then left-hand variant.",
-    examTags: allSetExamTags,
+    requirements: { sanKyu: "", niKyu: "", ikkyu: "Uke", shodan: "Tori" },
     slugs: ["yoko-gake", "yoko-guruma", "uki-waza"]
   }
 ];
@@ -82,6 +78,58 @@ const etiquetteNotes = [
 
   <div class="detail-grid">
     <div>
+      <section class="panel" aria-labelledby="kata-requirements-title">
+        <h2 id="kata-requirements-title">USJF Senior Promotion Requirements, 2026</h2>
+        <div class="table-scroll">
+          <table class="kata-requirement-table">
+            <thead>
+              <tr>
+                <th scope="col">Set</th>
+                {requirementColumns.map((column) => (
+                  <th scope="col">
+                    <span class={`tag rank-tag rank-${column.beltColor}`}>{column.label}</span>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {kataSets.map((set) => (
+                <tr>
+                  <th scope="row">
+                    <span>{set.title}</span>
+                    <small>{set.english}</small>
+                  </th>
+                  {requirementColumns.map((column) => {
+                    const role = set.requirements[column.key];
+                    return (
+                      <td>
+                        {role ? <span class={`tag rank-tag rank-${column.beltColor}`}>{role}</span> : <span class="empty-cell" aria-label="No requirement">—</span>}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="kodokan-video-title">
+        <h2 id="kodokan-video-title">Kodokan Reference Video</h2>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/bkhBZzE2HpM"
+            title="Kodokan Nage-no-kata reference video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="source">
+          Embedded from Kodokan's Nage-no-kata video on YouTube.
+        </p>
+      </section>
+
       <section class="panel" aria-labelledby="kata-techniques-title">
         <h2 id="kata-techniques-title">Technique Sets</h2>
         <div class="kata-set-list">
@@ -94,24 +142,26 @@ const etiquetteNotes = [
                 </div>
                 <div class="kata-set-tags">
                   <span class="tag">{set.slugs.length} techniques</span>
-                  {set.examTags.map((tag) => <span class={`tag rank-tag ${tag.rankClass}`}>{tag.label}</span>)}
                 </div>
               </div>
               <p class="kata-side-note">{set.sideOrder}</p>
-              <div class="technique-list-grid">
+              <ol class="kata-technique-sequence">
                 {set.slugs.map((slug) => {
                   const technique = techniqueBySlug.get(slug);
                   return technique && (
-                    <a class="technique-row-link" href={`/techniques/${technique.slug}/`}>
-                      <span class="kanji-title">{technique.names.japanese}</span>
-                      <span>
-                        <strong>{technique.names.japaneseRomaji}</strong>
-                        <small>{technique.names.english}</small>
-                      </span>
-                    </a>
+                    <li>
+                      <a class="technique-row-link kata-technique-link" href={`/techniques/${technique.slug}/`}>
+                        <span class="kata-sequence-number" aria-hidden="true"></span>
+                        <span class="kanji-title">{technique.names.japanese}</span>
+                        <span>
+                          <strong>{technique.names.japaneseRomaji}</strong>
+                          <small>{technique.names.english}</small>
+                        </span>
+                      </a>
+                    </li>
                   );
                 })}
-              </div>
+              </ol>
               <p class="kata-break-note">{set.note}</p>
             </section>
           ))}
