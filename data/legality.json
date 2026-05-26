@@ -1702,5 +1702,170 @@
       "ijf-sor-2026",
       "local-practice-advisory-v1"
     ]
+  },
+  {
+    "subjectSlug": "sasae-tsurikomi-ashi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "hiza-guruma",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "ko-soto-gari",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "okuri-ashi-harai",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "ko-soto-gake",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "ashi-guruma",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "o-tsuri-goshi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "ko-tsuri-goshi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "harai-tsurikomi-ashi",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal when performed as a recognizable Kodokan technique without prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "ijf-sor-2026"
+    ]
+  },
+  {
+    "subjectSlug": "makura-kesa-gatame",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal ne-waza hold-down practice content when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
+  },
+  {
+    "subjectSlug": "kuzure-yoko-shiho-gatame",
+    "subjectType": "technique",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "defensive-ne-waza-action"
+    ],
+    "appliesTo": "base-technique",
+    "notes": "Modeled as legal ne-waza hold-down practice content when performed without prohibited action features.",
+    "sourceIds": [
+      "ijf-sor-2026",
+      "local-practice-advisory-v1"
+    ]
   }
 ]

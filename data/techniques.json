@@ -3385,5 +3385,368 @@
       "aiyotsu",
       "kenkayotsu"
     ]
+  },
+  {
+    "slug": "sasae-tsurikomi-ashi",
+    "names": {
+      "english": "Propping lifting-pulling ankle throw",
+      "japaneseRomaji": "sasae-tsurikomi-ashi",
+      "japanese": "支釣込足",
+      "kana": "ささえつりこみあし",
+      "aliases": [
+        "sasae tsurikomi ashi",
+        "sasae-tsuri-komi-ashi"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
+  },
+  {
+    "slug": "hiza-guruma",
+    "names": {
+      "english": "Knee wheel",
+      "japaneseRomaji": "hiza-guruma",
+      "japanese": "膝車",
+      "kana": "ひざぐるま",
+      "aliases": [
+        "hiza guruma"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
+  },
+  {
+    "slug": "ko-soto-gari",
+    "names": {
+      "english": "Minor outer reap",
+      "japaneseRomaji": "ko-soto-gari",
+      "japanese": "小外刈",
+      "kana": "こそとがり",
+      "aliases": [
+        "ko soto gari",
+        "kosoto gari"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
+  },
+  {
+    "slug": "okuri-ashi-harai",
+    "names": {
+      "english": "Sliding foot sweep",
+      "japaneseRomaji": "okuri-ashi-harai",
+      "japanese": "送足払",
+      "kana": "おくりあしはらい",
+      "aliases": [
+        "okuri ashi harai",
+        "okuri ashi barai",
+        "okuri-ashi-barai"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
+  },
+  {
+    "slug": "ko-soto-gake",
+    "names": {
+      "english": "Minor outer hook",
+      "japaneseRomaji": "ko-soto-gake",
+      "japanese": "小外掛",
+      "kana": "こそとがけ",
+      "aliases": [
+        "ko soto gake",
+        "kosoto gake"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
+  },
+  {
+    "slug": "ashi-guruma",
+    "names": {
+      "english": "Leg wheel",
+      "japaneseRomaji": "ashi-guruma",
+      "japanese": "足車",
+      "kana": "あしぐるま",
+      "aliases": [
+        "ashi guruma"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
+  },
+  {
+    "slug": "o-tsuri-goshi",
+    "names": {
+      "english": "Major lifting hip throw",
+      "japaneseRomaji": "o-tsuri-goshi",
+      "japanese": "大釣腰",
+      "kana": "おおつりごし",
+      "aliases": [
+        "o tsuri goshi",
+        "otsuri goshi"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu",
+      "over-back-belt-control"
+    ]
+  },
+  {
+    "slug": "ko-tsuri-goshi",
+    "names": {
+      "english": "Minor lifting hip throw",
+      "japaneseRomaji": "ko-tsuri-goshi",
+      "japanese": "小釣腰",
+      "kana": "こつりごし",
+      "aliases": [
+        "ko tsuri goshi",
+        "kotsuri goshi"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "koshi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu",
+      "over-back-belt-control"
+    ]
+  },
+  {
+    "slug": "harai-tsurikomi-ashi",
+    "names": {
+      "english": "Sweeping lifting-pulling foot",
+      "japaneseRomaji": "harai-tsurikomi-ashi",
+      "japanese": "払釣込足",
+      "kana": "はらいつりこみあし",
+      "aliases": [
+        "harai tsurikomi ashi",
+        "harai-tsuri-komi-ashi"
+      ]
+    },
+    "classifications": [
+      "nage-waza",
+      "ashi-waza",
+      "tachi-waza"
+    ],
+    "domains": [
+      "standing"
+    ],
+    "roles": [
+      "attack"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "kodokan-repertoire"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu",
+      "kenkayotsu"
+    ]
+  },
+  {
+    "slug": "makura-kesa-gatame",
+    "names": {
+      "english": "Pillow scarf hold",
+      "japaneseRomaji": "makura-kesa-gatame",
+      "japanese": "枕袈裟固",
+      "kana": "まくらけさがため",
+      "aliases": [
+        "makura kesa gatame",
+        "pillow scarf hold"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "side-control",
+      "over-back-belt-control"
+    ]
+  },
+  {
+    "slug": "kuzure-yoko-shiho-gatame",
+    "names": {
+      "english": "Modified side four-quarter hold",
+      "japaneseRomaji": "kuzure-yoko-shiho-gatame",
+      "japanese": "崩横四方固",
+      "kana": "くずれよこしほうがため",
+      "aliases": [
+        "kuzure yoko shiho gatame",
+        "modified yoko shiho gatame",
+        "modified side control"
+      ]
+    },
+    "classifications": [
+      "katame-waza",
+      "osaekomi-waza"
+    ],
+    "domains": [
+      "ground"
+    ],
+    "roles": [
+      "attack",
+      "transition"
+    ],
+    "phases": {},
+    "sourceIds": [
+      "local-practice-advisory-v1"
+    ],
+    "gripContextSlugs": [
+      "side-control",
+      "underhook-hip-control"
+    ]
   }
 ]

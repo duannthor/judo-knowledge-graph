@@ -13,12 +13,11 @@
       "ippon-seoi-nage",
       "uki-goshi",
       "kesa-gatame",
+      "makura-kesa-gatame",
       "kuzure-kesa-gatame",
       "kata-gatame"
     ],
-    "unmappedItems": [
-      "Makura-kesa-gatame"
-    ],
+    "unmappedItems": [],
     "sourceIds": [
       "usjf-promotion-requirements-2026"
     ]
@@ -35,18 +34,17 @@
       "ko-uchi-gari",
       "seoi-nage",
       "o-soto-gaeshi",
+      "sasae-tsurikomi-ashi",
+      "hiza-guruma",
       "kami-shiho-gatame",
       "yoko-shiho-gatame",
+      "kuzure-yoko-shiho-gatame",
       "kesa-gatame-frame-turn-in-escape",
       "hadaka-jime",
       "okuri-eri-jime",
       "ude-hishigi-juji-gatame"
     ],
-    "unmappedItems": [
-      "Sasae-tsurikomi-ashi",
-      "Hiza-guruma",
-      "Kuzure-yoko-shiho-gatame"
-    ],
+    "unmappedItems": [],
     "requirementStubs": [
       {
         "id": "usjf-senior-2026-yon-kyu-shime-defense",
@@ -74,6 +72,8 @@
       "tsurikomi-goshi",
       "sode-tsurikomi-goshi",
       "harai-goshi",
+      "ko-soto-gari",
+      "okuri-ashi-harai",
       "ko-uchi-gaeshi",
       "kuzure-kami-shiho-gatame",
       "tate-shiho-gatame",
@@ -85,10 +85,7 @@
       "ude-garami",
       "ude-hishigi-ude-gatame"
     ],
-    "unmappedItems": [
-      "Ko-soto-gari",
-      "Okuri-ashi-barai"
-    ],
+    "unmappedItems": [],
     "requirementStubs": [
       {
         "id": "usjf-senior-2026-san-kyu-nage-no-kata-uke-first-3",
@@ -182,6 +179,7 @@
     "techniqueSlugs": [
       "kata-guruma",
       "hane-goshi",
+      "ko-soto-gake",
       "uchi-mata-sukashi",
       "uchi-mata-gaeshi",
       "hane-goshi-gaeshi",
@@ -205,9 +203,7 @@
       "ude-hishigi-te-gatame",
       "ude-hishigi-sankaku-gatame"
     ],
-    "unmappedItems": [
-      "Ko-soto-gake"
-    ],
+    "unmappedItems": [],
     "requirementStubs": [
       {
         "id": "usjf-senior-2026-ikkyu-opposite-side-throws",
@@ -253,6 +249,10 @@
     "band": 6,
     "techniqueSlugs": [
       "yoko-otoshi",
+      "ashi-guruma",
+      "o-tsuri-goshi",
+      "ko-tsuri-goshi",
+      "harai-tsurikomi-ashi",
       "morote-gari",
       "kuchiki-taoshi",
       "kibisu-gaeshi",
@@ -284,12 +284,7 @@
       "ude-hishigi-ude-gatame",
       "ude-hishigi-waki-gatame"
     ],
-    "unmappedItems": [
-      "Ashi-guruma",
-      "O-tsuri-goshi",
-      "Ko-tsuri-goshi",
-      "Harai-tsurikomi-ashi"
-    ],
+    "unmappedItems": [],
     "requirementStubs": [
       {
         "id": "usjf-senior-2026-shodan-opposite-side-throws",

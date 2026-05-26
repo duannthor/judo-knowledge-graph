@@ -12,6 +12,8 @@
       "uki-goshi",
       "harai-goshi",
       "tsurikomi-goshi",
+      "okuri-ashi-harai",
+      "sasae-tsurikomi-ashi",
       "uchi-mata",
       "tomoe-nage",
       "ura-nage",
@@ -20,10 +22,7 @@
       "yoko-guruma",
       "uki-waza"
     ],
-    "unmappedItems": [
-      "Okuri-ashi-barai",
-      "Sasae-tsurikomi-ashi"
-    ],
+    "unmappedItems": [],
     "sourceIds": [
       "kodokan-nage-no-kata"
     ]

@@ -40,15 +40,17 @@ test("ma-sutemi-waza catalog chunk contains the five base throws with kana", () 
   assert.ok(throws.every((technique) => technique.names.kana));
 });
 
-test("koshi-waza catalog chunk contains the ten hip throws with kana", () => {
+test("koshi-waza catalog chunk contains the hip throws with kana", () => {
   const throws = getByGrouping("koshi-waza");
   const slugs = throws.map((technique) => technique.slug).sort();
 
   assert.deepEqual(slugs, [
     "hane-goshi",
     "harai-goshi",
+    "ko-tsuri-goshi",
     "koshi-guruma",
     "o-goshi",
+    "o-tsuri-goshi",
     "sode-tsurikomi-goshi",
     "tsuri-goshi",
     "tsurikomi-goshi",
@@ -117,7 +119,7 @@ test("katame-waza catalog contains the thirty-two grappling techniques with kana
   assert.ok(techniques.every((technique) => technique.names.kana));
 });
 
-test("osaekomi-waza catalog chunk contains the ten hold-down techniques", () => {
+test("osaekomi-waza catalog chunk contains hold-down techniques", () => {
   const techniques = getByGrouping("osaekomi-waza");
   const slugs = techniques.map((technique) => technique.slug).sort();
 
@@ -127,6 +129,8 @@ test("osaekomi-waza catalog chunk contains the ten hold-down techniques", () => 
     "kesa-gatame",
     "kuzure-kami-shiho-gatame",
     "kuzure-kesa-gatame",
+    "kuzure-yoko-shiho-gatame",
+    "makura-kesa-gatame",
     "tate-shiho-gatame",
     "uki-gatame",
     "ura-gatame",
@@ -227,16 +231,15 @@ test("USJF senior promotion requirements tag concrete graph techniques by rank",
   assert.ok(promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan").techniqueSlugs.includes("morote-gari"));
 });
 
-test("USJF promotion requirements preserve unmapped syllabus items as stubs", () => {
-  const shodan = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan");
-  const yonKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-yon-kyu");
+test("USJF promotion requirements map named techniques and preserve requirement stubs", () => {
+  const ranks = promotionRequirements;
   const niKyu = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-ni-kyu");
+  const shodan = promotionRequirements.find((rank) => rank.id === "usjf-senior-2026-shodan");
 
-  assert.ok(shodan.unmappedItems.includes("Ashi-guruma"));
-  assert.ok(yonKyu.unmappedItems.includes("Sasae-tsurikomi-ashi"));
+  assert.ok(ranks.every((rank) => rank.unmappedItems.length === 0));
+  assert.ok(shodan.techniqueSlugs.includes("ashi-guruma"));
   assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "combination"));
   assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "counter"));
-  assert.equal(niKyu.unmappedItems.length, 0);
 });
 
 test("USJF syllabus-specific escape requirements map to concrete escape nodes", () => {
@@ -253,10 +256,11 @@ test("Nage-no-kata membership tags existing graph techniques and stubs missing t
   const nageNoKata = kataMemberships.find((kata) => kata.id === "nage-no-kata");
 
   assert.ok(nageNoKata.techniqueSlugs.includes("uki-otoshi"));
+  assert.ok(nageNoKata.techniqueSlugs.includes("okuri-ashi-harai"));
+  assert.ok(nageNoKata.techniqueSlugs.includes("sasae-tsurikomi-ashi"));
   assert.ok(nageNoKata.techniqueSlugs.includes("kata-guruma"));
   assert.ok(nageNoKata.techniqueSlugs.includes("uki-waza"));
-  assert.ok(nageNoKata.unmappedItems.includes("Okuri-ashi-barai"));
-  assert.ok(nageNoKata.unmappedItems.includes("Sasae-tsurikomi-ashi"));
+  assert.equal(nageNoKata.unmappedItems.length, 0);
 });
 
 test("engagement contexts are split by standing and ground phase", () => {
