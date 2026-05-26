@@ -195,8 +195,8 @@
         "description": "Demonstrate a linked attacking sequence. The graph distinguishes same-direction pressure, alternating-direction reaction, and direct follow-up combinations.",
         "exampleSlugs": ["ko-uchi-gari", "seoi-nage", "o-uchi-gari"],
         "action": {
-          "label": "Browse attacks",
-          "href": "/?role=attack&group=nage-waza"
+          "label": "Browse linked attacks",
+          "href": "/?filter=has-combo-links&role=attack&group=nage-waza"
         }
       },
       {
@@ -282,8 +282,8 @@
         "description": "Demonstrate two linked attacking sequences. Use same-direction pressure or alternating-direction reaction examples as appropriate for your dojo.",
         "exampleSlugs": ["ko-uchi-gari", "seoi-nage", "o-uchi-gari"],
         "action": {
-          "label": "Browse attacks",
-          "href": "/?role=attack&group=nage-waza"
+          "label": "Browse linked attacks",
+          "href": "/?filter=has-combo-links&role=attack&group=nage-waza"
         }
       },
       {
@@ -377,8 +377,8 @@
         "description": "Demonstrate three linked attacking sequences, ideally with varied pressure patterns.",
         "exampleSlugs": ["ko-uchi-gari", "seoi-nage", "o-uchi-gari"],
         "action": {
-          "label": "Browse attacks",
-          "href": "/?role=attack&group=nage-waza"
+          "label": "Browse linked attacks",
+          "href": "/?filter=has-combo-links&role=attack&group=nage-waza"
         }
       },
       {

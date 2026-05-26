@@ -255,7 +255,11 @@ test("USJF promotion requirements map named techniques and preserve requirement 
     stub.action?.href.includes("grip=kenkayotsu") &&
     stub.exampleSlugs.includes("uchi-mata")
   )));
-  assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "combination" && stub.description));
+  assert.ok(niKyu.requirementStubs.some((stub) => (
+    stub.type === "combination" &&
+    stub.description &&
+    stub.action?.href.includes("filter=has-combo-links")
+  )));
   assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "counter" && stub.action?.href.includes("role=counter")));
   assert.ok(ranks.every((rank) => !rank.requirementStubs.some((stub) => ["defense", "aggregate-requirement"].includes(stub.type))));
 });

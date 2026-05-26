@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import {
   classifications,
+  comboEdges,
   getLegality,
   getSafetyAdvisories,
   getVariantsFor,
@@ -114,6 +115,10 @@ const cards = browsableTechniques
       variant,
       legality: getLegality(variant.slug)
     }));
+    const subjectSlugs = new Set([technique.slug, ...variants.map((variant) => variant.slug)]);
+    const startsCombo = comboEdges.some((edge) => subjectSlugs.has(edge.fromSlug));
+    const followsCombo = comboEdges.some((edge) => subjectSlugs.has(edge.toSlug));
+    const hasComboLinks = startsCombo || followsCombo;
     const legalityStatuses = variantLegalityRows.map((row) => row.legality?.status).filter(Boolean);
     const legalVariantCount = variantLegalityRows.filter((row) => row.legality?.status === "legal").length;
     const bannedVariantCount = variantLegalityRows.filter((row) => row.legality?.status === "illegal").length;
@@ -148,7 +153,10 @@ const cards = browsableTechniques
       classicBanned && "classic-banned",
       (restrictedVariantCount > 0 || baseRestricted) && "restricted-variant",
       hasMixedLegality && "mixed-legality",
-      advisories.length > 0 && "safety-note"
+      advisories.length > 0 && "safety-note",
+      hasComboLinks && "has-combo-links",
+      startsCombo && "combo-starter",
+      followsCombo && "combo-follow-up"
     ].filter(Boolean).join(" ");
     return {
       technique,
@@ -169,6 +177,9 @@ const cards = browsableTechniques
       hasDropEntry,
       classicBanned,
       hasMixedLegality,
+      hasComboLinks,
+      startsCombo,
+      followsCombo,
       advisories,
       promotionRanksForTechnique,
       promotionRankIds,
@@ -286,6 +297,18 @@ const cards = browsableTechniques
               <input type="checkbox" value="escape" data-role-toggle />
               <span>Escapes</span>
             </label>
+            <label class="toggle">
+              <input type="checkbox" value="has-combo-links" data-status-toggle />
+              <span>Has combo links</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" value="combo-starter" data-status-toggle />
+              <span>Combo starter</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" value="combo-follow-up" data-status-toggle />
+              <span>Combo follow-up</span>
+            </label>
           </div>
         </div>
         <div class="filter-group">
@@ -399,6 +422,9 @@ const cards = browsableTechniques
       hasDropEntry,
       classicBanned,
       hasMixedLegality,
+      hasComboLinks,
+      startsCombo,
+      followsCombo,
       advisories,
       promotionRanksForTechnique,
       promotionRankIds,
@@ -450,6 +476,9 @@ const cards = browsableTechniques
           {baseRestricted && variants.length === 0 && <span class="tag danger">restricted</span>}
           {hasMixedLegality && <span class="tag mixed">mixed legality</span>}
           {advisories.length > 0 && <span class="tag warning">safety note</span>}
+          {hasComboLinks && <span class="tag accent">combo linked</span>}
+          {startsCombo && <span class="tag">starter</span>}
+          {followsCombo && <span class="tag">follow-up</span>}
           {promotionRanksForTechnique.map((rank) => (
             <span class={`tag rank-tag rank-${rank.beltColor}`}>{rank.label} · {rank.beltColor}</span>
           ))}
