@@ -436,19 +436,18 @@ const cards = browsableTechniques
   <section aria-label="Technique controls">
     <div class="toolbar">
       <div class="toolbar-primary">
+        <label class="sr-only" for="technique-search">Search techniques</label>
         <input class="field" id="technique-search" type="search" placeholder="Search English, romaji, kana, kanji, alias" autocomplete="off" />
         <fieldset class="side-toggle" aria-label="Tori side">
           <legend>Tori side</legend>
           <div class="side-switch">
             <span class="side-switch-thumb" aria-hidden="true"></span>
-            <label>
-              <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
+            <button type="button" value="left" data-tori-side-toggle aria-pressed="false">
               <span>Left</span>
-            </label>
-            <label>
-              <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
+            </button>
+            <button type="button" value="right" data-tori-side-toggle aria-pressed="true">
               <span>Right</span>
-            </label>
+            </button>
           </div>
         </fieldset>
       </div>
@@ -469,18 +468,15 @@ const cards = browsableTechniques
         <div class="filter-group">
           <span class="filter-label">Role</span>
           <div class="toggle-group">
-            <label class="toggle">
-              <input type="checkbox" value="attack" data-role-toggle />
+            <button class="toggle" type="button" value="attack" data-role-toggle aria-pressed="false">
               <span>Attacks</span>
-            </label>
-            <label class="toggle">
-              <input type="checkbox" value="counter" data-role-toggle />
+            </button>
+            <button class="toggle" type="button" value="counter" data-role-toggle aria-pressed="false">
               <span>Counters</span>
-            </label>
-            <label class="toggle">
-              <input type="checkbox" value="escape" data-role-toggle />
+            </button>
+            <button class="toggle" type="button" value="escape" data-role-toggle aria-pressed="false">
               <span>Escapes</span>
-            </label>
+            </button>
           </div>
         </div>
         <div class="filter-group">
@@ -489,22 +485,18 @@ const cards = browsableTechniques
             <small>IJF Senior rules, 2026</small>
           </span>
           <div class="toggle-group">
-            <label class="toggle success-toggle">
-              <input type="checkbox" value="competition-legal" data-status-toggle />
+            <button class="toggle success-toggle" type="button" value="competition-legal" data-status-toggle aria-pressed="false">
               <span>IJF senior legal</span>
-            </label>
-            <label class="toggle warning-toggle">
-              <input type="checkbox" value="safety-note" data-status-toggle />
+            </button>
+            <button class="toggle warning-toggle" type="button" value="safety-note" data-status-toggle aria-pressed="false">
               <span>Safety note</span>
-            </label>
-            <label class="toggle danger-toggle">
-              <input type="checkbox" value="banned-variant" data-status-toggle />
+            </button>
+            <button class="toggle danger-toggle" type="button" value="banned-variant" data-status-toggle aria-pressed="false">
               <span>Banned variant</span>
-            </label>
-            <label class="toggle danger-toggle">
-              <input type="checkbox" value="restricted-variant" data-status-toggle />
+            </button>
+            <button class="toggle danger-toggle" type="button" value="restricted-variant" data-status-toggle aria-pressed="false">
               <span>Restricted</span>
-            </label>
+            </button>
           </div>
         </div>
         <button class="clear-filters" type="button" id="clear-filters">Clear all</button>
@@ -521,13 +513,12 @@ const cards = browsableTechniques
                   <span class="context-filter-label">{group.title}</span>
                   <div class="toggle-group">
                     {group.contexts.map((context) => (
-                      <label class="toggle" title={context.shortGloss}>
-                        <input type="checkbox" value={context.slug} data-grip-toggle />
+                      <button class="toggle" type="button" value={context.slug} data-grip-toggle aria-pressed="false" title={context.shortGloss}>
                         <span>
                           {context.label}
                           {context.japanese && <small>{context.japanese}</small>}
                         </span>
-                      </label>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -537,43 +528,35 @@ const cards = browsableTechniques
           <div class="filter-group">
             <span class="filter-label">Sequence Links</span>
             <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" value="has-combo-links" data-status-toggle />
+              <button class="toggle" type="button" value="has-combo-links" data-status-toggle aria-pressed="false">
                 <span>Has combo links</span>
-              </label>
-              <label class="toggle">
-                <input type="checkbox" value="combo-starter" data-status-toggle />
+              </button>
+              <button class="toggle" type="button" value="combo-starter" data-status-toggle aria-pressed="false">
                 <span>Combo starter</span>
-              </label>
-              <label class="toggle">
-                <input type="checkbox" value="combo-follow-up" data-status-toggle />
+              </button>
+              <button class="toggle" type="button" value="combo-follow-up" data-status-toggle aria-pressed="false">
                 <span>Combo follow-up</span>
-              </label>
-              <label class="toggle">
-                <input type="checkbox" value="transition" data-role-toggle />
+              </button>
+              <button class="toggle" type="button" value="transition" data-role-toggle aria-pressed="false">
                 <span>Transitions</span>
-              </label>
+              </button>
             </div>
           </div>
           <div class="filter-group">
             <span class="filter-label">Variants</span>
             <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" value="has-variants" data-status-toggle />
+              <button class="toggle" type="button" value="has-variants" data-status-toggle aria-pressed="false">
                 <span>Has variants</span>
-              </label>
-              <label class="toggle">
-                <input type="checkbox" value="drop-entry" data-status-toggle />
+              </button>
+              <button class="toggle" type="button" value="drop-entry" data-status-toggle aria-pressed="false">
                 <span>Drop entry</span>
-              </label>
-              <label class="toggle danger-toggle">
-                <input type="checkbox" value="classic-banned" data-status-toggle />
+              </button>
+              <button class="toggle danger-toggle" type="button" value="classic-banned" data-status-toggle aria-pressed="false">
                 <span>Classic banned</span>
-              </label>
-              <label class="toggle mixed-toggle">
-                <input type="checkbox" value="mixed-legality" data-status-toggle />
+              </button>
+              <button class="toggle mixed-toggle" type="button" value="mixed-legality" data-status-toggle aria-pressed="false">
                 <span>Mixed legality</span>
-              </label>
+              </button>
             </div>
           </div>
           <div class="filter-group">
@@ -582,21 +565,18 @@ const cards = browsableTechniques
               <small>{promotionRequirementLabel}</small>
             </span>
             <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" value="promotion-requirement" data-status-toggle />
+              <button class="toggle" type="button" value="promotion-requirement" data-status-toggle aria-pressed="false">
                 <span>Any promotion requirement</span>
-              </label>
+              </button>
               {promotionRanks.map((rank) => (
-                <label class={`toggle rank-toggle rank-${rank.beltColor}`}>
-                  <input type="checkbox" value={rank.id} data-promotion-toggle />
+                <button class={`toggle rank-toggle rank-${rank.beltColor}`} type="button" value={rank.id} data-promotion-toggle aria-pressed="false">
                   <span>{rank.label} · {rank.beltColor}</span>
-                </label>
+                </button>
               ))}
               {kataFilters.map((kata) => (
-                <label class="toggle kata-toggle">
-                  <input type="checkbox" value={kata.id} data-kata-toggle />
+                <button class="toggle kata-toggle" type="button" value={kata.id} data-kata-toggle aria-pressed="false">
                   <span>{kata.label}</span>
-                </label>
+                </button>
               ))}
             </div>
           </div>
@@ -757,12 +737,35 @@ const cards = browsableTechniques
       "promotion-requirement": "Any promotion requirement"
     };
 
+    function toggleValue(toggle) {
+      return toggle instanceof HTMLInputElement || toggle instanceof HTMLButtonElement ? toggle.value : "";
+    }
+
+    function isToggleActive(toggle) {
+      if (toggle instanceof HTMLInputElement) return toggle.checked;
+      if (toggle instanceof HTMLButtonElement) return toggle.getAttribute("aria-pressed") === "true";
+      return false;
+    }
+
+    function setToggleActive(toggle, active) {
+      if (toggle instanceof HTMLInputElement) {
+        toggle.checked = active;
+      }
+      if (toggle instanceof HTMLButtonElement) {
+        toggle.setAttribute("aria-pressed", active ? "true" : "false");
+      }
+    }
+
+    function togglePressed(toggle) {
+      setToggleActive(toggle, !isToggleActive(toggle));
+    }
+
     function setToriSide(side) {
       const nextSide = side === "left" ? "left" : "right";
       document.documentElement.dataset.toriSide = nextSide;
       localStorage.setItem("judo-tori-side", nextSide);
       for (const toggle of toriSideToggles) {
-        if (toggle instanceof HTMLInputElement) toggle.checked = toggle.value === nextSide;
+        setToggleActive(toggle, toggleValue(toggle) === nextSide);
       }
     }
 
@@ -771,19 +774,20 @@ const cards = browsableTechniques
       if (groupFilter instanceof HTMLInputElement) groupFilter.value = "all";
 
       for (const toggle of [...roleToggles, ...gripToggles, ...statusToggles, ...promotionToggles, ...kataToggles]) {
-        if (toggle instanceof HTMLInputElement) toggle.checked = false;
+        setToggleActive(toggle, false);
       }
     }
 
     function setChecked(toggles, value, checked = true) {
       for (const toggle of toggles) {
-        if (toggle instanceof HTMLInputElement && toggle.value === value) toggle.checked = checked;
+        if (toggleValue(toggle) === value) setToggleActive(toggle, checked);
       }
     }
 
     function labelForToggle(toggle) {
-      if (!(toggle instanceof HTMLInputElement)) return "";
-      return filterLabels[toggle.value] ?? toggle.nextElementSibling?.textContent?.trim() ?? toggle.value;
+      const value = toggleValue(toggle);
+      if (!value) return "";
+      return filterLabels[value] ?? toggle.textContent?.trim() ?? value;
     }
 
     function updateActiveFilterSummary({
@@ -805,11 +809,11 @@ const cards = browsableTechniques
       for (const value of selectedGrips) labels.push(filterLabels[value] ?? value);
       for (const value of selectedStatuses) labels.push(filterLabels[value] ?? value);
       for (const value of selectedPromotions) {
-        const toggle = promotionToggles.find((item) => item instanceof HTMLInputElement && item.value === value);
+        const toggle = promotionToggles.find((item) => toggleValue(item) === value);
         labels.push(labelForToggle(toggle));
       }
       for (const value of selectedKatas) {
-        const toggle = kataToggles.find((item) => item instanceof HTMLInputElement && item.value === value);
+        const toggle = kataToggles.find((item) => toggleValue(item) === value);
         labels.push(labelForToggle(toggle));
       }
 
@@ -862,19 +866,19 @@ const cards = browsableTechniques
       search.value = params.get("q") ?? params.get("search") ?? "";
     }
     for (const toggle of roleToggles) {
-      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("role", "roles").includes(toggle.value);
+      setToggleActive(toggle, paramValues("role", "roles").includes(toggleValue(toggle)));
     }
     for (const toggle of gripToggles) {
-      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("grip", "grips", "context", "contexts").includes(toggle.value);
+      setToggleActive(toggle, paramValues("grip", "grips", "context", "contexts").includes(toggleValue(toggle)));
     }
     for (const toggle of statusToggles) {
-      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("status", "statuses", "filter", "filters").includes(toggle.value);
+      setToggleActive(toggle, paramValues("status", "statuses", "filter", "filters").includes(toggleValue(toggle)));
     }
     for (const toggle of promotionToggles) {
-      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("promotion", "promotions").includes(toggle.value);
+      setToggleActive(toggle, paramValues("promotion", "promotions").includes(toggleValue(toggle)));
     }
     for (const toggle of kataToggles) {
-      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("kata", "katas").includes(toggle.value);
+      setToggleActive(toggle, paramValues("kata", "katas").includes(toggleValue(toggle)));
     }
     const advancedStatusValues = new Set([
       "has-combo-links",
@@ -889,9 +893,9 @@ const cards = browsableTechniques
     if (
       moreFilters instanceof HTMLDetailsElement &&
       (
-        [...gripToggles, ...promotionToggles, ...kataToggles].some((toggle) => toggle instanceof HTMLInputElement && toggle.checked) ||
-        statusToggles.some((toggle) => toggle instanceof HTMLInputElement && toggle.checked && advancedStatusValues.has(toggle.value)) ||
-        roleToggles.some((toggle) => toggle instanceof HTMLInputElement && toggle.checked && toggle.value === "transition")
+        [...gripToggles, ...promotionToggles, ...kataToggles].some(isToggleActive) ||
+        statusToggles.some((toggle) => isToggleActive(toggle) && advancedStatusValues.has(toggleValue(toggle))) ||
+        roleToggles.some((toggle) => isToggleActive(toggle) && toggleValue(toggle) === "transition")
       )
     ) {
       moreFilters.open = true;
@@ -915,20 +919,20 @@ const cards = browsableTechniques
       const term = search instanceof HTMLInputElement ? search.value.trim().toLowerCase() : "";
       const group = groupFilter instanceof HTMLInputElement ? groupFilter.value : "all";
       const selectedRoles = roleToggles
-        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
-        .map((toggle) => toggle.value);
+        .filter(isToggleActive)
+        .map(toggleValue);
       const selectedGrips = gripToggles
-        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
-        .map((toggle) => toggle.value);
+        .filter(isToggleActive)
+        .map(toggleValue);
       const selectedStatuses = statusToggles
-        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
-        .map((toggle) => toggle.value);
+        .filter(isToggleActive)
+        .map(toggleValue);
       const selectedPromotions = promotionToggles
-        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
-        .map((toggle) => toggle.value);
+        .filter(isToggleActive)
+        .map(toggleValue);
       const selectedKatas = kataToggles
-        .filter((toggle) => toggle instanceof HTMLInputElement && toggle.checked)
-        .map((toggle) => toggle.value);
+        .filter(isToggleActive)
+        .map(toggleValue);
 
       for (const card of cards) {
         const matchesText = !term || card.dataset.search?.includes(term);
@@ -971,23 +975,38 @@ const cards = browsableTechniques
       applyFilters();
     });
     for (const toggle of roleToggles) {
-      toggle.addEventListener("change", applyFilters);
+      toggle.addEventListener("click", () => {
+        togglePressed(toggle);
+        applyFilters();
+      });
     }
     for (const toggle of gripToggles) {
-      toggle.addEventListener("change", applyFilters);
+      toggle.addEventListener("click", () => {
+        togglePressed(toggle);
+        applyFilters();
+      });
     }
     for (const toggle of statusToggles) {
-      toggle.addEventListener("change", applyFilters);
+      toggle.addEventListener("click", () => {
+        togglePressed(toggle);
+        applyFilters();
+      });
     }
     for (const toggle of promotionToggles) {
-      toggle.addEventListener("change", applyFilters);
+      toggle.addEventListener("click", () => {
+        togglePressed(toggle);
+        applyFilters();
+      });
     }
     for (const toggle of kataToggles) {
-      toggle.addEventListener("change", applyFilters);
+      toggle.addEventListener("click", () => {
+        togglePressed(toggle);
+        applyFilters();
+      });
     }
     for (const toggle of toriSideToggles) {
-      toggle.addEventListener("change", () => {
-        if (toggle instanceof HTMLInputElement && toggle.checked) setToriSide(toggle.value);
+      toggle.addEventListener("click", () => {
+        setToriSide(toggleValue(toggle));
       });
     }
     for (const button of presetButtons) {

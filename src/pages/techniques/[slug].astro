@@ -224,14 +224,12 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
     <legend>Tori side</legend>
     <div class="side-switch">
       <span class="side-switch-thumb" aria-hidden="true"></span>
-      <label>
-        <input type="radio" name="tori-side" value="left" data-tori-side-toggle />
+      <button type="button" value="left" data-tori-side-toggle aria-pressed="false">
         <span>Left</span>
-      </label>
-      <label>
-        <input type="radio" name="tori-side" value="right" data-tori-side-toggle checked />
+      </button>
+      <button type="button" value="right" data-tori-side-toggle aria-pressed="true">
         <span>Right</span>
-      </label>
+      </button>
     </div>
   </fieldset>
 
@@ -620,15 +618,17 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
         label.textContent = mirrorValue(label.dataset.canonicalToriSide ?? "", toriSideMirrorMap, nextSide);
       }
       for (const toggle of toriSideToggles) {
-        if (toggle instanceof HTMLInputElement) toggle.checked = toggle.value === nextSide;
+        if (toggle instanceof HTMLButtonElement) {
+          toggle.setAttribute("aria-pressed", toggle.value === nextSide ? "true" : "false");
+        }
       }
     }
 
     setToriSide(storedToriSide);
 
     for (const toggle of toriSideToggles) {
-      toggle.addEventListener("change", () => {
-        if (toggle instanceof HTMLInputElement && toggle.checked) setToriSide(toggle.value);
+      toggle.addEventListener("click", () => {
+        if (toggle instanceof HTMLButtonElement) setToriSide(toggle.value);
       });
     }
   </script>

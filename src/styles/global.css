@@ -156,6 +156,19 @@ select {
   font: inherit;
 }
 
+.sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .shell {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
@@ -472,20 +485,15 @@ html[data-tori-side="right"] .side-switch-thumb {
   transform: translateX(100%);
 }
 
-.side-switch label {
+.side-switch button {
   position: relative;
   z-index: 1;
   display: grid;
   place-items: center;
   min-height: 28px;
+  border: 0;
+  background: transparent;
   cursor: pointer;
-}
-
-.side-switch input {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  opacity: 0;
 }
 
 .side-switch span:not(.side-switch-thumb) {
@@ -494,12 +502,12 @@ html[data-tori-side="right"] .side-switch-thumb {
   transition: color 160ms ease;
 }
 
-.side-switch input:checked + span {
+.side-switch button[aria-pressed="true"] span {
   color: var(--accent-ink);
   font-weight: 700;
 }
 
-.side-switch:has(input:focus-visible) {
+.side-switch:has(button:focus-visible) {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
@@ -557,14 +565,10 @@ html[data-tori-side="right"] .side-switch-thumb {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  border: 0;
+  background: transparent;
+  padding: 0;
   cursor: pointer;
-}
-
-.toggle input {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  opacity: 0;
 }
 
 .toggle span {
@@ -587,40 +591,40 @@ html[data-tori-side="right"] .side-switch-thumb {
   opacity: 0.72;
 }
 
-.toggle input:focus-visible + span {
+.toggle:focus-visible span {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-.toggle input:checked + span {
+.toggle[aria-pressed="true"] span {
   border-color: color-mix(in srgb, var(--accent), transparent 40%);
   background: color-mix(in srgb, var(--accent), transparent 88%);
   color: var(--accent-ink);
 }
 
 .toggle.success-toggle span,
-.toggle.success-toggle input:checked + span {
+.toggle.success-toggle[aria-pressed="true"] span {
   border-color: color-mix(in srgb, var(--green), transparent 28%);
   background: color-mix(in srgb, var(--green), transparent 86%);
   color: color-mix(in srgb, var(--green), var(--text) 38%);
 }
 
 .toggle.danger-toggle span,
-.toggle.danger-toggle input:checked + span {
+.toggle.danger-toggle[aria-pressed="true"] span {
   border-color: color-mix(in srgb, #b33a2f, transparent 34%);
   background: color-mix(in srgb, #b33a2f, transparent 88%);
   color: #9b2f27;
 }
 
 .toggle.warning-toggle span,
-.toggle.warning-toggle input:checked + span {
+.toggle.warning-toggle[aria-pressed="true"] span {
   border-color: color-mix(in srgb, var(--gold), transparent 30%);
   background: color-mix(in srgb, var(--gold), transparent 86%);
   color: color-mix(in srgb, var(--gold), var(--text) 36%);
 }
 
 .toggle.mixed-toggle span,
-.toggle.mixed-toggle input:checked + span {
+.toggle.mixed-toggle[aria-pressed="true"] span {
   border-color: color-mix(in srgb, var(--green), transparent 35%);
   background: linear-gradient(
     90deg,
@@ -630,11 +634,11 @@ html[data-tori-side="right"] .side-switch-thumb {
   color: var(--text);
 }
 
-.toggle.success-toggle input:checked + span,
-.toggle.danger-toggle input:checked + span,
-.toggle.warning-toggle input:checked + span,
-.toggle.mixed-toggle input:checked + span,
-.toggle.rank-toggle input:checked + span {
+.toggle.success-toggle[aria-pressed="true"] span,
+.toggle.danger-toggle[aria-pressed="true"] span,
+.toggle.warning-toggle[aria-pressed="true"] span,
+.toggle.mixed-toggle[aria-pressed="true"] span,
+.toggle.rank-toggle[aria-pressed="true"] span {
   box-shadow: inset 0 0 0 1px currentColor;
 }
 
