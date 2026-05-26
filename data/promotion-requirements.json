@@ -29,6 +29,11 @@
         "label": "Kumi-kata: basic gripping"
       },
       {
+        "id": "usjf-senior-2026-go-kyu-taisabaki",
+        "type": "fundamental",
+        "label": "Tai-sabaki: body management / body turning concept"
+      },
+      {
         "id": "usjf-senior-2026-go-kyu-shizentai",
         "type": "fundamental",
         "label": "Shizentai: natural posture; hon-shizentai (basic natural posture), migi-shizentai (right natural posture), hidari-shizentai (left natural posture)"
@@ -47,11 +52,6 @@
         "id": "usjf-senior-2026-go-kyu-suriashi",
         "type": "fundamental",
         "label": "Suri-ashi: sliding footwork; related to shintai but emphasized separately because the feet glide without lifting high from the tatami"
-      },
-      {
-        "id": "usjf-senior-2026-go-kyu-taisabaki",
-        "type": "fundamental",
-        "label": "Tai-sabaki: body management / body turning concept"
       },
       {
         "id": "usjf-senior-2026-go-kyu-ukemi",
