@@ -9,6 +9,7 @@ import type {
   SafetyContext,
   Source,
   Technique,
+  TechniqueVideo,
   TechniqueVariant
 } from "./types";
 
@@ -21,6 +22,7 @@ export const variants: TechniqueVariant[];
 export const legality: RulesetLegality[];
 export const safetyAdvisories: SafetyAdvisory[];
 export const comboEdges: ComboEdge[];
+export const techniqueVideos: TechniqueVideo[];
 export const DEFAULT_RULESET_ID: string;
 
 export function getTechnique(slug: string): (Technique & {
@@ -41,6 +43,7 @@ export function getVariantsFor(baseTechniqueSlug: string, filters?: {
 export function getLegality(subjectSlug: string, rulesetId?: string): RulesetLegality | undefined;
 export function isLegal(subjectSlug: string, rulesetId?: string): boolean;
 export function getSafetyAdvisories(subjectSlug: string, context?: SafetyContext): SafetyAdvisory[];
+export function getTechniqueVideo(subjectSlug: string): TechniqueVideo | undefined;
 export function isPracticeSafe(subjectSlug: string, context?: SafetyContext): boolean;
 export function getCombosFor(subjectSlug: string, filters?: ComboFilters): ComboEdge[];
 export function getCountersFor(subjectSlug: string, filters?: ComboFilters): ComboEdge[];

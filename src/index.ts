@@ -13,6 +13,7 @@ export {
   getLegality,
   getSafetyAdvisories,
   getTechnique,
+  getTechniqueVideo,
   getVariantsFor,
   isLegal,
   isPracticeSafe,
@@ -21,6 +22,7 @@ export {
   safetyAdvisories,
   searchTechniques,
   sources,
+  techniqueVideos,
   techniques,
   variants
 } from "./query.mjs";

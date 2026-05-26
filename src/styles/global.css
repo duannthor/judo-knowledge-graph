@@ -634,6 +634,26 @@ html[data-tori-side="right"] .side-switch-thumb {
   border: 0;
 }
 
+.video-placeholder {
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.video-placeholder strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.video-placeholder p {
+  margin: 0;
+  line-height: 1.55;
+}
+
 .kata-set-list {
   display: grid;
   gap: 24px;

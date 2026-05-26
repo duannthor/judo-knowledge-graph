@@ -10,11 +10,13 @@ import {
   getLegality,
   getSafetyAdvisories,
   getVariantsFor,
+  getTechniqueVideo,
   gripContexts,
   isLegal,
   isPracticeSafe,
   kataMemberships,
   promotionRequirements,
+  techniqueVideos,
   techniques
 } from "../src/query.mjs";
 
@@ -592,6 +594,18 @@ test("seoi-nage and ippon-seoi-nage expose right and left turn chiral variants",
   assert.equal(leftIppon.chirality.toriSide, "left");
   assert.equal(leftIppon.chirality.turn, "counter-clockwise");
   assert.equal(getLegality("ippon-seoi-nage-right-turn").status, "legal");
+});
+
+test("Kodokan technique videos map playlist clips to graph techniques", () => {
+  const seoiVideo = getTechniqueVideo("seoi-nage");
+  const tomoeVideo = getTechniqueVideo("tomoe-nage");
+  const sankakuVideo = getTechniqueVideo("sankaku-jime");
+
+  assert.ok(techniqueVideos.length > 80);
+  assert.equal(seoiVideo.youtubeId, "zIq0xI0ogxk");
+  assert.equal(tomoeVideo.youtubeId, "880WbHvHv6A");
+  assert.equal(sankakuVideo.youtubeId, "lq1CUBRAm7s");
+  assert.equal(getTechniqueVideo("eri-seoi-nage"), undefined);
 });
 
 test("forbidden scissors, entanglements, body scissors, and wrist locks carry safety bans", () => {

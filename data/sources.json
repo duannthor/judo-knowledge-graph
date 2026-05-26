@@ -73,5 +73,13 @@
     "url": "https://kdkjd.org/nage-no-kata/",
     "authority": "official-kata",
     "notes": "Used for tagging techniques that appear in Nage-no-kata."
+  },
+  {
+    "id": "kodokan-100-techniques-playlist",
+    "title": "100 Techniques of Kodokan Judo",
+    "publisher": "Kodokan Judo Institute / IJF Academy",
+    "url": "https://www.youtube.com/playlist?list=PLtz539PTepc16H2iu5F3Q3D7_He1EYlIQ",
+    "authority": "official-technique-video",
+    "notes": "Used for embedding Kodokan technique reference videos on technique detail pages."
   }
 ]

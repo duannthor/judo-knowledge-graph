@@ -137,6 +137,14 @@ export type SafetyAdvisory = {
   sourceIds: string[];
 };
 
+export type TechniqueVideo = {
+  techniqueSlug: string;
+  title: string;
+  youtubeId: string;
+  playlistId: string;
+  sourceIds: string[];
+};
+
 export type ComboEdge = {
   fromSlug: string;
   toSlug: string;

@@ -9,6 +9,7 @@ import {
   rulesets,
   safetyAdvisories,
   sources,
+  techniqueVideos,
   techniques,
   variants
 } from "../src/query.mjs";
@@ -141,4 +142,12 @@ for (const kata of kataMemberships) {
   assertSources(kata);
 }
 
-console.log(`Validated ${techniques.length} techniques, ${classifications.length} classifications, ${variants.length} variants, ${legality.length} legality records, ${promotionRequirements.length} promotion ranks, ${kataMemberships.length} kata memberships.`);
+for (const video of techniqueVideos) {
+  assert.ok(techniqueSlugs.has(video.techniqueSlug), `${video.techniqueSlug} video points to missing technique`);
+  assert.ok(video.title, `${video.techniqueSlug} video needs title`);
+  assert.ok(video.youtubeId, `${video.techniqueSlug} video needs youtubeId`);
+  assert.ok(video.playlistId, `${video.techniqueSlug} video needs playlistId`);
+  assertSources(video);
+}
+
+console.log(`Validated ${techniques.length} techniques, ${classifications.length} classifications, ${variants.length} variants, ${legality.length} legality records, ${promotionRequirements.length} promotion ranks, ${kataMemberships.length} kata memberships, ${techniqueVideos.length} technique videos.`);

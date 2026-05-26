@@ -19,6 +19,7 @@ export const safetyAdvisories = readJson("safety-advisories.json");
 export const comboEdges = readJson("combo-edges.json");
 export const promotionRequirements = readJson("promotion-requirements.json");
 export const kataMemberships = readJson("kata-memberships.json");
+export const techniqueVideos = readJson("technique-videos.json");
 
 export const DEFAULT_RULESET_ID = rulesets.find((ruleset) => ruleset.default)?.id ?? "IJF_SENIOR_2026";
 
@@ -104,6 +105,10 @@ export function getPromotionRequirementsFor(subjectSlug, rulesetId = "USJF_SENIO
 
 export function getKataMembershipsFor(subjectSlug) {
   return kataMemberships.filter((kata) => kata.techniqueSlugs.includes(subjectSlug));
+}
+
+export function getTechniqueVideo(subjectSlug) {
+  return techniqueVideos.find((video) => video.techniqueSlug === subjectSlug);
 }
 
 export function isPracticeSafe(subjectSlug, context = "randori") {
