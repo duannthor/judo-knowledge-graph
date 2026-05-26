@@ -279,16 +279,18 @@ const cards = browsableTechniques
             </label>
           </div>
         </fieldset>
-        <button class="clear-filters" type="button" id="clear-filters">Clear all</button>
       </div>
 
       <div class="filter-presets" aria-label="Filter presets">
-        <button class="preset-chip" type="button" data-filter-preset="competition">Competition legal</button>
-        <button class="preset-chip" type="button" data-filter-preset="promotion">Promotion study</button>
-        <button class="preset-chip" type="button" data-filter-preset="combos">Combos</button>
-        <button class="preset-chip" type="button" data-filter-preset="counters">Counters</button>
-        <button class="preset-chip" type="button" data-filter-preset="groundwork">Groundwork</button>
-        <button class="preset-chip" type="button" data-filter-preset="opposite-side">Opposite-side stance</button>
+        <span class="filter-label">Quick filters</span>
+        <div class="preset-chip-list">
+          <button class="preset-chip" type="button" data-filter-preset="competition">Competition legal</button>
+          <button class="preset-chip" type="button" data-filter-preset="promotion">Promotion study</button>
+          <button class="preset-chip" type="button" data-filter-preset="combos">Combos</button>
+          <button class="preset-chip" type="button" data-filter-preset="counters">Counters</button>
+          <button class="preset-chip" type="button" data-filter-preset="groundwork">Groundwork</button>
+          <button class="preset-chip" type="button" data-filter-preset="opposite-side">Opposite-side stance</button>
+        </div>
       </div>
 
       <fieldset class="filter-groups primary-filter-groups" aria-label="Primary technique filters">
@@ -333,6 +335,7 @@ const cards = browsableTechniques
             </label>
           </div>
         </div>
+        <button class="clear-filters" type="button" id="clear-filters">Clear all</button>
       </fieldset>
 
       <details class="more-filters" id="more-filters">
