@@ -68,6 +68,9 @@ const promotionRanks = promotionRequirements
   .slice()
   .sort((a, b) => a.band - b.band);
 const kataFilters = kataMemberships.filter((kata) => kata.id === "nage-no-kata");
+const contextDisplayLabel = (context) => (
+  context.shortGloss ? `${context.label} · ${context.shortGloss}` : context.label
+);
 
 const cards = browsableTechniques
   .slice()
@@ -102,8 +105,11 @@ const cards = browsableTechniques
     }
     const gripContextSlugs = Array.from(gripContextSlugSet);
     const gripContextLabels = gripContextSlugs.map((slug) => (
-      gripContexts.find((context) => context.slug === slug)?.label ?? slug
+      gripContexts.find((context) => context.slug === slug)
     ));
+    const gripContextDisplayLabels = gripContextLabels.map((context) => (
+      context ? contextDisplayLabel(context) : ""
+    )).filter(Boolean);
     const variantLegalityRows = variants.map((variant) => ({
       variant,
       legality: getLegality(variant.slug)
@@ -151,7 +157,7 @@ const cards = browsableTechniques
       variants,
       displayAliases,
       gripContextSlugs,
-      gripContextLabels,
+      gripContextLabels: gripContextDisplayLabels,
       legalityStatuses,
       hasCompetitionLegalRecord,
       baseLegal,
@@ -184,7 +190,7 @@ const cards = browsableTechniques
           ...(variant.actionFeatures ?? [])
         ]),
         ...gripContextSlugs,
-        ...gripContextLabels,
+        ...gripContextDisplayLabels,
         ...promotionRanksForTechnique.flatMap((rank) => [
           rank.label,
           rank.japaneseRomaji,
@@ -294,6 +300,7 @@ const cards = browsableTechniques
                       <input type="checkbox" value={context.slug} data-grip-toggle />
                       <span>
                         {context.label}
+                        {context.shortGloss && <small>{context.shortGloss}</small>}
                         {context.japanese && <small>{context.japanese}</small>}
                       </span>
                     </label>

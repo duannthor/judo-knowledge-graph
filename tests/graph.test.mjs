@@ -213,6 +213,8 @@ test("grip and stance contexts are available for filtering", () => {
   assert.ok(oUchi.gripContextSlugs.includes("standard-kumi-kata"));
   assert.ok(oUchi.gripContextSlugs.includes("aiyotsu"));
   assert.ok(hikikomi.gripContextSlugs.includes("georgian-grip"));
+  assert.equal(gripContexts.find((context) => context.slug === "aiyotsu").shortGloss, "same-side stance");
+  assert.equal(gripContexts.find((context) => context.slug === "kenkayotsu").shortGloss, "opposite-side stance");
 });
 
 test("USJF senior promotion requirements tag concrete graph techniques by rank", () => {
@@ -575,6 +577,21 @@ test("drop-entry shoulder variants are legal searchable standing variants", () =
   assert.ok(sodeDrops.some((variant) => variant.slug === "sode-tsurikomi-goshi-drop-entry"));
   assert.equal(getLegality("seoi-nage-drop-entry").status, "legal");
   assert.ok(getSafetyAdvisories("seoi-nage-drop-entry", "randori").some((advisory) => advisory.reasons.includes("drop-entry")));
+});
+
+test("seoi-nage and ippon-seoi-nage expose right and left turn chiral variants", () => {
+  const seoiTurns = getVariantsFor("seoi-nage", { legalOnly: true });
+  const ipponTurns = getVariantsFor("ippon-seoi-nage", { legalOnly: true });
+  const rightIppon = ipponTurns.find((variant) => variant.slug === "ippon-seoi-nage-right-turn");
+  const leftIppon = ipponTurns.find((variant) => variant.slug === "ippon-seoi-nage-left-turn");
+
+  assert.ok(seoiTurns.some((variant) => variant.slug === "seoi-nage-right-turn"));
+  assert.ok(seoiTurns.some((variant) => variant.slug === "seoi-nage-left-turn"));
+  assert.equal(rightIppon.chirality.toriSide, "right");
+  assert.equal(rightIppon.chirality.turn, "clockwise");
+  assert.equal(leftIppon.chirality.toriSide, "left");
+  assert.equal(leftIppon.chirality.turn, "counter-clockwise");
+  assert.equal(getLegality("ippon-seoi-nage-right-turn").status, "legal");
 });
 
 test("forbidden scissors, entanglements, body scissors, and wrist locks carry safety bans", () => {

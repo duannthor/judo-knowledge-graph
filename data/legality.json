@@ -2137,5 +2137,50 @@
       "ijf-sor-2026",
       "local-practice-advisory-v1"
     ]
+  },
+  {
+    "subjectSlug": "seoi-nage-left-turn",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when the turn entry remains a continuous recognizable shoulder throw and avoids prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "kodokan-repertoire"
+    ]
+  },
+  {
+    "subjectSlug": "ippon-seoi-nage-right-turn",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when the turn entry remains a continuous recognizable shoulder throw and avoids prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "kodokan-repertoire"
+    ]
+  },
+  {
+    "subjectSlug": "ippon-seoi-nage-left-turn",
+    "subjectType": "variant",
+    "rulesetId": "IJF_SENIOR_2026",
+    "status": "legal",
+    "reasons": [
+      "recognizable-kodokan-technique"
+    ],
+    "appliesTo": "variant",
+    "notes": "Modeled as legal when the turn entry remains a continuous recognizable shoulder throw and avoids prohibited action features.",
+    "sourceIds": [
+      "ijf-rules-explanation-2023",
+      "kodokan-repertoire"
+    ]
   }
 ]

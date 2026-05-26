@@ -709,5 +709,229 @@
     "sourceIds": [
       "local-practice-advisory-v1"
     ]
+  },
+  {
+    "slug": "seoi-nage-left-turn",
+    "name": "Left-turn seoi-nage",
+    "baseTechniqueSlug": "seoi-nage",
+    "modifiers": [
+      "left",
+      "turn"
+    ],
+    "actionFeatures": [
+      "tachi-waza",
+      "turn"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ],
+    "chirality": {
+      "toriSide": "left",
+      "turn": "counter-clockwise"
+    },
+    "directionSequences": [
+      {
+        "stanceContext": "aiyotsu",
+        "toriSide": "left",
+        "directions": [
+          "front-left",
+          "counter-clockwise",
+          "front"
+        ]
+      }
+    ],
+    "mechanics": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal into the left-turn shoulder-throw line.",
+        "directionHints": [
+          "front-left",
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn left under uke while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "kake": {
+        "summary": "Rotate through the counter-clockwise turn and project uke forward over the shoulder line.",
+        "directionHints": [
+          "front",
+          "counter-clockwise"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "directionSequences": [
+        {
+          "stanceContext": "aiyotsu",
+          "toriSide": "left",
+          "directions": [
+            "front-left",
+            "counter-clockwise",
+            "front"
+          ]
+        }
+      ]
+    },
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
+  },
+  {
+    "slug": "ippon-seoi-nage-right-turn",
+    "name": "Right-turn ippon-seoi-nage",
+    "baseTechniqueSlug": "ippon-seoi-nage",
+    "modifiers": [
+      "right",
+      "turn",
+      "one-arm"
+    ],
+    "actionFeatures": [
+      "tachi-waza",
+      "turn"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ],
+    "chirality": {
+      "toriSide": "right",
+      "turn": "clockwise"
+    },
+    "directionSequences": [
+      {
+        "stanceContext": "aiyotsu",
+        "toriSide": "right",
+        "directions": [
+          "front-right",
+          "clockwise",
+          "front"
+        ]
+      }
+    ],
+    "mechanics": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal into the right-turn shoulder-throw line.",
+        "directionHints": [
+          "front-right",
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn right under uke while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "kake": {
+        "summary": "Rotate through the clockwise turn and project uke forward over the shoulder line.",
+        "directionHints": [
+          "front",
+          "clockwise"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "directionSequences": [
+        {
+          "stanceContext": "aiyotsu",
+          "toriSide": "right",
+          "directions": [
+            "front-right",
+            "clockwise",
+            "front"
+          ]
+        }
+      ]
+    },
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
+  },
+  {
+    "slug": "ippon-seoi-nage-left-turn",
+    "name": "Left-turn ippon-seoi-nage",
+    "baseTechniqueSlug": "ippon-seoi-nage",
+    "modifiers": [
+      "left",
+      "turn",
+      "one-arm"
+    ],
+    "actionFeatures": [
+      "tachi-waza",
+      "turn"
+    ],
+    "gripContextSlugs": [
+      "standard-kumi-kata",
+      "aiyotsu"
+    ],
+    "chirality": {
+      "toriSide": "left",
+      "turn": "counter-clockwise"
+    },
+    "directionSequences": [
+      {
+        "stanceContext": "aiyotsu",
+        "toriSide": "left",
+        "directions": [
+          "front-left",
+          "counter-clockwise",
+          "front"
+        ]
+      }
+    ],
+    "mechanics": {
+      "kuzushi": {
+        "summary": "Draw uke forward or forward-diagonal into the left-turn shoulder-throw line.",
+        "directionHints": [
+          "front-left",
+          "front"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "tsukuri": {
+        "summary": "Turn left under uke while keeping shoulder, hip, and sleeve control aligned for a safe projection.",
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "kake": {
+        "summary": "Rotate through the counter-clockwise turn and project uke forward over the shoulder line.",
+        "directionHints": [
+          "front",
+          "counter-clockwise"
+        ],
+        "sourceIds": [
+          "kodokan-repertoire"
+        ]
+      },
+      "directionSequences": [
+        {
+          "stanceContext": "aiyotsu",
+          "toriSide": "left",
+          "directions": [
+            "front-left",
+            "counter-clockwise",
+            "front"
+          ]
+        }
+      ]
+    },
+    "sourceIds": [
+      "kodokan-repertoire"
+    ]
   }
 ]

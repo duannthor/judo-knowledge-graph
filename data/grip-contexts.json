@@ -12,6 +12,7 @@
   {
     "slug": "aiyotsu",
     "label": "Aiyotsu",
+    "shortGloss": "same-side stance",
     "japanese": "相四つ",
     "kana": "あいよつ",
     "type": "stance-relation",
@@ -22,6 +23,7 @@
   {
     "slug": "kenkayotsu",
     "label": "Kenkayotsu",
+    "shortGloss": "opposite-side stance",
     "japanese": "喧嘩四つ",
     "kana": "けんかよつ",
     "type": "stance-relation",

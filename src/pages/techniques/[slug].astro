@@ -66,6 +66,9 @@ for (const { variant } of variantRows) {
 const gripContextRows = Array.from(gripContextSlugSet)
   .map((slug) => gripContexts.find((context) => context.slug === slug))
   .filter(Boolean);
+const contextDisplayLabel = (context) => (
+  context.shortGloss ? `${context.label} · ${context.shortGloss}` : context.label
+);
 
 const hasBasePhases = Object.keys(technique.phases).length > 0;
 const variantMechanicsRows = variantRows.filter((row) => row.variant.mechanics);
@@ -162,13 +165,13 @@ const sourceRows = technique.sourceIds
           {gripContextRows.length > 0 && (
             <div class="fact">
               <span>Grip / Position</span>
-              <strong>{gripContextRows.map((context) => context.label).join(", ")}</strong>
+              <strong>{gripContextRows.map((context) => contextDisplayLabel(context)).join(", ")}</strong>
             </div>
           )}
         </div>
         <div class="tags">
           {technique.classifications.map((slug) => <span class="tag accent">{slug}</span>)}
-          {gripContextRows.map((context) => <span class="tag">{context.label}</span>)}
+          {gripContextRows.map((context) => <span class="tag">{contextDisplayLabel(context)}</span>)}
           {baseLegality?.status === "legal" && <span class="tag success">competition legal</span>}
           {baseLegality?.status === "illegal" && <span class="tag danger">competition banned</span>}
           {baseLegality?.status === "restricted" && <span class="tag danger">restricted</span>}
