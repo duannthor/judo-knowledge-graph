@@ -21,7 +21,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Shoulder-wheel family: tori lowers under uke's center, loads uke across the shoulder line, and rotates them forward or forward-diagonally. The exact grip, entry, and off-balancing line depend heavily on the variant.",
     "phases": {
       "kuzushi": {
         "summary": "Draw uke forward or forward-diagonal while lowering under the center of gravity.",
@@ -57,7 +56,8 @@
     ],
     "gripContextSlugs": [
       "standard-kumi-kata"
-    ]
+    ],
+    "mechanicsTheme": "Shoulder-wheel family: tori lowers under uke's center, loads uke across the shoulder line, and rotates them forward or forward-diagonally. The exact grip, entry, and off-balancing line depend heavily on the variant."
   },
   {
     "slug": "ura-nage",
@@ -370,7 +370,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Kata sequence note: uki-goshi is a turn-entry hip throw, but Nage-no-kata demonstrates the left-hand version first as an exception. For ordinary lookup, model side by tori side first, then derive the absolute rotation from that side.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -378,7 +377,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Kata sequence note: uki-goshi is a turn-entry hip throw, but Nage-no-kata demonstrates the left-hand version first as an exception. For ordinary lookup, model side by tori side first, then derive the absolute rotation from that side."
   },
   {
     "slug": "o-goshi",
@@ -403,7 +403,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Turn-entry hip throw: model as a standard-side hip turn for the selected tori side. Absolute clockwise or counter-clockwise rotation should be derived from right/left tori side rather than treated as the variant name.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -411,7 +410,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Turn-entry hip throw: model as a standard-side hip turn for the selected tori side. Absolute clockwise or counter-clockwise rotation should be derived from right/left tori side rather than treated as the variant name."
   },
   {
     "slug": "koshi-guruma",
@@ -435,7 +435,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Rotational hip-wheel entry: model side by tori's chosen hip side first. Absolute clockwise or counter-clockwise turn should be displayed as a derived detail.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -443,7 +442,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Rotational hip-wheel entry: model side by tori's chosen hip side first. Absolute clockwise or counter-clockwise turn should be displayed as a derived detail."
   },
   {
     "slug": "tsurikomi-goshi",
@@ -468,7 +468,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Lifting-pulling hip entry: model as a standard-side fit-in for the selected tori side. The rotation label should mirror when the tori-side switch changes.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -476,7 +475,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Lifting-pulling hip entry: model as a standard-side fit-in for the selected tori side. The rotation label should mirror when the tori-side switch changes."
   },
   {
     "slug": "harai-goshi",
@@ -500,7 +500,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Sweeping hip entry: model side by tori's sweeping hip/leg side first. The rotation direction is derived from tori side, not a separate left/right-turn variant.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -508,7 +507,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Sweeping hip entry: model side by tori's sweeping hip/leg side first. The rotation direction is derived from tori side, not a separate left/right-turn variant."
   },
   {
     "slug": "tsuri-goshi",
@@ -532,7 +532,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Belt-grip hip throw: model as a standard-side hip entry for the selected tori side. The belt grip changes control, but the left/right display should still mirror from tori side.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -540,7 +539,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Belt-grip hip throw: model as a standard-side hip entry for the selected tori side. The belt grip changes control, but the left/right display should still mirror from tori side."
   },
   {
     "slug": "hane-goshi",
@@ -564,7 +564,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Spring hip entry: model side by tori's springing hip/leg side first. Absolute rotation should be derived from tori side and not used as the primary variant label.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -572,7 +571,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Spring hip entry: model side by tori's springing hip/leg side first. Absolute rotation should be derived from tori side and not used as the primary variant label."
   },
   {
     "slug": "utsuri-goshi",
@@ -658,7 +658,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Sleeve-controlled turn entry: model as standard-side or drop-entry relative to the selected tori side. This avoids treating clockwise/counter-clockwise as the main variant identity.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -666,7 +665,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Sleeve-controlled turn entry: model as standard-side or drop-entry relative to the selected tori side. This avoids treating clockwise/counter-clockwise as the main variant identity."
   },
   {
     "slug": "ippon-seoi-nage",
@@ -691,7 +691,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "One-arm seoi uses a standard-side turn for ordinary right/left tori entries. Reverse or Korean-style entries should be modeled as reverse-turn variants; absolute clockwise/counter-clockwise is derived from the selected tori side.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -700,7 +699,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "One-arm seoi uses a standard-side turn for ordinary right/left tori entries. Reverse or Korean-style entries should be modeled as reverse-turn variants; absolute clockwise/counter-clockwise is derived from the selected tori side."
   },
   {
     "slug": "seoi-otoshi",
@@ -726,7 +726,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Shoulder-drop entries inherit the seoi side model: standard-side or reverse-turn relative to tori side, with drop mechanics as the entry modifier.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -734,7 +733,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "aiyotsu"
-    ]
+    ],
+    "mechanicsTheme": "Shoulder-drop entries inherit the seoi side model: standard-side or reverse-turn relative to tori side, with drop mechanics as the entry modifier."
   },
   {
     "slug": "tai-otoshi",
@@ -759,7 +759,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Body-drop turn entry: model as a standard-side fit-in for the selected tori side. Absolute clockwise/counter-clockwise should be derived for display rather than treated as a named variant.",
     "phases": {},
     "sourceIds": [
       "kodokan-repertoire"
@@ -768,7 +767,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Body-drop turn entry: model as a standard-side fit-in for the selected tori side. Absolute clockwise/counter-clockwise should be derived for display rather than treated as a named variant."
   },
   {
     "slug": "sukui-nage",
@@ -2580,7 +2580,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Outer reap side model: the tori-side toggle should describe the reaping leg and outside line. This is not a reverse-turn variant; right and left versions mirror the attacking leg, support step, and backward-diagonal pressure."
   },
   {
     "slug": "o-soto-gaeshi",
@@ -2614,7 +2615,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Counter to o-soto-gari: model the side by the incoming reap and tori's returning reap line. The important chirality is which leg is being attacked and which leg returns the counter, not clockwise/counter-clockwise turn."
   },
   {
     "slug": "o-uchi-gari",
@@ -2645,7 +2647,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "aiyotsu"
-    ]
+    ],
+    "mechanicsTheme": "Inner reap side model: the tori-side toggle should describe the reaping leg and inside line. Right/left versions mirror the attacking leg, driving shoulder line, and uke's backward-diagonal balance."
   },
   {
     "slug": "ko-uchi-gari",
@@ -2676,7 +2679,8 @@
     "gripContextSlugs": [
       "standard-kumi-kata",
       "aiyotsu"
-    ]
+    ],
+    "mechanicsTheme": "Minor inner reap side model: the tori-side toggle should describe the small inside attacking foot and uke's near-foot line. Ko-uchi counters can be evasion-based or pressure-based, but the side label is still leg/foot line rather than turn direction."
   },
   {
     "slug": "seoi-nage",
@@ -3131,7 +3135,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Timing foot-sweep side model: the tori-side toggle should describe the sweeping foot and uke's advancing foot. The key distinction is timing and foot line, not a turn variant."
   },
   {
     "slug": "tsubame-gaeshi",
@@ -3164,7 +3169,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Counter to de-ashi-harai: model side by the foot that evades the sweep and the foot that immediately returns the sweep. This is an evasion-and-return timing problem, not a reverse-turn entry."
   },
   {
     "slug": "o-uchi-gaeshi",
@@ -3198,7 +3204,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Counter to o-uchi-gari: model side by the incoming inside reap and tori's returning reap or lift line. The side changes the legs and pressure line rather than creating a separate turn variant."
   },
   {
     "slug": "uchi-mata",
@@ -3230,7 +3237,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Inner-thigh throw side model: the tori-side toggle should describe the lifting/sweeping leg and hip line. Right and left versions mirror the attacking leg and forward-diagonal projection."
   },
   {
     "slug": "uchi-mata-gaeshi",
@@ -3263,7 +3271,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Counter to uchi-mata: model side by the incoming inner-thigh attack and the returning counter line. The relevant chirality is leg/hip line and balance recovery, not absolute rotation."
   },
   {
     "slug": "hane-goshi-gaeshi",
@@ -3358,7 +3367,6 @@
     "roles": [
       "attack"
     ],
-    "mechanicsTheme": "Lapel-based shoulder-throw family often described in English as reverse or Korean seoi-nage. It is modeled as its own searchable technique because the grip, turn, and arm-entanglement risk differ enough from standard seoi-nage to matter in lookup and safety views. Treat it as a reverse-turn seoi family entry: right tori rotates clockwise, left tori rotates counter-clockwise.",
     "phases": {
       "kuzushi": {
         "summary": "Draw uke forward or forward-diagonal while controlling the lapel-side upper body connection.",
@@ -3396,7 +3404,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Lapel-based shoulder-throw family often described in English as reverse or Korean seoi-nage. It is modeled as its own searchable technique because the grip, turn, and arm-entanglement risk differ enough from standard seoi-nage to matter in lookup and safety views. Treat it as a reverse-turn seoi family entry: right tori rotates clockwise, left tori rotates counter-clockwise."
   },
   {
     "slug": "sasae-tsurikomi-ashi",
@@ -3429,7 +3438,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Propping foot side model: the tori-side toggle should describe the blocking/propping foot and lifting-pulling line. The throw works through foot placement and diagonal draw rather than a named left/right-turn variant."
   },
   {
     "slug": "hiza-guruma",
@@ -3461,7 +3471,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Knee-wheel side model: the tori-side toggle should describe the propping leg and wheel line. The important side detail is which knee/leg line is blocked while uke is rotated over it."
   },
   {
     "slug": "ko-soto-gari",
@@ -3494,7 +3505,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Minor outer reap side model: the tori-side toggle should describe the outside attacking foot and uke's near-foot line. This mirrors by attacking leg and balance line rather than by turn direction."
   },
   {
     "slug": "okuri-ashi-harai",
@@ -3528,7 +3540,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Sliding foot-sweep side model: the tori-side toggle should describe the sweeping foot and the direction both of uke's feet are carried. Timing, spacing, and foot line matter more than turn chirality."
   },
   {
     "slug": "ko-soto-gake",
@@ -3561,7 +3574,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Minor outer hook side model: the tori-side toggle should describe the hooking leg and outside control line. Right/left versions mirror the hook and backward-diagonal pressure."
   },
   {
     "slug": "ashi-guruma",
@@ -3593,7 +3607,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Leg-wheel side model: the tori-side toggle should describe the blocking leg and wheel line. The side cue is leg placement across uke's path, with rotation derived from the selected side."
   },
   {
     "slug": "o-tsuri-goshi",
@@ -3696,7 +3711,8 @@
       "standard-kumi-kata",
       "aiyotsu",
       "kenkayotsu"
-    ]
+    ],
+    "mechanicsTheme": "Sweeping lifting-pulling foot side model: the tori-side toggle should describe the sweeping foot and tsurikomi line. The throw mirrors through foot placement and lifting-pulling pressure, not a reverse-turn variant."
   },
   {
     "slug": "makura-kesa-gatame",
