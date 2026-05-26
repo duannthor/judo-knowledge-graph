@@ -112,7 +112,7 @@ const relatedEdgeLabel = (edge, direction) => {
 };
 
 const techniqueVideo = getTechniqueVideo(technique.slug);
-const techniqueVideoEmbedUrl = techniqueVideo ? `https://www.youtube-nocookie.com/embed/${techniqueVideo.youtubeId}` : undefined;
+const techniqueVideoEmbedUrl = techniqueVideo ? `https://www.youtube.com/embed/${techniqueVideo.youtubeId}?rel=0` : undefined;
 const techniqueVideoSourceUrl = techniqueVideo ? `https://www.youtube.com/watch?v=${techniqueVideo.youtubeId}&list=${techniqueVideo.playlistId}` : undefined;
 const techniqueVideoNote = technique.slug === "seoi-nage"
   ? "Seoi-nage is commonly encountered in English-language dojo shorthand as morote seoi-nage when both hands stay on the standard sleeve-and-lapel controls."
