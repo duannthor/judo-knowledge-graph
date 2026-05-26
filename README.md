@@ -1,4 +1,4 @@
-# Judo Knowledge Graph
+# Technical Machine
 
 Static-first knowledge graph data for judo techniques, variants, competition legality, practice safety, and combo pressure patterns.
 

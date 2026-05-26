@@ -183,7 +183,7 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
   .filter(Boolean);
 ---
 
-<BaseLayout title={`${technique.names.japaneseRomaji} · Judo Knowledge Graph`}>
+<BaseLayout title={`${technique.names.japaneseRomaji} · Technical Machine`}>
   <section class="intro" aria-labelledby="technique-title">
     <div>
       <p class="eyebrow">{classificationLabels[0]}</p>
@@ -191,7 +191,7 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
       <p class="reading-line detail-reading">{technique.names.japaneseRomaji} · {technique.names.kana}</p>
       <p class="lede">{technique.names.english}</p>
     </div>
-    <img class="mark" src="/judo-graph-mark.svg" alt="" width="150" height="150" />
+    <img class="mark" src="/technical-machine-icon.svg" alt="" width="150" height="150" />
   </section>
 
   <fieldset class="side-toggle detail-side-toggle" aria-label="Tori side">

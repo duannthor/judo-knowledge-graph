@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Technical Machine CD-ROM icon</title>
+  <desc id="desc">A compact CD-ROM mark with a soft metallic disc and center ring.</desc>
+  <rect width="160" height="160" rx="28" fill="#f8f5ef"/>
+  <circle cx="80" cy="80" r="52" fill="#f1ece3" stroke="#2f2a25" stroke-width="5"/>
+  <path d="M43 64c18-34 64-39 89-10M31 86c20 18 52 25 96 21M57 119c30 9 58-1 78-28" fill="none" stroke="#c8bda9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M80 28a52 52 0 0 1 48 32L94 71a17 17 0 0 0-14-8z" fill="#d07a63" opacity="0.72"/>
+  <path d="M31 83a52 52 0 0 0 53 49l-6-34a18 18 0 0 1-14-11z" fill="#9fb38f" opacity="0.78"/>
+  <circle cx="80" cy="80" r="18" fill="#fbfaf7" stroke="#2f2a25" stroke-width="5"/>
+  <circle cx="80" cy="80" r="6" fill="#2f2a25"/>
+  <path d="M48 48l16 16M112 112l-16-16" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.72"/>
+</svg>

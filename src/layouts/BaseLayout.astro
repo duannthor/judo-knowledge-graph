@@ -2,7 +2,7 @@
 import "../styles/global.css";
 
 const {
-  title = "Judo Knowledge Graph",
+  title = "Technical Machine",
   description = "A static-first judo technique browser."
 } = Astro.props;
 ---
@@ -13,6 +13,7 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/technical-machine-icon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Yuji+Syuku&display=swap" rel="stylesheet" />
@@ -30,8 +31,8 @@ const {
     <header class="site-header">
       <nav class="shell site-nav" aria-label="Primary">
         <a class="brand" href="/">
-          <img src="/judo-graph-mark.svg" alt="" width="36" height="36" />
-          <span>Judo Knowledge Graph</span>
+          <img src="/technical-machine-icon.svg" alt="" width="36" height="36" />
+          <span>Technical Machine</span>
         </a>
         <div class="nav-links">
           <a href="/">Techniques</a>

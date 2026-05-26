@@ -92,12 +92,12 @@ select,
 .list li,
 .technique-row-link {
   transition:
-    background-color 180ms ease,
-    border-color 180ms ease,
-    color 180ms ease,
-    box-shadow 180ms ease,
-    text-decoration-color 180ms ease,
-    filter 180ms ease;
+    background-color 360ms ease,
+    border-color 360ms ease,
+    color 360ms ease,
+    box-shadow 360ms ease,
+    text-decoration-color 360ms ease,
+    filter 360ms ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -300,6 +300,20 @@ h3 {
   color: var(--muted);
   font-size: 1.1rem;
   line-height: 1.65;
+}
+
+.sensei-credit {
+  max-width: 690px;
+  margin: 18px 0 0;
+  border-left: 3px solid var(--accent);
+  padding: 9px 0 9px 13px;
+  color: var(--text);
+  font: 0.98rem/1.55 ui-sans-serif, system-ui, sans-serif;
+}
+
+.sensei-credit a {
+  color: var(--accent-ink);
+  font-weight: 700;
 }
 
 .mark {
