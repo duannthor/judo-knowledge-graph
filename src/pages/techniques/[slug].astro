@@ -113,6 +113,12 @@ const relatedEdgeLabel = (edge, direction) => {
 const sourceRows = technique.sourceIds
   .map((id) => sources.find((source) => source.id === id))
   .filter(Boolean);
+const techniqueVideo = technique.slug === "seoi-nage" ? {
+  title: "Kodokan Seoi-nage Reference Video",
+  embedUrl: "https://www.youtube-nocookie.com/embed/zIq0xI0ogxk",
+  sourceUrl: "https://www.youtube.com/watch?v=zIq0xI0ogxk&list=PLtz539PTepc16H2iu5F3Q3D7_He1EYlIQ&index=2",
+  note: "Seoi-nage is commonly encountered in English-language dojo shorthand as morote seoi-nage when both hands stay on the standard sleeve-and-lapel controls."
+} : undefined;
 ---
 
 <BaseLayout title={`${technique.names.japaneseRomaji} · Judo Knowledge Graph`}>
@@ -178,6 +184,24 @@ const sourceRows = technique.sourceIds
           {baseAdvisories.length > 0 && <span class="tag warning">safety note</span>}
         </div>
       </section>
+
+      {techniqueVideo && (
+        <section class="panel" aria-labelledby="technique-video-title">
+          <h2 id="technique-video-title">{techniqueVideo.title}</h2>
+          <div class="video-embed">
+            <iframe
+              src={techniqueVideo.embedUrl}
+              title={techniqueVideo.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="source">
+            {techniqueVideo.note} <a href={techniqueVideo.sourceUrl}>Open on YouTube</a>.
+          </p>
+        </section>
+      )}
 
       <section class="panel" aria-labelledby="phases-title">
         <h2 id="phases-title">Technique Theme</h2>
