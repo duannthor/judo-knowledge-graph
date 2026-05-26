@@ -296,11 +296,10 @@ const cards = browsableTechniques
                 <span class="context-filter-label">{group.title}</span>
                 <div class="toggle-group">
                   {group.contexts.map((context) => (
-                    <label class="toggle">
+                    <label class="toggle" title={context.shortGloss}>
                       <input type="checkbox" value={context.slug} data-grip-toggle />
                       <span>
                         {context.label}
-                        {context.shortGloss && <small>{context.shortGloss}</small>}
                         {context.japanese && <small>{context.japanese}</small>}
                       </span>
                     </label>

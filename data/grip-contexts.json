@@ -2,6 +2,7 @@
   {
     "slug": "standard-kumi-kata",
     "label": "Standard kumi-kata",
+    "shortGloss": "sleeve-and-lapel grip",
     "japanese": "組方",
     "kana": "くみかた",
     "type": "grip",
@@ -34,6 +35,7 @@
   {
     "slug": "georgian-grip",
     "label": "Georgian grip",
+    "shortGloss": "over-the-back or belt grip",
     "type": "grip",
     "notes": "Over-the-back or belt-control gripping family. Competition use can depend on attack timing and ruleset context.",
     "sourceIds": ["local-practice-advisory-v1"],
