@@ -476,6 +476,10 @@ const cards = browsableTechniques
     const toriSideToggles = Array.from(document.querySelectorAll("[data-tori-side-toggle]"));
     const params = new URLSearchParams(window.location.search);
     const initialGroup = params.get("group");
+    const groupAliases = {
+      "nage-waza": ["te-waza", "koshi-waza", "ashi-waza", "ma-sutemi-waza", "yoko-sutemi-waza"],
+      "katame-waza": ["osaekomi-waza", "shime-waza", "kansetsu-waza"]
+    };
     const storedToriSide = localStorage.getItem("judo-tori-side") ?? "right";
     const paramValues = (...keys) => keys.flatMap((key) => (
       params.getAll(key).flatMap((value) => value.split(",").map((item) => item.trim()).filter(Boolean))
@@ -520,6 +524,12 @@ const cards = browsableTechniques
       }
     }
 
+    function matchesGroupFilter(cardGroup, selectedGroup) {
+      if (selectedGroup === "all") return true;
+      if (cardGroup === selectedGroup) return true;
+      return groupAliases[selectedGroup]?.includes(cardGroup) ?? false;
+    }
+
     function applyFilters() {
       const term = search instanceof HTMLInputElement ? search.value.trim().toLowerCase() : "";
       const group = groupFilter instanceof HTMLInputElement ? groupFilter.value : "all";
@@ -541,7 +551,7 @@ const cards = browsableTechniques
 
       for (const card of cards) {
         const matchesText = !term || card.dataset.search?.includes(term);
-        const matchesGroup = group === "all" || card.dataset.group === group;
+        const matchesGroup = matchesGroupFilter(card.dataset.group ?? "", group);
         const cardRoles = card.dataset.roles?.split(" ") ?? [];
         const cardGrips = card.dataset.grips?.split(" ").filter(Boolean) ?? [];
         const cardFilters = card.dataset.filters?.split(" ").filter(Boolean) ?? [];
