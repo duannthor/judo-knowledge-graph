@@ -2,5 +2,6 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   output: "static",
-  site: "https://example.com"
+  site: "https://thorduann.github.io/judo-knowledge-graph",
+  base: "/judo-knowledge-graph"
 });
