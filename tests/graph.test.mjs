@@ -250,8 +250,13 @@ test("USJF promotion requirements map named techniques and preserve requirement 
   assert.ok(goKyu.requirementStubs.some((stub) => stub.type === "fundamental" && stub.label.includes("natural posture")));
   assert.ok(goKyu.requirementStubs.some((stub) => stub.type === "fundamental" && stub.label.includes("defensive posture")));
   assert.ok(goKyu.requirementStubs.some((stub) => stub.type === "fundamental" && stub.id.endsWith("suriashi")));
-  assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "combination"));
-  assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "counter"));
+  assert.ok(niKyu.requirementStubs.some((stub) => (
+    stub.type === "opposite-side-throw" &&
+    stub.action?.href.includes("grip=kenkayotsu") &&
+    stub.exampleSlugs.includes("uchi-mata")
+  )));
+  assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "combination" && stub.description));
+  assert.ok(niKyu.requirementStubs.some((stub) => stub.type === "counter" && stub.action?.href.includes("role=counter")));
   assert.ok(ranks.every((rank) => !rank.requirementStubs.some((stub) => ["defense", "aggregate-requirement"].includes(stub.type))));
 });
 

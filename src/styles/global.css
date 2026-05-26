@@ -602,6 +602,7 @@ html[data-tori-side="right"] .side-switch-thumb {
 }
 
 .compact-list li {
+  display: grid;
   padding: 9px 10px;
   font: 0.9rem/1.35 ui-sans-serif, system-ui, sans-serif;
 }
@@ -630,8 +631,67 @@ html[data-tori-side="right"] .side-switch-thumb {
   background: color-mix(in srgb, var(--accent), transparent 88%);
 }
 
+.open-requirement-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 8px;
+  height: 100%;
+}
+
+.open-requirement-card > strong {
+  color: var(--text);
+}
+
+.open-requirement-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.open-requirement-examples {
+  display: grid;
+  gap: 4px;
+}
+
+.open-requirement-examples > span {
+  color: color-mix(in srgb, var(--muted), var(--text) 20%);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.open-requirement-examples .tags {
+  margin-top: 0;
+}
+
+.requirement-action {
+  justify-self: start;
+  align-self: end;
+  border: 1px solid color-mix(in srgb, var(--accent), transparent 42%);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: var(--accent-ink);
+  font: 0.82rem/1 ui-sans-serif, system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.requirement-action:hover,
+.requirement-action:focus-visible {
+  background: color-mix(in srgb, var(--accent), transparent 88%);
+}
+
 .promotion-fundamentals-list {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.romaji-break {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.kanji-break {
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 .technique-list-grid {

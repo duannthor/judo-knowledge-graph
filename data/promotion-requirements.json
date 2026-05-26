@@ -180,17 +180,35 @@
       {
         "id": "usjf-senior-2026-ni-kyu-opposite-side-throw",
         "type": "opposite-side-throw",
-        "label": "One opposite-side throw"
+        "label": "One opposite-side throw",
+        "description": "Demonstrate a throw from kenka-yotsu, the opposite-side stance relationship.",
+        "exampleSlugs": ["seoi-nage", "uchi-mata", "ko-soto-gake"],
+        "action": {
+          "label": "Browse opposite-side attacks",
+          "href": "/?grip=kenkayotsu&role=attack&group=nage-waza"
+        }
       },
       {
         "id": "usjf-senior-2026-ni-kyu-combination",
         "type": "combination",
-        "label": "One combination"
+        "label": "One combination",
+        "description": "Demonstrate a linked attacking sequence. The graph distinguishes same-direction pressure, alternating-direction reaction, and direct follow-up combinations.",
+        "exampleSlugs": ["ko-uchi-gari", "seoi-nage", "o-uchi-gari"],
+        "action": {
+          "label": "Browse attacks",
+          "href": "/?role=attack&group=nage-waza"
+        }
       },
       {
         "id": "usjf-senior-2026-ni-kyu-counter",
         "type": "counter",
-        "label": "One counter"
+        "label": "One counter",
+        "description": "Demonstrate a technique that answers uke's attack.",
+        "exampleSlugs": ["tsubame-gaeshi", "o-soto-gaeshi", "uchi-mata-sukashi"],
+        "action": {
+          "label": "Browse counters",
+          "href": "/?role=counter"
+        }
       },
       {
         "id": "usjf-senior-2026-ni-kyu-nage-no-kata-tori-first-3",
@@ -249,17 +267,35 @@
       {
         "id": "usjf-senior-2026-ikkyu-opposite-side-throws",
         "type": "opposite-side-throw",
-        "label": "Two opposite-side throws"
+        "label": "Two opposite-side throws",
+        "description": "Demonstrate two throws from kenka-yotsu, the opposite-side stance relationship.",
+        "exampleSlugs": ["seoi-nage", "uchi-mata", "ko-soto-gake"],
+        "action": {
+          "label": "Browse opposite-side attacks",
+          "href": "/?grip=kenkayotsu&role=attack&group=nage-waza"
+        }
       },
       {
         "id": "usjf-senior-2026-ikkyu-combinations",
         "type": "combination",
-        "label": "Two combinations"
+        "label": "Two combinations",
+        "description": "Demonstrate two linked attacking sequences. Use same-direction pressure or alternating-direction reaction examples as appropriate for your dojo.",
+        "exampleSlugs": ["ko-uchi-gari", "seoi-nage", "o-uchi-gari"],
+        "action": {
+          "label": "Browse attacks",
+          "href": "/?role=attack&group=nage-waza"
+        }
       },
       {
         "id": "usjf-senior-2026-ikkyu-counters",
         "type": "counter",
-        "label": "Two counters"
+        "label": "Two counters",
+        "description": "Demonstrate two techniques that answer uke's attack.",
+        "exampleSlugs": ["tsubame-gaeshi", "o-soto-gaeshi", "uchi-mata-sukashi"],
+        "action": {
+          "label": "Browse counters",
+          "href": "/?role=counter"
+        }
       },
       {
         "id": "usjf-senior-2026-ikkyu-nage-no-kata-uke-all-5",
@@ -326,17 +362,35 @@
       {
         "id": "usjf-senior-2026-shodan-opposite-side-throws",
         "type": "opposite-side-throw",
-        "label": "Three throws from opposite side"
+        "label": "Three throws from opposite side",
+        "description": "Demonstrate three throws from kenka-yotsu, the opposite-side stance relationship.",
+        "exampleSlugs": ["seoi-nage", "uchi-mata", "ko-soto-gake"],
+        "action": {
+          "label": "Browse opposite-side attacks",
+          "href": "/?grip=kenkayotsu&role=attack&group=nage-waza"
+        }
       },
       {
         "id": "usjf-senior-2026-shodan-combinations",
         "type": "combination",
-        "label": "Three combinations"
+        "label": "Three combinations",
+        "description": "Demonstrate three linked attacking sequences, ideally with varied pressure patterns.",
+        "exampleSlugs": ["ko-uchi-gari", "seoi-nage", "o-uchi-gari"],
+        "action": {
+          "label": "Browse attacks",
+          "href": "/?role=attack&group=nage-waza"
+        }
       },
       {
         "id": "usjf-senior-2026-shodan-counters",
         "type": "counter",
-        "label": "Three counters"
+        "label": "Three counters",
+        "description": "Demonstrate three techniques that answer uke's attack.",
+        "exampleSlugs": ["tsubame-gaeshi", "o-soto-gaeshi", "uchi-mata-sukashi"],
+        "action": {
+          "label": "Browse counters",
+          "href": "/?role=counter"
+        }
       },
       {
         "id": "usjf-senior-2026-shodan-nage-no-kata-tori-all-5",

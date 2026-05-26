@@ -79,6 +79,8 @@ const groupStubs = (rank) => {
 
 const getFundamentalStubs = (rank) => (rank.requirementStubs ?? []).filter((stub) => stub.type === "fundamental");
 const getOpenStubGroups = (rank) => groupStubs(rank).filter((group) => group.type !== "fundamental");
+const romajiParts = (romaji) => romaji.split(/(\s+no\s+)/i).filter(Boolean);
+const japaneseParts = (japanese) => japanese?.split(/(の)/).filter(Boolean) ?? [];
 ---
 
 <BaseLayout title="USJF Promotion Requirements · Judo Knowledge Graph">
@@ -143,9 +145,9 @@ const getOpenStubGroups = (rank) => groupStubs(rank).filter((group) => group.typ
                 <div class="promotion-technique-list">
                   {group.techniques.map((technique) => (
                     <a class="technique-row-link promotion-technique-link" href={`/techniques/${technique.slug}/`}>
-                      <span class="kanji-title">{technique.names.japanese}</span>
+                      <span class="kanji-title kanji-break">{japaneseParts(technique.names.japanese).map((part) => part === "の" ? <><wbr />{part}</> : part)}</span>
                       <span>
-                        <strong>{technique.names.japaneseRomaji}</strong>
+                        <strong class="romaji-break">{romajiParts(technique.names.japaneseRomaji).map((part) => part.trim().toLowerCase() === "no" ? <><wbr />{part}</> : part)}</strong>
                         <small>{technique.names.english}</small>
                       </span>
                     </a>
@@ -157,8 +159,8 @@ const getOpenStubGroups = (rank) => groupStubs(rank).filter((group) => group.typ
             {stubGroups.length > 0 && (
               <section class="promotion-requirement-group" aria-labelledby={`${rank.id}-open-requirements-title`}>
                 <div class="promotion-group-heading">
-                  <h3 id={`${rank.id}-open-requirements-title`}>Open requirements</h3>
-                  <span>not mapped to a single technique yet</span>
+                  <h3 id={`${rank.id}-open-requirements-title`}>Flexible exam prompts</h3>
+                  <span>choose appropriate examples with your instructor</span>
                 </div>
                 <div class="promotion-open-groups">
                   {stubGroups.map((group) => (
@@ -173,7 +175,28 @@ const getOpenStubGroups = (rank) => groupStubs(rank).filter((group) => group.typ
                                 <strong>Open Nage-no-kata</strong>
                               </a>
                             ) : (
-                              stub.label
+                              <div class="open-requirement-card">
+                                <strong>{stub.label}</strong>
+                                {stub.description && <p>{stub.description}</p>}
+                                {stub.exampleSlugs?.length > 0 && (
+                                  <div class="open-requirement-examples">
+                                    <span>Examples</span>
+                                    <div class="tags">
+                                      {stub.exampleSlugs.map((slug) => {
+                                        const technique = techniqueBySlug.get(slug);
+                                        return technique ? (
+                                          <a class="tag" href={`/techniques/${technique.slug}/`}>{romajiParts(technique.names.japaneseRomaji).map((part) => part.trim().toLowerCase() === "no" ? <><wbr />{part}</> : part)}</a>
+                                        ) : (
+                                          <span class="tag">{slug}</span>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                )}
+                                {stub.action && (
+                                  <a class="requirement-action" href={stub.action.href}>{stub.action.label}</a>
+                                )}
+                              </div>
                             )}
                           </li>
                         ))}

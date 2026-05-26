@@ -129,6 +129,13 @@ for (const requirement of promotionRequirements) {
     assert.ok(stub.id, `${requirement.id} has requirement stub without id`);
     assert.ok(stub.type, `${stub.id} needs type`);
     assert.ok(stub.label, `${stub.id} needs label`);
+    for (const techniqueSlug of stub.exampleSlugs ?? []) {
+      assert.ok(techniqueSlugs.has(techniqueSlug), `${stub.id} example points to missing technique ${techniqueSlug}`);
+    }
+    if (stub.action) {
+      assert.ok(stub.action.label, `${stub.id} action needs label`);
+      assert.ok(stub.action.href, `${stub.id} action needs href`);
+    }
   }
   assertSources(requirement);
 }

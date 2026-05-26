@@ -477,6 +477,9 @@ const cards = browsableTechniques
     const params = new URLSearchParams(window.location.search);
     const initialGroup = params.get("group");
     const storedToriSide = localStorage.getItem("judo-tori-side") ?? "right";
+    const paramValues = (...keys) => keys.flatMap((key) => (
+      params.getAll(key).flatMap((value) => value.split(",").map((item) => item.trim()).filter(Boolean))
+    ));
 
     function setToriSide(side) {
       const nextSide = side === "left" ? "left" : "right";
@@ -489,6 +492,24 @@ const cards = browsableTechniques
 
     if (initialGroup && groupFilter instanceof HTMLInputElement) {
       groupFilter.value = initialGroup;
+    }
+    if (search instanceof HTMLInputElement) {
+      search.value = params.get("q") ?? params.get("search") ?? "";
+    }
+    for (const toggle of roleToggles) {
+      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("role", "roles").includes(toggle.value);
+    }
+    for (const toggle of gripToggles) {
+      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("grip", "grips", "context", "contexts").includes(toggle.value);
+    }
+    for (const toggle of statusToggles) {
+      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("status", "statuses", "filter", "filters").includes(toggle.value);
+    }
+    for (const toggle of promotionToggles) {
+      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("promotion", "promotions").includes(toggle.value);
+    }
+    for (const toggle of kataToggles) {
+      if (toggle instanceof HTMLInputElement) toggle.checked = paramValues("kata", "katas").includes(toggle.value);
     }
     setToriSide(storedToriSide);
 
