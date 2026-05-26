@@ -1,0 +1,165 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { techniques, variants, promotionRequirements, techniqueVideos } from "../../query.mjs";
+
+const baseUrl = import.meta.env.BASE_URL;
+const urlFor = (path) => `${baseUrl.replace(/\/?$/, "/")}${path.replace(/^\//, "")}`;
+
+const techniqueFamilies = [
+  "Te-waza",
+  "Koshi-waza",
+  "Ashi-waza",
+  "Ma-sutemi-waza",
+  "Yoko-sutemi-waza",
+  "Katame-waza"
+];
+
+const audience = [
+  "Judo students preparing for belt promotions",
+  "Enthusiasts exploring the taxonomy of judo movement",
+  "Instructors building lesson plans and technique references",
+  "Competitors checking competition rules, variants, and cautions"
+];
+
+const featureGroups = [
+  {
+    title: "Technique Catalog",
+    items: [
+      `${techniques.length} technique records across throwing, grappling, counter, and escape families`,
+      `${variants.length} modeled variants, including drop entries, modified competition-legal forms, and reverse-turn seoi entries`,
+      "Japanese names, kana, kanji, English names, and aliases for fast lookup",
+      "Kodokan-style technical families with slimmer browsing tabs"
+    ]
+  },
+  {
+    title: "Rules, Safety, And Variants",
+    items: [
+      "IJF Senior competition legality labeled as the default ruleset context",
+      "Separate safety advisories so practice caution does not get flattened into competition legality",
+      "Illegal, restricted, caution, and competition-legal tags with consistent color treatment",
+      "Variant cards that show when a base technique contains both legal and restricted forms"
+    ]
+  },
+  {
+    title: "Search And Filters",
+    items: [
+      "Search across English, romaji, kana, kanji, aliases, grips, roles, and contexts",
+      "Quick filters for competition study, promotion study, combos, counters, groundwork, and opposite-side stance",
+      "Multi-select role filters so a technique can be found as both an attack and a counter",
+      "Grip and position contexts including kumi-kata, aiyotsu, kenkayotsu, mount, guard, side control, and north-south"
+    ]
+  },
+  {
+    title: "Technique Relationships",
+    items: [
+      "Combination links separated from counters and defenses on technique detail pages",
+      "Combo patterns for same-direction pressure, alternating-direction reaction, direct follow-up, and counter sequences",
+      "Counters connected to their source techniques, including examples such as o-soto-gari to o-soto-gaeshi",
+      "Escapes linked back to the pins, chokes, and locks they answer"
+    ]
+  },
+  {
+    title: "Promotion And Kata",
+    items: [
+      `${promotionRequirements.length} USJF senior promotion ranks modeled through shodan`,
+      "Rank-colored promotion filters and promotion page tabs",
+      "Kuzushi, tsukuri, and kake captured for every listed promotion technique through shodan",
+      "Nage-no-kata guide with set breaks, etiquette notes, role matrix, and Kodokan video reference"
+    ]
+  },
+  {
+    title: "Reference Experience",
+    items: [
+      `${techniqueVideos.length} mapped Kodokan 100 Techniques playlist references`,
+      "Embedded technique video slots with graceful fallbacks when no source is mapped yet",
+      "Light and dark modes with smooth transitions",
+      "Soft kanji display and responsive cards tuned for study rather than marketing clutter"
+    ]
+  }
+];
+
+const nextItems = [
+  "Coach review status for draft mechanics notes",
+  "More complete video mapping and source timestamps",
+  "Dedicated breakout pages for each promotion rank",
+  "Richer combo examples with stance, side, and pressure-pattern filters",
+  "A possible graph export path for Neo4j or another local graph viewer"
+];
+---
+
+<BaseLayout
+  title="Technical Machine v1.0 Release Notes"
+  description="Release notes for the Technical Machine judo technique browser prototype."
+>
+  <section class="intro release-hero" aria-labelledby="page-title">
+    <div>
+      <p class="eyebrow">Release Notes</p>
+      <h1 id="page-title">Technical Machine v1.0</h1>
+      <p class="lede">
+        A static-first judo technique browser for lookup, promotion study, competition legality, safety notes, and technique relationships.
+      </p>
+    </div>
+    <img class="mark" src={urlFor("/technical-machine-icon.svg")} alt="" width="150" height="150" />
+  </section>
+
+  <section class="release-summary-grid" aria-label="Release summary">
+    <article class="panel release-stat">
+      <span>{techniques.length}</span>
+      <strong>technique records</strong>
+    </article>
+    <article class="panel release-stat">
+      <span>{variants.length}</span>
+      <strong>variant records</strong>
+    </article>
+    <article class="panel release-stat">
+      <span>{promotionRequirements.length}</span>
+      <strong>promotion ranks</strong>
+    </article>
+    <article class="panel release-stat">
+      <span>{techniqueVideos.length}</span>
+      <strong>video references</strong>
+    </article>
+  </section>
+
+  <section class="panel release-section" aria-labelledby="overview-title">
+    <p class="eyebrow">Overview</p>
+    <h2 id="overview-title">What this prototype does</h2>
+    <p>
+      Technical Machine consolidates essential judo technique study material into one searchable reference: technical families, Japanese names, promotion requirements, legality notes, safety advisories, variants, counters, escapes, and combination hooks.
+    </p>
+    <div class="tags release-family-tags">
+      {techniqueFamilies.map((family) => <span class="tag accent">{family}</span>)}
+    </div>
+  </section>
+
+  <section class="panel release-section" aria-labelledby="audience-title">
+    <p class="eyebrow">Who It Is For</p>
+    <h2 id="audience-title">Students, instructors, competitors, and curious people</h2>
+    <ul class="release-check-list">
+      {audience.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <section class="release-feature-grid" aria-label="Core features">
+    {featureGroups.map((group) => (
+      <article class="panel release-feature-card">
+        <p class="eyebrow">Core Feature</p>
+        <h2>{group.title}</h2>
+        <ul class="release-check-list">
+          {group.items.map((item) => <li>{item}</li>)}
+        </ul>
+      </article>
+    ))}
+  </section>
+
+  <section class="panel release-section" aria-labelledby="next-title">
+    <p class="eyebrow">What Is Next</p>
+    <h2 id="next-title">The next useful layer is review and depth</h2>
+    <p>
+      v1.0 is ready to show as a prototype. The next round should make provenance more explicit and deepen the pages that are most useful for training.
+    </p>
+    <ul class="release-check-list">
+      {nextItems.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+</BaseLayout>
