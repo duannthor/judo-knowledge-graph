@@ -98,6 +98,8 @@ const variantTurnSummary = (variant) => {
     turn: variant.chirality?.turn
   };
 };
+const stanceContextLabel = (value) => value === "any" ? "any stance" : value;
+const toriSideContextLabel = (value) => value === "any" ? "right or left tori" : value;
 const variantMechanicsRows = variantRows
   .filter((row) => row.variant.mechanics)
   .map((row) => ({
@@ -351,6 +353,9 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
                     {turnSummary && (
                       <p class="chiral-note">
                         {turnSummary.label}
+                        {turnSummary.relation === "standard" && !turnSummary.toriSide && !turnSummary.turn && (
+                          <> · mirrors with tori side</>
+                        )}
                         {turnSummary.toriSide && (
                           <>
                             {" · "}
@@ -389,7 +394,15 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
                   <div class="direction-strip">
                     {variant.mechanics.directionSequences.map((sequence) => (
                       <div>
-                        <span class="mini-label">{sequence.stanceContext} · <span data-tori-side-label data-canonical-tori-side={sequence.toriSide}>{sequence.toriSide}</span></span>
+                        <span class="mini-label">
+                          {stanceContextLabel(sequence.stanceContext)}
+                          {" · "}
+                          {sequence.toriSide === "any" ? (
+                            toriSideContextLabel(sequence.toriSide)
+                          ) : (
+                            <><span data-tori-side-label data-canonical-tori-side={sequence.toriSide}>{sequence.toriSide}</span> tori</>
+                          )}
+                        </span>
                         <div class="tags">
                           {sequence.directions.map((direction) => (
                             <span class="tag" data-direction-label data-canonical-direction={direction}>{direction}</span>
