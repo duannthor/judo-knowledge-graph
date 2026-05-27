@@ -202,6 +202,11 @@ const techniqueVideo = getTechniqueVideo(technique.slug);
 const techniqueVideoEmbedUrl = techniqueVideo ? `https://www.youtube.com/embed/${techniqueVideo.youtubeId}?rel=0` : undefined;
 const techniqueVideoSourceUrl = techniqueVideo ? `https://www.youtube.com/watch?v=${techniqueVideo.youtubeId}&list=${techniqueVideo.playlistId}` : undefined;
 const isAuthorEdited = false;
+const correctionFormEndpoint = import.meta.env.PUBLIC_CORRECTION_FORM_ENDPOINT ?? "https://splitforms.com/api/submit";
+const correctionFormAccessKey = import.meta.env.PUBLIC_SPLITFORMS_ACCESS_KEY ?? "";
+const correctionFormEnabled = Boolean(correctionFormAccessKey);
+const correctionPagePath = urlFor(`/techniques/${technique.slug}/`);
+const correctionPageUrl = Astro.site ? new URL(correctionPagePath, Astro.site).href : correctionPagePath;
 const techniqueVideoNote = technique.slug === "seoi-nage"
   ? "Seoi-nage is commonly encountered in English-language dojo shorthand as morote seoi-nage when both hands stay on the standard sleeve-and-lapel controls."
   : "Kodokan reference video from the 100 Techniques playlist.";
@@ -584,6 +589,85 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
     </aside>
   </div>
 
+  <button class="correction-trigger" type="button" data-correction-open aria-controls="correction-dialog">
+    Suggest a correction
+  </button>
+
+  <dialog class="correction-dialog" id="correction-dialog" aria-labelledby="correction-title">
+    <form
+      class="correction-form"
+      action={correctionFormEndpoint}
+      method="POST"
+      data-correction-form
+      data-enabled={correctionFormEnabled ? "true" : "false"}
+    >
+      <input type="hidden" name="access_key" value={correctionFormAccessKey} />
+      <input type="hidden" name="form_name" value="Technical Machine correction" />
+      <input type="hidden" name="technique_slug" value={technique.slug} />
+      <input type="hidden" name="technique_name" value={technique.names.japaneseRomaji} />
+      <input type="hidden" name="page_url" value={correctionPageUrl} data-correction-page-url />
+      <label class="sr-only" for="correction-botcheck">Leave this unchecked</label>
+      <input id="correction-botcheck" type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
+
+      <div class="correction-header">
+        <div>
+          <p class="eyebrow">Anonymous feedback</p>
+          <h2 id="correction-title">Suggest a correction</h2>
+          <p>
+            Tell me what looks off on {technique.names.japaneseRomaji}. Sources are welcome, but optional.
+          </p>
+        </div>
+        <button class="icon-button" type="button" data-correction-close aria-label="Close correction form">x</button>
+      </div>
+
+      {!correctionFormEnabled && (
+        <p class="correction-status warning">
+          Add <code>PUBLIC_SPLITFORMS_ACCESS_KEY</code> to enable submissions.
+        </p>
+      )}
+
+      <label for="correction-area">
+        <span>Area</span>
+      </label>
+      <select id="correction-area" name="area">
+          <option value="name-translation">Name / translation</option>
+          <option value="mechanics">Mechanics</option>
+          <option value="safety-legality">Safety / legality</option>
+          <option value="video">Video</option>
+          <option value="promotion-requirement">Promotion requirement</option>
+          <option value="combo-counter">Combo / counter</option>
+          <option value="other">Other</option>
+      </select>
+
+      <label for="correction-message">
+        <span>What seems wrong?</span>
+      </label>
+      <textarea id="correction-message" name="message" rows="5" required placeholder="Example: the kuzushi direction seems wrong for right-handed tori."></textarea>
+
+      <label for="correction-suggestion">
+        <span>Suggested correction</span>
+      </label>
+      <textarea id="correction-suggestion" name="suggested_correction" rows="3" placeholder="What should it say instead?"></textarea>
+
+      <label for="correction-source-url">
+        <span>Source link</span>
+      </label>
+      <input id="correction-source-url" name="source_url" type="url" placeholder="https://..." />
+
+      <label for="correction-contact-email">
+        <span>Email, optional</span>
+      </label>
+      <input id="correction-contact-email" name="contact_email" type="email" placeholder="Only if you want a follow-up." />
+
+      <p class="correction-status" data-correction-status aria-live="polite"></p>
+
+      <div class="correction-actions">
+        <button class="clear-filters" type="button" data-correction-close>Cancel</button>
+        <button class="preset-chip" type="submit" disabled={!correctionFormEnabled}>Send correction</button>
+      </div>
+    </form>
+  </dialog>
+
   <script>
     const directionMirrorMap = {
       "front-right": "front-left",
@@ -601,6 +685,12 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
     const toriSideLabels = Array.from(document.querySelectorAll("[data-tori-side-label]"));
     const toriSideToggles = Array.from(document.querySelectorAll("[data-tori-side-toggle]"));
     const appRoot = document.querySelector("[data-technical-machine]");
+    const correctionDialog = document.querySelector("#correction-dialog");
+    const correctionOpen = document.querySelector("[data-correction-open]");
+    const correctionCloseButtons = Array.from(document.querySelectorAll("[data-correction-close]"));
+    const correctionForm = document.querySelector("[data-correction-form]");
+    const correctionStatus = document.querySelector("[data-correction-status]");
+    const correctionPageUrl = document.querySelector("[data-correction-page-url]");
     const storedToriSide = localStorage.getItem("judo-tori-side") ?? "right";
 
     function mirrorValue(value, map, side) {
@@ -635,5 +725,63 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
         if (toggle instanceof HTMLButtonElement) setToriSide(toggle.value);
       });
     }
+
+    if (correctionPageUrl instanceof HTMLInputElement) {
+      correctionPageUrl.value = window.location.href;
+    }
+
+    correctionOpen?.addEventListener("click", () => {
+      if (correctionDialog instanceof HTMLDialogElement) correctionDialog.showModal();
+    });
+
+    for (const button of correctionCloseButtons) {
+      button.addEventListener("click", () => {
+        if (correctionDialog instanceof HTMLDialogElement) correctionDialog.close();
+      });
+    }
+
+    correctionDialog?.addEventListener("click", (event) => {
+      if (event.target === correctionDialog && correctionDialog instanceof HTMLDialogElement) {
+        correctionDialog.close();
+      }
+    });
+
+    correctionForm?.addEventListener("submit", async (event) => {
+      if (!(correctionForm instanceof HTMLFormElement)) return;
+      if (correctionForm.dataset.enabled !== "true") {
+        event.preventDefault();
+        if (correctionStatus instanceof HTMLElement) {
+          correctionStatus.textContent = "Correction submissions need a Splitforms access key first.";
+          correctionStatus.className = "correction-status warning";
+        }
+        return;
+      }
+
+      event.preventDefault();
+      if (correctionStatus instanceof HTMLElement) {
+        correctionStatus.textContent = "Sending...";
+        correctionStatus.className = "correction-status";
+      }
+
+      try {
+        const response = await fetch(correctionForm.action, {
+          method: correctionForm.method,
+          body: new FormData(correctionForm),
+          headers: { Accept: "application/json" }
+        });
+
+        if (!response.ok) throw new Error("Submission failed");
+        correctionForm.reset();
+        if (correctionStatus instanceof HTMLElement) {
+          correctionStatus.textContent = "Thank you. I'll review this correction.";
+          correctionStatus.className = "correction-status success";
+        }
+      } catch {
+        if (correctionStatus instanceof HTMLElement) {
+          correctionStatus.textContent = "Something went wrong. Please try again in a moment.";
+          correctionStatus.className = "correction-status warning";
+        }
+      }
+    });
   </script>
 </BaseLayout>
