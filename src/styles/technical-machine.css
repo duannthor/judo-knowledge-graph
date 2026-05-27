@@ -1641,6 +1641,10 @@
   background: var(--accent-ink);
 }
 
+.technical-machine .correction-trigger-short {
+  display: none;
+}
+
 .technical-machine .correction-dialog {
   width: min(560px, calc(100% - 32px));
   max-height: min(760px, calc(100% - 32px));
@@ -1838,5 +1842,15 @@
   .technical-machine .correction-trigger {
     right: 12px;
     bottom: 12px;
+    padding: 9px 12px;
+    font-size: 0.82rem;
+  }
+
+  .technical-machine .correction-trigger-full {
+    display: none;
+  }
+
+  .technical-machine .correction-trigger-short {
+    display: inline;
   }
 }
