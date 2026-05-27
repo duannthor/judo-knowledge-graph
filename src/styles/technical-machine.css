@@ -1829,14 +1829,21 @@
   }
 
   .technical-machine .promotion-technique-link {
-    grid-template-columns: minmax(56px, 0.28fr) minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 8px;
   }
 
   .technical-machine .promotion-technique-link .kanji-title {
-    font-size: clamp(1.12rem, 5vw, 1.32rem);
+    font-size: clamp(1.42rem, 7vw, 1.8rem);
     line-break: strict;
-    overflow-wrap: anywhere;
-    word-break: normal;
+    overflow-wrap: normal;
+    word-break: keep-all;
+    line-height: 1.18;
+  }
+
+  .technical-machine .promotion-technique-link span:last-child {
+    gap: 3px;
   }
 
   .technical-machine .correction-trigger {
