@@ -1787,6 +1787,17 @@
     grid-column: 2;
   }
 
+  .technical-machine .promotion-technique-link {
+    grid-template-columns: minmax(56px, 0.28fr) minmax(0, 1fr);
+  }
+
+  .technical-machine .promotion-technique-link .kanji-title {
+    font-size: clamp(1.12rem, 5vw, 1.32rem);
+    line-break: strict;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
   .technical-machine .correction-trigger {
     right: 12px;
     bottom: 12px;
