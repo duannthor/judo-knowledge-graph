@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../styles/technical-machine.css";
 
 const {
   title = "Technical Machine",
@@ -20,50 +21,55 @@ const urlFor = (path) => `${baseUrl.replace(/\/?$/, "/")}${path.replace(/^\//, "
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Yuji+Syuku&display=swap" rel="stylesheet" />
-    <script is:inline>
-      const storedTheme = localStorage.getItem("judo-theme");
-      if (storedTheme === "light" || storedTheme === "dark") {
-        document.documentElement.dataset.theme = storedTheme;
-      } else {
-        document.documentElement.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      }
-    </script>
     <title>{title}</title>
   </head>
   <body>
-    <header class="site-header">
-      <nav class="shell site-nav" aria-label="Primary">
-        <a class="brand" href={urlFor("/")}>
-          <img src={urlFor("/technical-machine-icon.svg")} alt="" width="36" height="36" />
-          <span>Technical Machine</span>
-        </a>
-        <div class="nav-links">
-          <a href={urlFor("/")}>Techniques</a>
-          <a href={urlFor("/kata/nage-no-kata/")}>Nage-no-kata</a>
-          <a href={urlFor("/promotion/")}>Promotion</a>
-          <a href={urlFor("/release-notes/")}>v1.0</a>
-          <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
-            <span class="theme-toggle-thumb" aria-hidden="true"></span>
-            <span>Light</span>
-            <span>Dark</span>
-          </button>
-        </div>
-      </nav>
-    </header>
-    <main class="shell page">
-      <slot />
-    </main>
+    <div class="technical-machine" data-technical-machine>
+      <script is:inline>
+        const technicalMachineRoot = document.currentScript.closest("[data-technical-machine]");
+        const storedTheme = localStorage.getItem("judo-theme");
+        if (storedTheme === "light" || storedTheme === "dark") {
+          technicalMachineRoot.dataset.theme = storedTheme;
+        } else {
+          technicalMachineRoot.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+      </script>
+      <header class="site-header">
+        <nav class="shell site-nav" aria-label="Primary">
+          <a class="brand" href={urlFor("/")}>
+            <img src={urlFor("/technical-machine-icon.svg")} alt="" width="36" height="36" />
+            <span>Technical Machine</span>
+          </a>
+          <div class="nav-links">
+            <a href="/">Main site</a>
+            <a href={urlFor("/")}>Techniques</a>
+            <a href={urlFor("/kata/nage-no-kata/")}>Nage-no-kata</a>
+            <a href={urlFor("/promotion/")}>Promotion</a>
+            <a href={urlFor("/release-notes/")}>v1.0</a>
+            <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+              <span class="theme-toggle-thumb" aria-hidden="true"></span>
+              <span>Light</span>
+              <span>Dark</span>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <main class="shell page">
+        <slot />
+      </main>
+    </div>
     <script is:inline>
-      const themeToggle = document.querySelector("[data-theme-toggle]");
+      const appRoot = document.querySelector("[data-technical-machine]");
+      const themeToggle = appRoot?.querySelector("[data-theme-toggle]");
       const themePreference = window.matchMedia("(prefers-color-scheme: dark)");
 
       function currentTheme() {
-        return document.documentElement.dataset.theme || (themePreference.matches ? "dark" : "light");
+        return appRoot?.dataset.theme || (themePreference.matches ? "dark" : "light");
       }
 
       function setTheme(theme) {
         const nextTheme = theme === "dark" ? "dark" : "light";
-        document.documentElement.dataset.theme = nextTheme;
+        if (appRoot) appRoot.dataset.theme = nextTheme;
         localStorage.setItem("judo-theme", nextTheme);
         themeToggle?.setAttribute("aria-pressed", String(nextTheme === "dark"));
       }

@@ -597,6 +597,7 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
     const directionLabels = Array.from(document.querySelectorAll("[data-direction-label]"));
     const toriSideLabels = Array.from(document.querySelectorAll("[data-tori-side-label]"));
     const toriSideToggles = Array.from(document.querySelectorAll("[data-tori-side-toggle]"));
+    const appRoot = document.querySelector("[data-technical-machine]");
     const storedToriSide = localStorage.getItem("judo-tori-side") ?? "right";
 
     function mirrorValue(value, map, side) {
@@ -606,7 +607,7 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
 
     function setToriSide(side) {
       const nextSide = side === "left" ? "left" : "right";
-      document.documentElement.dataset.toriSide = nextSide;
+      if (appRoot instanceof HTMLElement) appRoot.dataset.toriSide = nextSide;
       localStorage.setItem("judo-tori-side", nextSide);
 
       for (const label of directionLabels) {

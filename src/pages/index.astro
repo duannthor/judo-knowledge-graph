@@ -695,6 +695,7 @@ const cards = browsableTechniques
     const activeFilterTags = document.querySelector("#active-filter-tags");
     const cards = Array.from(document.querySelectorAll("[data-technique-card]"));
     const toriSideToggles = Array.from(document.querySelectorAll("[data-tori-side-toggle]"));
+    const appRoot = document.querySelector("[data-technical-machine]");
     const params = new URLSearchParams(window.location.search);
     const initialGroup = params.get("group");
     const groupAliases = {
@@ -762,7 +763,7 @@ const cards = browsableTechniques
 
     function setToriSide(side) {
       const nextSide = side === "left" ? "left" : "right";
-      document.documentElement.dataset.toriSide = nextSide;
+      if (appRoot instanceof HTMLElement) appRoot.dataset.toriSide = nextSide;
       localStorage.setItem("judo-tori-side", nextSide);
       for (const toggle of toriSideToggles) {
         setToggleActive(toggle, toggleValue(toggle) === nextSide);
