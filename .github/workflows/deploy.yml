@@ -23,6 +23,9 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          PUBLIC_SPLITFORMS_ACCESS_KEY: ${{ secrets.PUBLIC_SPLITFORMS_ACCESS_KEY }}
+          PUBLIC_CORRECTION_FORM_ENDPOINT: ${{ vars.PUBLIC_CORRECTION_FORM_ENDPOINT }}
         run: npm run build
 
       - name: Deploy to gh-pages

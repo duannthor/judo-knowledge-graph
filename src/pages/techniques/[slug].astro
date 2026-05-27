@@ -641,6 +641,7 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
       <input type="hidden" name="technique_slug" value={technique.slug} />
       <input type="hidden" name="technique_name" value={technique.names.japaneseRomaji} />
       <input type="hidden" name="page_url" value={correctionPageUrl} data-correction-page-url />
+      <input type="hidden" name="_start_time" value="" data-correction-start-time />
       <label class="sr-only" for="correction-botcheck">Leave this unchecked</label>
       <input id="correction-botcheck" type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
 
@@ -726,6 +727,7 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
     const correctionForm = document.querySelector("[data-correction-form]");
     const correctionStatus = document.querySelector("[data-correction-status]");
     const correctionPageUrl = document.querySelector("[data-correction-page-url]");
+    const correctionStartTime = document.querySelector("[data-correction-start-time]");
     const storedToriSide = localStorage.getItem("judo-tori-side") ?? "right";
 
     function mirrorValue(value, map, side) {
@@ -763,6 +765,9 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
 
     if (correctionPageUrl instanceof HTMLInputElement) {
       correctionPageUrl.value = window.location.href;
+    }
+    if (correctionStartTime instanceof HTMLInputElement) {
+      correctionStartTime.value = String(Date.now());
     }
 
     correctionOpen?.addEventListener("click", () => {
