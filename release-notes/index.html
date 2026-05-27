@@ -12,7 +12,86 @@ A static-first judo technique browser for lookup, promotion study, competition l
 Technical Machine consolidates essential judo technique study material into one searchable reference: technical families, Japanese names, promotion requirements, legality notes, safety advisories, variants, counters, escapes, and combination hooks.
 </p> <div class="tags release-family-tags"> <span class="tag accent">Te-waza</span><span class="tag accent">Koshi-waza</span><span class="tag accent">Ashi-waza</span><span class="tag accent">Ma-sutemi-waza</span><span class="tag accent">Yoko-sutemi-waza</span><span class="tag accent">Katame-waza</span> </div> </section> <section class="panel release-section" aria-labelledby="audience-title"> <p class="eyebrow">Who It Is For</p> <h2 id="audience-title">Students, instructors, competitors, and curious people</h2> <ul class="release-check-list"> <li>Judo students preparing for belt promotions</li><li>Enthusiasts exploring the taxonomy of judo movement</li><li>Instructors building lesson plans and technique references</li><li>Competitors checking competition rules, variants, and cautions</li> </ul> </section> <section class="release-feature-grid" aria-label="Core features"> <article class="panel release-feature-card"> <p class="eyebrow">Core Feature</p> <h2>Technique Catalog</h2> <ul class="release-check-list"> <li>127 technique records across throwing, grappling, counter, and escape families</li><li>18 modeled variants, including drop entries, modified competition-legal forms, and reverse-turn seoi entries</li><li>Japanese names, kana, kanji, English names, and aliases for fast lookup</li><li>Kodokan-style technical families with slimmer browsing tabs</li> </ul> </article><article class="panel release-feature-card"> <p class="eyebrow">Core Feature</p> <h2>Rules, Safety, And Variants</h2> <ul class="release-check-list"> <li>IJF Senior competition legality labeled as the default ruleset context</li><li>Separate safety advisories so practice caution does not get flattened into competition legality</li><li>Illegal, restricted, caution, and competition-legal tags with consistent color treatment</li><li>Variant cards that show when a base technique contains both legal and restricted forms</li> </ul> </article><article class="panel release-feature-card"> <p class="eyebrow">Core Feature</p> <h2>Search And Filters</h2> <ul class="release-check-list"> <li>Search across English, romaji, kana, kanji, aliases, grips, roles, and contexts</li><li>Quick filters for competition study, promotion study, combos, counters, groundwork, and opposite-side stance</li><li>Multi-select role filters so a technique can be found as both an attack and a counter</li><li>Grip and position contexts including kumi-kata, aiyotsu, kenkayotsu, mount, guard, side control, and north-south</li><li>Content filters for video linked, video not linked, author edited, and pending review</li> </ul> </article><article class="panel release-feature-card"> <p class="eyebrow">Core Feature</p> <h2>Technique Relationships</h2> <ul class="release-check-list"> <li>Combination links separated from counters and defenses on technique detail pages</li><li>Combo patterns for same-direction pressure, alternating-direction reaction, direct follow-up, and counter sequences</li><li>Counters connected to their source techniques, including examples such as o-soto-gari to o-soto-gaeshi</li><li>Escapes linked back to the pins, chokes, and locks they answer</li> </ul> </article><article class="panel release-feature-card"> <p class="eyebrow">Core Feature</p> <h2>Promotion And Kata</h2> <ul class="release-check-list"> <li>6 USJF senior promotion ranks modeled through shodan</li><li>Rank-colored promotion filters and promotion page tabs</li><li>Kuzushi, tsukuri, and kake captured for every listed promotion technique through shodan</li><li>Nage-no-kata guide with set breaks, etiquette notes, role matrix, and Kodokan video reference</li> </ul> </article><article class="panel release-feature-card"> <p class="eyebrow">Core Feature</p> <h2>Reference Experience</h2> <ul class="release-check-list"> <li>92 mapped Kodokan 100 Techniques playlist references</li><li>Embedded technique video slots with graceful fallbacks when no source is mapped yet</li><li>Light and dark modes with smooth transitions</li><li>Soft kanji display and responsive cards tuned for study rather than marketing clutter</li> </ul> </article><article class="panel release-feature-card"> <p class="eyebrow">Core Feature</p> <h2>Review And Integration</h2> <ul class="release-check-list"> <li>Anonymous correction form on technique pages, ready for a Splitforms hosted endpoint</li><li>Hidden correction metadata for technique slug, technique name, and page URL</li><li>Pending review and author-edited content status support for future coach review workflows</li><li>Technical Machine styles scoped under a mini-app wrapper so it can live inside a larger personal site</li><li>App-specific navigation with a main-site link for future integrated hosting</li> </ul> </article> </section> <section class="panel release-section" aria-labelledby="next-title"> <p class="eyebrow">What Is Next</p> <h2 id="next-title">The next useful layer is review and depth</h2> <p>
 v1.0 is ready to show as a prototype. The next round should make provenance more explicit and deepen the pages that are most useful for training.
-</p> <ul class="release-check-list"> <li>Connect the hosted Splitforms access key and triage anonymous correction submissions</li><li>Promote reviewed technique pages from pending review to author edited</li><li>Add source timestamps and more complete video mapping</li><li>Dedicated breakout pages for each promotion rank</li><li>Richer combo examples with stance, side, and pressure-pattern filters</li><li>A possible graph export path for Neo4j or another local graph viewer</li> </ul> </section>  </main> </div> <script>
+</p> <ul class="release-check-list"> <li>Connect the hosted Splitforms access key and triage anonymous correction submissions</li><li>Promote reviewed technique pages from pending review to author edited</li><li>Add source timestamps and more complete video mapping</li><li>Dedicated breakout pages for each promotion rank</li><li>Richer combo examples with stance, side, and pressure-pattern filters</li><li>A possible graph export path for Neo4j or another local graph viewer</li> </ul> </section>  </main> <button class="correction-trigger" type="button" data-feedback-open aria-controls="feedback-dialog"> <span class="correction-trigger-full">Submit feedback</span> <span class="correction-trigger-short">Feedback</span> </button> <dialog class="correction-dialog" id="feedback-dialog" aria-labelledby="feedback-title"> <form class="correction-form" action="https://splitforms.com/api/submit" method="POST" data-feedback-form data-enabled="true"> <input type="hidden" name="access_key" value="864ea7b69beb4d44a29ad8d1d2356aa7"> <input type="hidden" name="form_name" value="Technical Machine feedback"> <input type="hidden" name="page_type" value="release-notes"> <input type="hidden" name="page_title" value="Technical Machine v1.0 Release Notes"> <input type="hidden" name="subject_slug" value="v1.0"> <input type="hidden" name="subject_name" value="Technical Machine v1.0 Release Notes"> <input type="hidden" name="page_url" value="" data-feedback-page-url> <input type="hidden" name="_start_time" value="" data-feedback-start-time> <label class="sr-only" for="feedback-botcheck">Leave this unchecked</label> <input id="feedback-botcheck" type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off"> <div class="correction-header"> <div> <p class="eyebrow">Anonymous feedback</p> <h2 id="feedback-title">Submit feedback</h2> <p>
+Tell me what would make Technical Machine v1.0 Release Notes clearer or more useful. Sources are welcome, but optional.
+</p> </div> <button class="icon-button" type="button" data-feedback-close aria-label="Close feedback form">x</button> </div>  <label for="feedback-area"> <span>Type</span> </label> <select id="feedback-area" name="area"> <option value="correction">Correction</option> <option value="enhancement-request">Enhancement request</option> <option value="name-translation">Name / translation</option> <option value="mechanics">Mechanics</option> <option value="safety-legality">Safety / legality</option> <option value="video">Video</option> <option value="promotion-requirement">Promotion requirement</option> <option value="combo-counter">Combo / counter</option> <option value="other">Other</option> </select> <label for="feedback-message"> <span>Feedback</span> </label> <textarea id="feedback-message" name="message" rows="5" required placeholder="Example: I would like a comparison between the standard and drop versions here."></textarea> <label for="feedback-suggestion"> <span>Suggested change</span> </label> <textarea id="feedback-suggestion" name="suggested_correction" rows="3" placeholder="What should change or be added?"></textarea> <label for="feedback-source-url"> <span>Source link</span> </label> <input id="feedback-source-url" name="source_url" type="url" placeholder="https://..."> <label for="feedback-contact-email"> <span>Email, optional</span> </label> <input id="feedback-contact-email" name="contact_email" type="email" placeholder="Only if you want a follow-up."> <p class="correction-status" data-feedback-status aria-live="polite"></p> <div class="correction-actions"> <button class="clear-filters" type="button" data-feedback-close>Cancel</button> <button class="preset-chip" type="submit">Send feedback</button> </div> </form> </dialog> <script>
+  (() => {
+    const feedbackDialog = document.querySelector("#feedback-dialog");
+    const feedbackOpen = document.querySelector("[data-feedback-open]");
+    const feedbackCloseButtons = Array.from(document.querySelectorAll("[data-feedback-close]"));
+    const feedbackForm = document.querySelector("[data-feedback-form]");
+    const feedbackStatus = document.querySelector("[data-feedback-status]");
+    const feedbackPageUrl = document.querySelector("[data-feedback-page-url]");
+    const feedbackStartTime = document.querySelector("[data-feedback-start-time]");
+
+    if (feedbackPageUrl instanceof HTMLInputElement) {
+      feedbackPageUrl.value = window.location.href;
+    }
+    if (feedbackStartTime instanceof HTMLInputElement) {
+      feedbackStartTime.value = String(Date.now());
+    }
+
+    feedbackOpen?.addEventListener("click", () => {
+      if (feedbackDialog instanceof HTMLDialogElement) feedbackDialog.showModal();
+    });
+
+    for (const button of feedbackCloseButtons) {
+      button.addEventListener("click", () => {
+        if (feedbackDialog instanceof HTMLDialogElement) feedbackDialog.close();
+      });
+    }
+
+    feedbackDialog?.addEventListener("click", (event) => {
+      if (event.target === feedbackDialog && feedbackDialog instanceof HTMLDialogElement) {
+        feedbackDialog.close();
+      }
+    });
+
+    feedbackForm?.addEventListener("submit", async (event) => {
+      if (!(feedbackForm instanceof HTMLFormElement)) return;
+      if (feedbackForm.dataset.enabled !== "true") {
+        event.preventDefault();
+        if (feedbackStatus instanceof HTMLElement) {
+          feedbackStatus.textContent = "Feedback submissions need a Splitforms access key first.";
+          feedbackStatus.className = "correction-status warning";
+        }
+        return;
+      }
+
+      event.preventDefault();
+      if (feedbackStatus instanceof HTMLElement) {
+        feedbackStatus.textContent = "Sending...";
+        feedbackStatus.className = "correction-status";
+      }
+
+      try {
+        const response = await fetch(feedbackForm.action, {
+          method: feedbackForm.method,
+          body: new FormData(feedbackForm),
+          headers: { Accept: "application/json" }
+        });
+
+        if (!response.ok) throw new Error("Submission failed");
+        feedbackForm.reset();
+        if (feedbackStartTime instanceof HTMLInputElement) {
+          feedbackStartTime.value = String(Date.now());
+        }
+        if (feedbackPageUrl instanceof HTMLInputElement) {
+          feedbackPageUrl.value = window.location.href;
+        }
+        if (feedbackStatus instanceof HTMLElement) {
+          feedbackStatus.textContent = "Thank you. I'll review this feedback.";
+          feedbackStatus.className = "correction-status success";
+        }
+      } catch {
+        if (feedbackStatus instanceof HTMLElement) {
+          feedbackStatus.textContent = "Something went wrong. Please try again in a moment.";
+          feedbackStatus.className = "correction-status warning";
+        }
+      }
+    });
+  })();
+</script> </div> <script>
       const appRoot = document.querySelector("[data-technical-machine]");
       const themeToggle = appRoot?.querySelector("[data-theme-toggle]");
       const themePreference = window.matchMedia("(prefers-color-scheme: dark)");
