@@ -1755,8 +1755,20 @@
   }
 
   .technical-machine .site-nav {
+    flex-direction: column;
     align-items: flex-start;
     padding: 16px 0;
+  }
+
+  .technical-machine .brand,
+  .technical-machine .nav-links {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .technical-machine .nav-links {
+    flex-wrap: wrap;
+    gap: 10px 14px;
   }
 
   .technical-machine .mark {
