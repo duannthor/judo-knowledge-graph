@@ -46,7 +46,8 @@ const featureGroups = [
       "Search across English, romaji, kana, kanji, aliases, grips, roles, and contexts",
       "Quick filters for competition study, promotion study, combos, counters, groundwork, and opposite-side stance",
       "Multi-select role filters so a technique can be found as both an attack and a counter",
-      "Grip and position contexts including kumi-kata, aiyotsu, kenkayotsu, mount, guard, side control, and north-south"
+      "Grip and position contexts including kumi-kata, aiyotsu, kenkayotsu, mount, guard, side control, and north-south",
+      "Content filters for video linked, video not linked, author edited, and pending review"
     ]
   },
   {
@@ -75,12 +76,23 @@ const featureGroups = [
       "Light and dark modes with smooth transitions",
       "Soft kanji display and responsive cards tuned for study rather than marketing clutter"
     ]
+  },
+  {
+    title: "Review And Integration",
+    items: [
+      "Anonymous correction form on technique pages, ready for a Splitforms hosted endpoint",
+      "Hidden correction metadata for technique slug, technique name, and page URL",
+      "Pending review and author-edited content status support for future coach review workflows",
+      "Technical Machine styles scoped under a mini-app wrapper so it can live inside a larger personal site",
+      "App-specific navigation with a main-site link for future integrated hosting"
+    ]
   }
 ];
 
 const nextItems = [
-  "Coach review status for draft mechanics notes",
-  "More complete video mapping and source timestamps",
+  "Connect the hosted Splitforms access key and triage anonymous correction submissions",
+  "Promote reviewed technique pages from pending review to author edited",
+  "Add source timestamps and more complete video mapping",
   "Dedicated breakout pages for each promotion rank",
   "Richer combo examples with stance, side, and pressure-pattern filters",
   "A possible graph export path for Neo4j or another local graph viewer"
