@@ -35,9 +35,15 @@ const classificationLabels = technique.classifications.map((slug) => {
 
 const baseLegality = getLegality(technique.slug);
 const baseAdvisories = getSafetyAdvisories(technique.slug);
+const variantSortRank = (variant) => {
+  if (variant.modifiers?.includes("drop") || variant.actionFeatures?.includes("drop-entry")) return 10;
+  if (variant.modifiers?.includes("reverse-turn") || variant.actionFeatures?.includes("reverse-turn")) return 20;
+  return 30;
+};
 
 const variantRows = variants
   .filter((variant) => variant.baseTechniqueSlug === technique.slug)
+  .sort((a, b) => variantSortRank(a) - variantSortRank(b) || a.slug.localeCompare(b.slug))
   .map((variant) => ({
     variant,
     legality: getLegality(variant.slug),
@@ -99,6 +105,21 @@ const variantMechanicsRows = variantRows
     turnSummary: variantTurnSummary(row.variant)
   }))
   .filter((row) => !(row.turnSummary?.relation && row.turnSummary.toriSide === "left"));
+const mechanicsRows = [
+  ...(hasBasePhases ? [{
+    variant: {
+      slug: technique.slug,
+      name: technique.names.japaneseRomaji,
+      mechanics: technique.phases
+    },
+    legality: baseLegality,
+    turnSummary: {
+      relation: "standard",
+      label: "Standard-side turn"
+    }
+  }] : []),
+  ...variantMechanicsRows
+];
 
 const outgoingEdgeRows = comboEdges
   .filter((edge) => edge.fromSlug === technique.slug || variantRows.some((row) => row.variant.slug === edge.fromSlug))
@@ -320,9 +341,9 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
 
       <section class="panel" aria-labelledby="variant-mechanics-title">
         <h2 id="variant-mechanics-title">Mechanics By Variant</h2>
-        {variantMechanicsRows.length > 0 ? (
+        {mechanicsRows.length > 0 ? (
           <div class="variant-mechanics">
-            {variantMechanicsRows.map(({ variant, legality, turnSummary }) => (
+            {mechanicsRows.map(({ variant, legality, turnSummary }) => (
               <article class="mechanics-card">
                 <div class="mechanics-heading">
                   <div>
