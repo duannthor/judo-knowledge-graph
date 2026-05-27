@@ -201,6 +201,7 @@ const edgeRelatedLabel = (row) => {
 const techniqueVideo = getTechniqueVideo(technique.slug);
 const techniqueVideoEmbedUrl = techniqueVideo ? `https://www.youtube.com/embed/${techniqueVideo.youtubeId}?rel=0` : undefined;
 const techniqueVideoSourceUrl = techniqueVideo ? `https://www.youtube.com/watch?v=${techniqueVideo.youtubeId}&list=${techniqueVideo.playlistId}` : undefined;
+const isAuthorEdited = false;
 const techniqueVideoNote = technique.slug === "seoi-nage"
   ? "Seoi-nage is commonly encountered in English-language dojo shorthand as morote seoi-nage when both hands stay on the standard sleeve-and-lapel controls."
   : "Kodokan reference video from the 100 Techniques playlist.";
@@ -268,6 +269,8 @@ const sourceRows = Array.from(new Set([...technique.sourceIds, ...(techniqueVide
           {baseLegality?.status === "illegal" && <span class="tag danger">competition banned</span>}
           {baseLegality?.status === "restricted" && <span class="tag danger">restricted</span>}
           {baseAdvisories.length > 0 && <span class="tag warning">safety note</span>}
+          {techniqueVideo ? <span class="tag">video linked</span> : <span class="tag warning">video not linked</span>}
+          {isAuthorEdited ? <span class="tag success">author edited</span> : <span class="tag warning">pending review</span>}
         </div>
       </section>
 

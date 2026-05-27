@@ -5,6 +5,7 @@ import {
   comboEdges,
   getLegality,
   getSafetyAdvisories,
+  getTechniqueVideo,
   getVariantsFor,
   gripContexts,
   kataMemberships,
@@ -256,6 +257,8 @@ const cards = browsableTechniques
     const primaryGroup = groups.find((group) => technique.classifications.includes(group)) ?? "other";
     const baseLegality = getLegality(technique.slug);
     const variants = getVariantsFor(technique.slug);
+    const hasTechniqueVideo = Boolean(getTechniqueVideo(technique.slug));
+    const isAuthorEdited = false;
     const gripContextSlugSet = new Set(technique.gripContextSlugs ?? []);
     for (const variant of variants) {
       for (const slug of variant.gripContextSlugs ?? []) {
@@ -322,6 +325,10 @@ const cards = browsableTechniques
       (restrictedVariantCount > 0 || baseRestricted) && "restricted-variant",
       hasMixedLegality && "mixed-legality",
       advisories.length > 0 && "safety-note",
+      hasTechniqueVideo && "video-linked",
+      !hasTechniqueVideo && "video-not-linked",
+      isAuthorEdited && "author-edited",
+      !isAuthorEdited && "pending-review",
       hasComboLinks && "has-combo-links",
       startsCombo && "combo-starter",
       followsCombo && "combo-follow-up",
@@ -560,6 +567,23 @@ const cards = browsableTechniques
             </div>
           </div>
           <div class="filter-group">
+            <span class="filter-label">Content</span>
+            <div class="toggle-group">
+              <button class="toggle" type="button" value="video-linked" data-status-toggle aria-pressed="false">
+                <span>Video linked</span>
+              </button>
+              <button class="toggle" type="button" value="video-not-linked" data-status-toggle aria-pressed="false">
+                <span>Video not linked</span>
+              </button>
+              <button class="toggle" type="button" value="author-edited" data-status-toggle aria-pressed="false">
+                <span>Author edited</span>
+              </button>
+              <button class="toggle" type="button" value="pending-review" data-status-toggle aria-pressed="false">
+                <span>Pending review</span>
+              </button>
+            </div>
+          </div>
+          <div class="filter-group">
             <span class="filter-label">
               Promotion Requirements
               <small>{promotionRequirementLabel}</small>
@@ -735,6 +759,10 @@ const cards = browsableTechniques
       "drop-entry": "Drop entry",
       "classic-banned": "Classic banned",
       "mixed-legality": "Mixed legality",
+      "video-linked": "Video linked",
+      "video-not-linked": "Video not linked",
+      "author-edited": "Author edited",
+      "pending-review": "Pending review",
       "promotion-requirement": "Any promotion requirement"
     };
 
@@ -889,6 +917,10 @@ const cards = browsableTechniques
       "drop-entry",
       "classic-banned",
       "mixed-legality",
+      "video-linked",
+      "video-not-linked",
+      "author-edited",
+      "pending-review",
       "promotion-requirement"
     ]);
     if (
