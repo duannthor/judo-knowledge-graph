@@ -85,7 +85,12 @@ const romajiParts = (romaji) => romaji.split(/(\s+no\s+)/i).filter(Boolean);
 const japaneseParts = (japanese) => japanese?.split(/(の)/).filter(Boolean) ?? [];
 ---
 
-<BaseLayout title="USJF Promotion Requirements · Technical Machine">
+<BaseLayout
+  title="USJF Promotion Requirements · Technical Machine"
+  feedbackPageType="promotion"
+  feedbackSubjectSlug="usjf-senior-promotion-2026"
+  feedbackSubjectName="USJF Senior Promotion Requirements, 2026"
+>
   <section class="intro" aria-labelledby="page-title">
     <div>
       <p class="eyebrow">Promotion</p>

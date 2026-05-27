@@ -4,15 +4,18 @@ Technical Machine uses Splitforms as a hosted backend for anonymous feedback. Th
 
 ## Current Form Behavior
 
-- The feedback button appears on technique detail pages.
+- The feedback button appears on every Technical Machine page.
 - Local development reads `.env`.
 - GitHub Pages builds read GitHub Actions variables/secrets.
 - If `PUBLIC_SPLITFORMS_ACCESS_KEY` is missing, the form renders but submission is disabled.
+- Feedback can be categorized as a correction, enhancement request, mechanics note, safety/legality note, video note, promotion requirement note, combo/counter note, or other.
 - The form includes:
   - `access_key`
   - page URL
-  - technique slug
-  - technique name
+  - page type
+  - page title
+  - subject slug, when available
+  - subject name, when available
   - optional contact email
   - honeypot checkbox named `botcheck`
   - time-trap field named `_start_time`
@@ -52,7 +55,7 @@ https://<github-username>.github.io
 8. Later, when hosted under the personal site, add that production domain too.
 9. Send one test submission from the deployed site.
 10. Confirm the submission lands in the Splitforms dashboard.
-11. Confirm the hidden fields include the page URL and technique slug.
+11. Confirm the hidden fields include the page URL, page type, and subject slug when available.
 
 ## Local Development Setup
 
@@ -69,7 +72,7 @@ Then run:
 npm run dev
 ```
 
-Open a technique page and test the form. If the key is present, the submit button should be enabled.
+Open any page and test the form. If the key is present, the submit button should be enabled.
 
 ## GitHub Pages Setup
 

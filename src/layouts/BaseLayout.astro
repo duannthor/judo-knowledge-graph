@@ -1,10 +1,14 @@
 ---
+import FeedbackForm from "../components/FeedbackForm.astro";
 import "../styles/global.css";
 import "../styles/technical-machine.css";
 
 const {
   title = "Technical Machine",
-  description = "A static-first judo technique browser."
+  description = "A static-first judo technique browser.",
+  feedbackPageType = "page",
+  feedbackSubjectSlug = "",
+  feedbackSubjectName = ""
 } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL;
@@ -57,6 +61,12 @@ const urlFor = (path) => `${baseUrl.replace(/\/?$/, "/")}${path.replace(/^\//, "
       <main class="shell page">
         <slot />
       </main>
+      <FeedbackForm
+        pageType={feedbackPageType}
+        pageTitle={title}
+        subjectSlug={feedbackSubjectSlug}
+        subjectName={feedbackSubjectName}
+      />
     </div>
     <script is:inline>
       const appRoot = document.querySelector("[data-technical-machine]");
