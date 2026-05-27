@@ -969,6 +969,7 @@
 }
 
 .technical-machine .table-scroll {
+  max-width: 100%;
   overflow-x: auto;
 }
 
@@ -1398,6 +1399,11 @@
   align-items: start;
 }
 
+.technical-machine .detail-grid > *,
+.technical-machine .panel {
+  min-width: 0;
+}
+
 .technical-machine .panel {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1797,6 +1803,25 @@
   .technical-machine .kata-technique-link .kanji-title,
 .technical-machine .kata-technique-link span:last-child {
     grid-column: 2;
+  }
+
+  .technical-machine .kata-requirement-table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .technical-machine .kata-requirement-table th,
+  .technical-machine .kata-requirement-table td {
+    padding: 7px 4px;
+  }
+
+  .technical-machine .kata-requirement-table th:first-child {
+    width: 34%;
+  }
+
+  .technical-machine .kata-requirement-table .tag {
+    padding: 4px 6px;
+    font-size: 0.68rem;
   }
 
   .technical-machine .promotion-technique-link {
